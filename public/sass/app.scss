@@ -1,0 +1,38 @@
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// Lib
+@import "lib/animations";
+@import "lib/var";
+@import "lib/fonts";
+@import "lib/mixins";
+@import "lib/Hillsrion";
+
+// Component
+@import "component/header";
+@import "component/footer";
+@import "component/home";
+
+//Style
+html, body {
+  width: 100%;
+  font-family: $font-light;
+}
+
+.row {
+  margin: 0;
+}
+
+@for $i from 2 through 12 {
+  @if $i==1 {
+    .col-xs > .row {
+      height: 100%;
+    }
+  }
+  .col-xs-#{$i} > .row {
+    height: 100%;
+  }
+}
+
+.full-row {
+  width: 100%;
+}

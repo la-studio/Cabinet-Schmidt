@@ -1,0 +1,255 @@
+
+/**
+ * Ismaël SEBBANE's mixins.
+ * @author Ismaël
+ * Open Source Mixins, free of use !
+ */
+
+/* NOTE
+
+These mixins can be either utilitary or to build something you can position and/or stylise as you wish like arrows, border effects
+
+Mixins level 0 don't use any arguments, there are basically blocks of code.
+Mixins level 1 use one or many arguments and don't use any others mixins (Level 2 Mixins does.)
+So mixins level 2 includes level 1 mixins in the code. When it's the case, it's specified in the concerned mixins (and which mixin level 2 uses it)
+
+*/
+
+
+/* ==========================================================================
+   No arguments mixins
+   ========================================================================== */
+
+@mixin normal-center-x() {
+  display: block;
+  margin: 0 auto;
+}
+
+@mixin bg-regular() {
+  background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+@mixin reset() {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin link-off() {
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin page-format() {
+  width: 100%;
+  height: 100vh;
+}
+
+@mixin fullsize() {
+  width: 100%;
+  height: 100%;
+}
+
+ // Is Used as a component for Level 2 Mixin flex()
+@mixin flex-around() {
+display: flex;
+float: none;
+justify-content: space-around;
+}
+
+
+// Is Used as a component for Level 2 Mixin flex()
+@mixin flex-between() {
+ display: flex;
+ float: none;
+ justify-content: space-between;
+}
+
+
+/* ==========================================================================
+   Level 1 Mixins
+   ========================================================================== */
+
+ /**
+  * Mixin Level 1.
+  * Desc : Arrow to position.
+  * $border-value (Int) :  Arrow size
+  * $position (arguments: top, bottom, right, ou left) : Arrow's position
+  * $color (arguments:  hex, rgb, rgba, etc..) : Arrow's color
+  */
+ @mixin arrow($border-value, $position, $color) {
+   $midrange: calc(50% - #{$border-value});
+   &:after {
+     content:'';
+     position: absolute;
+     @if $position==top {
+       top: (-$border-value);
+       border-bottom: solid $border-value $color;
+       border-left: solid $border-value transparent;
+       border-right: solid $border-value transparent;
+       left: 0;
+       right: 0;
+     } @else if $position==bottom {
+       border-top: solid $border-value $color;
+       border-left: solid $border-value transparent;
+       border-right: solid $border-value transparent;
+       left: 0;
+       top: calc(100% - 1px);
+       right: 0;
+     } @else if $position==right {
+       left: 100%;
+       top: $midrange;
+       border-left: solid $border-value $color;
+       border-top: solid $border-value transparent;
+       border-bottom: solid $border-value transparent;
+     } @else if $position==left {
+       top: $midrange;
+       border-right: solid $border-value $color;
+       border-top: solid $border-value transparent;
+       border-bottom: solid $border-value transparent;
+       right: 100%;
+     }
+     margin: 0 auto;
+     width: 0;
+     height: 0;
+   }
+ }
+
+/**
+* Mixin Level 1.
+* Desc : Handles flex-start value into justify-content and align-items properties according to the axis to want to place your element and the the direction of your flex container, put none if you wanna use axis xy .
+* Is Used as a component for Level 2 Mixin flex()
+*/
+@mixin flex-start($axis:"",$direction: "") {
+  display: flex;
+  float: none;
+  @if $direction==""{
+    $direction: row;
+  }
+  @if ($axis==x and $direction==column) or ($axis==y and $direction==row) {
+    align-items: flex-start;
+  } @else if ($axis==x and $direction==row) or ($axis==y and $direction==column) {
+    justify-content: flex-start;
+  } @else if $axis==xy {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+/**
+ * Mixin Level 1.
+ * Desc : Handles center value into justify-content and align-items properties according to the axis to want to place your element and the the direction of your flex container, put none if you wanna use axis xy
+ * Is Used as a component for Level 2 Mixin flex()
+ */
+@mixin flex-middle($axis:"",$direction: "") {
+ display: flex;
+ float: none;
+ @if $direction==""{
+   $direction: row;
+ }
+ @if ($axis==x and $direction==column) or ($axis==y and $direction==row) {
+   align-items: center;
+ } @else if ($axis==x and $direction==row) or ($axis==y and $direction==column) {
+   justify-content: center;
+ } @else if $axis==xy {
+   align-items: center;
+   justify-content: center;
+ }
+}
+
+/**
+ * Mixin Level 1.
+ * Desc : Handles flex-end value into justify-content and align-items properties according to the axis to want to place your element and the the direction of your flex container, put none if you wanna use axis xy
+ * Is Used as a component for Level 2 Mixin flex()
+ */
+ @mixin flex-end($axis:"",$direction: "") {
+   display: flex;
+   float: none;
+   @if $direction==""{
+     $direction: row;
+   }
+   @if ($axis==x and $direction==column) or ($axis==y and $direction==row) {
+     align-items: flex-end;
+   } @else if ($axis==x and $direction==row) or ($axis==y and $direction==column) {
+     justify-content: flex-end;
+   } @else if $axis==xy {
+     align-items: flex-end;
+     justify-content: flex-end;
+   }
+ }
+
+ /**
+  * Mixin Level 1.
+  * Desc : Useful for button, switches the color of text and the background-color. put $bg-enabled to true to define your background-color.
+  */
+@mixin colorToBg($color-text, $color-bg, $time, $easing, $bg-enabled:"") {
+  transition: background-color $time, color $time $easing;
+  &:hover {
+    background-color: $color-text;
+    color: $color-bg;
+  }
+}
+
+/**
+ * Mixin Level 1.
+ * Desc : Sets width and height according to size parameter.
+ * You can set size as full without providing values.
+ * equal needs a value in second parameter of the mixin.
+ * different needs width in 1st parameter and height in 2nd.
+ */
+
+@mixin size($size:"",$width:"", $height:"") {
+  @if $size==full {
+    width: 100%;
+    height: 100%;
+  } @else if $size==equal{
+    $width: $value;
+    width: $value;
+    height: $value;
+  } @else if $size==different {
+    width: $width;
+    height: $height;
+  }
+}
+
+/**
+ * Mixin Level 1.
+ * Desc : Set display to none if width reaches the breakpoint given in argument
+ */
+
+@mixin hidden($value) {
+  $breakpoint: 'screen and (max-width: #{$value})';
+  @media #{$breakpoint} {
+    display: none;
+  }
+}
+/* ==========================================================================
+   Level 2 Mixins.
+   ========================================================================== */
+
+
+ /**
+  * Mixin level 2. Mixins used : flex-start(), flex-middle(), flex-end(), flex-around(), flex-between()
+  * Desc : Handles align-items and justify-content to position your element according to the position you give as argument for the mixin.
+  * $position(arguments: start, middle, end) : Set the flex position of the element.
+  * $axis (arguments: x,y) : Gives the axis you want to handle.
+  * $direction (arguments: row, column) : Gives the current direction of the flex container, row or column.
+  */
+
+  @mixin flex-position($position, $axis, $direction:"") {
+    @if $direction=="" {
+      $direction: row;
+    }
+    @if $position==start {
+      @include flex-start($axis, $direction);
+    } @else if $position==center {
+      @include flex-middle($axis, $direction);
+    } @else if $position==end {
+      @include flex-end($axis, $direction);
+    } @else if $position==space-around {
+      @include flex-around();
+    } @else if $position==space-between {
+      @include flex-between();
+    }
+  }

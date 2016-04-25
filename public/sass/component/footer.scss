@@ -1,0 +1,19 @@
+.footer {
+  @include reset();
+  &__call-action { // Accès client bouton
+    color: $yellow;
+    font-family: $font-semibold;
+    font-size: 22px;
+    @include flex-middle(y);
+    @include hidden($tablet-max);
+    a {
+      border: 2px solid $yellow;
+      padding: 8px 15px;
+      transition: background-color .3s, color .3s ease;
+      &:hover {
+        color: white;
+        background-color: $yellow;
+      }
+    }
+  } // end call-action
+}

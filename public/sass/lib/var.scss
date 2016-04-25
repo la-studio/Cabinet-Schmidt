@@ -1,0 +1,39 @@
+// Colors
+$light-blue: #3c4f96;
+$blue: #283466;
+$moutarde: #a27e13;
+$yellow: #e7b116;
+$black: #1d1e1c;
+$light-grey: #c7c8c8;
+$grey: #9c9c9c;
+
+
+//Fonts
+$font: "proximanova-regular";
+$font-italic: "New Cicle Gordita Italic";
+$font-light: "proximanova-light";
+$font-semibold: "proximanova-semibold";
+$font-bold: "proximanova-bold";
+
+// Easings
+$easeOutCubic : cubic-bezier(0.215, 0.61, 0.355, 1);
+$easeOutCirc: cubic-bezier(0.075, 0.82, 0.165, 1);
+$easeInOutCubic : cubic-bezier(0.645, 0.045, 0.355, 1);
+$easeInOutSine : cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$easeOutQuad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$easeInOutBack : cubic-bezier(0.68, -0.55, 0.265, 1.40);
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$easeOutQuart: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+// CSS Breakpoints
+$mobile: 767px;
+$tablet-min: 768px;
+$tablet-max: 991px;
+$desktop-min: 992px;
+$desktop-max: 1199px;
+$large: 1200px;
+$tablet-min-size: "(max-width: 768px)";
+$tablet-max-size: "(max-width: 991px)";
+$desktop-min-size: "(max-width: 992px)";
+$desktop-max-size: "(max-width: 1199px)";
+$large-size: "(max-width: 1200px)";
