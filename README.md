@@ -1,1 +1,1 @@
-# Cabinet-Schmidt DE
+# Cabinet-Schmidt
