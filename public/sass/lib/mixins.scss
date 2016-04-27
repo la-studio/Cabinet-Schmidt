@@ -1,5 +1,0 @@
-@mixin hidden($breakpoint) {
-  @media #{$breakpoint} {
-    display: none;
-  }
-}

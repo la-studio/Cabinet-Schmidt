@@ -1,0 +1,39 @@
+@mixin custom-col($value) {
+  -ms-flex-preferred-size: $value;
+  -webkit-flex-basis: $value;
+  flex-basis: $value;
+  max-width: $value;
+}
+
+@mixin addon-grid() {
+  .row {
+    margin: 0;
+  }
+  $dimensions: xs sm md lg;
+  @for $i from 1 through 12 {
+    @if $i==1 {
+      @each $format in $dimensions {
+        .col-#{$format} > .row {
+          height: 100%;
+        }
+      }
+    }
+    // If we do something like .col-sm-#{$i},.col-md-#{$i},.col-lg-#{$i}, col are affected by the rule and not the row. ahkward, so i made separated rules.
+    // Can't make each loop here because need to interpolate sass vars, and hyphen between interpolations is interpreted a negative calcul operator
+    .col-xs-#{$i} > .row {
+      height: 100%;
+    }
+    .col-md-#{$i} > .row {
+      height: 100%;
+    }
+    .col-sm-#{$i} > .row {
+      height: 100%;
+    }
+    .col-lg-#{$i} > .row {
+      height: 100%;
+    }
+  }
+  .full-row {
+    width: 100%;
+  }
+}
