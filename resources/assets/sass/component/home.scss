@@ -185,13 +185,19 @@
       &__title {
         font-size: 21px;
       }
-      &__header {
+      &__header {/*
+        @media screen and (max-width: 1600px) {
+          width:
+        }*/
         @media screen and (max-width: 840px) {
           text-align: center;
         }
       }
       &__cabinet {
         padding-left: 30px;
+        @media screen and (min-width: 1600px) {
+          @include custom-col(45%);
+        }
         @media screen and (max-width: 840px) {
           @include custom-col(100%);
           padding: 0 15px;
@@ -229,6 +235,9 @@
       }
       &__entreprises {
         padding-left: 35px;
+        @media screen and (min-width: 1600px) {
+          @include custom-col(45%);
+        }
         @media screen and (max-width: 840px) {
           @include custom-col(100%);
           padding: 0 20px;
@@ -244,9 +253,9 @@
           $size-pic: 220px;
           background-color: #fff;
           margin-top: 20px;
-          box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.4);
+          box-shadow: 2px 2px 4px 0px rgba(0,0,0,.4);
           max-width: 700px;
-          @media screen and (max-width: 840px) {
+          @media screen and (min-width: 1600px) , screen and (max-width: 840px) {
             max-width: none;
           }
           &__picture {
@@ -263,6 +272,9 @@
             @media screen and (max-width: 840px) {
               max-width: none;
             }
+          }
+          &__body {
+              text-align: left;
           }
           &__name {
             margin: 0;
@@ -385,6 +397,46 @@
           @media screen and (max-width: 930px) {
             text-align: center;
           }
+        }
+      }
+    }
+  } // end __services
+  &__partenaires {
+    padding: 30px 0;
+    position: relative;
+    .partenaires-header {
+      @include flex-middle(x,column);
+      flex-direction: column;
+      &__title {
+        font-size: 26px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+      &__label {
+        @include reset();
+        font-size: 19px;
+        a {
+          color: $yellow;
+        }
+      }
+    } // end partenaires-header
+    .slider {
+      height: 300px;
+      .swiper-slide {
+        img {
+          max-height: 100%;
+          display: block;
+          max-width: 100%;
+        }
+      }
+      .swiper-button {
+        &-prev,&-next {
+          @include flex-middle(xy);
+          background-image: none;
+          color: $blue;
+          opacity: 1;
+          font-size: 55px;
+          top: calc(50% + 44px);
         }
       }
     }

@@ -5,10 +5,10 @@
       <h3 class="actus-header__label">Accéder à toute <a href="#">L'actu</a></h3>
     </header>
     <div class="col-xs-12 actus-articles">
-      <div class="row">
-        <section class="col-md-5 col-sm-5 col-xs-12 actus-articles__cabinet">
+      <div class="row center-lg">
+        <section class="col-custom col-md-5 col-sm-5 col-xs-12 actus-articles__cabinet">
           <h3 class="actus-articles__header">L'actualité du cabinet</h3>
-          <article class="row middle-xs article">
+          <article class="row center-lg middle-xs article">
               <div class="article__wrapper"> <!-- wrapper is here to center content into the defined height box without stretch elements on sides and middle. -->
                 <h4 class="article__name">Le cabinet Schmidt ferme cet été</h4>
                 <p class="article__body">
@@ -17,7 +17,7 @@
                 <span class="article__date">Publié le 25/03/2016</span>
               </div>
           </article>
-          <article class="row middle-xs article">
+          <article class="row center-lg middle-xs article">
               <div class="article__wrapper"> <!-- wrapper is here to center content into the defined height box without stretch elements on sides and middle. -->
                 <h4 class="article__name">Le cabinet Schmidt ferme cet été</h4>
                 <p class="article__body">
@@ -27,7 +27,7 @@
               </div>
           </article>
         </section>
-        <section class="col-md-7 col-sm-7 col-xs-12 actus-articles__entreprises">
+        <section class="col-custom col-md-7 col-sm-7 col-xs-12 actus-articles__entreprises">
           <h3 class="actus-articles__header">L'actualité des TPE-PME</h3>
           <article class="row article">
             <div class="col-xs article__picture" style="background-image: url('http://www.cineshow.fr/wp-content/uploads/2015/10/Arrow-header.jpg')"></div>

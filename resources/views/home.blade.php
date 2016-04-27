@@ -5,5 +5,6 @@
     @include('home.contact')
     @include('home.actus')
     @include('home.services')
+    @include('home.partenaires')
   </div>
 @stop

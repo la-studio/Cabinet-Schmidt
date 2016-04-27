@@ -616,11 +616,22 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     margin-top: 50px; }
     .home__actus .actus-articles__title {
       font-size: 21px; }
-    @media screen and (max-width: 840px) {
-      .home__actus .actus-articles__header {
-        text-align: center; } }
+    .home__actus .actus-articles__header {
+      /*
+        @media screen and (max-width: 1600px) {
+          width:
+        }*/ }
+      @media screen and (max-width: 840px) {
+        .home__actus .actus-articles__header {
+          text-align: center; } }
     .home__actus .actus-articles__cabinet {
       padding-left: 30px; }
+      @media screen and (min-width: 1600px) {
+        .home__actus .actus-articles__cabinet {
+          -ms-flex-preferred-size: 45%;
+          -webkit-flex-basis: 45%;
+          flex-basis: 45%;
+          max-width: 45%; } }
       @media screen and (max-width: 840px) {
         .home__actus .actus-articles__cabinet {
           -ms-flex-preferred-size: 100%;
@@ -655,6 +666,12 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
           font-style: italic; }
     .home__actus .actus-articles__entreprises {
       padding-left: 35px; }
+      @media screen and (min-width: 1600px) {
+        .home__actus .actus-articles__entreprises {
+          -ms-flex-preferred-size: 45%;
+          -webkit-flex-basis: 45%;
+          flex-basis: 45%;
+          max-width: 45%; } }
       @media screen and (max-width: 840px) {
         .home__actus .actus-articles__entreprises {
           -ms-flex-preferred-size: 100%;
@@ -674,7 +691,7 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         @media screen and (max-width: 920px) {
           .home__actus .actus-articles__entreprises .article {
             min-height: 209px; } }
-        @media screen and (max-width: 840px) {
+        @media screen and (min-width: 1600px), screen and (max-width: 840px) {
           .home__actus .actus-articles__entreprises .article {
             max-width: none; } }
         .home__actus .actus-articles__entreprises .article__picture {
@@ -704,6 +721,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
           @media screen and (max-width: 840px) {
             .home__actus .actus-articles__entreprises .article__content {
               max-width: none; } }
+        .home__actus .actus-articles__entreprises .article__body {
+          text-align: left; }
         .home__actus .actus-articles__entreprises .article__name {
           margin: 0;
           font-family: "proximanova-semibold";
@@ -849,6 +868,53 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         @media screen and (max-width: 930px) {
           .home .services__list .service__description {
             text-align: center; } }
+
+.home__partenaires {
+  padding: 30px 0;
+  position: relative; }
+  .home__partenaires .partenaires-header {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .home__partenaires .partenaires-header__title {
+      font-size: 26px;
+      text-transform: uppercase;
+      margin-bottom: 15px; }
+    .home__partenaires .partenaires-header__label {
+      padding: 0;
+      margin: 0;
+      font-size: 19px; }
+      .home__partenaires .partenaires-header__label a {
+        color: #e7b116; }
+  .home__partenaires .slider {
+    height: 300px; }
+    .home__partenaires .slider .swiper-slide img {
+      max-height: 100%;
+      display: block;
+      max-width: 100%; }
+    .home__partenaires .slider .swiper-button-prev, .home__partenaires .slider .swiper-button-next {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      float: none;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      background-image: none;
+      color: #283466;
+      opacity: 1;
+      font-size: 55px;
+      top: calc(50% + 44px); }
 
 html, body {
   width: 100%;
