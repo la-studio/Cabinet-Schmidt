@@ -974,7 +974,7 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       padding-bottom: 15px; }
     .home__agenda .datepicker__body {
       width: 100%;
-      background-color: #c7c8c8;
+      background-color: rgba(255, 255, 255, 0.85);
       overflow: hidden;
       height: 340px; }
       .home__agenda .datepicker__body .month {
