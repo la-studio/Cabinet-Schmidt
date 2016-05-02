@@ -871,7 +871,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
 
 .home__partenaires {
   padding: 30px 0;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .home__partenaires .partenaires-header {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -915,6 +916,212 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       opacity: 1;
       font-size: 55px;
       top: calc(50% + 44px); }
+
+.home__agenda {
+  min-height: 500px;
+  background-color: #f3f3f3; }
+  .home__agenda .agenda-header {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 40px; }
+    .home__agenda .agenda-header__title {
+      font-size: 26px;
+      text-transform: uppercase;
+      margin-bottom: 15px; }
+    .home__agenda .agenda-header__label {
+      padding: 0;
+      margin: 0;
+      font-size: 21px; }
+      .home__agenda .agenda-header__label a {
+        color: #e7b116; }
+  .home__agenda .datepicker {
+    padding-left: 150px;
+    width: 400px;
+    min-width: 350px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    font-family: "proximanova-semibold"; }
+    .home__agenda .datepicker__caption {
+      width: 100%;
+      height: 70px;
+      color: white;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+      align-items: flex-end;
+      background-color: #4d64b8;
+      font-size: 25px;
+      letter-spacing: 0.04rem;
+      padding-right: 15px;
+      padding-bottom: 15px; }
+    .home__agenda .datepicker__body {
+      width: 100%;
+      background-color: #c7c8c8;
+      overflow: hidden;
+      height: 340px; }
+      .home__agenda .datepicker__body .month {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        height: 60px;
+        font-size: 19px;
+        padding: 0 1rem;
+        color: #9c9c9c; }
+        .home__agenda .datepicker__body .month__prev, .home__agenda .datepicker__body .month__next {
+          font-size: 27px;
+          cursor: pointer; }
+      .home__agenda .datepicker__body .calendar-list {
+        height: calc(100% - 60px);
+        overflow: hidden;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        text-align: center;
+        transition: -webkit-transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .home__agenda .datepicker__body .calendar-list .calendar {
+          height: 100%;
+          margin-top: 10px; }
+          .home__agenda .datepicker__body .calendar-list .calendar__label-list {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            text-align: center; }
+            .home__agenda .datepicker__body .calendar-list .calendar__label-list .col {
+              -webkit-flex-grow: 1;
+              -ms-flex-positive: 1;
+              -webkit-box-flex: 1;
+              flex-grow: 1;
+              -ms-flex-preferred-size: 0;
+              -webkit-flex-basis: 0;
+              flex-basis: 0;
+              color: #3c4f96; }
+          .home__agenda .datepicker__body .calendar-list .calendar__day-list {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-flex: 0 1 auto;
+            -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+            text-align: center;
+            margin: 10px 0;
+            display: flex;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center; }
+            .home__agenda .datepicker__body .calendar-list .calendar__day-list .col {
+              -webkit-flex-grow: 1;
+              -ms-flex-positive: 1;
+              -webkit-box-flex: 1;
+              flex-grow: 1;
+              -ms-flex-preferred-size: calc(100%/7);
+              -webkit-flex-basis: calc(100%/7);
+              flex-basis: calc(100%/7);
+              max-width: calc(100%/7);
+              height: 40px;
+              color: #9c9c9c;
+              display: -webkit-flex;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-justify-content: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              -webkit-align-items: center;
+              -ms-flex-align: center;
+              align-items: center;
+              transition: color .2s, background-color .2s ease;
+              cursor: pointer;
+              -webkit-user-select: none;
+              -moz-user-select: none;
+              -ms-user-select: none;
+              user-select: none; }
+              .home__agenda .datepicker__body .calendar-list .calendar__day-list .col span {
+                border-radius: 100%;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-align-items: center;
+                -ms-flex-align: center;
+                align-items: center;
+                width: 33px;
+                height: 33px;
+                position: relative; }
+                .home__agenda .datepicker__body .calendar-list .calendar__day-list .col span:before {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  background-color: #283466;
+                  -webkit-transform: scale(0);
+                  transform: scale(0);
+                  transition: -webkit-transform .15s ease;
+                  transition: transform .15s ease;
+                  border-radius: 100%; }
+              .home__agenda .datepicker__body .calendar-list .calendar__day-list .col:hover {
+                color: #283466; }
+              .home__agenda .datepicker__body .calendar-list .calendar__day-list .col--selected {
+                color: white; }
+                .home__agenda .datepicker__body .calendar-list .calendar__day-list .col--selected span {
+                  z-index: 1; }
+                  .home__agenda .datepicker__body .calendar-list .calendar__day-list .col--selected span:before {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    z-index: -1; }
+                .home__agenda .datepicker__body .calendar-list .calendar__day-list .col--selected:hover {
+                  color: white; }
 
 html, body {
   width: 100%;

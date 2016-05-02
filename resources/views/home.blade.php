@@ -6,5 +6,6 @@
     @include('home.actus')
     @include('home.services')
     @include('home.partenaires')
+    @include('home.agenda')
   </div>
 @stop
