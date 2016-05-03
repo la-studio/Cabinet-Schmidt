@@ -190,3 +190,78 @@
     }
   }
 }
+
+.toolbox {
+  $value: 250px;
+  $visible: 50px;
+  position : fixed;
+  width: $value;
+  height: 50px;
+  background-color: $yellow;
+  overflow: hidden;
+  left: 100%;
+  top: 25%;
+  z-index: 10;
+  cursor: pointer;
+  transform: translate3d(-($visible),0,0);
+  transition: background-color .3s ease, height .5s ease,transform .3s ease;
+  box-shadow: -2px 2px 4px 0px rgba(80, 80, 80, 0.65);
+  display: flex;
+  svg {
+    height: 35px;
+    width: 35px;
+    margin: 7px 0 5px 5px;
+    transition: transform .3s ease;
+    path {
+      transition: fill .3s ease;
+    }
+  }
+  &__label {
+    left: 100%;
+    position: relative;
+    margin-top: 7px;
+    transform: translate3d(-25px,0,0);
+    .upper-label {
+      font-size: 23px;
+    }
+    .lower-label {
+      font-size: 17px;
+      letter-spacing: 0.01rem;
+    }
+  }
+  &__list {
+    list-style: none;
+    width: 100%;
+    a {
+      @include link-off();
+    }
+  }
+  &__item {
+    @include flex-middle(y);
+    padding-left: 15px;
+    border-top: 1px solid $yellow;
+    height: 30px;
+  }
+  &:hover {
+    background-color: white;
+  }
+  &:hover svg path {
+    fill: $yellow;
+  }
+  &--open-x {
+    background-color: white;
+    transform: translate3d(-($value),0,0);
+    .toolbox__label {
+      left: 0;
+    }
+    svg {
+      transform: translate3d(200px,0,0);
+      path {
+        fill: $yellow;
+      }
+    }
+  }
+  &--open-y {
+    height: 200px;
+  }
+}

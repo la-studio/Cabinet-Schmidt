@@ -5,6 +5,21 @@
   max-width: $value;
 }
 
+@mixin datepicker-thumb($background) { // mixin only useful for this project
+  color: white;
+  span {
+    z-index: 1;
+    &:before {
+      transform: scale(1);
+      background-color: $background;
+      z-index: -1;
+    }
+  }
+  &:hover {
+    color: white;
+  }
+}
+
 @mixin addon-grid() {
   .row {
     margin: 0;

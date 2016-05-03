@@ -338,9 +338,83 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         -webkit-transform: translate3d(20px, 0, 0);
         transform: translate3d(20px, 0, 0); }
 
+.toolbox {
+  position: fixed;
+  width: 250px;
+  height: 50px;
+  background-color: #e7b116;
+  overflow: hidden;
+  left: 100%;
+  top: 25%;
+  z-index: 10;
+  cursor: pointer;
+  -webkit-transform: translate3d(-50px, 0, 0);
+  transform: translate3d(-50px, 0, 0);
+  transition: background-color .3s ease, height .5s ease,-webkit-transform .3s ease;
+  transition: background-color .3s ease, height .5s ease,transform .3s ease;
+  box-shadow: -2px 2px 4px 0px rgba(80, 80, 80, 0.65);
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .toolbox svg {
+    height: 35px;
+    width: 35px;
+    margin: 7px 0 5px 5px;
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease; }
+    .toolbox svg path {
+      transition: fill .3s ease; }
+  .toolbox__label {
+    left: 100%;
+    position: relative;
+    margin-top: 7px;
+    -webkit-transform: translate3d(-25px, 0, 0);
+    transform: translate3d(-25px, 0, 0); }
+    .toolbox__label .upper-label {
+      font-size: 23px; }
+    .toolbox__label .lower-label {
+      font-size: 17px;
+      letter-spacing: 0.01rem; }
+  .toolbox__list {
+    list-style: none;
+    width: 100%; }
+    .toolbox__list a {
+      text-decoration: none;
+      color: inherit; }
+  .toolbox__item {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 15px;
+    border-top: 1px solid #e7b116;
+    height: 30px; }
+  .toolbox:hover {
+    background-color: white; }
+  .toolbox:hover svg path {
+    fill: #e7b116; }
+  .toolbox--open-x {
+    background-color: white;
+    -webkit-transform: translate3d(-250px, 0, 0);
+    transform: translate3d(-250px, 0, 0); }
+    .toolbox--open-x .toolbox__label {
+      left: 0; }
+    .toolbox--open-x svg {
+      -webkit-transform: translate3d(200px, 0, 0);
+      transform: translate3d(200px, 0, 0); }
+      .toolbox--open-x svg path {
+        fill: #e7b116; }
+  .toolbox--open-y {
+    height: 200px; }
+
 .footer {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  background-color: #283466;
+  height: 75px; }
   .footer__call-action {
     color: #e7b116;
     font-family: "proximanova-semibold";
@@ -356,12 +430,28 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       .footer__call-action {
         display: none; } }
     .footer__call-action a {
-      border: 2px solid #e7b116;
+      border: 2px solid white;
       padding: 8px 15px;
-      transition: background-color .3s, color .3s ease; }
-      .footer__call-action a:hover {
-        color: white;
-        background-color: #e7b116; }
+      color: white;
+      background-color: transparent;
+      transition: background-color .3s ease, color .3s ease, border .3s ease; }
+    .footer__call-action:hover a {
+      border: 2px solid #e7b116;
+      background-color: #e7b116;
+      color: white; }
+  .footer__credits {
+    color: white;
+    font-size: 14px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
 
 .home__slider {
   height: calc(100vh - 100px);
@@ -919,6 +1009,7 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
 
 .home__agenda {
   min-height: 500px;
+  padding: 20px 0;
   background-color: #f3f3f3; }
   .home__agenda .agenda-header {
     display: -webkit-flex;
@@ -1104,7 +1195,7 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
                   left: 0;
                   width: 100%;
                   height: 100%;
-                  background-color: #283466;
+                  background-color: transparent;
                   -webkit-transform: scale(0);
                   transform: scale(0);
                   transition: -webkit-transform .15s ease;
@@ -1119,9 +1210,221 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
                   .home__agenda .datepicker__body .calendar-list .calendar__day-list .col--selected span:before {
                     -webkit-transform: scale(1);
                     transform: scale(1);
+                    background-color: #283466;
                     z-index: -1; }
                 .home__agenda .datepicker__body .calendar-list .calendar__day-list .col--selected:hover {
                   color: white; }
+              .home__agenda .datepicker__body .calendar-list .calendar__day-list .col--highlight {
+                color: white; }
+                .home__agenda .datepicker__body .calendar-list .calendar__day-list .col--highlight span {
+                  z-index: 1; }
+                  .home__agenda .datepicker__body .calendar-list .calendar__day-list .col--highlight span:before {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    background-color: #5c70be;
+                    z-index: -1; }
+                .home__agenda .datepicker__body .calendar-list .calendar__day-list .col--highlight:hover {
+                  color: white; }
+  .home__agenda .agenda-text {
+    overflow: hidden; }
+    .home__agenda .agenda-text__carousel {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      transition: -webkit-transform 0.85s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: transform 0.85s cubic-bezier(0.165, 0.84, 0.44, 1);
+      margin-bottom: 10px; }
+    .home__agenda .agenda-text__item {
+      width: 100%; }
+    .home__agenda .agenda-text__body {
+      padding: 0 2rem; }
+    .home__agenda .agenda-text__date {
+      font-size: 29px;
+      margin-bottom: 20px;
+      padding: 0 2rem; }
+    .home__agenda .agenda-text__title {
+      font-size: 24px;
+      padding: 0;
+      margin: 0;
+      padding: 0 2rem; }
+    .home__agenda .agenda-text__button {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      float: none;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      cursor: pointer;
+      margin-top: 30px;
+      width: 150px;
+      height: 40px;
+      margin: 0 2rem;
+      padding: 0 15px;
+      color: #e7b116;
+      font-family: "proximanova-semibold";
+      font-size: 19px;
+      border: 2px solid #e7b116;
+      position: relative;
+      overflow: hidden; }
+      .home__agenda .agenda-text__button:before {
+        content: attr(data-hover);
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        float: none;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+        color: white;
+        background-color: #e7b116;
+        font-family: "proximanova-bold";
+        transition: -webkit-transform .3s ease;
+        transition: transform .3s ease; }
+      .home__agenda .agenda-text__button:hover:before {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0); }
+
+.actualites__cover {
+  height: 550px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/images/cover-actu.jpg"); }
+
+.actualites__banner {
+  padding-left: 40px;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+  color: white;
+  background-color: #283466; }
+  @media screen and (max-width: 785px) {
+    .actualites__banner {
+      padding-left: 0; } }
+  .actualites__banner h1 {
+    margin: 0.8em 0;
+    text-align: left; }
+    @media screen and (max-width: 785px) {
+      .actualites__banner h1 {
+        text-align: center; } }
+
+.actualites .gallery {
+  padding: 20px 0; }
+  .actualites .gallery__head {
+    text-align: center;
+    text-transform: uppercase; }
+    @media screen and (max-width: 430px) {
+      .actualites .gallery__head {
+        padding: 0 20px; } }
+  .actualites .gallery .filters {
+    list-style: none;
+    margin: 0;
+    padding: 30px 0; }
+    @media screen and (min-width: 992px) and (max-width: 1310px) {
+      .actualites .gallery .filters__item {
+        -ms-flex-preferred-size: 33.33%;
+        -webkit-flex-basis: 33.33%;
+        flex-basis: 33.33%;
+        max-width: 33.33%; } }
+    @media screen and (max-width: 1310px) {
+      .actualites .gallery .filters__item {
+        margin-top: 20px; } }
+    .actualites .gallery .filters__item span {
+      margin: 0 1.5rem;
+      transition: background-color 0.3s, color 0.3s ease;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      float: none;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      color: #e7b116;
+      border: 1px solid #e7b116;
+      text-transform: uppercase;
+      cursor: pointer;
+      height: 30px; }
+      .actualites .gallery .filters__item span:hover {
+        background-color: #e7b116;
+        color: white; }
+  @media screen and (max-width: 767px) {
+    .actualites .gallery__wrapper {
+      padding: 0 20px; } }
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    .actualites .gallery__wrapper.col-custom {
+      -ms-flex-preferred-size: 75%;
+      -webkit-flex-basis: 75%;
+      flex-basis: 75%;
+      max-width: 75%; } }
+  .actualites .gallery__item {
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.4);
+    margin-top: 20px; }
+    .actualites .gallery__item .image {
+      height: 210px; }
+    .actualites .gallery__item .article {
+      min-height: 210px;
+      padding: 12px; }
+      .actualites .gallery__item .article__title {
+        margin-bottom: 15px;
+        text-align: left;
+        font-family: "proximanova-semibold"; }
+      .actualites .gallery__item .article__body {
+        padding-top: 0;
+        margin-bottom: 15px;
+        text-align: left; }
+      .actualites .gallery__item .article__footer {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        float: none;
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+      .actualites .gallery__item .article__date {
+        font-style: italic;
+        padding-right: 5px; }
+      .actualites .gallery__item .article__button {
+        color: #e7b116;
+        border: 1px solid #e7b116;
+        width: 50px;
+        height: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s ease;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        float: none;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
+        .actualites .gallery__item .article__button:hover {
+          background-color: #e7b116;
+          color: white; }
 
 html, body {
   width: 100%;

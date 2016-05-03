@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/actus', function () {
+    return view('actusgallery');
+});

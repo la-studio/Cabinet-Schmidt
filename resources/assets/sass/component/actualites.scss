@@ -1,0 +1,109 @@
+.actualites {
+  &__cover {
+    height: 550px;
+    @include bg-regular();
+    background-image: url('/images/cover-actu.jpg');
+  }
+  &__banner {
+    padding-left: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
+    color: white;
+    background-color: $blue;
+    @media screen and (max-width: 785px) {
+      padding-left: 0;
+    }
+    h1 {
+      margin: 0.8em 0;
+      text-align: left;
+      @media screen and (max-width: 785px) {
+        text-align: center;
+      }
+    }
+  }
+  .gallery {
+    padding: 20px 0;
+    &__head {
+      text-align: center;
+      text-transform: uppercase;
+      @media screen and (max-width: 430px) {
+        padding: 0 20px;
+      }
+    }
+    .filters {
+      list-style: none;
+      margin:0;
+      padding: 30px 0;
+      &__item {
+        @media screen and (min-width: #{$tablet-max+1px}) and (max-width: 1310px) {
+          @include custom-col(33.33%);
+        }
+        @media screen and (max-width: 1310px) {
+          margin-top: 20px
+        }
+        span {
+          margin: 0 1.5rem;
+          @include colorToBg($yellow, white, .3s,ease);
+          @include flex-middle(xy);
+          color: $yellow;
+          border: 1px solid $yellow;
+          text-transform: uppercase;
+          cursor: pointer;
+          height: 30px;
+        }
+
+      }
+    } // end filters
+    &__list {
+
+    }
+    &__wrapper {
+      @media screen and (max-width: $mobile) {
+        padding: 0 20px;
+      }
+      @media screen and (min-width: 480px) and (max-width: $mobile) {
+        &.col-custom {
+          @include custom-col(75%);
+        }
+      }
+    }
+    &__item {
+      box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.4);
+      margin-top: 20px;
+      .image {
+        height: 210px;
+      }
+      .article {
+        min-height: 210px;
+        padding: 12px;
+        &__title {
+          margin-bottom: 15px;
+          text-align: left;
+          font-family: $font-semibold;
+        }
+        &__body {
+          padding-top: 0;
+          margin-bottom: 15px;
+          text-align: left;
+        }
+        &__footer {
+          @include flex-end(y);
+          justify-content: space-between;
+        }
+        &__date {
+          font-style: italic;
+          padding-right: 5px;
+        }
+        &__button {
+          color: $yellow;
+          border: 1px solid $yellow;
+          width: 50px;
+          height: 20px;
+          cursor: pointer;
+          @include colorToBg($yellow, white,.3s,ease);
+          @include flex-middle(xy);
+        }
+      }
+    }
+  }
+}

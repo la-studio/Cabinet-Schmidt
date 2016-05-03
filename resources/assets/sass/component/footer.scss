@@ -1,5 +1,7 @@
 .footer {
   @include reset();
+  background-color: $blue;
+  height: 75px;
   &__call-action { // Accès client bouton
     color: $yellow;
     font-family: $font-semibold;
@@ -7,13 +9,22 @@
     @include flex-middle(y);
     @include hidden($tablet-max);
     a {
-      border: 2px solid $yellow;
+      border: 2px solid white;
       padding: 8px 15px;
-      transition: background-color .3s, color .3s ease;
-      &:hover {
-        color: white;
-        background-color: $yellow;
-      }
+      color: white;
+      background-color: transparent;
+      transition: background-color .3s ease, color .3s ease, border .3s ease;
+    }
+    &:hover a {
+      border: 2px solid $yellow;
+      background-color: $yellow;
+      color: white;
     }
   } // end call-action
+  &__credits {
+    color: white;
+    font-size: 14px;
+    @include flex-middle(y,column);
+    flex-direction: column;
+  }
 }

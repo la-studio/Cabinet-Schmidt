@@ -7,10 +7,13 @@
 @import "lib/mixins";
 @import "lib/Hillsrion";
 
-// Component
+// Layout
 @import "component/header";
 @import "component/footer";
+
+// Component
 @import "component/home";
+@import "component/actualites";
 
 //Style
 html, body {
@@ -19,4 +22,4 @@ html, body {
   font-family: $font-light;
 }
 
-@include addon-grid(); // Some fixes for bothering defauts of flexgrid we're using. 
+@include addon-grid(); // Some fixes for bothering defauts of flexgrid we're using.

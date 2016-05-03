@@ -36,6 +36,7 @@ Datepicker.prototype.init = function () {
     this.langage = this.defaults.langage;
   }
   this.active = this.month;
+  this.agenda = comptaAgenda;
   this.width = $('.datepicker__body').width();
   this.selector = '.calendar-list';
   this.transition = this.setTranslate();
@@ -43,13 +44,14 @@ Datepicker.prototype.init = function () {
   this.createBoards();
   this.updateDayLabel();
   this.enableClickListeners();
-  var that = this;
-
+  this.addMarkers(this.agenda.dates);
+  //this.highlightToday();
   $('.calendar-list').css('transform','translate3d('+this.translate+'px,0,0)');
+  /*
   $('.col').click(function () {
     $('.col').removeClass('col--selected');
     $(this).addClass('col--selected');
-  })
+  })*/
   this.tool.debug('init',this.translate);
 };
 
@@ -77,12 +79,12 @@ Datepicker.prototype.getTodayNumber = function () {
 };
 
 Datepicker.prototype.getDayIndex = function (day) {
-  var index = dayList.indexOf(day);
+  var index = this.dayList.indexOf(day);
   return index // With String day as parameter, returns day Index.
 };
 
 Datepicker.prototype.getMonthIndex = function (month) {
-  var index = monthList.indexOf(month);
+  var index = this.monthList.indexOf(month);
   return index // With String day as parameter, returns month  Index.
 };
 
@@ -168,6 +170,11 @@ Datepicker.prototype.updateDayLabel = function () {
   $('.date__month').html(this.getThisMonth());
   $('.date__number').html(this.getTodayNumber());
 };
+/*
+Datepicker.prototype.highlightToday = function () {
+  var toHighlight = $('.calendar[data-month="'+this.month+'"] .calendar__day-list .col').eq(this.day).addClass('col--selected');
+};*/
+
 Datepicker.prototype.createBoards = function () {
   el = $(this.selector);
   $('.calendar-list').css('width',12*this.width)
@@ -192,23 +199,29 @@ Datepicker.prototype.createBoards = function () {
           if (firstDayPos==0) {
             $('.calendar__day-list').eq(i).append('<div class="col"><span>'+(x+1)+'</span></div>')
           } else {
-            $('.calendar__day-list').eq(i).append('<div class="col"><span>'+(x-firstDayPos)+'</span></div>')
+            $('.calendar__day-list').eq(i).append('<div data-day="'+(x-firstDayPos)+'" class="col"><span>'+(x-firstDayPos)+'</span></div>')
           }
         }
       } else { // end first if for x loop
-        $('.calendar__day-list').eq(i).append('<div class="col"><span>'+x+'</span></div>')
+        $('.calendar__day-list').eq(i).append('<div data-day="'+x+'"class="col"><span>'+x+'</span></div>')
       }
     }
   }
 };
 
+Datepicker.prototype.addMarkers = function (options) {
+  for (var i = 0; i < options.length; i++) {
+      var monthIndex = this.getMonthIndex(options[i].month);
+      var toHighlight = $('.calendar[data-month="'+monthIndex+'"] .calendar__day-list .col[data-day="'+options[i].day+'"]').addClass('col--highlight');
+  }
+};
 
 Datepicker.prototype.setTranslate = function () {
   if(this.active<12 && this.active>=1) {
     var value = -((this.active-1)*this.width) // I decrement one because we don't wanna translate for the first month.
     this.translate = value;
   } else {
-    var value = -((11)*this.width); // 11 because we need to translate to the end of the container - the width of a month calendar. 
+    var value = -((11)*this.width); // 11 because we need to translate to the end of the container - the width of a month calendar.
     this.translate = value;
   }
 
