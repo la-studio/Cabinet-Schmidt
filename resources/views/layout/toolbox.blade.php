@@ -7,15 +7,15 @@
     L26.795,17.81z"/>
   </svg>
   <div class="col-xs toolbox__label">
-    <div class="row">
+    <div class="row label">
       <span class="upper-label">La boîte à outils</span>
     </div>
-    <div class="row">
+    <div class="row label">
       <span class="lower-label">de l'entrepreneur</span>
     </div>
   </div>
   <ul class="toolbox__list">
-    <li class="toolbox__item"><a href="#">Liens utiles</a></li>
+    <li class="toolbox__item"><a href="{{ URL::to('sites-utiles') }}">Liens utiles</a></li>
     <li class="toolbox__item"><a href="#">Chiffres utiles</a></li>
     <li class="toolbox__item"><a href="#">Simulateur</a></li>
     <li class="toolbox__item"><a href="#">FAQ</a></li>

@@ -209,12 +209,12 @@
           border-radius: 2px;
           box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.4);
           margin-top: 20px;
-          min-height: 180px;
+          height: 180px;
           @media screen and (max-width: 1065px) {
-            min-height: 187px;
+            height: 187px;
           }
           @media screen and (max-width: 920px) {
-            min-height: 209px;
+            height: 209px;
           }
           &__wrapper {
             padding-right: 10px;
@@ -243,12 +243,12 @@
           padding: 0 20px;
         }
         .article {
-          min-height: 180px;
+          height: 180px;
           @media screen and (max-width: 1065px) {
-            min-height: 187px;
+            height: 187px;
           }
           @media screen and (max-width: 920px) {
-            min-height: 209px;
+            height: 209px;
           }
           $size-pic: 220px;
           background-color: #fff;

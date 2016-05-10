@@ -29,8 +29,9 @@
           <i class="fa fa-map-marker"></i>
         </div>
         <div class="contact-item__text">
-          <span class="label">Espace Belle Etoile</span>
+          <span class="label">81, rue Henri Fabre</span>
           <span class="highlight">CROLLES</span>
+          <span class="label">espace Belle Etoile</span>
         </div>
       </div>
     </div>

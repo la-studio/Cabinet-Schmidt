@@ -18,3 +18,15 @@ Route::get('/', function () {
 Route::get('/actus', function () {
     return view('actusgallery');
 });
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/sites-utiles', function () {
+    return view('useful');
+});

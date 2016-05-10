@@ -1,0 +1,247 @@
+.contact {
+  &__cover {
+    height: 550px;
+    @include bg-regular();
+    background-attachment: fixed;
+    background-image: url('/images/cover-contact.jpg');
+  }
+  &__wrapper {
+    position: relative;
+    @media screen and (max-width: 536px) {
+      //height: 430px;
+    }
+  }
+  &__map {
+    max-height: 800px;
+    min-height: 100vh;
+    @include hidden(536px);
+  }
+  .form {
+    background-color: #fff;
+    position: absolute;
+    width: 60%;
+    @media screen and (min-width: 537px) {
+      max-width: 750px;
+      min-width: 500px;
+    }
+    top: calc(50% - 200px);
+    left: 100%;
+    transform: translate3d(-100%,0,0);
+    @media screen and (max-width: 536px) {
+      width: 100%;
+      transform: translate3d(0,0,0);
+      position: static;
+    }
+    &.row {
+      @media screen and (min-width: 537px) {
+        height: 430px; // Overridin my addon on grid, setting row child from col to 100% height.
+      }
+    }
+    .col-xs-12 > .row {
+      height: auto; // Overridin my addon on grid, setting row child from col to 100% height.
+    }
+    &__head {
+      background-color: $yellow;
+      padding: 20px 0;
+      color: white;
+      @include flex-middle(y);
+      flex-direction: column;
+      justify-content: center;
+      &.row {
+        height: auto;
+      }
+      h2 {
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+    }
+    &__content {
+      padding: 15px;
+      @media screen and (min-width: 537px) {
+        padding: 15px;
+      }
+    }
+    &__fields,&__message {
+      margin: 15px 0;
+      .field {
+        height: 48px;
+        &--textarea {
+          height: 100px;
+        }
+        @media screen and (min-width: 537px) {
+          &:nth-child(n+3) {
+            margin-top: 15px;
+          }
+        }
+        @media screen and (max-width: 536px) {
+          margin-top: 10px;
+          &.col-custom {
+            @include custom-col(100%);
+          }
+        }
+        .input {
+        	position: relative;
+        	z-index: 1;
+        	display: inline-block;
+        	width: 100%;
+          height: 100%;
+          overflow: hidden;
+          &__error {
+            position: absolute;
+            color: darken($yellow,10%);
+            top: 0;
+            right: 0;
+            padding-right: 5px;
+            user-select: none;
+            pointer-events: none;
+            opacity: 0;
+            transform: translate3d(0,0,0);
+            transition: opacity .2s, transform .2s ease-out;
+            font-size: 14px;
+            &--missing {
+              transform: translate3d(0,33px,0);
+              opacity: 1;
+            }
+          }
+          &__field {
+            position: relative;
+            display: block;
+            float: right;
+            border: none;
+            border-radius: 0;
+            height: 30px;
+            color: #aaa;
+            -webkit-appearance: none; /* for box shadows to show on iOS */
+            width: 100%;
+            background: transparent;
+            margin-bottom: 1.5em;
+            z-index: 100;
+            opacity: 0;
+            @media screen and (min-width: 537px) {
+              margin-bottom: 0;
+            }
+            &--textarea {
+              height: 85px;
+              overflow: hidden;
+            }
+            &:focus {
+        	    outline: none;
+            }
+          } // end field
+          &__label {
+            display: flex;
+            align-items: center;
+            padding: 0 1em;
+            height: 30px;
+            color: #696969;
+            font-family: $font-semibold;
+            font-size: 70.25%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-touch-callout: none;
+            user-select: none;
+            width: 100%;
+            position: absolute;
+            text-align: left;
+            pointer-events: none;
+            &--textarea {
+              height: 90px;
+              align-items: flex-start;
+            }
+            &:before,&:after {
+              content: '';
+              position: absolute;
+              width: 100%;
+              left: 0;
+            }
+            &:before {
+              height: 100%;
+              background: transparent;
+              top: 0;
+              transform: translate3d(0, -100%, 0);
+              transition: transform 0.2s;
+            }
+            &:after { // trait input
+              height: 2px;
+              background-color: #A8A8A8;
+              top: 100%;
+              transition: opacity .2s, background-color .2s;
+            }
+            &--missing {
+              &:after {
+                background-color: $yellow;
+              }
+            }
+          }
+          &__label-content {
+            position: relative;
+            display: block;
+            padding: 1.6em 0;
+            width: 100%;
+            transform-origin: 0 0;
+            transition: transform .2s $input-easing, color .2s ease, opacity .1s $input-easing;
+            &--textarea {
+              padding: 0;
+            }
+          }
+        } // end input class
+      }
+
+      .input__field:focus,
+      .input--filled .input__field {
+      	opacity: 1;
+      	transition: opacity 0s 0.2s;
+      }
+
+      .input__label::before,
+      .input__label::after,
+      .input__label-content,
+      .input__field:focus,
+      .input--filled .input__field {
+      	transition-timing-function: $input-easing;
+      }
+
+      .input__field:focus + .input__label::before,
+      .input--filled .input__label::before {
+      	transform: translate3d(0, 0, 0);
+      }
+      .input__field:focus + .input__label .input__label-content,
+      .input--filled .input__label .input__label-content {
+      	color: $yellow;
+      	transform: translate3d(0, 2.5em, 0) scale3d(0.95, 0.95, 1);
+      }
+      .input__field--textarea:focus + .input__label .input__label-content,
+      .input--filled .input__label .input__label-content {
+        color: $yellow;
+        opacity: 0;
+        transform: translate3d(0, 15px, 0) scale3d(0.95, 0.95, 1);
+      }
+    }
+    &__message {
+      resize: none;
+      @media screen and (min-width: $tablet-min) {
+        padding: 0 1rem;
+      }
+      textarea {
+        padding: 0 .3em;
+        overflow-y: scroll;
+        overflow-: hidden;
+        transform: translate3d(10px,0,0);
+        box-sizing: border-box;
+      }
+    }
+
+    &__button {
+      margin-top: 15px;
+      span {
+        color: $yellow;
+        padding: 0 10px;
+        height: 25px;
+        border: 1px solid $yellow;
+        cursor: pointer;
+        @include colorToBg($yellow,white,.3s,ease);
+        @include flex-middle(y);
+      }
+    }
+  }
+}

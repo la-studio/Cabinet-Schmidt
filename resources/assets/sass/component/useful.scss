@@ -1,0 +1,188 @@
+.useful-sites {
+  &__cover {
+    height: 550px;
+    @include bg-regular();
+    background-attachment: fixed;
+    background-image: url('/images/cover-useful.jpg');
+  }
+  &__banner {
+    padding: .8em 0 .8em 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
+    background-color: $blue;
+    color: white;
+    @media screen and (max-width: 785px) {
+      padding-left: 0;
+    }
+    h1 {
+      @include reset();
+      text-align: left;
+      @media screen and (max-width: 785px) {
+        text-align: center;
+      }
+    }
+  } // end banner
+  &__main-nav {
+    padding: 30px 0;
+    background-color: lighten($light-grey,17%);
+    .partner {
+      &:nth-child(n+3) {
+        margin-top: 25px;
+      }
+      @media screen and (min-width: #{$tablet-min+1px}) {
+        &:nth-child(n+3) {
+          margin-top: 25px;
+        }
+      }
+      @media screen and (max-width: $tablet-min){
+        &:nth-child(n+2) {
+          margin-top: 25px;
+        }
+      }
+      @media screen and (min-width: 450px) and (max-width: $tablet-min) {
+        &.col-custom {
+          @include custom-col(75%);
+        }
+      }
+      @media screen and (max-width: 450px){
+        padding : 0 1rem;
+      }
+      .wrapper {
+        padding: 1rem;
+        box-shadow: 3px 3px 3px transparentize(black, .7);
+        background-color: #fff;
+        min-height: 230px;
+        display: flex;
+        align-items: stretch;
+        @media screen and (max-width: 955px) {
+          min-height: 280px;
+        }
+        @media screen and (min-width: 450px) and (max-width: $tablet-min) {
+          min-height: 230px;
+        }
+      }
+      &__logo.row { // Overriding addon
+        height: 90px;
+        @include flex-middle(y);
+        img {
+          max-height: 100%;
+          max-width: 60%;
+          display: block;
+        }
+      }
+      &__description {
+        text-align: left;
+        p {
+          margin-top: 15px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }// end main-nav
+  &__second-nav {
+    padding: 20px 0;
+    h2.row {
+      text-align: center;
+      margin-bottom: 1.3em;
+      font-size: 24px;
+      font-family: $font-light;
+      height: auto;
+    }
+    .link {
+      display: flex;
+      white-space: pre;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      text-overflow:  ellipsis;
+      @media screen and (max-width: 470px) {
+        padding: 0 1rem;
+      }
+      @media screen and (min-width: 1196px) {
+        &:nth-child(n+3) {
+          margin-top: 20px;
+        }
+      }
+      @media screen and (max-width: 1195px) {
+        margin-top: 20px;
+        &:first-child {
+          margin-top: 0;
+        }
+        &.col-custom {
+          @include custom-col(100%);
+        }
+        justify-content: center;
+      }
+      @media screen and (max-width: 585px) {
+        &.col-custom {
+          @include custom-col(80%);
+        }
+      }
+      &__label {
+        color: $yellow;
+        font-family: $font-semibold;
+      }
+      &__desc {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    } //end link
+  }
+  &__third-nav {
+      background-color: lighten($light-grey,17%);
+      padding: 2rem;
+    .link {
+      height: 70px;
+      @media screen and (min-width: 1166px) {
+        &:nth-child(n+4) {
+          margin-top: 20px;
+        }
+      }
+      @media screen and (min-width: #{$mobile+1px}) and (max-width: 1165px) {
+        &.col-custom {
+          @include custom-col(50%);
+        }
+        &:nth-child(n+3) {
+          margin-top: 20px;
+        }
+      }
+      @media screen and (min-width: 451px) and (max-width: $mobile) {
+        &.col-custom {
+          @include custom-col(80%);
+        }
+      }
+      @media screen and (max-width: $mobile) {
+        margin-top: 20px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      &__wrapper {
+        padding: 0 1rem;
+        box-shadow: 3px 3px 3px transparentize(black, .7);
+        background-color: #fff;
+        @include link-off();
+      }
+      &__logo {
+        flex-grow: 0;
+        height: 100%;
+        @include flex-middle(y);
+        img {
+          height: 60px;
+          @media screen and (max-width: 375px) {
+            height: 35px;
+          }
+        }
+      }
+      &__label {
+        font-size: 27px;
+        @media screen and (max-width: 1340px) {
+          font-size: 23px;
+        }
+        @media screen and (max-width: 1220px) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

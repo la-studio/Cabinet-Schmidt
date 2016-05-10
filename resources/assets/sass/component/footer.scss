@@ -1,7 +1,7 @@
 .footer {
-  @include reset();
+  padding: 0 1.5rem;
   background-color: $blue;
-  height: 75px;
+  min-height: 75px;
   &__call-action { // Accès client bouton
     color: $yellow;
     font-family: $font-semibold;
@@ -22,9 +22,82 @@
     }
   } // end call-action
   &__credits {
+    @include reset();
     color: white;
     font-size: 14px;
     @include flex-middle(y,column);
     flex-direction: column;
+    .row.middle-xs { // Overriding addon on grid. (row child of col have 100% height)
+      height: auto;
+    }
+    @media screen and (max-width: 650px) {
+      &.col-custom {
+        @include custom-col(100%);
+        margin-bottom: 20px;
+        margin-top: 10px;
+      }
+      .row {
+        justify-content: center;
+      }
+    }
+    .upper {
+      &__link {
+        color: $yellow;
+        text-decoration: none;
+      }
+    }
+    .lower {
+
+    }
+  } // end credits
+  &__socials {
+    @include reset();
+    color: white;
+    @include flex-middle(y);
+    justify-content: flex-end;
+    @media screen and (max-width: 650px) {
+      &.col-custom {
+        @include custom-col(100%);
+        @include flex-middle(x);
+        margin-bottom: 10px;
+      }
+    }
+    a {
+      @include link-off();
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    > .row {
+      @media screen and (max-width: 1150px) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+  &__action {
+    @include flex-middle(y);
+    margin-right: 10px;
+    @media screen and (max-width: 1150px) {
+      margin-bottom: 5px;
+    }
+    @media screen and (max-width: 650px) {
+      margin-bottom: 10px;
+    }
+  }
+  &__icon {
+    @include colorToBg(white, $blue,.3s,ease);
+    @include flex-middle(xy);
+    width: 35px;
+    height: 35px;
+    @media screen and (max-width: 1150px) {
+      width: 30px;
+      height: 30px;
+    }
+    border: 1px solid white;
+    i {
+      font-size: 19px;
+    }
   }
 }

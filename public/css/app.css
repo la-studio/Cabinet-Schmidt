@@ -369,7 +369,11 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     position: relative;
     margin-top: 7px;
     -webkit-transform: translate3d(-25px, 0, 0);
-    transform: translate3d(-25px, 0, 0); }
+    transform: translate3d(-25px, 0, 0);
+    opacity: 0;
+    transition: opacity .5s ease .1s; }
+    .toolbox__label .row.label {
+      height: auto; }
     .toolbox__label .upper-label {
       font-size: 23px; }
     .toolbox__label .lower-label {
@@ -380,7 +384,10 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     width: 100%; }
     .toolbox__list a {
       text-decoration: none;
-      color: inherit; }
+      color: inherit;
+      transition: color .2s ease; }
+      .toolbox__list a:hover {
+        color: #e7b116; }
   .toolbox__item {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -391,7 +398,23 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     align-items: center;
     padding-left: 15px;
     border-top: 1px solid #e7b116;
-    height: 30px; }
+    height: 30px;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    transition: -webkit-transform .6s ease-in-out;
+    transition: transform .6s ease-in-out; }
+    .toolbox__item:nth-child(2) {
+      transition-delay: 0.06s;
+      -webkit-transform: translate3d(calc(100% + 30px), 0, 0);
+      transform: translate3d(calc(100% + 30px), 0, 0); }
+    .toolbox__item:nth-child(3) {
+      transition-delay: 0.09s;
+      -webkit-transform: translate3d(calc(100% + 45px), 0, 0);
+      transform: translate3d(calc(100% + 45px), 0, 0); }
+    .toolbox__item:nth-child(4) {
+      transition-delay: 0.12s;
+      -webkit-transform: translate3d(calc(100% + 60px), 0, 0);
+      transform: translate3d(calc(100% + 60px), 0, 0); }
   .toolbox:hover {
     background-color: white; }
   .toolbox:hover svg path {
@@ -401,7 +424,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     -webkit-transform: translate3d(-250px, 0, 0);
     transform: translate3d(-250px, 0, 0); }
     .toolbox--open-x .toolbox__label {
-      left: 0; }
+      left: 0;
+      opacity: 1; }
     .toolbox--open-x svg {
       -webkit-transform: translate3d(200px, 0, 0);
       transform: translate3d(200px, 0, 0); }
@@ -409,12 +433,17 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         fill: #e7b116; }
   .toolbox--open-y {
     height: 200px; }
+    .toolbox--open-y .toolbox__item {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+  .toolbox--delay .toolbox__item {
+    transition: -webkit-transform .7s ease-in-out .5s;
+    transition: transform .7s ease-in-out .5s; }
 
 .footer {
-  padding: 0;
-  margin: 0;
+  padding: 0 1.5rem;
   background-color: #283466;
-  height: 75px; }
+  min-height: 75px; }
   .footer__call-action {
     color: #e7b116;
     font-family: "proximanova-semibold";
@@ -440,6 +469,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       background-color: #e7b116;
       color: white; }
   .footer__credits {
+    padding: 0;
+    margin: 0;
     color: white;
     font-size: 14px;
     display: -webkit-flex;
@@ -452,6 +483,104 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
+    .footer__credits .row.middle-xs {
+      height: auto; }
+    @media screen and (max-width: 650px) {
+      .footer__credits.col-custom {
+        -ms-flex-preferred-size: 100%;
+        -webkit-flex-basis: 100%;
+        flex-basis: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+        margin-top: 10px; }
+      .footer__credits .row {
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center; } }
+    .footer__credits .upper__link {
+      color: #e7b116;
+      text-decoration: none; }
+  .footer__socials {
+    padding: 0;
+    margin: 0;
+    color: white;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+    @media screen and (max-width: 650px) {
+      .footer__socials.col-custom {
+        -ms-flex-preferred-size: 100%;
+        -webkit-flex-basis: 100%;
+        flex-basis: 100%;
+        max-width: 100%;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        float: none;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-bottom: 10px; } }
+    .footer__socials a {
+      text-decoration: none;
+      color: inherit;
+      margin-right: 10px; }
+      .footer__socials a:last-child {
+        margin-right: 0; }
+    @media screen and (max-width: 1150px) {
+      .footer__socials > .row {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center; } }
+  .footer__action {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-right: 10px; }
+    @media screen and (max-width: 1150px) {
+      .footer__action {
+        margin-bottom: 5px; } }
+    @media screen and (max-width: 650px) {
+      .footer__action {
+        margin-bottom: 10px; } }
+  .footer__icon {
+    transition: background-color 0.3s, color 0.3s ease;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid white; }
+    .footer__icon:hover {
+      background-color: white;
+      color: #283466; }
+    @media screen and (max-width: 1150px) {
+      .footer__icon {
+        width: 30px;
+        height: 30px; } }
+    .footer__icon i {
+      font-size: 19px; }
 
 .home__slider {
   height: calc(100vh - 100px);
@@ -736,13 +865,13 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         border-radius: 2px;
         box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.4);
         margin-top: 20px;
-        min-height: 180px; }
+        height: 180px; }
         @media screen and (max-width: 1065px) {
           .home__actus .actus-articles__cabinet .article {
-            min-height: 187px; } }
+            height: 187px; } }
         @media screen and (max-width: 920px) {
           .home__actus .actus-articles__cabinet .article {
-            min-height: 209px; } }
+            height: 209px; } }
         .home__actus .actus-articles__cabinet .article__wrapper {
           padding-right: 10px; }
         .home__actus .actus-articles__cabinet .article__name {
@@ -770,17 +899,17 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
           max-width: 100%;
           padding: 0 20px; } }
       .home__actus .actus-articles__entreprises .article {
-        min-height: 180px;
+        height: 180px;
         background-color: #fff;
         margin-top: 20px;
         box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.4);
         max-width: 700px; }
         @media screen and (max-width: 1065px) {
           .home__actus .actus-articles__entreprises .article {
-            min-height: 187px; } }
+            height: 187px; } }
         @media screen and (max-width: 920px) {
           .home__actus .actus-articles__entreprises .article {
-            min-height: 209px; } }
+            height: 209px; } }
         @media screen and (min-width: 1600px), screen and (max-width: 840px) {
           .home__actus .actus-articles__entreprises .article {
             max-width: none; } }
@@ -1306,6 +1435,7 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-image: url("/images/cover-actu.jpg"); }
 
 .actualites__banner {
@@ -1329,6 +1459,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
   .actualites .gallery__head {
     text-align: center;
     text-transform: uppercase; }
+    .actualites .gallery__head.row {
+      height: auto; }
     @media screen and (max-width: 430px) {
       .actualites .gallery__head {
         padding: 0 20px; } }
@@ -1336,6 +1468,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     list-style: none;
     margin: 0;
     padding: 30px 0; }
+    .actualites .gallery .filters.row {
+      height: auto; }
     @media screen and (min-width: 992px) and (max-width: 1310px) {
       .actualites .gallery .filters__item {
         -ms-flex-preferred-size: 33.33%;
@@ -1366,6 +1500,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       .actualites .gallery .filters__item span:hover {
         background-color: #e7b116;
         color: white; }
+  .actualites .gallery__list.row {
+    height: auto; }
   @media screen and (max-width: 767px) {
     .actualites .gallery__wrapper {
       padding: 0 20px; } }
@@ -1387,6 +1523,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         margin-bottom: 15px;
         text-align: left;
         font-family: "proximanova-semibold"; }
+        .actualites .gallery__item .article__title.row {
+          height: auto; }
       .actualites .gallery__item .article__body {
         padding-top: 0;
         margin-bottom: 15px;
@@ -1425,6 +1563,518 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         .actualites .gallery__item .article__button:hover {
           background-color: #e7b116;
           color: white; }
+
+.about__cover {
+  height: 550px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/images/cover-about.jpg"); }
+
+.about__banner {
+  padding-left: 40px;
+  letter-spacing: 0.02rem;
+  color: white;
+  background-color: #283466; }
+  @media screen and (max-width: 785px) {
+    .about__banner {
+      padding-left: 0; } }
+  .about__banner h1 {
+    margin: 0.8em 0;
+    text-align: left; }
+    @media screen and (max-width: 785px) {
+      .about__banner h1 {
+        text-align: center; } }
+
+.about__main {
+  margin: 20px 0; }
+  .about__main .presentation {
+    margin-top: 35px;
+    text-align: left; }
+    .about__main .presentation:first-child {
+      margin-top: 0; }
+    .about__main .presentation__title {
+      font-size: 22px;
+      margin-bottom: 15px;
+      font-family: "proximanova-semibold"; }
+    .about__main .presentation__body {
+      font-size: 19px;
+      white-space: pre-line;
+      padding: 0;
+      margin: 0; }
+    .about__main .presentation__icons {
+      padding: 15px 0; }
+      .about__main .presentation__icons .icon {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+        .about__main .presentation__icons .icon__picto {
+          width: 90px;
+          min-height: 90px;
+          margin-bottom: 15px;
+          background-color: orange; }
+        .about__main .presentation__icons .icon__label {
+          font-size: 20px;
+          width: 100%; }
+
+.contact__cover {
+  height: 550px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("/images/cover-contact.jpg"); }
+
+.contact__wrapper {
+  position: relative; }
+
+.contact__map {
+  max-height: 800px;
+  min-height: 100vh; }
+  @media screen and (max-width: 536px) {
+    .contact__map {
+      display: none; } }
+
+.contact .form {
+  background-color: #fff;
+  position: absolute;
+  width: 60%;
+  top: calc(50% - 200px);
+  left: 100%;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0); }
+  @media screen and (min-width: 537px) {
+    .contact .form {
+      max-width: 750px;
+      min-width: 500px; } }
+  @media screen and (max-width: 536px) {
+    .contact .form {
+      width: 100%;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      position: static; } }
+  @media screen and (min-width: 537px) {
+    .contact .form.row {
+      height: 430px; } }
+  .contact .form .col-xs-12 > .row {
+    height: auto; }
+  .contact .form__head {
+    background-color: #e7b116;
+    padding: 20px 0;
+    color: white;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .contact .form__head.row {
+      height: auto; }
+    .contact .form__head h2 {
+      text-transform: uppercase;
+      margin-bottom: 10px; }
+  .contact .form__content {
+    padding: 15px; }
+    @media screen and (min-width: 537px) {
+      .contact .form__content {
+        padding: 15px; } }
+  .contact .form__fields, .contact .form__message {
+    margin: 15px 0; }
+    .contact .form__fields .field, .contact .form__message .field {
+      height: 48px; }
+      .contact .form__fields .field--textarea, .contact .form__message .field--textarea {
+        height: 100px; }
+      @media screen and (min-width: 537px) {
+        .contact .form__fields .field:nth-child(n+3), .contact .form__message .field:nth-child(n+3) {
+          margin-top: 15px; } }
+      @media screen and (max-width: 536px) {
+        .contact .form__fields .field, .contact .form__message .field {
+          margin-top: 10px; }
+          .contact .form__fields .field.col-custom, .contact .form__message .field.col-custom {
+            -ms-flex-preferred-size: 100%;
+            -webkit-flex-basis: 100%;
+            flex-basis: 100%;
+            max-width: 100%; } }
+      .contact .form__fields .field .input, .contact .form__message .field .input {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden; }
+        .contact .form__fields .field .input__error, .contact .form__message .field .input__error {
+          position: absolute;
+          color: #b88d12;
+          top: 0;
+          right: 0;
+          padding-right: 5px;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          pointer-events: none;
+          opacity: 0;
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+          transition: opacity .2s, -webkit-transform .2s ease-out;
+          transition: opacity .2s, transform .2s ease-out;
+          font-size: 14px; }
+          .contact .form__fields .field .input__error--missing, .contact .form__message .field .input__error--missing {
+            -webkit-transform: translate3d(0, 33px, 0);
+            transform: translate3d(0, 33px, 0);
+            opacity: 1; }
+        .contact .form__fields .field .input__field, .contact .form__message .field .input__field {
+          position: relative;
+          display: block;
+          float: right;
+          border: none;
+          border-radius: 0;
+          height: 30px;
+          color: #aaa;
+          -webkit-appearance: none;
+          /* for box shadows to show on iOS */
+          width: 100%;
+          background: transparent;
+          margin-bottom: 1.5em;
+          z-index: 100;
+          opacity: 0; }
+          @media screen and (min-width: 537px) {
+            .contact .form__fields .field .input__field, .contact .form__message .field .input__field {
+              margin-bottom: 0; } }
+          .contact .form__fields .field .input__field--textarea, .contact .form__message .field .input__field--textarea {
+            height: 85px;
+            overflow: hidden; }
+          .contact .form__fields .field .input__field:focus, .contact .form__message .field .input__field:focus {
+            outline: none; }
+        .contact .form__fields .field .input__label, .contact .form__message .field .input__label {
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-align-items: center;
+          -ms-flex-align: center;
+          align-items: center;
+          padding: 0 1em;
+          height: 30px;
+          color: #696969;
+          font-family: "proximanova-semibold";
+          font-size: 70.25%;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          width: 100%;
+          position: absolute;
+          text-align: left;
+          pointer-events: none; }
+          .contact .form__fields .field .input__label--textarea, .contact .form__message .field .input__label--textarea {
+            height: 90px;
+            -webkit-align-items: flex-start;
+            -ms-flex-align: start;
+            align-items: flex-start; }
+          .contact .form__fields .field .input__label:before, .contact .form__fields .field .input__label:after, .contact .form__message .field .input__label:before, .contact .form__message .field .input__label:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            left: 0; }
+          .contact .form__fields .field .input__label:before, .contact .form__message .field .input__label:before {
+            height: 100%;
+            background: transparent;
+            top: 0;
+            -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+            transition: -webkit-transform 0.2s;
+            transition: transform 0.2s; }
+          .contact .form__fields .field .input__label:after, .contact .form__message .field .input__label:after {
+            height: 2px;
+            background-color: #A8A8A8;
+            top: 100%;
+            transition: opacity .2s, background-color .2s; }
+          .contact .form__fields .field .input__label--missing:after, .contact .form__message .field .input__label--missing:after {
+            background-color: #e7b116; }
+        .contact .form__fields .field .input__label-content, .contact .form__message .field .input__label-content {
+          position: relative;
+          display: block;
+          padding: 1.6em 0;
+          width: 100%;
+          -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+          transition: -webkit-transform 0.2s cubic-bezier(0, 0.25, 0.5, 1), color 0.2s ease, opacity 0.1s cubic-bezier(0, 0.25, 0.5, 1);
+          transition: transform 0.2s cubic-bezier(0, 0.25, 0.5, 1), color 0.2s ease, opacity 0.1s cubic-bezier(0, 0.25, 0.5, 1); }
+          .contact .form__fields .field .input__label-content--textarea, .contact .form__message .field .input__label-content--textarea {
+            padding: 0; }
+    .contact .form__fields .input__field:focus,
+    .contact .form__fields .input--filled .input__field, .contact .form__message .input__field:focus,
+    .contact .form__message .input--filled .input__field {
+      opacity: 1;
+      transition: opacity 0s 0.2s; }
+    .contact .form__fields .input__label::before,
+    .contact .form__fields .input__label::after,
+    .contact .form__fields .input__label-content,
+    .contact .form__fields .input__field:focus,
+    .contact .form__fields .input--filled .input__field, .contact .form__message .input__label::before,
+    .contact .form__message .input__label::after,
+    .contact .form__message .input__label-content,
+    .contact .form__message .input__field:focus,
+    .contact .form__message .input--filled .input__field {
+      transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1); }
+    .contact .form__fields .input__field:focus + .input__label::before,
+    .contact .form__fields .input--filled .input__label::before, .contact .form__message .input__field:focus + .input__label::before,
+    .contact .form__message .input--filled .input__label::before {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+    .contact .form__fields .input__field:focus + .input__label .input__label-content,
+    .contact .form__fields .input--filled .input__label .input__label-content, .contact .form__message .input__field:focus + .input__label .input__label-content,
+    .contact .form__message .input--filled .input__label .input__label-content {
+      color: #e7b116;
+      -webkit-transform: translate3d(0, 2.5em, 0) scale3d(0.95, 0.95, 1);
+      transform: translate3d(0, 2.5em, 0) scale3d(0.95, 0.95, 1); }
+    .contact .form__fields .input__field--textarea:focus + .input__label .input__label-content,
+    .contact .form__fields .input--filled .input__label .input__label-content, .contact .form__message .input__field--textarea:focus + .input__label .input__label-content,
+    .contact .form__message .input--filled .input__label .input__label-content {
+      color: #e7b116;
+      opacity: 0;
+      -webkit-transform: translate3d(0, 15px, 0) scale3d(0.95, 0.95, 1);
+      transform: translate3d(0, 15px, 0) scale3d(0.95, 0.95, 1); }
+  .contact .form__message {
+    resize: none; }
+    @media screen and (min-width: 768px) {
+      .contact .form__message {
+        padding: 0 1rem; } }
+    .contact .form__message textarea {
+      padding: 0 .3em;
+      overflow-y: scroll;
+      overflow-: hidden;
+      -webkit-transform: translate3d(10px, 0, 0);
+      transform: translate3d(10px, 0, 0);
+      box-sizing: border-box; }
+  .contact .form__button {
+    margin-top: 15px; }
+    .contact .form__button span {
+      color: #e7b116;
+      padding: 0 10px;
+      height: 25px;
+      border: 1px solid #e7b116;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s ease;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      float: none;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .contact .form__button span:hover {
+        background-color: #e7b116;
+        color: white; }
+
+.useful-sites__cover {
+  height: 550px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("/images/cover-useful.jpg"); }
+
+.useful-sites__banner {
+  padding: .8em 0 .8em 40px;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+  background-color: #283466;
+  color: white; }
+  @media screen and (max-width: 785px) {
+    .useful-sites__banner {
+      padding-left: 0; } }
+  .useful-sites__banner h1 {
+    padding: 0;
+    margin: 0;
+    text-align: left; }
+    @media screen and (max-width: 785px) {
+      .useful-sites__banner h1 {
+        text-align: center; } }
+
+.useful-sites__main-nav {
+  padding: 30px 0;
+  background-color: #f3f3f3; }
+  .useful-sites__main-nav .partner:nth-child(n+3) {
+    margin-top: 25px; }
+  @media screen and (min-width: 769px) {
+    .useful-sites__main-nav .partner:nth-child(n+3) {
+      margin-top: 25px; } }
+  @media screen and (max-width: 768px) {
+    .useful-sites__main-nav .partner:nth-child(n+2) {
+      margin-top: 25px; } }
+  @media screen and (min-width: 450px) and (max-width: 768px) {
+    .useful-sites__main-nav .partner.col-custom {
+      -ms-flex-preferred-size: 75%;
+      -webkit-flex-basis: 75%;
+      flex-basis: 75%;
+      max-width: 75%; } }
+  @media screen and (max-width: 450px) {
+    .useful-sites__main-nav .partner {
+      padding: 0 1rem; } }
+  .useful-sites__main-nav .partner .wrapper {
+    padding: 1rem;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    min-height: 230px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch; }
+    @media screen and (max-width: 955px) {
+      .useful-sites__main-nav .partner .wrapper {
+        min-height: 280px; } }
+    @media screen and (min-width: 450px) and (max-width: 768px) {
+      .useful-sites__main-nav .partner .wrapper {
+        min-height: 230px; } }
+  .useful-sites__main-nav .partner__logo.row {
+    height: 90px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .useful-sites__main-nav .partner__logo.row img {
+      max-height: 100%;
+      max-width: 60%;
+      display: block; }
+  .useful-sites__main-nav .partner__description {
+    text-align: left; }
+    .useful-sites__main-nav .partner__description p {
+      margin-top: 15px;
+      margin-bottom: 0; }
+
+.useful-sites__second-nav {
+  padding: 20px 0; }
+  .useful-sites__second-nav h2.row {
+    text-align: center;
+    margin-bottom: 1.3em;
+    font-size: 24px;
+    font-family: "proximanova-light";
+    height: auto; }
+  .useful-sites__second-nav .link {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    white-space: pre;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    text-overflow: ellipsis; }
+    @media screen and (max-width: 470px) {
+      .useful-sites__second-nav .link {
+        padding: 0 1rem; } }
+    @media screen and (min-width: 1196px) {
+      .useful-sites__second-nav .link:nth-child(n+3) {
+        margin-top: 20px; } }
+    @media screen and (max-width: 1195px) {
+      .useful-sites__second-nav .link {
+        margin-top: 20px;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
+        .useful-sites__second-nav .link:first-child {
+          margin-top: 0; }
+        .useful-sites__second-nav .link.col-custom {
+          -ms-flex-preferred-size: 100%;
+          -webkit-flex-basis: 100%;
+          flex-basis: 100%;
+          max-width: 100%; } }
+    @media screen and (max-width: 585px) {
+      .useful-sites__second-nav .link.col-custom {
+        -ms-flex-preferred-size: 80%;
+        -webkit-flex-basis: 80%;
+        flex-basis: 80%;
+        max-width: 80%; } }
+    .useful-sites__second-nav .link__label {
+      color: #e7b116;
+      font-family: "proximanova-semibold"; }
+    .useful-sites__second-nav .link__desc {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+
+.useful-sites__third-nav {
+  background-color: #f3f3f3;
+  padding: 2rem; }
+  .useful-sites__third-nav .link {
+    height: 70px; }
+    @media screen and (min-width: 1166px) {
+      .useful-sites__third-nav .link:nth-child(n+4) {
+        margin-top: 20px; } }
+    @media screen and (min-width: 768px) and (max-width: 1165px) {
+      .useful-sites__third-nav .link.col-custom {
+        -ms-flex-preferred-size: 50%;
+        -webkit-flex-basis: 50%;
+        flex-basis: 50%;
+        max-width: 50%; }
+      .useful-sites__third-nav .link:nth-child(n+3) {
+        margin-top: 20px; } }
+    @media screen and (min-width: 451px) and (max-width: 767px) {
+      .useful-sites__third-nav .link.col-custom {
+        -ms-flex-preferred-size: 80%;
+        -webkit-flex-basis: 80%;
+        flex-basis: 80%;
+        max-width: 80%; } }
+    @media screen and (max-width: 767px) {
+      .useful-sites__third-nav .link {
+        margin-top: 20px; }
+        .useful-sites__third-nav .link:first-child {
+          margin-top: 0; } }
+    .useful-sites__third-nav .link__wrapper {
+      padding: 0 1rem;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+      background-color: #fff;
+      text-decoration: none;
+      color: inherit; }
+    .useful-sites__third-nav .link__logo {
+      -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+      flex-grow: 0;
+      height: 100%;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      float: none;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .useful-sites__third-nav .link__logo img {
+        height: 60px; }
+        @media screen and (max-width: 375px) {
+          .useful-sites__third-nav .link__logo img {
+            height: 35px; } }
+    .useful-sites__third-nav .link__label {
+      font-size: 27px; }
+      @media screen and (max-width: 1340px) {
+        .useful-sites__third-nav .link__label {
+          font-size: 23px; } }
+      @media screen and (max-width: 1220px) {
+        .useful-sites__third-nav .link__label {
+          font-size: 20px; } }
 
 html, body {
   width: 100%;

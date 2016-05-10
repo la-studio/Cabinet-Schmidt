@@ -53,6 +53,7 @@
         display: none;
         cursor: pointer;
         padding-right: 20px;
+        -moz-transition: transform .3s $easeInOutCubic;
         transition: transform .3s $easeInOutCubic;
         @media screen and (max-width: $responsive-menu-size) {
           @include flex-middle(xy);
@@ -68,8 +69,10 @@
           height: $bar-value;
           background-color: $black;
           position: relative;
+          -moz-transition: transform .3s $easeInOutCubic;
           transition: transform .3s $easeInOutCubic;
           &:before,&:after {
+            -moz-transition: transform .3s $easeInOutCubic;
             transition: transform .3s, width .3s $easeInOutCubic;
             content: '';
             position: absolute;
@@ -111,6 +114,7 @@
           @include flex-middle(xy);
           overflow: hidden;
           a {
+            -moz-transition: transform .35s $easeInOutCubic;
             transition: transform .35s $easeInOutCubic;
             position: relative;
             min-width: 70%;
@@ -181,6 +185,7 @@
         font-family: $font-semibold;
         border-bottom: 1px solid darken($grey,20%);
         a {
+          -moz-transition: transform .3s ease;
           transition: transform .3s ease;
         }
         &:hover a{
@@ -204,6 +209,7 @@
   z-index: 10;
   cursor: pointer;
   transform: translate3d(-($visible),0,0);
+  -moz-transition: background-color .3s ease, height .5s ease,transform .3s ease;
   transition: background-color .3s ease, height .5s ease,transform .3s ease;
   box-shadow: -2px 2px 4px 0px rgba(80, 80, 80, 0.65);
   display: flex;
@@ -221,6 +227,12 @@
     position: relative;
     margin-top: 7px;
     transform: translate3d(-25px,0,0);
+    opacity: 0;
+    -moz-transition: opacity .5s ease .1s;
+    transition: opacity .5s ease .1s;
+    .row.label { // Overriding addon on grid. (row child of col have 100% height)
+      height: auto;
+    }
     .upper-label {
       font-size: 23px;
     }
@@ -234,6 +246,11 @@
     width: 100%;
     a {
       @include link-off();
+      -moz-transition: color .2s ease;
+      transition: color .2s ease;
+      &:hover {
+        color: $yellow;
+      }
     }
   }
   &__item {
@@ -241,6 +258,17 @@
     padding-left: 15px;
     border-top: 1px solid $yellow;
     height: 30px;
+    transform: translate3d(100%,0,0);
+    @for $i from 2 through 4 { // excluding first child because i don't wanna give him delay
+      $offset: $i * .03s;
+      $offset2: $i * 15px;
+      &:nth-child(#{$i}) {
+        transition-delay: $offset;
+        transform: translate3d(calc(100% + #{$offset2}),0,0);
+      }
+    };
+    -moz-transition: transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
   }
   &:hover {
     background-color: white;
@@ -253,6 +281,7 @@
     transform: translate3d(-($value),0,0);
     .toolbox__label {
       left: 0;
+      opacity: 1;
     }
     svg {
       transform: translate3d(200px,0,0);
@@ -263,5 +292,14 @@
   }
   &--open-y {
     height: 200px;
+    .toolbox__item {
+      transform: translate3d(0,0,0);
+    }
+  }
+  &--delay {
+    .toolbox__item {
+      -moz-transition: transform .7s ease-in-out .5s;
+      transition: transform .7s ease-in-out .5s;
+    }
   }
 }

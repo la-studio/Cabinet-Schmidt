@@ -1,0 +1,61 @@
+.about {
+  &__cover {
+    height: 550px;
+    @include bg-regular();
+    background-image: url('/images/cover-about.jpg');
+  }
+  &__banner {
+    padding-left: 40px;
+    letter-spacing: 0.02rem;
+    color: white;
+    background-color: $blue;
+    @media screen and (max-width: 785px) {
+      padding-left: 0;
+    }
+    h1 {
+      margin: 0.8em 0;
+      text-align: left;
+      @media screen and (max-width: 785px) {
+        text-align: center;
+      }
+    }
+  } // end banner
+  &__main {
+    margin: 20px 0;
+    .presentation {
+      margin-top: 35px;
+      text-align: left;
+      &:first-child {
+        margin-top: 0;
+      }
+      &__title {
+        font-size: 22px;
+        margin-bottom: 15px;
+        font-family: $font-semibold;
+      }
+      &__body {
+        font-size: 19px;
+        white-space: pre-line;
+        @include reset();
+      }
+      &__icons {
+        padding: 15px 0;
+        .icon {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          &__picto {
+            width: 90px;
+            min-height: 90px;
+            margin-bottom: 15px;
+            background-color: orange;
+          }
+          &__label {
+            font-size: 20px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
