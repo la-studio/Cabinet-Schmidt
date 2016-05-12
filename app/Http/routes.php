@@ -20,7 +20,8 @@ Route::get('/actus', function () {
 });
 
 Route::get('/about', function () {
-    return view('about');
+    $remove_footer = "Disappear.";
+    return view('about')->with('remove_footer',$remove_footer);
 });
 
 Route::get('/contact', function () {

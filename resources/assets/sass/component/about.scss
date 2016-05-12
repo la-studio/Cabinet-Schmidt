@@ -11,12 +11,17 @@
     color: white;
     background-color: transparentize(black, .4);
     padding-top: 100px;
-    padding-left: 30px;
     padding-right: 0;
     font-family: $font;
     overflow: hidden;
     position: relative;
     transition: flex-basis .5s $easeOutCubic,background-color .4s $easeOutCubic;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    &.row { // Overriding addon on grid. (row child of col have 100% height)
+      height: auto;
+    }
     &--extend {
       @include custom-col(100%);
       background-color: lighten(black,7%);
@@ -29,6 +34,9 @@
       &.col-custom {
         @include custom-col(100%);
       }
+    }
+    .wrapper {
+      padding-left: 30px;
     }
     &__title {
       text-transform: uppercase;
@@ -52,6 +60,8 @@
       margin-top: 20px;
       text-align: left;
       font-size: 21px;
+      min-height: 50px;
+      padding-right: 50px;
       &.row { // Overriding addon on grid. (row child of col have 100% height)
         height: auto;
       }
@@ -73,7 +83,7 @@
         animation: conclusion-slide .9s $easeOutQuint .65s forwards;
       }
     }
-    &__arrow {
+    &__mouse {
       margin-top: 60px;
       &.row { // Overriding addon on grid. (row child of col have 100% height)
         height: 90px;
@@ -83,6 +93,11 @@
         stroke: white;
         stroke-width: 3px;
         overflow: hidden;
+        opacity: 0;
+        transition: opacity .4s ease;
+        &.show {
+          opacity: 1;
+        }
         g {
           path {
             stroke: white;
@@ -103,9 +118,31 @@
           }
         }
       }
+    } // end __arrow
+    &__nav {
+      background-color: transparentize(white,0.8);
+      &.row { // Overriding addon on grid. (row child of col have 100% height)
+        height: 8px;
+      }
+      .item {
+        height: inherit;
+        &:last-child .wrapper{
+          margin-right: 0;
+        }
+        &:first-child .wrapper{
+          background-color: #fff;
+        }
+        .wrapper {
+          background-color: transparentize(white,0.5);
+          margin-right: 5px;
+        }
+      }
     }
     .arguments {
       margin-top: 30px;
+      &.row { // Overriding addon on grid. (row child of col have 100% height)
+        height: auto;
+      }
       &__list {
         @include reset();
         list-style: none;

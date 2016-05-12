@@ -9,8 +9,8 @@ About = function () {
 
 About.prototype.init = function () {
   this.imagesSuffixPath = '/images/';
-  console.log($(window).height())
   this.el = 'panel';
+  this.lastSlide = new Date();
   var suffix = this.imagesSuffixPath;
   this.slides = [
     {
@@ -22,14 +22,14 @@ About.prototype.init = function () {
     },
     {
       title: "Auprès des TPE et artisans",
-      slogan: 'Nous accompagnons des entreprises issues de différents secteurs',
+      slogan: 'Nous accompagnons des entreprises issues de différents secteurs tels que :',
       list: ['Artisanat','Commerce','Professions libérales','Loueurs de meubles','CMI','Agricole','Restauration'],
       conclusion: 'Et bien plus encore !',
       cover: suffix+'artisan.jpg'
     },
     {
       title: "Implantée dans le Grésivaudan",
-      slogan: "Implantée dans la vallée du Grésivaudan de l'axe Grenoble - Chambéry, les entreprises sont principalement issues de",
+      slogan: "Implantée dans la vallée du Grésivaudan de l'axe Grenoble - Chambéry, les entreprises sont principalement issues de :",
       list: ['Crolles','Pontcharra','Grenoble','Meylan','Voiron'],
       conclusion: 'Et dans les alentours !',
       cover: suffix+'Gresivaudan.jpg'
@@ -43,23 +43,69 @@ About.prototype.init = function () {
     }
   ];
   this.active = 1;
+
+  //Methods at init.
+  this.initFirstView();
+  this.forceScroll();
   this.enableKeyboardListener();
+  this.scrollListener();
+  this.mouseListener();
+};
+
+About.prototype.forceScroll = function () {
+  var that = this
+  setTimeout(function () {
+    if(!that.isDown()) {
+      $('html,body').animate({scrollTop: $('.header').height()}, 500);
+    }
+  },1600)
+};
+
+About.prototype.scrollListener = function () {
+  $(window).on('scroll',function () {
+    if($(this).scrollTop()>=$('.header').height()) {
+      $('.panel__mouse svg').addClass('show')
+    }
+  })
+};
+
+About.prototype.mouseListener = function () {
+  var that = this;
+  $(document).on('mousewheel',function (ev) {
+    if(that.canSlide() && that.isDown() && ev.originalEvent.wheelDelta < 0) { // ev.originalEvent.wheelDelta < 0 == Scroll down.
+     that.getNext();
+   }
+  })
+};
+
+About.prototype.isDown = function () {
+  if($('body').scrollTop()>=$('.header').height()) {
+    return true
+  } else {
+    return false
+  }
 };
 
 About.prototype.enableKeyboardListener = function () {
   var that = this;
   $(document).on('keydown',function (ev) {
+    //ev.preventDefault();
     var key = ev.keyCode || ev.which;
     if (key==39 && that.canSlide()) { // right arrow
       that.getNext();
-      that.lastSlide = new Date();
+
     }
   })
 };
 
 About.prototype.canSlide = function () {
   if(this.lastSlide) {
-    return new Date(this.lastSlide.getTime() + 2000) < new Date() ? true : false;
+    if(new Date(this.lastSlide.getTime() + 2000) < new Date()) {
+      this.lastSlide = new Date()
+      return true
+    } else {
+      return false
+    }
   } else {
     return true
   }
@@ -76,10 +122,6 @@ About.prototype.getNext = function () {
     this.active = 1;
     this.handleThisAndCall(el)
   }
-};
-
-About.prototype.defineTimeline = function (options) {
-
 };
 
 About.prototype.handleThisAndCall = function (el) {
@@ -106,7 +148,7 @@ About.prototype.handleThisAndCall = function (el) {
 };
 
 About.prototype.appendSlide = function () {
-  var that = this
+  var that = this;
   var template = '<div class="col-xs-6 col-custom panel panel--active panel--slided"></div>';
   $('.about').append(template);
   var el = $('.'+that.el+'--active'); // Don't define it before otherwise it won't catch any dom element.
@@ -115,7 +157,7 @@ About.prototype.appendSlide = function () {
 };
 
 About.prototype.appendChildren = function (el) {
-  var childrenTemplate = '<h2 class="row panel__title"></h2><div class="row panel__slogan panel__slogan--slided"></div><div class="row arguments"><ul class="arguments__list"></ul></div><div class="panel__arrow"></div>'
+  var childrenTemplate = '<div class="row wrapper"><div class="col-xs"><h2 class="row panel__title"></h2><div class="row panel__slogan panel__slogan--slided"></div><div class="row arguments"><ul class="arguments__list"></ul></div><div class="panel__arrow"></div></div></div>'
   el.append(childrenTemplate);
 };
 
@@ -128,15 +170,27 @@ About.prototype.getInfos = function (el) {
     var elemList = this.slides[this.active-1].list[i];
     el.find('.arguments__list').append('<li class="arguments__item arguments__item--slided">'+elemList+'</li>')
   }
-  if(this.slides[this.active-1].conclusion) {
-    var conclusion = this.slides[this.active-1].conclusion
-    el.append('<div class="row panel__conclusion panel__conclusion--slided"></div>');
-    el.find('.panel__conclusion').text(conclusion);
-  }
+  // if(this.slides[this.active-1].conclusion) { // Conclusion removed. I let the js here just in case.
+  //   var conclusion = this.slides[this.active-1].conclusion
+  //   el.append('<div class="row panel__conclusion panel__conclusion--slided"></div>');
+  //   el.find('.panel__conclusion').text(conclusion);
+  // }
 };
 
 About.prototype.getCover = function () {
   return this.slides[this.active-1].cover // this.active has a 1 based index, so given that js' arrays have a 0 based index, i have to decrement it of 1.
 };
 
+About.prototype.initFirstView = function () {
+  var el = $('.'+this.el+'--active'); // Don't define it before otherwise it won't catch any dom element.
+  console.log(el);
+  var title = this.slides[this.active-1].title;
+  var slogan = this.slides[this.active-1].slogan;
+  el.find('.panel__title').text(title);
+  el.find('.panel__slogan').text(slogan);
+  for (var i = 0; i < this.slides[this.active-1].list.length; i++) {
+    var elemList = this.slides[this.active-1].list[i];
+    el.find('.arguments__list').append('<li class="arguments__item arguments__item--slided">'+elemList+'</li>')
+  }
+};
 originalNav = new About();

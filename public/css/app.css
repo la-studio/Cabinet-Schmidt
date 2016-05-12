@@ -49,15 +49,15 @@
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     opacity: 1; }
-  55% {
+  35% {
     opacity: 0;
     -webkit-transform: translate3d(0, 30px, 0);
     transform: translate3d(0, 30px, 0); }
-  70% {
+  50% {
     opacity: 0;
     -webkit-transform: translate3d(0, -15px, 0);
     transform: translate3d(0, -15px, 0); }
-  80% {
+  60% {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
@@ -71,15 +71,15 @@
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     opacity: 1; }
-  55% {
+  35% {
     opacity: 0;
     -webkit-transform: translate3d(0, 30px, 0);
     transform: translate3d(0, 30px, 0); }
-  70% {
+  50% {
     opacity: 0;
     -webkit-transform: translate3d(0, -15px, 0);
     transform: translate3d(0, -15px, 0); }
-  80% {
+  60% {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
@@ -1665,14 +1665,24 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     color: white;
     background-color: rgba(0, 0, 0, 0.6);
     padding-top: 100px;
-    padding-left: 30px;
     padding-right: 0;
     font-family: "proximanova-regular";
     overflow: hidden;
     position: relative;
     transition: -webkit-flex-basis 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
     transition: -ms-flex-preferred-size 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition: flex-basis 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0.4s cubic-bezier(0.215, 0.61, 0.355, 1); }
+    transition: flex-basis 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), background-color 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .about .panel.row {
+      height: auto; }
     .about .panel--extend {
       -ms-flex-preferred-size: 100%;
       -webkit-flex-basis: 100%;
@@ -1690,6 +1700,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         -webkit-flex-basis: 100%;
         flex-basis: 100%;
         max-width: 100%; } }
+    .about .panel .wrapper {
+      padding-left: 30px; }
     .about .panel__title {
       text-transform: uppercase;
       display: -webkit-flex;
@@ -1714,7 +1726,9 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     .about .panel__slogan {
       margin-top: 20px;
       text-align: left;
-      font-size: 21px; }
+      font-size: 21px;
+      min-height: 50px;
+      padding-right: 50px; }
       .about .panel__slogan.row {
         height: auto; }
       .about .panel__slogan--slided {
@@ -1734,29 +1748,48 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         opacity: 0;
         -webkit-animation: conclusion-slide 0.9s cubic-bezier(0.23, 1, 0.32, 1) 0.65s forwards;
         animation: conclusion-slide 0.9s cubic-bezier(0.23, 1, 0.32, 1) 0.65s forwards; }
-    .about .panel__arrow {
+    .about .panel__mouse {
       margin-top: 60px; }
-      .about .panel__arrow.row {
+      .about .panel__mouse.row {
         height: 90px; }
-      .about .panel__arrow svg {
+      .about .panel__mouse svg {
         height: 70px;
         stroke: white;
         stroke-width: 3px;
-        overflow: hidden; }
-        .about .panel__arrow svg g path {
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity .4s ease; }
+        .about .panel__mouse svg.show {
+          opacity: 1; }
+        .about .panel__mouse svg g path {
           stroke: white;
           fill: white;
           stroke-width: 2px; }
-        .about .panel__arrow svg .mousewheel--animated {
+        .about .panel__mouse svg .mousewheel--animated {
           -webkit-animation: mousewheel 2s 0.3s cubic-bezier(0.23, 1, 0.32, 1) both;
           animation: mousewheel 2s 0.3s cubic-bezier(0.23, 1, 0.32, 1) both; }
-        .about .panel__arrow svg .mouse-arrow {
+        .about .panel__mouse svg .mouse-arrow {
           opacity: 0;
           transition: opacity .7s; }
-          .about .panel__arrow svg .mouse-arrow--show {
+          .about .panel__mouse svg .mouse-arrow--show {
             opacity: .8; }
+    .about .panel__nav {
+      background-color: rgba(255, 255, 255, 0.2); }
+      .about .panel__nav.row {
+        height: 8px; }
+      .about .panel__nav .item {
+        height: inherit; }
+        .about .panel__nav .item:last-child .wrapper {
+          margin-right: 0; }
+        .about .panel__nav .item:first-child .wrapper {
+          background-color: #fff; }
+        .about .panel__nav .item .wrapper {
+          background-color: rgba(255, 255, 255, 0.5);
+          margin-right: 5px; }
     .about .panel .arguments {
       margin-top: 30px; }
+      .about .panel .arguments.row {
+        height: auto; }
       .about .panel .arguments__list {
         padding: 0;
         margin: 0;
