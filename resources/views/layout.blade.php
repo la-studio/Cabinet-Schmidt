@@ -25,6 +25,9 @@
     <script type="text/javascript" src="/js/Classes/Agenda.js" ></script>
     <script type="text/javascript" src="/js/Classes/Toolbox.js"></script>
     <script type="text/javascript" src="/js/Classes/Datepicker.js"></script>
+    <script type="text/javascript" src="/js/Classes/About.js"></script>
+    <script type="text/javascript" src="/js/Classes/MouseAnimation.js"></script>
+    @if (isset($check))
     <script type="text/javascript">
     var initMaps = function () {
             var styles = [
@@ -76,6 +79,7 @@
         };
     </script>
     <script type="text/javascript" async src="http://maps.google.com/maps/api/js?v3.exp&key=AIzaSyDaqvAJy_P9DqqR8ClhZJG0L5ldEOiEYDs&callback=initMaps"></script>
+    @endif
     <script type="text/javascript" src="/js/mixitup.js"></script>
     <script type="text/javascript" src="/js/script.js"></script>
   </body>

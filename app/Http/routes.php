@@ -24,7 +24,8 @@ Route::get('/about', function () {
 });
 
 Route::get('/contact', function () {
-    return view('contact');
+    $check = "i'm here to check something.";
+    return view('contact')->with('check',$check);
 });
 
 Route::get('/sites-utiles', function () {
