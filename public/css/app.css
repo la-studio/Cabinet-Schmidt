@@ -1653,6 +1653,9 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
           background-color: #e7b116;
           color: white; }
 
+.mouse-template {
+  display: none; }
+
 .about {
   height: 100vh;
   position: relative;
@@ -1749,7 +1752,10 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         -webkit-animation: conclusion-slide 0.9s cubic-bezier(0.23, 1, 0.32, 1) 0.65s forwards;
         animation: conclusion-slide 0.9s cubic-bezier(0.23, 1, 0.32, 1) 0.65s forwards; }
     .about .panel__mouse {
-      margin-top: 60px; }
+      margin-top: 60px;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
       .about .panel__mouse.row {
         height: 90px; }
       .about .panel__mouse svg {
@@ -1758,9 +1764,22 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         stroke-width: 3px;
         overflow: hidden;
         opacity: 0;
-        transition: opacity .4s ease; }
+        -webkit-transform: translate3d(0, -50px, 0);
+        transform: translate3d(0, -50px, 0); }
+        .about .panel__mouse svg .main-shape {
+          fill: transparent; }
         .about .panel__mouse svg.show {
-          opacity: 1; }
+          transition: opacity .5s ease .2s, -webkit-transform .5s ease .2s;
+          transition: opacity .5s ease .2s, transform .5s ease .2s;
+          opacity: 1;
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
+        .about .panel__mouse svg.slided {
+          transition: opacity .5s ease .75s, -webkit-transform .5s ease .5s;
+          transition: opacity .5s ease .75s, transform .5s ease .5s;
+          opacity: 1;
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
         .about .panel__mouse svg g path {
           stroke: white;
           fill: white;

@@ -1,3 +1,6 @@
+.mouse-template {
+  display: none;
+}
 .about {
   height: 100vh; // 100 px is header's height.
   position: relative;
@@ -85,6 +88,7 @@
     }
     &__mouse {
       margin-top: 60px;
+      justify-content: center;
       &.row { // Overriding addon on grid. (row child of col have 100% height)
         height: 90px;
       }
@@ -94,9 +98,19 @@
         stroke-width: 3px;
         overflow: hidden;
         opacity: 0;
-        transition: opacity .4s ease;
+        transform: translate3d(0,-50px,0);
+        .main-shape {
+          fill: transparent;
+        }
         &.show {
+          transition: opacity .5s ease .2s, transform .5s ease .2s;
           opacity: 1;
+          transform: translate3d(0,0,0);
+        }
+        &.slided {
+          transition: opacity .5s ease .75s, transform .5s ease .5s;
+          opacity: 1;
+          transform: translate3d(0,0,0);
         }
         g {
           path {

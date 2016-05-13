@@ -42,9 +42,6 @@ $(document).ready(function () {
       $(this).parent().removeClass('input--filled');
     }
   })
-  $(document).click(function (e) {
-    console.log(e);
-  })
   $('.input__field').on('keyup keydown', function () {
     if($(this).val().trim().length!=0) {
       $(this).parent().addClass('input--filled');

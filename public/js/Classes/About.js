@@ -37,23 +37,24 @@ About.prototype.init = function () {
     {
       title: "Depuis plus de 20 ans",
       slogan: 'Le cabinet a acquis une expérience durant ses années de métier',
-      list: ['Plus de 300 clients','Plus de 3000 liasses fiscales bouclées','et des milliers de litres de café'],
+      list: ['Plus de 300 clients','Plus de 3000 liasses fiscales bouclées','Et des milliers de litres de café'],
       conclusion: 'Rejoignez nous pour faire partie de cette aventure !',
       cover: suffix+'cover-comptable.jpg'
     }
   ];
   this.active = 1;
 
-  //Methods at init.
+  //Methods executed at init.
   this.initFirstView();
   this.forceScroll();
   this.enableKeyboardListener();
   this.scrollListener();
   this.mouseListener();
+  this.loadListener();
 };
 
 About.prototype.forceScroll = function () {
-  var that = this
+  var that = this;
   setTimeout(function () {
     if(!that.isDown()) {
       $('html,body').animate({scrollTop: $('.header').height()}, 500);
@@ -63,6 +64,14 @@ About.prototype.forceScroll = function () {
 
 About.prototype.scrollListener = function () {
   $(window).on('scroll',function () {
+    if($(this).scrollTop()>=$('.header').height()) {
+      $('.panel__mouse svg').addClass('show')
+    }
+  })
+};
+
+About.prototype.loadListener = function () {
+  $(window).on('load',function () {
     if($(this).scrollTop()>=$('.header').height()) {
       $('.panel__mouse svg').addClass('show')
     }
@@ -157,7 +166,17 @@ About.prototype.appendSlide = function () {
 };
 
 About.prototype.appendChildren = function (el) {
-  var childrenTemplate = '<div class="row wrapper"><div class="col-xs"><h2 class="row panel__title"></h2><div class="row panel__slogan panel__slogan--slided"></div><div class="row arguments"><ul class="arguments__list"></ul></div><div class="panel__arrow"></div></div></div>'
+  var childrenTemplate = '<div class="row wrapper">'+
+                            '<div class="col-xs">'+
+                              '<h2 class="row panel__title"></h2>'+
+                              '<div class="row panel__slogan panel__slogan--slided"></div>'+
+                              '<div class="row arguments"><ul class="arguments__list"></ul></div>'+
+                              '<div class="row panel__mouse">'+$('.mouse-template').clone().html()+'</div>'+
+                            '</div>'+
+                          '</div>'
+  setTimeout(function () {
+    $('.panel__mouse svg').addClass('slided')
+  },50)
   el.append(childrenTemplate);
 };
 

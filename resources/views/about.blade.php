@@ -41,4 +41,7 @@
   <div class="about__responsive">
   </div>
 </main>
+<div class="mouse-template">
+  @include('about.mouse')
+</div>
 @stop

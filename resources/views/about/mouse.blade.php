@@ -1,7 +1,7 @@
 
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 53.5 103.125">
-<path stroke="#FFFFFF" stroke-miterlimit="10" d="M45.044,47.487c0,7.235-6.716,13.101-15,13.101h-5.564
+<path class="main-shape" stroke="#FFFFFF" stroke-miterlimit="10" d="M45.044,47.487c0,7.235-6.716,13.101-15,13.101h-5.564
 	c-8.284,0-15-5.865-15-13.101V18.875c0-7.235,6.716-13.1,15-13.1h5.564c8.284,0,15,5.865,15,13.1V47.487z"/>
 <g class="mousewheel">
 	<g>
