@@ -6,7 +6,7 @@
           <div class="row middle-xs between-xs">
             <h3 class="service__name">Conseil</h3>
             <div class="service__icon">
-              <svg></svg>
+              @include('home.services.icons.bulles')
             </div>
           </div>
         </div>
@@ -20,7 +20,7 @@
           <div class="row middle-xs between-xs">
             <h3 class="service__name">Accompagnement</h3>
             <div class="service__icon">
-              <svg></svg>
+              @include('home.services.icons.ordinateur')
             </div>
           </div>
         </div>
@@ -34,7 +34,7 @@
           <div class="row middle-xs between-xs">
             <h3 class="service__name">Comptabilité</h3>
             <div class="service__icon">
-              <svg></svg>
+              @include('home.services.icons.fichier')
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@
           <div class="row middle-xs between-xs">
             <h3 class="service__name">Fiscalité</h3>
             <div class="service__icon">
-              <svg></svg>
+              @include('home.services.icons.calculatrice')
             </div>
           </div>
         </div>
@@ -62,7 +62,7 @@
           <div class="row middle-xs between-xs">
             <h3 class="service__name">Social</h3>
             <div class="service__icon">
-              <svg></svg>
+              @include('home.services.icons.silhouette')
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@
           <div class="row middle-xs between-xs">
             <h3 class="service__name">Conseil</h3>
             <div class="service__icon">
-              <svg></svg>
+              @include('home.services.icons.loupe')
             </div>
           </div>
         </div>

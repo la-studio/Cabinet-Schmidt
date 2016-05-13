@@ -378,9 +378,8 @@
         }
         &__icon {
           svg {
-            width: 70px;
-            height: 70px;
-            background-color: orange;
+            width: 80px;
+            height: 80px;
           }
         }
         &__slogan {
@@ -394,6 +393,7 @@
         }
         &__description {
           @include reset();
+          text-align: left;
           @media screen and (max-width: 930px) {
             text-align: center;
           }

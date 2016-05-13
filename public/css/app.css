@@ -1158,9 +1158,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
             font-size: 25px;
             margin-bottom: 15px; } }
       .home .services__list .service__icon svg {
-        width: 70px;
-        height: 70px;
-        background-color: orange; }
+        width: 80px;
+        height: 80px; }
       .home .services__list .service__slogan {
         padding: 0;
         margin: 0;
@@ -1172,7 +1171,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
             text-align: center; } }
       .home .services__list .service__description {
         padding: 0;
-        margin: 0; }
+        margin: 0;
+        text-align: left; }
         @media screen and (max-width: 930px) {
           .home .services__list .service__description {
             text-align: center; } }
