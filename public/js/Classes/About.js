@@ -120,6 +120,11 @@ About.prototype.canSlide = function () {
   }
 };
 
+About.prototype.highlightCurrent = function () {
+  $('.panel__nav .wrapper').removeClass('wrapper--active')
+  $('.panel__nav .wrapper').eq(this.active-1).addClass('wrapper--active')
+};
+
 About.prototype.getNext = function () {
   var el = $('.'+this.el+'--active');
   var that = this;
@@ -166,6 +171,7 @@ About.prototype.appendSlide = function () {
 };
 
 About.prototype.appendChildren = function (el) {
+  var that = this;
   var childrenTemplate = '<div class="row wrapper">'+
                             '<div class="col-xs">'+
                               '<h2 class="row panel__title"></h2>'+
@@ -173,9 +179,12 @@ About.prototype.appendChildren = function (el) {
                               '<div class="row arguments"><ul class="arguments__list"></ul></div>'+
                               '<div class="row panel__mouse">'+$('.mouse-template').clone().html()+'</div>'+
                             '</div>'+
-                          '</div>'
+                          '</div>'+
+                          '<div class="row panel__nav panel__nav--slided">'+$('.nav-template').clone().html()+'</div>'
+
   setTimeout(function () {
     $('.panel__mouse svg').addClass('slided')
+    that.highlightCurrent();
   },50)
   el.append(childrenTemplate);
 };
@@ -211,5 +220,6 @@ About.prototype.initFirstView = function () {
     var elemList = this.slides[this.active-1].list[i];
     el.find('.arguments__list').append('<li class="arguments__item arguments__item--slided">'+elemList+'</li>')
   }
+  this.highlightCurrent();
 };
 originalNav = new About();

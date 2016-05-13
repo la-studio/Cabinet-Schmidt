@@ -8,6 +8,22 @@
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); } }
 
+@-webkit-keyframes nav-reveal {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
+@keyframes nav-reveal {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0); }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+
 @-webkit-keyframes slogan-slide {
   to {
     -webkit-transform: translate3d(0, 0, 0);
@@ -1653,7 +1669,7 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
           background-color: #e7b116;
           color: white; }
 
-.mouse-template {
+.mouse-template, .nav-template {
   display: none; }
 
 .about {
@@ -1793,18 +1809,31 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
           .about .panel__mouse svg .mouse-arrow--show {
             opacity: .8; }
     .about .panel__nav {
-      background-color: rgba(255, 255, 255, 0.2); }
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0); }
+      .about .panel__nav--slided {
+        -webkit-animation: nav-reveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.15s forwards;
+        animation: nav-reveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.15s forwards; }
+      .about .panel__nav--show {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0); }
       .about .panel__nav.row {
-        height: 8px; }
+        height: auto; }
       .about .panel__nav .item {
         height: inherit; }
         .about .panel__nav .item:last-child .wrapper {
           margin-right: 0; }
-        .about .panel__nav .item:first-child .wrapper {
-          background-color: #fff; }
+        .about .panel__nav .item svg {
+          height: 20px; }
         .about .panel__nav .item .wrapper {
-          background-color: rgba(255, 255, 255, 0.5);
-          margin-right: 5px; }
+          padding: 10px 0;
+          border-bottom: 8px solid white;
+          margin-right: 5px;
+          opacity: .35;
+          transition: opacity .3s ease;
+          cursor: pointer; }
+          .about .panel__nav .item .wrapper:hover, .about .panel__nav .item .wrapper--active {
+            opacity: 1; }
     .about .panel .arguments {
       margin-top: 30px; }
       .about .panel .arguments.row {

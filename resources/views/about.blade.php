@@ -10,38 +10,39 @@
           <ul class="arguments__list"></ul>
         </div>
         <div class="row center-xs panel__mouse">
-          @include('about.mouse')
+          @include('about.icons.mouse')
         </div>
       </div> {{-- end col-xs l.6 --}}
     </div>
-    <div class="row panel__nav">
-      <div class="col-xs item">
-        <div class="row wrapper">
-
+    <div class="row panel__nav panel__nav--show">
+      <div data-index="1" class="col-xs item">
+        <div class="row center-xs middle-xs wrapper">
+          @include('about.icons.team')
         </div>
       </div>
-      <div class="col-xs item">
-        <div class="row wrapper">
-
+      <div data-index="2" class="col-xs item">
+        <div class="row center-xs middle-xs wrapper">
+          @include('about.icons.head')
         </div>
       </div>
-      <div class="col-xs item">
-        <div class="row wrapper">
-
+      <div data-index="3" class="col-xs item">
+        <div class="row center-xs middle-xs wrapper">
+          @include('about.icons.map')
         </div>
       </div>
-      <div class="col-xs item">
-        <div class="row wrapper">
-
+      <div data-index="4" class="col-xs item">
+        <div class="row center-xs middle-xs wrapper">
+          @include('about.icons.worker')
         </div>
       </div>
     </div>
   </div>
   <div class="about__cover" style="background-image: url('/images/cover-about.jpg')"></div>
-  <div class="about__responsive">
-  </div>
+  {{-- <div class="about__responsive">
+  </div> --}}
 </main>
 <div class="mouse-template">
-  @include('about.mouse')
+  @include('about.icons.mouse')
 </div>
+  @include('about.nav-template') {{-- nav-template way too long. --}}
 @stop
