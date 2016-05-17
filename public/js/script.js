@@ -36,12 +36,6 @@ $(document).ready(function () {
         var swiper3 = new Swiper('.temoignages .slider',optionsSlider3);
         var sliderController = new Slider('.swiper',swiper); // Connecting Swiper to my object and initializing it.
       }
-
-      var test = new Image();
-      test.src = '/images/cover-actu.jpg';
-      test.onload = function () {
-        $('#tes').css('background-image','url("'+test.src+'")');
-      }
   //Responsive menu switch on/off. No obj because way too simple.
   $('.responsive-menu').click(function () {
     $(this).toggleClass('responsive-menu--open');

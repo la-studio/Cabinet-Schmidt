@@ -51,6 +51,7 @@ About.prototype.init = function () {
   this.scrollListener();
   this.mouseListener();
   this.loadListener();
+  this.preloadImages()
   var that = this;
   setTimeout(function () {
       that.clickListener();
@@ -207,6 +208,18 @@ About.prototype.appendSlide = function (index) {
   var el = $('.'+that.el+'--active'); // Don't define it before otherwise it won't catch any dom element.
   this.appendChildren(el,index);
   this.getInfos(el,index);
+};
+
+About.prototype.preloadImages = function () {
+  for (var i = 0; i < this.slides.length; i++) {
+    img = new Image()
+    img.src = this.slides[i].cover;
+    $('body').append('<span id="#preloader"></span>')
+    img.onload = function () {
+      $('#preloader').css('background-image','url("'+img.src+'")');
+    }
+  }
+  $('#preloader').remove();
 };
 
 About.prototype.appendChildren = function (el,index) {
