@@ -1241,6 +1241,51 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       font-size: 55px;
       top: calc(50% + 44px); }
 
+.home__temoignages {
+  overflow: hidden; }
+  .home__temoignages .row {
+    height: auto; }
+  .home__temoignages .temoignages-header__title {
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 15px; }
+  .home__temoignages .slider {
+    height: 400px;
+    margin-top: 15px;
+    position: relative; }
+    .home__temoignages .slider .temoignage {
+      margin-top: 20px; }
+      @media screen and (max-width: 767px) {
+        .home__temoignages .slider .temoignage .col-xs {
+          padding: 0 1rem; } }
+      .home__temoignages .slider .temoignage__photo span {
+        width: 80px;
+        height: 80px;
+        background-color: orange;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; }
+      .home__temoignages .slider .temoignage__body {
+        margin-top: 20px;
+        font-family: "proximanova-regular"; }
+        .home__temoignages .slider .temoignage__body:after {
+          content: '';
+          height: 2px;
+          width: 25%;
+          margin: 0 auto;
+          display: block;
+          margin-top: 20px;
+          background-color: #1d1e1c; }
+      .home__temoignages .slider .temoignage__identity {
+        margin-top: 15px;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+        .home__temoignages .slider .temoignage__identity h3 {
+          font-family: "proximanova-semibold"; }
+    .home__temoignages .slider .swiper {
+      position: relative; }
+
 .home__agenda {
   min-height: 500px;
   padding: 20px 0;
@@ -1713,12 +1758,26 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       transform: translate3d(100%, 0, 0);
       -webkit-animation: reveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.15s forwards;
       animation: reveal 0.8s cubic-bezier(0.23, 1, 0.32, 1) 0.15s forwards; }
-    @media screen and (max-width: 580px) {
+    @media screen and (max-width: 890px) {
       .about .panel.col-custom {
-        -ms-flex-preferred-size: 100%;
-        -webkit-flex-basis: 100%;
-        flex-basis: 100%;
-        max-width: 100%; } }
+        -ms-flex-preferred-size: 65%;
+        -webkit-flex-basis: 65%;
+        flex-basis: 65%;
+        max-width: 65%; } }
+    @media screen and (max-width: 750px) {
+      .about .panel.col-custom {
+        -ms-flex-preferred-size: 75%;
+        -webkit-flex-basis: 75%;
+        flex-basis: 75%;
+        max-width: 75%; } }
+    @media screen and (max-width: 580px) {
+      .about .panel {
+        padding-top: 70px; }
+        .about .panel.col-custom {
+          -ms-flex-preferred-size: 100%;
+          -webkit-flex-basis: 100%;
+          flex-basis: 100%;
+          max-width: 100%; } }
     .about .panel .wrapper {
       padding-left: 30px; }
     .about .panel__title {
@@ -1772,6 +1831,9 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center; }
+      @media screen and (max-width: 991px) {
+        .about .panel__mouse {
+          display: none; } }
       .about .panel__mouse.row {
         height: 90px; }
       .about .panel__mouse svg {
@@ -2379,6 +2441,140 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       @media screen and (max-width: 1220px) {
         .useful-sites__third-nav .link__label {
           font-size: 20px; } }
+
+.chiffres__cover {
+  height: 550px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: url("/images/cover-actu.jpg"); }
+
+.chiffres__banner {
+  padding-left: 40px;
+  text-transform: uppercase;
+  letter-spacing: 0.02rem;
+  color: white;
+  background-color: #283466; }
+  @media screen and (max-width: 785px) {
+    .chiffres__banner {
+      padding-left: 0; } }
+  .chiffres__banner h1 {
+    margin: 0.8em 0;
+    text-align: left; }
+    @media screen and (max-width: 785px) {
+      .chiffres__banner h1 {
+        text-align: center; } }
+
+.chiffres .gallery {
+  padding: 20px 0; }
+  .chiffres .gallery__head {
+    text-align: center;
+    text-transform: uppercase; }
+    .chiffres .gallery__head.row {
+      height: auto; }
+    @media screen and (max-width: 430px) {
+      .chiffres .gallery__head {
+        padding: 0 20px; } }
+  .chiffres .gallery .filters {
+    list-style: none;
+    margin: 0;
+    padding: 30px 0; }
+    .chiffres .gallery .filters.row {
+      height: auto; }
+    @media screen and (min-width: 992px) and (max-width: 1310px) {
+      .chiffres .gallery .filters__item {
+        -ms-flex-preferred-size: 33.33%;
+        -webkit-flex-basis: 33.33%;
+        flex-basis: 33.33%;
+        max-width: 33.33%; } }
+    @media screen and (max-width: 1310px) {
+      .chiffres .gallery .filters__item {
+        margin-top: 20px; } }
+    .chiffres .gallery .filters__item span {
+      margin: 0 1.5rem;
+      transition: background-color 0.3s, color 0.3s ease;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      float: none;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      color: #e7b116;
+      border: 1px solid #e7b116;
+      text-transform: uppercase;
+      cursor: pointer;
+      height: 30px; }
+      .chiffres .gallery .filters__item span:hover {
+        background-color: #e7b116;
+        color: white; }
+  .chiffres .gallery__list.row {
+    height: auto; }
+  @media screen and (max-width: 767px) {
+    .chiffres .gallery__wrapper {
+      padding: 0 20px; } }
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    .chiffres .gallery__wrapper.col-custom {
+      -ms-flex-preferred-size: 75%;
+      -webkit-flex-basis: 75%;
+      flex-basis: 75%;
+      max-width: 75%; } }
+  .chiffres .gallery__item {
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.4);
+    margin-top: 20px; }
+    .chiffres .gallery__item .image {
+      height: 210px; }
+    .chiffres .gallery__item .article {
+      min-height: 210px;
+      padding: 12px; }
+      .chiffres .gallery__item .article__title {
+        margin-bottom: 15px;
+        text-align: left;
+        font-family: "proximanova-semibold"; }
+        .chiffres .gallery__item .article__title.row {
+          height: auto; }
+      .chiffres .gallery__item .article__body {
+        padding-top: 0;
+        margin-bottom: 15px;
+        text-align: left; }
+      .chiffres .gallery__item .article__footer {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        float: none;
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+      .chiffres .gallery__item .article__date {
+        font-style: italic;
+        padding-right: 5px; }
+      .chiffres .gallery__item .article__button {
+        color: #e7b116;
+        border: 1px solid #e7b116;
+        width: 50px;
+        height: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s ease;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        float: none;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
+        .chiffres .gallery__item .article__button:hover {
+          background-color: #e7b116;
+          color: white; }
 
 html, body {
   width: 100%;

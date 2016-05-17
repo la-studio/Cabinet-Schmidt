@@ -442,6 +442,63 @@
       }
     }
   } // end partenaires-header
+  &__temoignages {
+    overflow: hidden;
+    .row {
+      height: auto;
+    }
+    .temoignages-header {
+      &__title {
+        font-size: 26px;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+      }
+    }
+    .slider {
+      height: 400px;
+      margin-top: 15px;
+      position: relative;
+      .temoignage {
+        margin-top: 20px;
+        .col-xs{
+          @media screen and (max-width: $mobile) {
+            padding: 0 1rem;
+          }
+        }
+        &__photo {
+          span {
+            width: 80px;
+            height: 80px;
+            background-color: orange;
+            @include bg-regular();
+          }
+        }
+        &__body {
+          margin-top: 20px;
+          font-family: $font;
+          &:after {
+            content: '';
+            height: 2px;
+            width: 25%;
+            margin: 0 auto;
+            display: block;
+            margin-top: 20px;
+            background-color: $black;
+          }
+        }
+        &__identity {
+          margin-top: 15px;
+          flex-direction: column;
+          h3 {
+            font-family: $font-semibold;
+          }
+        }
+      }
+      .swiper {
+        position: relative;
+      }
+    }
+  }
   &__agenda {
     min-height: 500px;
     padding: 20px 0;

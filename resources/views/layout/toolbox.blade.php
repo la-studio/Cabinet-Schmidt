@@ -16,7 +16,7 @@
   </div>
   <ul class="toolbox__list">
     <li class="toolbox__item"><a href="{{ URL::to('sites-utiles') }}">Liens utiles</a></li>
-    <li class="toolbox__item"><a href="#">Chiffres utiles</a></li>
+    <li class="toolbox__item"><a href="{{ URL::to('chiffres-utiles') }}">Chiffres utiles</a></li>
     <li class="toolbox__item"><a href="#">Simulateur</a></li>
     <li class="toolbox__item"><a href="#">FAQ</a></li>
   </ul>

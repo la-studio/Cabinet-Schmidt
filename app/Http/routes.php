@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/test', 'TemoignagesController@findAll');
+
 Route::get('/actus', function () {
     return view('actusgallery');
 });
@@ -27,6 +29,10 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     $check = "i'm here to check something.";
     return view('contact')->with('check',$check);
+});
+
+Route::get('/chiffres-utiles', function () {
+    return view('chiffres');
 });
 
 Route::get('/sites-utiles', function () {

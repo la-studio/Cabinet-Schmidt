@@ -17,6 +17,15 @@
 @import "component/about";
 @import "component/contact";
 @import "component/useful";
+@import "component/chiffres";
+
+
+//Placeholders
+%fixheight {
+  &.row {
+    height: auto;
+  }
+}
 
 //Style
 html, body {

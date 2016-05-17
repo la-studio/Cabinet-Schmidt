@@ -51,15 +51,22 @@ About.prototype.init = function () {
   this.scrollListener();
   this.mouseListener();
   this.loadListener();
+  var that = this;
+  setTimeout(function () {
+      that.clickListener();
+  },50)
+
 };
 
 About.prototype.forceScroll = function () {
   var that = this;
-  setTimeout(function () {
-    if(!that.isDown()) {
-      $('html,body').animate({scrollTop: $('.header').height()}, 500);
-    }
-  },1600)
+  if($('.about').length>0) {
+    setTimeout(function () {
+      if(!that.isDown()) {
+        $('html,body').animate({scrollTop: $('.header').height()}, 500);
+      }
+    },1600)
+  }
 };
 
 About.prototype.scrollListener = function () {
@@ -80,15 +87,29 @@ About.prototype.loadListener = function () {
 
 About.prototype.mouseListener = function () {
   var that = this;
-  $(document).on('mousewheel',function (ev) {
-    if(that.canSlide() && that.isDown() && ev.originalEvent.wheelDelta < 0) { // ev.originalEvent.wheelDelta < 0 == Scroll down.
-     that.getNext();
-   }
+  $(document).on('mousewheel DOMMouseScroll',function (ev) { // DOMMouseScroll ev too for shitty Firefox.
+    ev.delta = null;
+     if (ev.originalEvent) {
+         if (ev.originalEvent.wheelDelta) {
+           ev.delta = ev.originalEvent.wheelDelta;
+           if(that.canSlide() && that.isDown() && ev.delta < 0) { // ev.originalEvent.wheelDelta < 0 == Scroll down.
+            that.getNext();
+          }
+        } else if (ev.originalEvent.clientY && $(window).scrollTop()==$('.header').height() && ev.originalEvent.wheelDelta==undefined) {
+            if(that.canSlide() && that.isDown()) { // ev.originalEvent.wheelDelta < 0 == Scroll down.
+             that.getNext();
+           }
+           console.log(that.canSlide(),that.isDown());
+        } else {
+          console.log(ev.originalEvent,ev.originalEvent.wheelDelta==undefined,ev.originalEvent.clientY,$(window).height());
+          // Debug hook.
+        }
+     }
   })
 };
 
 About.prototype.isDown = function () {
-  if($('body').scrollTop()>=$('.header').height()) {
+  if($(document).scrollTop()>=$('.header').height()) {
     return true
   } else {
     return false
@@ -98,13 +119,44 @@ About.prototype.isDown = function () {
 About.prototype.enableKeyboardListener = function () {
   var that = this;
   $(document).on('keydown',function (ev) {
-    //ev.preventDefault();
     var key = ev.keyCode || ev.which;
     if (key==39 && that.canSlide()) { // right arrow
       that.getNext();
-
     }
   })
+};
+
+About.prototype.clickListener = function () {
+  var that = this;
+  $(document).on('click', '.panel__nav .item',function () {
+    var index = $(this).data('index');
+    if(!$(this).hasClass('current')) {
+      if(index==1) {
+        that.active = 0;
+      } else {
+        that.active = index-1;
+      }
+      setTimeout(function () { // Timeout to reach the next created DOM element, if i don't use this, the dom catched will be the dom destroyed.
+        $('.panel__nav .item').eq(that.active-1).addClass('current');
+      }, 1100);
+     console.log('active is now '+that.active+' in clickListener');
+     that.getNext()
+    }
+     // getNext will increment it.
+  })
+};
+
+About.prototype.getNext = function () {
+  var el = $('.'+this.el+'--active');
+  var that = this;
+  if(this.active>=0 && this.active<4) {
+    this.active++;
+    this.handleThisAndCall(el,that.active-1)
+    console.log('this.active is now '+this.active);
+  } else if(this.active==4) {
+    this.active = 1;
+    this.handleThisAndCall(el,that.active-1)
+  }
 };
 
 About.prototype.canSlide = function () {
@@ -120,25 +172,12 @@ About.prototype.canSlide = function () {
   }
 };
 
-About.prototype.highlightCurrent = function () {
+About.prototype.highlightCurrent = function (index) {
   $('.panel__nav .wrapper').removeClass('wrapper--active')
   $('.panel__nav .wrapper').eq(this.active-1).addClass('wrapper--active')
 };
 
-About.prototype.getNext = function () {
-  var el = $('.'+this.el+'--active');
-  var that = this;
-  if(this.active>=1 && this.active<4) {
-    this.active++;
-    this.handleThisAndCall(el)
-    console.log('this.active is now '+this.active);
-  } else if(this.active==4) {
-    this.active = 1;
-    this.handleThisAndCall(el)
-  }
-};
-
-About.prototype.handleThisAndCall = function (el) {
+About.prototype.handleThisAndCall = function (el,index) {
   var that = this;
   el.addClass(this.el+'--extend');
   $('.'+this.el+'__slogan').css('visibility','hidden')
@@ -150,27 +189,27 @@ About.prototype.handleThisAndCall = function (el) {
   },100)
   setTimeout(function () {
     $('.about__cover').addClass('about__cover--reveal')
-  },300)
+  },450)
   setTimeout(function () {
-    $('.about__cover').removeClass('about__cover--reveal').css('background-image','url("'+that.getCover()+'")');
+    $('.about__cover').removeClass('about__cover--reveal').css('background-image','url("'+that.getCover(index)+'")');
     $('.about').removeClass('about--reveal');
     $('.'+that.el+'--extend').fadeOut(500).remove();
   },700)
   setTimeout(function () {
-    that.appendSlide()
+    that.appendSlide(index)
   },850)
 };
 
-About.prototype.appendSlide = function () {
+About.prototype.appendSlide = function (index) {
   var that = this;
   var template = '<div class="col-xs-6 col-custom panel panel--active panel--slided"></div>';
   $('.about').append(template);
   var el = $('.'+that.el+'--active'); // Don't define it before otherwise it won't catch any dom element.
-  this.appendChildren(el);
-  this.getInfos(el);
+  this.appendChildren(el,index);
+  this.getInfos(el,index);
 };
 
-About.prototype.appendChildren = function (el) {
+About.prototype.appendChildren = function (el,index) {
   var that = this;
   var childrenTemplate = '<div class="row wrapper">'+
                             '<div class="col-xs">'+
@@ -184,29 +223,30 @@ About.prototype.appendChildren = function (el) {
 
   setTimeout(function () {
     $('.panel__mouse svg').addClass('slided')
-    that.highlightCurrent();
+    that.highlightCurrent(index);
+    console.log(index);
   },50)
   el.append(childrenTemplate);
 };
 
-About.prototype.getInfos = function (el) {
-  var title = this.slides[this.active-1].title;
-  var slogan = this.slides[this.active-1].slogan;
+About.prototype.getInfos = function (el,index) {
+  var title = this.slides[index].title;
+  var slogan = this.slides[index].slogan;
   el.find('.panel__title').text(title);
   el.find('.panel__slogan').text(slogan);
-  for (var i = 0; i < this.slides[this.active-1].list.length; i++) {
-    var elemList = this.slides[this.active-1].list[i];
+  for (var i = 0; i < this.slides[index].list.length; i++) {
+    var elemList = this.slides[index].list[i];
     el.find('.arguments__list').append('<li class="arguments__item arguments__item--slided">'+elemList+'</li>')
   }
-  // if(this.slides[this.active-1].conclusion) { // Conclusion removed. I let the js here just in case.
+  // if(this.slides[this.active-1].conclusion) { // TODO: DONT ERASE. Conclusion removed. I let the js here just in case.
   //   var conclusion = this.slides[this.active-1].conclusion
   //   el.append('<div class="row panel__conclusion panel__conclusion--slided"></div>');
   //   el.find('.panel__conclusion').text(conclusion);
   // }
 };
 
-About.prototype.getCover = function () {
-  return this.slides[this.active-1].cover // this.active has a 1 based index, so given that js' arrays have a 0 based index, i have to decrement it of 1.
+About.prototype.getCover = function (index) {
+  return this.slides[index].cover // this.active has a 1 based index, so given that js' arrays have a 0 based index, i have to decrement it of 1.
 };
 
 About.prototype.initFirstView = function () {
@@ -220,6 +260,6 @@ About.prototype.initFirstView = function () {
     var elemList = this.slides[this.active-1].list[i];
     el.find('.arguments__list').append('<li class="arguments__item arguments__item--slided">'+elemList+'</li>')
   }
-  this.highlightCurrent();
+  this.highlightCurrent(this.active-1);
 };
 originalNav = new About();

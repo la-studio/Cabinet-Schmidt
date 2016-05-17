@@ -25,12 +25,12 @@
           Slider
         </div>
       </div>
-      <div class="swiper-button-prev">
+      {{-- <div class="swiper-button-prev">
         <i class="fa fa-angle-left" aria-hidden="true"></i>
       </div>
       <div class="swiper-button-next">
         <i class="fa fa-angle-right" aria-hidden="true"></i>
-      </div>
+      </div> --}}
     </div>
   </div>
 </div>

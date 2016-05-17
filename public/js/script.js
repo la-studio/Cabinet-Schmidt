@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
   var optionsSlider = {
       pagination: '.swiper-pagination',
@@ -19,10 +20,27 @@ $(document).ready(function () {
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev'
       }
+      var optionsSlider3 = {
+          pagination: '.swiper-pagination',
+          paginationClickable: true,
+          grabCursor: true,
+          autoplay: 3000,
+          loop: true,
+          slidesPerView: 1,
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev'
+        }
       if($('.swiper').length >0 && $('.slider').length >0) {
         var swiper = new Swiper('.swiper',optionsSlider);
-        var swiper2 = new Swiper('.slider',optionsSlider)
+        var swiper2 = new Swiper('.slider',optionsSlider);
+        var swiper3 = new Swiper('.temoignages .slider',optionsSlider3);
         var sliderController = new Slider('.swiper',swiper); // Connecting Swiper to my object and initializing it.
+      }
+
+      var test = new Image();
+      test.src = '/images/cover-actu.jpg';
+      test.onload = function () {
+        $('#tes').css('background-image','url("'+test.src+'")');
       }
   //Responsive menu switch on/off. No obj because way too simple.
   $('.responsive-menu').click(function () {
