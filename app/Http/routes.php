@@ -10,16 +10,11 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
-Route::get('/', function () {
-    return view('home');
-});
-
 Route::get('/test', 'TemoignagesController@findAll');
 
-Route::get('/actus', function () {
-    return view('actusgallery');
-});
+Route::get('/', 'HomeController@index');
+
+Route::get('/actus', 'ActusController@index');
 
 Route::get('/about', function () {
     $remove_footer = "Disappear.";

@@ -8,24 +8,18 @@
       <div class="row center-lg">
         <section class="col-custom col-md-5 col-sm-5 col-xs-12 actus-articles__cabinet">
           <h3 class="actus-articles__header">L'actualité du cabinet</h3>
-          <article class="row center-lg middle-xs article">
-              <div class="article__wrapper"> <!-- wrapper is here to center content into the defined height box without stretch elements on sides and middle. -->
-                <h4 class="article__name">Le cabinet Schmidt ferme cet été</h4>
-                <p class="article__body">
-                  Fermeture des portes le 10 août,nous vous retrouvons le lundi 25 août.Bonnes vacances !
-                </p>
-                <span class="article__date">Publié le 25/03/2016</span>
-              </div>
-          </article>
-          <article class="row center-lg middle-xs article">
-              <div class="article__wrapper"> <!-- wrapper is here to center content into the defined height box without stretch elements on sides and middle. -->
-                <h4 class="article__name">Le cabinet Schmidt ferme cet été</h4>
-                <p class="article__body">
-                  Fermeture des portes le 10 août,nous vous retrouvons le lundi 25 août.Bonnes vacances !
-                </p>
-                <span class="article__date">Publié le 25/03/2016</span>
-              </div>
-          </article>
+          {{-- {{dd($data['articles'])}} --}}
+          @foreach ($data['articles'] as $article)
+            <article class="row center-lg middle-xs article">
+                <div class="article__wrapper"> <!-- wrapper is here to center content into the defined height box without stretch elements on sides and middle. -->
+                  <h4 class="article__name">{{$article->title}}</h4>
+                  <p class="article__body">
+                    {{$article->content}}
+                  </p>
+                  <span class="article__date">Publié le {{$article->created_at}}</span>
+                </div>
+            </article>
+          @endforeach
         </section>
         <section class="col-custom col-md-7 col-sm-7 col-xs-12 actus-articles__entreprises">
           <h3 class="actus-articles__header">L'actualité des TPE-PME</h3>

@@ -3,7 +3,7 @@
     <header class="col-xs-12 temoignages-header">
       <h2 class="temoignages-header__title">Ils nous font confiance</h2>
     </header>
-    <div class="col-xs-12 slider">
+    <div id="slider-temoignage" class="col-xs-12 slider">
       <div class="swiper-wrapper">
         <div class="swiper-slide temoignage">
           <div class="row center-xs">

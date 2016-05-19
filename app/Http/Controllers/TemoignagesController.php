@@ -10,7 +10,7 @@ use App\Http\Requests;
 class TemoignagesController extends Controller
 {
     public function findAll() {
-        $temoignages = DB::table('temoignages')->get();
-        return view('home');
+        $temoignages = Temoignage::all();
+        return $temoignages;
     }
 }
