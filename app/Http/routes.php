@@ -69,12 +69,6 @@ Route::group(['middleware' => ['web']], function () {
         $directoryName = 'ec_actu_tout_flux';
         $fileName = 'ec_flux_actualites.xml';
         $file = Storage::disk('ftp')->get($directoryName.'/'.$fileName);
-        //$file = FTP::connection()->readFile($directoryName.'/'.$fileName);
-        
-        //dd($file);
         Storage::disk('local')->put($fileName, $file);
-
-        //dd(gettype($file));
-        // dd(Storage::disk('public')->put($fileName, $file));
     });
 });
