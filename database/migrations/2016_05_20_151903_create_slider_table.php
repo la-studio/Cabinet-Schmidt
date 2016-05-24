@@ -17,8 +17,9 @@ class CreateSliderTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->string('cover');
-            $table->string('button-link');
-            $table->string('button-name');
+            $table->string('button_link');
+            $table->string('button_name');
+            $table->integer('index');
             $table->timestamps();
         });
     }

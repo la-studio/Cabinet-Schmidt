@@ -16,5 +16,8 @@
       </div>
     </div>
   @endforeach
+  <div class="col-xs-12 partenaire-add">
+    <a href="/admin/partenaire/create"><span>Ajouter un partenaire</span></a>
+  </div>
 </div>
 @stop

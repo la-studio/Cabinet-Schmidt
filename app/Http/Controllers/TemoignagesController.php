@@ -39,21 +39,22 @@ class TemoignagesController extends Controller
     {
         return view('admin.new.temoignage');
     }
-    public function update(Request $request, Temoignage $id)
+    public function update(Request $request, $id)
     {
+        $temoignage = Temoignage::find($id);
         if(!is_null($request->photo)) {
             $file = $request->photo;
             $destinationPath = public_path().'/images/partenaires';
             $filename        = $file->getClientOriginalName();
             $uploadSuccess   = $file->move($destinationPath, $filename);
-            $id->logo = "/images/partenaires/".$filename;
-            $id->content = $request->content;
-            $id->person_job = $request->person_job;
-            $id->person_identity = $request->person_identity;
-            $id->update();
+            $temoignage->logo = "/images/partenaires/".$filename;
+            $temoignage->content = $request->content;
+            $temoignage->person_job = $request->person_job;
+            $temoignage->person_identity = $request->person_identity;
+            $temoignage->save();
             return redirect('/admin/temoignages');
         } else {
-            $id->update($request->all());
+            $temoignage->update($request->all());
             return redirect('/admin/temoignages');
         }
     }
