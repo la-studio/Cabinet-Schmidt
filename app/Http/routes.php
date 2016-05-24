@@ -26,6 +26,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('temoignage/edit/{id}', 'TemoignagesController@show');
         Route::delete('temoignage/delete/{id}','TemoignagesController@destroy');
         Route::post('temoignage/store', 'TemoignagesController@store');
+        Route::patch('temoignage/update/{id}', 'TemoignagesController@update');
         Route::get('temoignage/create', 'TemoignagesController@create');
         //Slider
         Route::get('slider', 'SliderController@index');

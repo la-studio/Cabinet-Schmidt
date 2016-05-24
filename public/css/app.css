@@ -2638,6 +2638,10 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
 .admin .admin-content .temoignages-list .row.row {
   height: auto; }
 
+.admin .admin-content .temoignage img {
+  max-width: 75%;
+  max-height: 50vh; }
+
 .admin .admin-content .temoignage-create {
   margin-top: 30px; }
 

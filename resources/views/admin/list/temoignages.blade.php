@@ -22,6 +22,7 @@
             {{csrf_field()}}
             <button type="submit" name="button">Delete</button>
           </form>
+          <a href="/admin/temoignage/edit/{{$temoignage->id}}"><span>Edit</span></a>
         </div>
       </div>
     @endforeach

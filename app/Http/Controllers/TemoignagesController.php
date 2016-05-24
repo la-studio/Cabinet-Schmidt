@@ -26,20 +26,34 @@ class TemoignagesController extends Controller
     }
     public function store(Request $request)
     {
-        $file = $request->file;
-        $destinationPath = public_path().'/images/partenaires';
+        $file = $request->photo;
+        $destinationPath = public_path()."/images/partenaires";
         $filename        = $file->getClientOriginalName();
         $uploadSuccess   = $file->move($destinationPath, $filename);
         $temoignage = new Temoignage($request->all());
-        // $temoignage->content = $request->content;
-        // $temoignage->person_job = $request->person_job;
-        // $temoignage->person_identity = $request->person_identity;
-        // $temoignage->logo = $destinationPath;
+        $temoignage->logo = "/images/partenaires/".$filename; // Filling this property manually
         $temoignage->save();
         return redirect('/admin/temoignages');
     }
     public function create()
     {
         return view('admin.new.temoignage');
+    }
+    public function update(Request $request, Temoignage $id)
+    {
+        if(!is_null($request->photo)) {
+            $file = $request->photo;
+            $destinationPath = public_path().'/images/partenaires';
+            $filename        = $file->getClientOriginalName();
+            $uploadSuccess   = $file->move($destinationPath, $filename);
+            $id->logo = "/images/partenaires/".$filename;
+            $id->content = $request->content;
+            $id->person_job = $request->person_job;
+            $id->person_identity = $request->person_identity;
+            $id->update();
+            return redirect('/admin/temoignages');
+        } else {
+            $id->update($request->all());
+        }
     }
 }

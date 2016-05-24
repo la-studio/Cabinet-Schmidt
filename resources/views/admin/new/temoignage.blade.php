@@ -14,7 +14,7 @@
           <input type="text" name="person_job" placeholder="Nom de l'entreprise"/>
         </div>
         <div class="temoignage-create__field">
-          <input type="file" name="file"/>
+          <input type="file" name="photo"/>
         </div>
         <button type="submit" role="button">Enregistrer</button>
       </div>
