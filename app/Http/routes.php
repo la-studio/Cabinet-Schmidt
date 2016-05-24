@@ -69,12 +69,12 @@ Route::group(['middleware' => ['web']], function () {
         $directoryName = 'ec_actu_tout_flux';
         $fileName = 'ec_flux_actualites';
 
-        // $file = Storage::disk('ftp')->get($directoryName.'/'.$fileName.'.xml');
-        // Storage::disk('local')->put($fileName.'.xml', $file);
+        $file = Storage::disk('ftp')->get($directoryName.'/'.$fileName.'.xml');
+        Storage::disk('local')->put($fileName.'.xml', $file);
         
-        // $json = json_encode(Storage::disk('local')->get($fileName.'.xml'));
+        $json = json_encode(Storage::disk('local')->get($fileName.'.xml'));
 
-        // Storage::disk('local')->put($fileName.'.json', $json);
+        Storage::disk('local')->put($fileName.'.json', $json);
 
         $xml = XmlParser::load(storage_path('app/'.$fileName.'.xml'));
 
