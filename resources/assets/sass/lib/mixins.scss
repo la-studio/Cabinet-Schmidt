@@ -20,6 +20,12 @@
   }
 }
 
+@mixin fixheight($height) {
+  &.row {
+    height: $height;
+  }
+}
+
 @mixin addon-grid() {
   .row {
     margin: 0;
@@ -28,7 +34,7 @@
   @for $i from 1 through 12 {
     @if $i==1 {
       @each $format in $dimensions {
-        .col-#{$format} > .row {
+        .col-#{$format} .row {
           height: 100%;
         }
       }

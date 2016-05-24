@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTemoignage extends Migration
+class CreateSliderTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,13 @@ class CreateTemoignage extends Migration
      */
     public function up()
     {
-        Schema::create('temoignages', function (Blueprint $table) {
+        Schema::create('sliders', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('logo');
-            $table->string('content');
-            $table->string('person_identity');
-            $table->string('person_job');
+            $table->string('title');
+            $table->string('description');
+            $table->string('cover');
+            $table->string('button-link');
+            $table->string('button-name');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateTemoignage extends Migration
      */
     public function down()
     {
-        Schema::drop('temoignages');
+        Schema::drop('slides');
     }
 }

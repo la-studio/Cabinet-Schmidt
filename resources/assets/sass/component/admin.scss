@@ -1,0 +1,64 @@
+.admin {
+  .admin-menu {
+    background-color: $blue;
+    height: 100vh;
+    color: white;
+    &.col-custom {
+      @include custom-col(20%);
+    }
+    &__logo {
+      @include fixheight(200px);
+      background-color: #fff;
+      margin: 10px;
+    }
+    &__nav {
+      @include fixheight(auto);
+      a {
+          @include link-off;
+      }
+    }
+    &__item {
+      font-size: 18px;
+      font-family: $font-semibold;
+      letter-spacing: 0.02rem;
+      @include fixheight(40px);
+    }
+  } // end menu
+  .admin-content {
+    .articles-list {
+      .article {
+        margin-top: 20px;
+        @include link-off();
+        .wrapper {
+          border: 1px solid grey;
+          @include fixheight(inherit);
+        }
+      }
+      .article-add {
+        margin-top: 15px;
+        padding: 5px 10px;
+        color: white;
+        background-color: $yellow;
+      }
+    } // end articles-list
+    .article {
+      @include fixheight(auto);
+      margin-top: 30px;
+    }
+    .article-create {
+      margin-top: 30px;
+    }
+    .temoignages-list {
+      .row {
+        @include fixheight(auto);
+      }
+    }
+    .temoignage {
+
+    }
+    .temoignage-create {
+      margin-top: 30px;
+    }
+  }
+
+}
