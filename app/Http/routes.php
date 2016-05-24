@@ -70,13 +70,16 @@ Route::group(['middleware' => ['web']], function () {
         $fileName = 'ec_flux_actualites';
 
         $file = Storage::disk('ftp')->get($directoryName.'/'.$fileName.'.xml');
+        $file = str_replace('<lien', '<a', $file);
+        $file = str_replace('</lien>', '</a>', $file);
+
         Storage::disk('local')->put($fileName.'.xml', $file);
         
         $json = json_encode(Storage::disk('local')->get($fileName.'.xml'));
-
         Storage::disk('local')->put($fileName.'.json', $json);
 
         $xml = XmlParser::load(storage_path('app/'.$fileName.'.xml'));
+
 
         //bug d'affichage quand je display à la rache (en echo) : htmlentities fait l'affaire
         //mais de toute façon on sera pas confronté au pb avec blade et les bdd
