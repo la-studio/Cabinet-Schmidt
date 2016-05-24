@@ -9,7 +9,7 @@
         <section class="col-custom col-md-5 col-sm-5 col-xs-12 actus-articles__cabinet">
           <h3 class="actus-articles__header">L'actualité du cabinet</h3>
           {{-- {{dd($data['articles'])}} --}}
-          @foreach ($data['articles'] as $article)
+          @foreach ($articles as $article)
             <article class="row center-lg middle-xs article">
                 <div class="article__wrapper"> <!-- wrapper is here to center content into the defined height box without stretch elements on sides and middle. -->
                   <h4 class="article__name">{{$article->title}}</h4>

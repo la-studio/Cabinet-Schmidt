@@ -6,7 +6,7 @@
     </header>
     <div id="slider-partenaires" class="slider">
       <div class="swiper-wrapper">
-        @foreach ($data["partenaires"] as $partenaire)
+        @foreach ($partenaires as $partenaire)
           <div class="swiper-slide">
             <img src="{{$partenaire->logo}}" alt title="{{$partenaire->name}}" />
           </div>

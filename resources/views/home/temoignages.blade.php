@@ -5,7 +5,7 @@
     </header>
     <div id="slider-temoignage" class="col-xs-12 slider">
       <div class="swiper-wrapper">
-        @foreach ($data['temoignages'] as $temoignage)
+        @foreach ($temoignages as $temoignage)
           <div class="swiper-slide temoignage">
             <div class="row center-xs">
               <div class="col-sm-8 col-xs">

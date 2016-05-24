@@ -17,7 +17,6 @@ class HomeController extends Controller
         // I could have done Article::all() to not have to use get() but this way laravel crashs and says taht orderBy is an undefined method.
         $temoignages = Temoignage::all();
         $partenaires = Partenaire::all();
-        $data = ['articles'=>$articles,'temoignages'=> $temoignages,'partenaires'=>$partenaires];
-        return view('home')->with('data',$data);
+        return view('home', compact('articles', 'temoignages', 'partenaires'));
     }
 }
