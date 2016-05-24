@@ -24,7 +24,6 @@ class PartenairesController extends Controller
     }
     public function destroy(Partenaire $id)
     {
-        
         $id->delete();
         return redirect('/admin/partenaires');
     }
@@ -38,5 +37,21 @@ class PartenairesController extends Controller
         $temoignage->logo = "/images/partenaires/".$filename; // Filling this property manually
         $temoignage->save();
         return redirect('/admin/partenaires');
+    }
+    public function update(Request $request, Partenaire $id)
+    {
+        $partenaire = $id;
+        if(!is_null($request->photo)) {
+            $file = $request->photo;
+            $destinationPath = public_path().'/images/partenaires';
+            $filename        = $file->getClientOriginalName();
+            $uploadSuccess   = $file->move($destinationPath, $filename);
+            $partenaire->logo = "/images/partenaires/".$filename;
+            $partenaire->save();
+            return redirect('/admin/partenaires');
+        } else {
+            $partenaire->update($request->all());
+            return redirect('/admin/partenaires');
+        }
     }
 }

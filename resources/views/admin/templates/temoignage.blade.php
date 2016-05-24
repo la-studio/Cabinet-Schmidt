@@ -16,10 +16,10 @@
             <input type="text" name="content" value="{{$temoignage->content}}">
           </div>
           <div class="row center-xs">
-            <input type="text" name="content" value="{{$temoignage->person_job}}">
+            <input type="text" name="person_job" value="{{$temoignage->person_job}}">
           </div>
           <div class="row center-xs">
-            <input type="text" name="content" value="{{$temoignage->person_identity}}">
+            <input type="text" name="person_identity" value="{{$temoignage->person_identity}}">
           </div>
           <button type="submit" name="button">Enregistrer</button>
         </div>

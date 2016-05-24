@@ -2611,45 +2611,78 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     .admin .admin-menu__item.row {
       height: 40px; }
 
-.admin .admin-content .articles-list .article {
-  margin-top: 20px;
-  text-decoration: none;
-  color: inherit; }
-  .admin .admin-content .articles-list .article .wrapper {
-    border: 1px solid grey; }
-    .admin .admin-content .articles-list .article .wrapper.row {
-      height: inherit; }
-
-.admin .admin-content .articles-list .article-add {
-  margin-top: 15px;
-  padding: 5px 10px;
-  color: white;
-  background-color: #e7b116; }
-
-.admin .admin-content .article {
-  margin-top: 30px; }
-  .admin .admin-content .article.row {
+.admin .admin-content {
+  height: 100vh;
+  overflow-y: scroll; }
+  .admin .admin-content .articles-list .article {
+    margin-top: 20px;
+    text-decoration: none;
+    color: inherit; }
+    .admin .admin-content .articles-list .article .wrapper {
+      border: 1px solid grey; }
+      .admin .admin-content .articles-list .article .wrapper.row {
+        height: inherit; }
+  .admin .admin-content .articles-list .article-add {
+    margin-top: 15px;
+    padding: 5px 10px;
+    color: white;
+    background-color: #e7b116; }
+  .admin .admin-content .article {
+    margin-top: 30px; }
+    .admin .admin-content .article.row {
+      height: auto; }
+  .admin .admin-content .article-create {
+    margin-top: 30px; }
+  .admin .admin-content .temoignages-list .row.row {
     height: auto; }
-
-.admin .admin-content .article-create {
-  margin-top: 30px; }
-
-.admin .admin-content .temoignages-list .row.row {
-  height: auto; }
-
-.admin .admin-content .temoignage img {
-  max-width: 100px;
-  max-height: 100px; }
-
-.admin .admin-content .temoignage-create {
-  margin-top: 30px; }
-
-.admin .admin-content .partenaires-list img {
-  max-width: 100px;
-  max-height: 100px; }
-
-.admin .admin-content .partenaire-create {
-  margin-top: 30px; }
+  .admin .admin-content .temoignage {
+    margin-top: 15px; }
+    .admin .admin-content .temoignage img {
+      max-width: 100px;
+      max-height: 100px; }
+  .admin .admin-content .temoignage-create {
+    margin-top: 30px; }
+  .admin .admin-content .partenaires-list img {
+    max-width: 100px;
+    max-height: 100px; }
+  .admin .admin-content .partenaires-list a {
+    text-decoration: none;
+    color: inherit; }
+  .admin .admin-content .partenaires-list .partenaire-add {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .admin .admin-content .partenaires-list .partenaire-add span {
+      margin-top: 15px;
+      padding: 5px 10px;
+      color: white;
+      background-color: #e7b116; }
+  .admin .admin-content .partenaire img {
+    max-width: 100px;
+    max-height: 100px; }
+  .admin .admin-content .partenaire-create {
+    margin-top: 30px; }
+  .admin .admin-content .slider-list .slide-add {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 15px; }
+    .admin .admin-content .slider-list .slide-add span {
+      padding: 5px 10px;
+      color: white;
+      background-color: #e7b116; }
+  .admin .admin-content .slide.row {
+    height: 350px; }
+  .admin .admin-content .slide__bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
 
 .row.rowfix {
   height: auto; }

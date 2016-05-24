@@ -24,13 +24,17 @@ Route::group(['middleware' => ['web']], function () {
         // Temoignages
         Route::get('temoignages', 'TemoignagesController@index');
         Route::get('temoignage/edit/{id}', 'TemoignagesController@show');
+        Route::get('temoignage/create', 'TemoignagesController@create');
         Route::delete('temoignage/delete/{id}','TemoignagesController@destroy');
         Route::post('temoignage/store', 'TemoignagesController@store');
         Route::patch('temoignage/update/{id}', 'TemoignagesController@update');
-        Route::get('temoignage/create', 'TemoignagesController@create');
         //Slider
         Route::get('slider', 'SliderController@index');
-        Route::get('slider/{id}', 'SliderController@show');
+        Route::get('slider/edit/{id}', 'SliderController@show');
+        Route::get('slider/create', 'SliderController@create');
+        Route::delete('slider/delete/{id}','SliderController@destroy');
+        Route::post('slider/store', 'SliderController@store');
+        Route::patch('slider/update/{id}', 'SliderController@update');
 
         //Partenaires
         Route::get('partenaires', 'PartenairesController@index');
@@ -38,6 +42,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('partenaire/create', 'PartenairesController@create');
         Route::delete('partenaire/delete/{id}','PartenairesController@destroy');
         Route::post('partenaire/store', 'PartenairesController@store');
+        Route::patch('partenaire/update/{id}', 'PartenairesController@update');
     });
 
     // Common nav.
