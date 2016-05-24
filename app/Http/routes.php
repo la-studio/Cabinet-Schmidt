@@ -34,7 +34,10 @@ Route::group(['middleware' => ['web']], function () {
 
         //Partenaires
         Route::get('partenaires', 'PartenairesController@index');
-        Route::get('partenaire/{id}', 'PartenairesController@show');
+        Route::get('partenaire/edit/{id}', 'PartenairesController@show');
+        Route::get('partenaire/create', 'PartenairesController@create');
+        Route::delete('partenaire/delete/{id}','PartenairesController@destroy');
+        Route::post('partenaire/store', 'PartenairesController@store');
     });
 
     // Common nav.

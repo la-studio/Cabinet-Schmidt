@@ -1268,10 +1268,9 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       @media screen and (max-width: 767px) {
         .home__temoignages .slider .temoignage .col-xs {
           padding: 0 1rem; } }
-      .home__temoignages .slider .temoignage__photo span {
+      .home__temoignages .slider .temoignage__photo img {
         width: 80px;
         height: 80px;
-        background-color: orange;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat; }
@@ -2639,10 +2638,17 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
   height: auto; }
 
 .admin .admin-content .temoignage img {
-  max-width: 75%;
-  max-height: 50vh; }
+  max-width: 100px;
+  max-height: 100px; }
 
 .admin .admin-content .temoignage-create {
+  margin-top: 30px; }
+
+.admin .admin-content .partenaires-list img {
+  max-width: 100px;
+  max-height: 100px; }
+
+.admin .admin-content .partenaire-create {
   margin-top: 30px; }
 
 .row.rowfix {

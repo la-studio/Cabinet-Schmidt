@@ -54,6 +54,7 @@ class TemoignagesController extends Controller
             return redirect('/admin/temoignages');
         } else {
             $id->update($request->all());
+            return redirect('/admin/temoignages');
         }
     }
 }
