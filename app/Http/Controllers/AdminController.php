@@ -8,13 +8,10 @@ use App\Http\Requests;
 
 class AdminController extends Controller
 {
-    public function index() {
-        return view('admin.login');
-    }
 
-    public function login()
+    public function index()
     {
-        # code...
+        return view('admin.dashboard_body');
     }
 
 }

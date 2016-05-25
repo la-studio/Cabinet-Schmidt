@@ -5,6 +5,7 @@
 @import "lib/var";
 @import "lib/fonts";
 @import "lib/mixins";
+@import "lib/placeholders";
 @import "lib/Hillsrion";
 
 // Layout
@@ -21,16 +22,6 @@
 @import "component/admin";
 
 
-//Placeholders
-%fixheight {
-  &.row {
-    height: auto;
-  }
-}
-
-.rowfix {
-  @extend %fixheight;
-}
 
 //Style
 html, body {

@@ -24,6 +24,7 @@
             <li class="row admin-menu__item"><a href="{{ URL::to('/admin/temoignages') }}">Témoignages</a></li>
             <li class="row admin-menu__item"><a href="{{ URL::to('/admin/partenaires') }}">Partenaires</a></li>
             <li class="row admin-menu__item"><a href="{{ URL::to('/admin/slider') }}">Slider</a></li>
+            <li class="row admin-menu__item"><a href="{{ URL::to('/logout') }}">Déconnexion</a></li>
           </ul>
         </nav>
       </div>

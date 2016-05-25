@@ -124,6 +124,19 @@
   font-family: "proxima-nova-italic";
   src: url("/fonts/proxima-nova-italic.ttf"); }
 
+.admin .admin-content .slider-list .slide-add {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 15px; }
+  .admin .admin-content .slider-list .slide-add span {
+    padding: 5px 10px;
+    color: white;
+    background-color: #e7b116; }
+
 /**
  * Ismaël SEBBANE's mixins.
  * @author Ismaël
@@ -2604,12 +2617,22 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
   .admin .admin-menu__nav a {
     text-decoration: none;
     color: inherit; }
+  .admin .admin-menu__list {
+    height: calc(100vh - 260px);
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
   .admin .admin-menu__item {
     font-size: 18px;
     font-family: "proximanova-semibold";
     letter-spacing: 0.02rem; }
     .admin .admin-menu__item.row {
       height: 40px; }
+    .admin .admin-menu__item:last-child {
+      margin-top: auto; }
 
 .admin .admin-content {
   height: 100vh;
@@ -2665,27 +2688,26 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     max-height: 100px; }
   .admin .admin-content .partenaire-create {
     margin-top: 30px; }
-  .admin .admin-content .slider-list .slide-add {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-top: 15px; }
-    .admin .admin-content .slider-list .slide-add span {
-      padding: 5px 10px;
-      color: white;
-      background-color: #e7b116; }
-  .admin .admin-content .slide.row {
-    height: 350px; }
-  .admin .admin-content .slide__bg {
+  .admin .admin-content .slider-list .slide.row {
+    height: 400px; }
+  .admin .admin-content .slider-list .slide__bg {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; }
-
-.row.rowfix {
-  height: auto; }
+  .admin .admin-content .slider-list .slide__edit {
+    padding: 5px 10px;
+    color: white;
+    background-color: #e7b116; }
+  .admin .admin-content .slide__cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+    .admin .admin-content .slide__cover.row {
+      height: 60vh; }
+  .admin .admin-content .slide__form {
+    margin-top: 20px; }
+    .admin .admin-content .slide__form input {
+      margin-right: 10px; }
 
 html, body {
   width: 100%;

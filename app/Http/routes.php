@@ -11,40 +11,42 @@
 |
 */
 Route::group(['middleware' => ['web']], function () {
-
-    // Admin routes. A mettre sous middleware avec un suffixe.
-    Route::group(['prefix'=>'admin'],function(){
-        //Articles
-        Route::get('articles','ArticlesController@index');
-        Route::get('article/edit/{id}', 'ArticlesController@show');
-        Route::get('article/create', 'ArticlesController@create');
-        Route::post('article/store', 'ArticlesController@store');
-        Route::patch('article/update/{id}', 'ArticlesController@update');
-        Route::delete('article/delete/{id}','ArticlesController@destroy');
-        // Temoignages
-        Route::get('temoignages', 'TemoignagesController@index');
-        Route::get('temoignage/edit/{id}', 'TemoignagesController@show');
-        Route::get('temoignage/create', 'TemoignagesController@create');
-        Route::delete('temoignage/delete/{id}','TemoignagesController@destroy');
-        Route::post('temoignage/store', 'TemoignagesController@store');
-        Route::patch('temoignage/update/{id}', 'TemoignagesController@update');
-        //Slider
-        Route::get('slider', 'SliderController@index');
-        Route::get('slider/edit/{id}', 'SliderController@show');
-        Route::get('slider/create', 'SliderController@create');
-        Route::delete('slider/delete/{id}','SliderController@destroy');
-        Route::post('slider/store', 'SliderController@store');
-        Route::patch('slider/update/{id}', 'SliderController@update');
-
-        //Partenaires
-        Route::get('partenaires', 'PartenairesController@index');
-        Route::get('partenaire/edit/{id}', 'PartenairesController@show');
-        Route::get('partenaire/create', 'PartenairesController@create');
-        Route::delete('partenaire/delete/{id}','PartenairesController@destroy');
-        Route::post('partenaire/store', 'PartenairesController@store');
-        Route::patch('partenaire/update/{id}', 'PartenairesController@update');
+    // Admin routes.
+    Route::auth();
+    Route::group(['middleware'=> 'auth'],function() {
+        Route::group(['prefix'=>'admin'],function(){
+            //Articles
+            Route::get('/','AuthController@index');
+            Route::get('dashboard','AdminController@index');
+            Route::get('articles','ArticlesController@index');
+            Route::get('article/edit/{id}', 'ArticlesController@show');
+            Route::get('article/create', 'ArticlesController@create');
+            Route::post('article/store', 'ArticlesController@store');
+            Route::patch('article/update/{id}', 'ArticlesController@update');
+            Route::delete('article/delete/{id}','ArticlesController@destroy');
+            // Temoignages
+            Route::get('temoignages', 'TemoignagesController@index');
+            Route::get('temoignage/edit/{id}', 'TemoignagesController@show');
+            Route::get('temoignage/create', 'TemoignagesController@create');
+            Route::delete('temoignage/delete/{id}','TemoignagesController@destroy');
+            Route::post('temoignage/store', 'TemoignagesController@store');
+            Route::patch('temoignage/update/{id}', 'TemoignagesController@update');
+            //Slider
+            Route::get('slider', 'SliderController@index');
+            Route::get('slide/edit/{id}', 'SliderController@show');
+            Route::get('slider/create', 'SliderController@create');
+            Route::delete('slider/delete/{id}','SliderController@destroy');
+            Route::post('slider/store', 'SliderController@store');
+            Route::patch('slider/update/{id}', 'SliderController@update');
+            //Partenaires
+            Route::get('partenaires', 'PartenairesController@index');
+            Route::get('partenaire/edit/{id}', 'PartenairesController@show');
+            Route::get('partenaire/create', 'PartenairesController@create');
+            Route::delete('partenaire/delete/{id}','PartenairesController@destroy');
+            Route::post('partenaire/store', 'PartenairesController@store');
+            Route::patch('partenaire/update/{id}', 'PartenairesController@update');
+        });
     });
-
     // Common nav.
     Route::get('/', 'HomeController@index');
     Route::get('/actus', 'ActusController@index');
@@ -70,11 +72,15 @@ Route::group(['middleware' => ['web']], function () {
         $fileName = 'ec_flux_actualites.xml';
         $file = Storage::disk('ftp')->get($directoryName.'/'.$fileName);
         //$file = FTP::connection()->readFile($directoryName.'/'.$fileName);
-        
+
         //dd($file);
         Storage::disk('local')->put($fileName, $file);
 
         //dd(gettype($file));
         // dd(Storage::disk('public')->put($fileName, $file));
     });
+    Route::get('/logout','AuthController@logout');
+    //Route::get('/login','AuthController@login');
 });
+
+Route::get('/', 'HomeController@index');

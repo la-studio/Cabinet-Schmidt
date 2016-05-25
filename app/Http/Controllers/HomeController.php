@@ -1,13 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Temoignage;
 use App\Article;
 use App\Partenaire;
-
 class HomeController extends Controller
 {
     public function index() {

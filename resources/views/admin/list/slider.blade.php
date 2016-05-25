@@ -21,6 +21,9 @@
         <div class="row">
           <p>{{$slide->button_name}}</p>
         </div>
+        <div class="row">
+          <a href="/admin/slide/edit/{{$slide->id}}"><span class="slide__edit">Éditer ce slide</span></a>
+        </div>
       </div>
     </div>
   @endforeach

@@ -1,0 +1,10 @@
+%admin-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  span {
+    padding: 5px 10px;
+    color: white;
+    background-color: $yellow;
+  }
+}

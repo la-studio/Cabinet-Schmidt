@@ -17,11 +17,19 @@
           @include link-off;
       }
     }
+    &__list {
+      height: calc(100vh - 260px);
+      display: flex;
+      flex-direction: column;
+    }
     &__item {
       font-size: 18px;
       font-family: $font-semibold;
       letter-spacing: 0.02rem;
       @include fixheight(40px);
+      &:last-child {
+        margin-top: auto;
+      }
     }
   } // end menu
   .admin-content {
@@ -94,21 +102,31 @@
       margin-top: 30px;
     }
     .slider-list {
-      .slide-add {
-        display: flex;
-        justify-content: center;
-        margin-top: 15px;
-        span {
+      .slide {
+        @include fixheight(400px);
+        &__bg {
+          @include bg-regular;
+        }
+        &__edit {
           padding: 5px 10px;
           color: white;
           background-color: $yellow;
         }
       }
-    }
+      .slide-add {
+        @extend %admin-button;
+      }
+    } // end slider-list
     .slide {
-      @include fixheight(350px);
-      &__bg {
+      &__cover {
         @include bg-regular;
+        @include fixheight(60vh);
+      }
+      &__form {
+        margin-top: 20px;
+        input {
+          margin-right: 10px ;
+        }
       }
     }
   }
