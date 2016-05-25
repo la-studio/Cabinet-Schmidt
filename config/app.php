@@ -159,7 +159,6 @@ return [
         /*
          * Vendor Service Providers...
          */
-        Anchu\Ftp\FtpServiceProvider::class,
         Orchestra\Parser\XmlServiceProvider::class,
     ],
 

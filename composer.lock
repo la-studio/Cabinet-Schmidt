@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d32bd39867e09c649a50a9fec47fd7bd",
-    "content-hash": "49ec0c300f45ad40f93fec08b5c52061",
+    "hash": "08c2b34dca673ea29392ca0732161345",
+    "content-hash": "cf8290424dd1da381f7da08169f12c6d",
     "packages": [
         {
             "name": "anahkiasen/underscore-php",
@@ -56,50 +56,6 @@
                 "toolkit"
             ],
             "time": "2015-05-16 19:24:58"
-        },
-        {
-            "name": "anchu/ftp",
-            "version": "v2.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/harishanchu/Laravel-FTP.git",
-                "reference": "e0fec2dae79123a7d993afcafa174eb88b45146e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/harishanchu/Laravel-FTP/zipball/e0fec2dae79123a7d993afcafa174eb88b45146e",
-                "reference": "e0fec2dae79123a7d993afcafa174eb88b45146e",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/support": "5.x",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Anchu\\Ftp\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Harish Anchu",
-                    "email": "harishanchu@gmail.com"
-                }
-            ],
-            "description": "A simple Laravel 4/5 ftp service provider",
-            "keywords": [
-                "L4",
-                "ftp",
-                "l5",
-                "laravel",
-                "service provider"
-            ],
-            "time": "2015-05-16 18:29:29"
         },
         {
             "name": "classpreloader/classpreloader",
