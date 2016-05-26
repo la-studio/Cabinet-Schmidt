@@ -13,11 +13,12 @@
 Route::group(['middleware' => ['web']], function () {
     // Admin routes.
     Route::auth();
-    Route::group(['middleware'=> 'auth'],function() {
+    Route::group(['middleware'=> 'auth'],function() { // FIXME: Il faudrait merge ces deux groupes.
         Route::group(['prefix'=>'admin'],function(){
             //Articles
             Route::get('/','AuthController@index');
             Route::get('dashboard','AdminController@index');
+            Route::get('register', 'AuthController@register');
             Route::get('articles','ArticlesController@index');
             Route::get('article/edit/{id}', 'ArticlesController@show');
             Route::get('article/create', 'ArticlesController@create');
@@ -45,6 +46,12 @@ Route::group(['middleware' => ['web']], function () {
             Route::delete('partenaire/delete/{id}','PartenairesController@destroy');
             Route::post('partenaire/store', 'PartenairesController@store');
             Route::patch('partenaire/update/{id}', 'PartenairesController@update');
+            //Compétences
+            Route::get('competences', 'CompetencesController@index');
+            Route::get('competence/edit/{id}', 'CompetencesController@show');
+            Route::get('competence/create', 'CompetencesController@create');
+            Route::post('competence/store', 'CompetencesController@store');
+            Route::patch('competence/update/{id}', 'CompetencesController@update');
         });
     });
     // Common nav.
@@ -69,14 +76,12 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/ftp', function () {
         $directoryName = 'ec_actu_tout_flux';
-<<<<<<< HEAD
         $fileName = 'ec_flux_actualites.xml';
         $file = Storage::disk('ftp')->get($directoryName.'/'.$fileName);
         //$file = FTP::connection()->readFile($directoryName.'/'.$fileName);
 
         //dd($file);
         Storage::disk('local')->put($fileName, $file);
-=======
         $fileName = 'ec_flux_actualites';
 
         $file = Storage::disk('ftp')->get($directoryName.'/'.$fileName.'.xml');
@@ -84,7 +89,7 @@ Route::group(['middleware' => ['web']], function () {
         $file = str_replace('</lien>', '</a>', $file);
 
         Storage::disk('local')->put($fileName.'.xml', $file);
-        
+
         $json = json_encode(Storage::disk('local')->get($fileName.'.xml'));
         Storage::disk('local')->put($fileName.'.json', $json);
 
@@ -113,21 +118,21 @@ Route::group(['middleware' => ['web']], function () {
             echo '<br>';
 
             echo $article->content->section->section_content->asXML();
-            
+
             // foreach($article->content->section->section_content->children() as $item){
             //     echo $item;
             //     echo '<br>';
             // }
-            
+
             echo '<br>';
 
             // foreach($article->content->section->section_content->annotation as $item){
             //     echo $item->titreannotation;
             //     echo '<br>';
-            //     echo $item; 
+            //     echo $item;
             //     echo '<br>';
             // }
->>>>>>> a04f19dab2268f602369c189d1570204d3fce8e5
+
 
             // echo '<br>';
             // echo $article->tag;

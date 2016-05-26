@@ -2628,11 +2628,20 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
   .admin .admin-menu__item {
     font-size: 18px;
     font-family: "proximanova-semibold";
-    letter-spacing: 0.02rem; }
+    letter-spacing: 0.02rem;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
     .admin .admin-menu__item.row {
       height: 40px; }
     .admin .admin-menu__item:last-child {
       margin-top: auto; }
+    .admin .admin-menu__item i {
+      margin-right: 15px; }
 
 .admin .admin-content {
   height: 100vh;
@@ -2708,6 +2717,14 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     margin-top: 20px; }
     .admin .admin-content .slide__form input {
       margin-right: 10px; }
+  .admin .admin-content .competence > * {
+    margin-top: 10px; }
+  .admin .admin-content .competence textarea {
+    width: 60%;
+    height: 70px;
+    margin-top: 10px; }
+  .admin .admin-content .competence span {
+    margin-right: 10px; }
 
 html, body {
   width: 100%;

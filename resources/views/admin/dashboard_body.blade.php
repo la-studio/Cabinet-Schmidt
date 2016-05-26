@@ -1,6 +1,6 @@
 @extends('admin.dashboard-layout')
 @section('content')
 <div class>
-  Un truc
+  Bienvenue sur le panel d'administration !
 </div>
 @stop

@@ -27,8 +27,12 @@
       font-family: $font-semibold;
       letter-spacing: 0.02rem;
       @include fixheight(40px);
+      @include flex-middle(y);
       &:last-child {
         margin-top: auto;
+      }
+      i {
+        margin-right: 15px;
       }
     }
   } // end menu
@@ -127,6 +131,22 @@
         input {
           margin-right: 10px ;
         }
+      }
+    } // end slide
+    .competences-list {
+
+    }
+    .competence {
+      > * {
+        margin-top: 10px;
+      }
+      textarea {
+        width: 60%;
+        height: 70px;
+        margin-top: 10px;
+      }
+      span {
+        margin-right: 10px;
       }
     }
   }

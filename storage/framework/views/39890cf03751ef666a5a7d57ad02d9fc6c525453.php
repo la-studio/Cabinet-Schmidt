@@ -1,6 +1,6 @@
 <?php $__env->startSection('content'); ?>
 <div class>
-  Un truc
+  Bienvenue sur le panel d'administration !
 </div>
 <?php $__env->stopSection(); ?>
 

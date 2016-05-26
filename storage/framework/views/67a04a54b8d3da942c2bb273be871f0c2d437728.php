@@ -1,5 +1,5 @@
 <?php $__env->startSection('content'); ?>
-<div class="rowfix row center-xs articles-list">
+<div class="row center-xs articles-list">
   <?php foreach($articles as $article): ?>
     <div href="/admin/article/<?php echo e($article->id); ?>" class="col-sm-6 article">
       <div class="row center-xs middle-xs rowfix wrapper">

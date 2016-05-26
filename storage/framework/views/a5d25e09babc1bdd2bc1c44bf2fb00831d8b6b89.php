@@ -10,7 +10,7 @@
 
 
                         <div class="form-group<?php echo e($errors->has('name') ? ' has-error' : ''); ?>">
-                            <label class="col-md-4 control-label">Name</label>
+                            <label class="col-md-4 control-label">Nom complet</label>
 
                             <div class="col-md-6">
                                 <input type="text" class="form-control" name="name" value="<?php echo e(old('name')); ?>">
@@ -24,7 +24,7 @@
                         </div>
 
                         <div class="form-group<?php echo e($errors->has('email') ? ' has-error' : ''); ?>">
-                            <label class="col-md-4 control-label">E-Mail Address</label>
+                            <label class="col-md-4 control-label">Adresse mail</label>
 
                             <div class="col-md-6">
                                 <input type="email" class="form-control" name="email" value="<?php echo e(old('email')); ?>">
@@ -38,7 +38,7 @@
                         </div>
 
                         <div class="form-group<?php echo e($errors->has('password') ? ' has-error' : ''); ?>">
-                            <label class="col-md-4 control-label">Password</label>
+                            <label class="col-md-4 control-label">Mot de passe </label>
 
                             <div class="col-md-6">
                                 <input type="password" class="form-control" name="password">
@@ -52,7 +52,7 @@
                         </div>
 
                         <div class="form-group<?php echo e($errors->has('password_confirmation') ? ' has-error' : ''); ?>">
-                            <label class="col-md-4 control-label">Confirm Password</label>
+                            <label class="col-md-4 control-label">Confirmation du mot de passe</label>
 
                             <div class="col-md-6">
                                 <input type="password" class="form-control" name="password_confirmation">

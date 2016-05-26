@@ -1,8 +1,8 @@
 @extends('admin.dashboard-layout')
 @section('content')
-<div class="rowfix row center-xs articles-list">
+<div class="row center-xs articles-list">
   @foreach ($articles as $article)
-    <div href="/admin/article/{{$article->id}}" class="col-sm-6 article">
+    <div class="col-sm-6 article">
       <div class="row center-xs middle-xs rowfix wrapper">
         <div class="col-xs">
           <p>{{$article->title}}</p>

@@ -39,9 +39,9 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
-                    Connexion au panel d'administration
-                </a>
+                <span class="navbar-brand">
+                    Gestion d'accès au panel d'administration
+                </span>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">

@@ -5,6 +5,7 @@ use App\Http\Requests;
 use App\Temoignage;
 use App\Article;
 use App\Partenaire;
+use App\Competence;
 class HomeController extends Controller
 {
     public function index() {
@@ -14,6 +15,7 @@ class HomeController extends Controller
         // I could have done Article::all() to not have to use get() but this way laravel crashs and says taht orderBy is an undefined method.
         $temoignages = Temoignage::all();
         $partenaires = Partenaire::all();
-        return view('home', compact('articles', 'temoignages', 'partenaires'));
+        $competences = Competence::all();
+        return view('home', compact('articles', 'temoignages', 'partenaires','competences'));
     }
 }
