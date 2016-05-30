@@ -5,7 +5,7 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Storage;
 use Orchestra\Parser\Xml\Facade as XmlParser;
-use App\EchosArticle;
+use App\Echosarticle;
 use App\Reference;
 
 class RefreshFlux extends Command
