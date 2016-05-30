@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\Storage;
 use Orchestra\Parser\Xml\Facade as XmlParser;
 use App\Echosarticle;
 use App\Reference;
-use Log;
 
 class RefreshFlux extends Command
 {
@@ -131,6 +130,5 @@ class RefreshFlux extends Command
                     array_push($titles,$element->title->__toString());
                 }
             }
-            Log::info('Everything is ok');
     }
 }
