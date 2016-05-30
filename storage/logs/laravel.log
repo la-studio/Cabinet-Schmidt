@@ -1,0 +1,129 @@
+[2016-05-30 17:46:12] production.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "schedule" is not defined.
+
+Did you mean this?
+    schedule:run' in /Users/alain/Apps/Cabinet-Schmidt/vendor/symfony/console/Application.php:512
+Stack trace:
+#0 /Users/alain/Apps/Cabinet-Schmidt/vendor/symfony/console/Application.php(183): Symfony\Component\Console\Application->find('schedule')
+#1 /Users/alain/Apps/Cabinet-Schmidt/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /Users/alain/Apps/Cabinet-Schmidt/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2016-05-30 17:50:03] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Console\Commands\Storage' not found' in /Users/alain/Apps/Cabinet-Schmidt/app/Console/Commands/RefreshFlux.php:42
+Stack trace:
+#0 {main}  
+[2016-05-30 17:54:19] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Console\Commands\Storage' not found' in /Users/alain/Apps/Cabinet-Schmidt/app/Console/Commands/RefreshFlux.php:42
+Stack trace:
+#0 {main}  
+[2016-05-30 17:54:38] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Console\Commands\Storage' not found' in /Users/alain/Apps/Cabinet-Schmidt/app/Console/Commands/RefreshFlux.php:42
+Stack trace:
+#0 {main}  
+[2016-05-30 17:54:40] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Console\Commands\Storage' not found' in /Users/alain/Apps/Cabinet-Schmidt/app/Console/Commands/RefreshFlux.php:42
+Stack trace:
+#0 {main}  
+[2016-05-30 17:55:03] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Console\Commands\Storage' not found' in /Users/alain/Apps/Cabinet-Schmidt/app/Console/Commands/RefreshFlux.php:42
+Stack trace:
+#0 {main}  
+[2016-05-30 17:59:53] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Console\Commands\Storage' not found' in /Users/alain/Apps/Cabinet-Schmidt/app/Console/Commands/RefreshFlux.php:42
+Stack trace:
+#0 {main}  
+[2016-05-30 18:02:10] production.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "xmlrefresh" is not defined.' in /Users/alain/Apps/Cabinet-Schmidt/vendor/symfony/console/Application.php:512
+Stack trace:
+#0 /Users/alain/Apps/Cabinet-Schmidt/vendor/symfony/console/Application.php(183): Symfony\Component\Console\Application->find('xmlrefresh')
+#1 /Users/alain/Apps/Cabinet-Schmidt/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /Users/alain/Apps/Cabinet-Schmidt/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2016-05-30 18:02:18] production.ERROR: exception 'Symfony\Component\Console\Exception\CommandNotFoundException' with message 'Command "xmlrefresh" is not defined.' in /Users/alain/Apps/Cabinet-Schmidt/vendor/symfony/console/Application.php:512
+Stack trace:
+#0 /Users/alain/Apps/Cabinet-Schmidt/vendor/symfony/console/Application.php(183): Symfony\Component\Console\Application->find('xmlrefresh')
+#1 /Users/alain/Apps/Cabinet-Schmidt/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /Users/alain/Apps/Cabinet-Schmidt/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
+[2016-05-30 18:02:21] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Console\Commands\Storage' not found' in /Users/alain/Apps/Cabinet-Schmidt/app/Console/Commands/RefreshFlux.php:42
+Stack trace:
+#0 {main}  
+[2016-05-30 18:03:31] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Console\Commands\Storage' not found' in /Users/alain/Apps/Cabinet-Schmidt/app/Console/Commands/RefreshFlux.php:42
+Stack trace:
+#0 {main}  
+[2016-05-30 18:03:39] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Console\Commands\Storage' not found' in /Users/alain/Apps/Cabinet-Schmidt/app/Console/Commands/RefreshFlux.php:42
+Stack trace:
+#0 {main}  
+[2016-05-30 18:03:49] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Console\Commands\Storage' not found' in /Users/alain/Apps/Cabinet-Schmidt/app/Console/Commands/RefreshFlux.php:42
+Stack trace:
+#0 {main}  
+[2016-05-30 18:09:21] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Undefined constant 'App\Console\Commands\Illuminate\Support\Facades\Storage'' in /Users/alain/Apps/Cabinet-Schmidt/app/Console/Commands/RefreshFlux.php:6
+Stack trace:
+#0 {main}  
+[2016-05-30 18:09:30] production.ERROR: exception 'ErrorException' with message 'ftp_connect(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known' in /Users/alain/Apps/Cabinet-Schmidt/vendor/league/flysystem/src/Adapter/Ftp.php:99
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'ftp_connect(): ...', '/Users/alain/Ap...', 99, Array)
+#1 /Users/alain/Apps/Cabinet-Schmidt/vendor/league/flysystem/src/Adapter/Ftp.php(99): ftp_connect('', 21, 90)
+#2 /Users/alain/Apps/Cabinet-Schmidt/vendor/league/flysystem/src/Adapter/AbstractFtpAdapter.php(574): League\Flysystem\Adapter\Ftp->connect()
+#3 /Users/alain/Apps/Cabinet-Schmidt/vendor/league/flysystem/src/Adapter/Ftp.php(329): League\Flysystem\Adapter\AbstractFtpAdapter->getConnection()
+#4 /Users/alain/Apps/Cabinet-Schmidt/vendor/league/flysystem/src/Adapter/AbstractFtpAdapter.php(536): League\Flysystem\Adapter\Ftp->getMetadata('ec_actu_tout_fl...')
+#5 /Users/alain/Apps/Cabinet-Schmidt/vendor/league/flysystem/src/Filesystem.php(54): League\Flysystem\Adapter\AbstractFtpAdapter->has('ec_actu_tout_fl...')
+#6 /Users/alain/Apps/Cabinet-Schmidt/vendor/league/flysystem/src/Filesystem.php(380): League\Flysystem\Filesystem->has('ec_actu_tout_fl...')
+#7 /Users/alain/Apps/Cabinet-Schmidt/vendor/league/flysystem/src/Filesystem.php(176): League\Flysystem\Filesystem->assertPresent('ec_actu_tout_fl...')
+#8 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Filesystem/FilesystemAdapter.php(59): League\Flysystem\Filesystem->read('ec_actu_tout_fl...')
+#9 /Users/alain/Apps/Cabinet-Schmidt/app/Console/Commands/RefreshFlux.php(43): Illuminate\Filesystem\FilesystemAdapter->get('ec_actu_tout_fl...')
+#10 [internal function]: App\Console\Commands\RefreshFlux->handle()
+#11 /Users/alain/Apps/Cabinet-Schmidt/bootstrap/cache/compiled.php(1244): call_user_func_array(Array, Array)
+#12 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#13 /Users/alain/Apps/Cabinet-Schmidt/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#15 /Users/alain/Apps/Cabinet-Schmidt/vendor/symfony/console/Application.php(791): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#16 /Users/alain/Apps/Cabinet-Schmidt/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\RefreshFlux), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#17 /Users/alain/Apps/Cabinet-Schmidt/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#18 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#19 /Users/alain/Apps/Cabinet-Schmidt/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#20 {main}  
+[2016-05-30 18:10:25] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Console\Commands\XmlParser' not found' in /Users/alain/Apps/Cabinet-Schmidt/app/Console/Commands/RefreshFlux.php:59
+Stack trace:
+#0 {main}  
+[2016-05-30 18:11:56] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Console\Commands\XmlParser' not found' in /Users/alain/Apps/Cabinet-Schmidt/app/Console/Commands/RefreshFlux.php:60
+Stack trace:
+#0 {main}  
+[2016-05-30 18:12:15] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Console\Commands\XmlParser' not found' in /Users/alain/Apps/Cabinet-Schmidt/app/Console/Commands/RefreshFlux.php:60
+Stack trace:
+#0 {main}  
+[2016-05-30 18:13:27] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Console\Commands\Storage' not found' in /Users/alain/Apps/Cabinet-Schmidt/app/Console/Commands/RefreshFlux.php:43
+Stack trace:
+#0 {main}  
+[2016-05-30 18:14:02] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Illuminate\Support\Facades\XmlParser' not found' in /Users/alain/Apps/Cabinet-Schmidt/app/Console/Commands/RefreshFlux.php:60
+Stack trace:
+#0 {main}  
+[2016-05-30 18:14:53] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Console\Commands\App\EchosArticle' not found' in /Users/alain/Apps/Cabinet-Schmidt/app/Console/Commands/RefreshFlux.php:92
+Stack trace:
+#0 {main}  
+[2016-05-30 18:16:24] local.ERROR: exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Connection refused' in /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:55
+Stack trace:
+#0 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(55): PDO->__construct('mysql:host=127....', 'homestead', 'secret', Array)
+#1 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Database/Connectors/MySqlConnector.php(24): Illuminate\Database\Connectors\Connector->createConnection('mysql:host=127....', Array, Array)
+#2 /Users/alain/Apps/Cabinet-Schmidt/bootstrap/cache/compiled.php(11777): Illuminate\Database\Connectors\MySqlConnector->connect(Array)
+#3 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#4 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Database/Connection.php(875): call_user_func(Object(Closure))
+#5 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Database/Connection.php(743): Illuminate\Database\Connection->getPdo()
+#6 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Database/Connection.php(628): Illuminate\Database\Connection->reconnectIfMissingConnection()
+#7 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Database/Connection.php(409): Illuminate\Database\Connection->run('insert into `ec...', Array, Object(Closure))
+#8 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Database/Connection.php(365): Illuminate\Database\Connection->statement('insert into `ec...', Array)
+#9 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Database/Query/Processors/Processor.php(32): Illuminate\Database\Connection->insert('insert into `ec...', Array)
+#10 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(2018): Illuminate\Database\Query\Processors\Processor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into `ec...', Array, 'id')
+#11 [internal function]: Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#12 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(1385): call_user_func_array(Array, Array)
+#13 /Users/alain/Apps/Cabinet-Schmidt/bootstrap/cache/compiled.php(10802): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#14 /Users/alain/Apps/Cabinet-Schmidt/bootstrap/cache/compiled.php(10802): Illuminate\Database\Eloquent\Builder->insertGetId(Array, 'id')
+#15 /Users/alain/Apps/Cabinet-Schmidt/bootstrap/cache/compiled.php(10791): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#16 /Users/alain/Apps/Cabinet-Schmidt/bootstrap/cache/compiled.php(10742): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder), Array)
+#17 /Users/alain/Apps/Cabinet-Schmidt/app/Console/Commands/RefreshFlux.php(126): Illuminate\Database\Eloquent\Model->save()
+#18 [internal function]: App\Console\Commands\RefreshFlux->handle()
+#19 /Users/alain/Apps/Cabinet-Schmidt/bootstrap/cache/compiled.php(1244): call_user_func_array(Array, Array)
+#20 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Console/Command.php(169): Illuminate\Container\Container->call(Array)
+#21 /Users/alain/Apps/Cabinet-Schmidt/vendor/symfony/console/Command/Command.php(256): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#22 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Console/Command.php(155): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#23 /Users/alain/Apps/Cabinet-Schmidt/vendor/symfony/console/Application.php(791): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#24 /Users/alain/Apps/Cabinet-Schmidt/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->doRunCommand(Object(App\Console\Commands\RefreshFlux), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#25 /Users/alain/Apps/Cabinet-Schmidt/vendor/symfony/console/Application.php(117): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#26 /Users/alain/Apps/Cabinet-Schmidt/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(107): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#27 /Users/alain/Apps/Cabinet-Schmidt/artisan(36): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#28 {main}  

@@ -3,6 +3,10 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Storage;
+use Orchestra\Parser\Xml\Facade as XmlParser;
+use App\EchosArticle;
+use App\Reference;
 
 class RefreshFlux extends Command
 {
@@ -87,9 +91,9 @@ class RefreshFlux extends Command
                         }
                     }
                     $rubriques = implode(' ',$rubriques); // Collapsing my array in one string separated by spaces.
-                    $article = new App\EchosArticle(); // Don't create object while looping on XML object
+                    $article = new EchosArticle(); // Don't create object while looping on XML object
                     if(isset($section_content->reference)) {
-                        $reference = new App\Reference();
+                        $reference = new Reference();
                         foreach($section_content->reference as $link) {
                             $reference->link = $link->ref_lien['href']->__toString();
                             $reference->label = $link->ref_lien->__toString();
