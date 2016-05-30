@@ -21,57 +21,25 @@
         <li class="col-lg col-md col-sm-4 col-xs-6 filters__item" data-filter="juridique"><span>juridique</span></li>
       </ul>
       <section class="row center-xs gallery__list">
+        @foreach ($echosarticles as $article)
         <article class="col-md-4 col-sm-6 col-xs-12 col-custom gallery__wrapper">
           <div class="gallery__item">
-            <div class="row image" style="background-image: url('http://img.actucine.com/wp-content/uploads/2016/02/game.jpe')"></div>
+            <div class="row image" style="background-image: url('{{$article->image}}')"></div>
             <div class="row article">
               <div class="col-xs-12">
-                <h3 class="row article__title">Prélevement sur le salaire des pensions alimentaires non versées</h3>
+                <h3 class="row article__title">{{$article->title}}</h3>
                 <p class="row article__body">
-                  Pudding wafer brownie cookie marzipan oat cake marshmallow. Sweet brownie sweet roll gingerbread cake jelly beans marshmallow caramels.
+                  {{$article->summary}}
                 </p>
               </div>
               <div class="col-xs-12 article__footer">
-                  <span class="article__date">Publié le mercredi 14 avril</span>
+                  <span class="article__date">{{$article->date}}</span>
                   <span class="article__button">Lire +</span>
               </div>
             </div>
           </div>
         </article>
-        <article class="col-md-4 col-sm-6 col-xs-12 col-custom gallery__wrapper">
-          <div class="gallery__item">
-            <div class="row image" style="background-image: url('http://img.actucine.com/wp-content/uploads/2016/02/game.jpe')"></div>
-            <div class="row article">
-              <div class="col-xs-12">
-                <h3 class="row article__title">Prélevement sur le salaire des pensions alimentaires non versées</h3>
-                <p class="row article__body">
-                  Pudding wafer brownie cookie marzipan oat cake marshmallow. Sweet brownie sweet roll gingerbread cake jelly beans marshmallow caramels.
-                </p>
-              </div>
-              <div class="col-xs-12 article__footer">
-                  <span class="article__date">Publié le mercredi 14 avril</span>
-                  <span class="article__button">Lire +</span>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="col-md-4 col-sm-6 col-xs-12 col-custom gallery__wrapper">
-          <div class="gallery__item">
-            <div class="row image" style="background-image: url('http://img.actucine.com/wp-content/uploads/2016/02/game.jpe')"></div>
-            <div class="row article">
-              <div class="col-xs-12">
-                <h3 class="row article__title">Prélevement sur le salaire des pensions alimentaires non versées</h3>
-                <p class="row article__body">
-                  Pudding wafer brownie cookie marzipan oat cake marshmallow. Sweet brownie sweet roll gingerbread cake jelly beans marshmallow caramels.
-                </p>
-              </div>
-              <div class="col-xs-12 article__footer">
-                  <span class="article__date">Publié le mercredi 14 avril</span>
-                  <span class="article__button">Lire +</span>
-              </div>
-            </div>
-          </div>
-        </article>
+        @endforeach
       </section>
     </div>
   </div>

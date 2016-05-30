@@ -23,36 +23,23 @@
         </section>
         <section class="col-custom col-md-7 col-sm-7 col-xs-12 actus-articles__entreprises">
           <h3 class="actus-articles__header">L'actualité des TPE-PME</h3>
-          <article class="row article">
-            <div class="col-xs article__picture" style="background-image: url('http://www.cineshow.fr/wp-content/uploads/2015/10/Arrow-header.jpg')"></div>
-            <div class="col-xs article__content">
-              <div class="row article__wrapper">
-                <h4 class="article__name">Le cabinet Schmidt ferme cet été</h4>
-                <p class="article__body">
-                  Fermeture des portes le 10 août,nous vous retrouvons le lundi 25 août.Bonnes vacances !
-                </p>
+           @for ($i = 0; $i < 2; $i++)
+            <article class="row article">
+              <div class="col-xs article__picture" style="background-image: url('{{$echosarticles[$i]->image}}')"></div>
+              <div class="col-xs article__content">
+                <div class="row article__wrapper">
+                  <h4 class="article__name">{{$echosarticles[$i]->title}}</h4>
+                  <p class="article__body">
+                    {{$echosarticles[$i]->summary}}
+                  </p>
+                </div>
+                <div class="article__footer">
+                  <span class="date">{{$echosarticles[$i]->date}}</span>
+                  <a href="#" class="button"><span >Lire +</span></a>
+                </div>
               </div>
-              <div class="article__footer">
-                <span class="date">Publié le 25/03/2016</span>
-                <a href="#" class="button"><span >Lire +</span></a>
-              </div>
-            </div>
-          </article>
-          <article class="row article">
-            <div class="col-xs article__picture" style="background-image: url('http://www.cineshow.fr/wp-content/uploads/2015/10/Arrow-header.jpg')"></div>
-            <div class="col-xs article__content">
-              <div class="row article__wrapper">
-                <h4 class="article__name">Le cabinet Schmidt ferme cet été</h4>
-                <p class="article__body">
-                  Fermeture des portes le 10 août,nous vous retrouvons le lundi 25 août.Bonnes vacances !
-                </p>
-              </div>
-              <div class="article__footer">
-                <span class="date">Publié le 25/03/2016</span>
-                <a href="#" class="button"><span >Lire +</span></a>
-              </div>
-            </div>
-          </article>
+            </article>
+           @endfor
         </section>
       </div>
     </div>

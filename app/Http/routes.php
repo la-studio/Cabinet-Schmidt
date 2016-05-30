@@ -67,6 +67,7 @@ Route::group(['middleware' => ['web']], function () {
     });
 
     //Toolbox
+    Route::get('/test', 'FluxController@store');
     Route::get('/chiffres-utiles', function () {
         return view('chiffres');
     });
@@ -74,80 +75,99 @@ Route::group(['middleware' => ['web']], function () {
         return view('useful');
     });
 
-    Route::get('/ftp', function () {
-        $directoryName = 'ec_actu_tout_flux';
-        $fileName = 'ec_flux_actualites.xml';
-        $file = Storage::disk('ftp')->get($directoryName.'/'.$fileName);
-        //$file = FTP::connection()->readFile($directoryName.'/'.$fileName);
-
-        //dd($file);
-        Storage::disk('local')->put($fileName, $file);
-        $fileName = 'ec_flux_actualites';
-
-        $file = Storage::disk('ftp')->get($directoryName.'/'.$fileName.'.xml');
-        $file = str_replace('<lien', '<a', $file);
-        $file = str_replace('</lien>', '</a>', $file);
-
-        Storage::disk('local')->put($fileName.'.xml', $file);
-
-        $json = json_encode(Storage::disk('local')->get($fileName.'.xml'));
-        Storage::disk('local')->put($fileName.'.json', $json);
-
-        $xml = XmlParser::load(storage_path('app/'.$fileName.'.xml'));
-
-
-        //bug d'affichage quand je display à la rache (en echo) : htmlentities fait l'affaire
-        //mais de toute façon on sera pas confronté au pb avec blade et les bdd
-
-        //$articles = simplexml_load_string(Storage::disk('local')->get($fileName.'.xml'));
-        $articles = $xml->getContent();
-        foreach ($articles as $article){
-            echo $article->id;
-            echo '<br>';
-            echo $article->create_date;
-            echo '<br>';
-            echo $article->display_date;
-            echo '<br>';
-            echo $article->author;
-            echo '<br>';
-            echo $article->language;
-            echo '<br>';
-            echo $article->title;
-            echo '<br>';
-            echo $article->summary;
-            echo '<br>';
-
-            echo $article->content->section->section_content->asXML();
-
-            // foreach($article->content->section->section_content->children() as $item){
-            //     echo $item;
-            //     echo '<br>';
-            // }
-
-            echo '<br>';
-
-            // foreach($article->content->section->section_content->annotation as $item){
-            //     echo $item->titreannotation;
-            //     echo '<br>';
-            //     echo $item;
-            //     echo '<br>';
-            // }
-
-
-            // echo '<br>';
-            // echo $article->tag;
-            // echo '<br>';
-            // echo $article->media;
-            // echo '<br>';
-            // echo $article->copyright;
-            // echo '<br>';
-            // echo '<br>';
-            // echo '<br>';
-        }
-        dd($articles);
-    });
     Route::get('/logout','AuthController@logout');
     //Route::get('/login','AuthController@login');
 });
 
 Route::get('/', 'HomeController@index');
+Route::get('/ftp', function () {
+    $directoryName = 'ec_actu_tout_flux';
+    $fileName = 'ec_flux_actualites.xml';
+    $file = Storage::disk('ftp')->get($directoryName.'/'.$fileName);
+    //$file = FTP::connection()->readFile($directoryName.'/'.$fileName);
+    Storage::disk('local')->put($fileName, $file);
+    $fileName = 'ec_flux_actualites';
+
+    $file = Storage::disk('ftp')->get($directoryName.'/'.$fileName.'.xml');
+    $file = str_replace('<lien', '<a', $file);
+    $file = str_replace('</lien>', '</a>', $file);
+    $file = str_replace('<exposant>', '', $file);
+    $file = str_replace('</exposant>', '', $file);
+    $file = str_replace('<retourligne/>', '', $file);
+    Storage::disk('local')->put($fileName.'.xml', $file);
+
+    $json = json_encode(Storage::disk('local')->get($fileName.'.xml'));
+    Storage::disk('local')->put($fileName.'.json', $json);
+
+    $xml = XmlParser::load(storage_path('app/'.$fileName.'.xml'));
+
+    //bug d'affichage quand je display à la rache (en echo) : htmlentities fait l'affaire
+    //mais de toute façon on sera pas confronté au pb avec blade et les bdd
+
+    //$articles = simplexml_load_string(Storage::disk('local')->get($fileName.'.xml'));
+    $articles = $xml->getContent();
+    $titles = [];
+    $medias = [];
+    $paragraphes = [];
+        foreach ($articles as $element) { // Works !! If i just echoout $element i get the entire object parsed.
+            $title = $element->title->__toString();
+            $author = $element->author->__toString();
+            $date = $element->create_date->__toString();
+            $media_attr = $element->media->attributes();
+            $summary = $element->summary->__toString();
+            //$link_attr = $element->content->section->section_content->reference->ref_lien;
+            $tags = $element->tag;
+            $contents = $element->content->section->section_content->texteparagraphe;
+            $annotations = $element->content->section->section_content->annotation;
+            $section_content = $element->content->section->section_content;
+            $rubriques = [];
+            $merged_content = [];
+            $links = [];
+            if(substr($element->create_date->__toString(),0,4)=='2016' && count($titles)<50) {
+                foreach ($tags as $tag) {
+                    $tag_attr = $tag->attributes();
+                    if($tag_attr['type']=="rubrique") {
+                        array_push($rubriques,$tag->__toString());
+                    }
+                }
+                $rubriques = implode(' ',$rubriques); // Collapsing my array in one string separated by spaces.
+                $article = new App\EchosArticle(); // Don't create object while looping on XML object
+                if(isset($section_content->reference)) {
+                    $reference = new App\Reference();
+                    foreach($section_content->reference as $link) {
+                        $reference->link = $link->ref_lien['href']->__toString();
+                        $reference->label = $link->ref_lien->__toString();
+                        //$reference->save();
+                    }
+                }
+                if($media_attr['type']=="image") {
+                    $article->image = 'http://photo.expert-infos.com/'.$element->media->__toString();
+                }
+                foreach ($section_content as $element) {
+                    foreach($element as $sub) {
+                        if($sub->getName()=="annotation" && $sub->getName()!=="reference") {
+                        $ann_title = $sub->titreannotation->__toString();
+                        $body = $sub->__toString();
+                        $collapsing = $ann_title.$body;
+                        str_replace('\n','',$collapsing);
+                        array_push($merged_content, $collapsing);
+                    } else if($sub->getName()!=="reference") {
+                            array_push($merged_content, $sub->__toString());
+                        }
+                    }
+                }
+                $merged_content = implode(' ',$merged_content);
+                $article->content = $merged_content;
+                $article->title = $title;
+                $article->date = $date;
+                $article->summary = $summary;
+                $article->auteur = $author;
+                $article->rubrique = $rubriques;
+                $article->save();
+                if(isset($section_content->reference)) {
+                    $article->references()->save($reference);
+                }
+                array_push($titles,$element->title->__toString());
+            }
+        }
+});

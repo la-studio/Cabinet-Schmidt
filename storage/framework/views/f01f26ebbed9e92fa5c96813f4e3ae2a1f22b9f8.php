@@ -29,6 +29,7 @@
     <script type="text/javascript" src="/js/Classes/Datepicker.js"></script>
     <script type="text/javascript" src="/js/Classes/About.js"></script>
     <script type="text/javascript" src="/js/Classes/MouseAnimation.js"></script>
+    <?php /* <script type="text/javascript" src="/js/Classes/FluxHandler.js"></script> */ ?>
     <?php if(isset($check)): ?>
     <script type="text/javascript" src="/js/initMap.js"></script>
     <script type="text/javascript" async src="https://maps.google.com/maps/api/js?v3.exp&key=AIzaSyDaqvAJy_P9DqqR8ClhZJG0L5ldEOiEYDs&callback=initMaps"></script>
