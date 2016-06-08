@@ -44,7 +44,8 @@ Datepicker.prototype.init = function () {
   this.createBoards();
   this.updateDayLabel();
   this.enableClickListeners();
-  this.addMarkers(this.agenda.dates);
+  this.addMarkers(this.agenda.parsedDates);
+  $('.month__text').text(this.getThisMonth()+' '+this.year);
   //this.highlightToday();
   $('.calendar-list').css('transform','translate3d('+this.translate+'px,0,0)');
   /*
@@ -67,11 +68,11 @@ Datepicker.prototype.getToday = function () {
 };
 
 Datepicker.prototype.getThisMonth = function () {
-  return this.monthList[this.month]; // return current month as String (e.g: Dimanche)
+  return this.monthList[this.month]; // return current month as String (e.g: Juin)
 };
 
 Datepicker.prototype.getMonth = function (index) {
-  return this.monthList[index]; // return current month as String (e.g: Dimanche)
+  return this.monthList[index]; // return parameter month as String (e.g: Juin)
 };
 
 Datepicker.prototype.getTodayNumber = function () {
@@ -122,6 +123,14 @@ Datepicker.prototype.enableClickListeners = function () {
   $('.month__next').click(function () {
     that.getNext()
   })
+  $('.col[data-day]').click(function () {
+    var month = $(this).parent().parent().data('month');
+    var day = $(this).data('day');
+    var date = new Date();
+    var sentence = day+' '+that.getMonth(month)+' '+date.getFullYear();
+    var index = that.agenda.dates.indexOf(sentence);
+    that.agenda.getIndex(index);
+  })
 };
 Datepicker.prototype.translation = function (type, string) {
   if(this.langage=="fr") {
@@ -137,12 +146,12 @@ Datepicker.prototype.getNext = function () {
     this.active++;
     this.setTranslate()
     $('.calendar-list').css('transform','translate3d('+this.translate+'px,0,0)');
-    $('.month__text span:first-child').html(this.getMonth(this.active))
+    $('.month__text').text(this.getMonth(this.active)+' '+this.year);
   } else if(this.active==11) {
     this.active=0;
     this.setTranslate();
     $('.calendar-list').css('transform','translate3d('+this.translate+'px,0,0)');
-    $('.month__text span:first-child').html(this.getMonth(this.active))// Setting parameter manually because activ is defined to 0
+    $('.month__text').text(this.getMonth(this.active)+' '+this.year);// Setting parameter manually because activ is defined to 0
   }
   this.tool.debug('getNext',this.active)
 };
@@ -151,12 +160,12 @@ Datepicker.prototype.getPrev = function () {
     this.active--;
     this.setTranslate()
     $('.calendar-list').css('transform','translate3d('+this.translate+'px,0,0)');
-    $('.month__text span:first-child').html(this.getMonth(this.active))
+    $('.month__text').text(this.getMonth(this.active)+' '+this.year);
   } else if(this.active==0) {
     this.active=11;
     this.setTranslate()
     $('.calendar-list').css('transform','translate3d('+this.translate+'px,0,0)');
-    $('.month__text span:first-child').html(this.getMonth(this.active)) // Setting parameter manually because activ is defined to 0
+    $('.month__text').text(this.getMonth(this.active)+' '+this.year); // Setting parameter manually because activ is defined to 0
   }
   this.tool.debug('getNext',this.active)
 };
@@ -170,6 +179,7 @@ Datepicker.prototype.updateDayLabel = function () {
   $('.date__month').html(this.getThisMonth());
   $('.date__number').html(this.getTodayNumber());
 };
+
 /*
 Datepicker.prototype.highlightToday = function () {
   var toHighlight = $('.calendar[data-month="'+this.month+'"] .calendar__day-list .col').eq(this.day).addClass('col--selected');
@@ -210,10 +220,13 @@ Datepicker.prototype.createBoards = function () {
 };
 
 Datepicker.prototype.addMarkers = function (options) {
-  for (var i = 0; i < options.length; i++) {
-      var monthIndex = this.getMonthIndex(options[i].month);
-      var toHighlight = $('.calendar[data-month="'+monthIndex+'"] .calendar__day-list .col[data-day="'+options[i].day+'"]').addClass('col--highlight');
-  }
+  var that = this;
+  setTimeout(function () {
+    for (var i = 0; i < options.length; i++) {
+        var monthIndex = that.getMonthIndex(options[i].month);
+        var toHighlight = $('.calendar[data-month="'+monthIndex+'"] .calendar__day-list .col[data-day="'+options[i].day+'"]').addClass('col--highlight');
+    }
+  },1000);
 };
 
 Datepicker.prototype.setTranslate = function () {

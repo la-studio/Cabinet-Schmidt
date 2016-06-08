@@ -17,7 +17,7 @@
                     <?php echo e($article->content); ?>
 
                   </p>
-                  <span class="article__date">Publié le <?php echo e($article->created_at); ?></span>
+                  <span class="article__date"><?php echo e($article->created_at); ?></span>
                 </div>
             </article>
           <?php endforeach; ?>
@@ -37,7 +37,7 @@
                 </div>
                 <div class="article__footer">
                   <span class="date"><?php echo e($echosarticles[$i]->date); ?></span>
-                  <a href="#" class="button"><span >Lire +</span></a>
+                  <a href="/actus/<?php echo e($echosarticles[$i]->slug); ?>" class="button"><span >Lire +</span></a>
                 </div>
               </div>
             </article>

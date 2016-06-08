@@ -1,82 +1,77 @@
 FluxHandler = function () {
-  this.list = [];
   this.init();
 }
 
 FluxHandler.prototype.init = function () {
-  this.storeArticles();
+  this.monthList = ['Décembre','Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre'];
+  this.parsingDates();
+  this.parsingTags();
+  this.trimTable();
 };
 
-FluxHandler.prototype.storeArticles = function () {
+FluxHandler.prototype.parsingDates = function () {
   var that = this;
-  $.ajax({
-          type: "GET",
-          url: "ec_flux_actualites.xml",
-          dataType: "xml",
-          success: function(xml) {
-            $(xml).find('article create_date').each(function () {
-              if($(this).text().substring(0,4)=='2016' && that.list.length<50) {
-                that.list.push($(this).parent());
-              }
-            })
-            that.storeDate(that.list);
-            that.sort(that.list);
-            that.createHomePreviews();
-          }
-      })
-};
-
-FluxHandler.prototype.storeDate = function (array) {
-  for (var i = 0; i < array.length; i++) {
-    var fulldate = array[i].find('create_date').text();
-    var month = parseInt(fulldate.substring(5,7));
-    var day = parseInt(fulldate.substring(8,10));
-    console.log(fulldate);
-    array[i].month = month; // Useful to store month and day for later (to not handle in fulldate)
-    array[i].day = day;
-    array[i].fulldate = month+'/'+day;
-  }
-};
-
-FluxHandler.prototype.logInfos = function () { // DONT erase this pls. For debug of sorted dates of not.
-  for (var i = 0; i < this.list.length; i++) {
-     console.log(this.list[i].fulldate);
-  }
-};
-
-FluxHandler.prototype.sort = function (array) {
-  array.sort(function (a,b) {
-    if (a.fulldate < b.fulldate) //sort string descending
-      return 1;
-    if (a.fulldate > b.fulldate)
-      return -1;
-    return 0; //default return value (no sorting)
+  $('.actus-articles__entreprises .article__footer .date, .actus-articles__cabinet .article__date,.gallery__item .article__date').each(function () {
+    var val = $(this).text();
+    var year = val.substring(0,4);
+    var month = val.substring(6,7);
+    month = that.getMonth(month);
+    var day = val.substring(8,10);
+    var date = 'Publié le '+day+' '+month+' '+year+'.';
+    $(this).text(date);
   })
 };
 
-FluxHandler.prototype.createHomePreviews = function () {
-  for (var i = 0; i <= 1; i++) {
-    console.log(this.list);
-    var title = this.list[i].find('title').text();
-    var content = this.list[i].find('summary').text();
-    var image = 'http://www.cineshow.fr/wp-content/uploads/2015/10/Arrow-header.jpg';
-    var date = 'test';
-    var link = '#';
-    var template = '<div class="row article">'+
-                     '<div class="col-xs article__picture" style="background-image: url("'+image+'")"></div>'+
-                     '<div class="col-xs article__content">'+
-                        '<div class="row article__wrapper>'+
-                          '<h4 class="article__name">'+title+'</h4>'+
-                          '<p class="article__body">'+content+'</p>'+
-                        '</div>'+
-                        '<div class="article__footer">'+
-                          '<span class="date">Publié le '+date+'</span>'+
-                          '<a href="'+link+'" class="button"><span >Lire +</span></a>'+ // FIXME: Set route for article.
-                        '</div>'+
-                      '</div>'+
-                    '</article>';
-    $('.actus-articles__entreprises').append(template);
-    //this.list[i].find('title');
-  }
+FluxHandler.prototype.parsingTags = function () {
+  var parsedContent = $.parseHTML($('.echo-article__content').text());
+  var parsedTable = $.parseHTML($('.echo-article__table').text());
+  $('.echo-article__content').html(parsedContent);
+  $('.echo-article__table').html(parsedTable);
 };
+
+FluxHandler.prototype.trimTable = function () {
+  $('.echo-article__table td').each(function () {
+    var trimmed = $(this).text().split('').join('');
+    $(this).text(trimmed);
+  })
+  $('.echo-article__table tr').each(function () {
+    if($(this).children().length==1) {
+      $(this).find('td').attr('colspan',8).addClass('full');
+    }
+  })
+};
+
+FluxHandler.prototype.testLink = function (val) {
+  return /^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$/.test(val);
+};
+
+FluxHandler.prototype.replace = function (val) {
+  var special = ["À","Á","Â","Ã","Ä","Å","Æ","Ç","È","É","Ê","Ë","Ì","Í","Î","Ï","Ð","Ñ","Ò","Ó","Ô","Õ","Ö","Ø","Ù","Ú","Û","Ü","Ý","ß","à","á","â","ã","ä","å","æ","ç","è","é","ê","ë","ì","í","î","ï","ñ","ò","ó","ô","õ","ö","ø","ù","ú","û","ü","ý","ÿ","’",":",'&nbsp','/']
+  var literal = ["A","A","A","A","A","A","AE","C","E","E","E","E","I","I","I","I","D","N","O","O","O","O","O","O","U","U","U","U","Y","s","a","a","a","a","a","a","ae","c","e","e","e","e","i","i","i","i","n","o","o","o","o","o","o","u","u","u","u","y","y","","-","",'-']
+  for (i=0;i<special.length;i++) {
+    if(val.indexOf(special[i])!==-1) {
+      while(val.indexOf(special[i])!==-1) {
+        val = val.replace(special[i],literal[i]);
+      }
+    }
+  }
+  val = val.replace(/ /g, "-");
+  val = val.replace('--','-');
+  val = val.toLowerCase();
+  return val;
+};
+
+FluxHandler.prototype.removeSpecials = function (str) {
+  var specialChars = "!@#$^&%*()+=-[]\{}|:<>?,.";
+  for (var i = 0; i < specialChars.length; i++) {
+      str = str.replace(new RegExp("\\" + specialChars[i], 'gi'), '');
+  }
+  return str;
+};
+
+
+FluxHandler.prototype.getMonth = function (index) {
+  return this.monthList[index]; // return current month as String (e.g: Dimanche)
+};
+
 fluxXML = new FluxHandler();

@@ -6,7 +6,11 @@
     @include('home.actus')
     @include('home.services')
     @include('home.partenaires')
-    @include('home.agenda')
+    @if(count($count))
+      @include('home.agenda')
+    @else
+      @include('home.agenda-empty')
+    @endif
     @include('home.temoignages')
   </div>
 @stop

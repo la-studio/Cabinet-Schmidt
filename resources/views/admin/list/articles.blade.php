@@ -3,7 +3,7 @@
 <div class="row center-xs articles-list">
   @foreach ($articles as $article)
     <div class="col-sm-6 article">
-      <div class="row center-xs middle-xs rowfix wrapper">
+      <div class="row center-xs middle-xs wrapper">
         <div class="col-xs">
           <p>{{$article->title}}</p>
           <p>{{$article->content}}</p>

@@ -1289,14 +1289,17 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         background-repeat: no-repeat; }
       .home__temoignages .slider .temoignage__body {
         margin-top: 20px;
-        font-family: "proximanova-regular"; }
-        .home__temoignages .slider .temoignage__body:after {
+        font-family: "proximanova-regular";
+        position: relative;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+        .home__temoignages .slider .temoignage__body:before {
           content: '';
           height: 2px;
           width: 25%;
           margin: 0 auto;
           display: block;
-          margin-top: 20px;
           background-color: #1d1e1c; }
       .home__temoignages .slider .temoignage__identity {
         margin-top: 15px;
@@ -1335,10 +1338,16 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       font-size: 21px; }
       .home__agenda .agenda-header__label a {
         color: #e7b116; }
+  .home__agenda .agenda-datepicker {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
   .home__agenda .datepicker {
-    padding-left: 150px;
-    width: 400px;
-    min-width: 350px;
+    width: 350px;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -1346,6 +1355,9 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     font-family: "proximanova-semibold"; }
+    @media screen and (min-width: 991px) {
+      .home__agenda .datepicker {
+        padding-left: 150px; } }
     .home__agenda .datepicker__caption {
       width: 100%;
       height: 70px;
@@ -1474,7 +1486,9 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
               -webkit-user-select: none;
               -moz-user-select: none;
               -ms-user-select: none;
-              user-select: none; }
+              user-select: none;
+              position: relative;
+              z-index: 100; }
               .home__agenda .datepicker__body .calendar-list .calendar__day-list .col span {
                 border-radius: 100%;
                 display: -webkit-flex;
@@ -1492,10 +1506,11 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
                 .home__agenda .datepicker__body .calendar-list .calendar__day-list .col span:before {
                   content: '';
                   position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
+                  top: 7.5%;
+                  left: 7.5%;
+                  width: 85%;
+                  height: 85%;
+                  z-index: -1;
                   background-color: transparent;
                   -webkit-transform: scale(0);
                   transform: scale(0);
@@ -1513,6 +1528,9 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
                     transform: scale(1);
                     background-color: #283466;
                     z-index: -1; }
+                  .home__agenda .datepicker__body .calendar-list .calendar__day-list .col--selected span:after {
+                    -webkit-transform: scale(1);
+                    transform: scale(1); }
                 .home__agenda .datepicker__body .calendar-list .calendar__day-list .col--selected:hover {
                   color: white; }
               .home__agenda .datepicker__body .calendar-list .calendar__day-list .col--highlight {
@@ -1524,10 +1542,31 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
                     transform: scale(1);
                     background-color: #5c70be;
                     z-index: -1; }
+                  .home__agenda .datepicker__body .calendar-list .calendar__day-list .col--highlight span:after {
+                    -webkit-transform: scale(1);
+                    transform: scale(1); }
                 .home__agenda .datepicker__body .calendar-list .calendar__day-list .col--highlight:hover {
                   color: white; }
   .home__agenda .agenda-text {
-    overflow: hidden; }
+    overflow: hidden;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0; }
+    @media screen and (max-width: 991px) {
+      .home__agenda .agenda-text {
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse; } }
     .home__agenda .agenda-text__carousel {
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -1538,14 +1577,14 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       transition: -webkit-transform 0.85s cubic-bezier(0.165, 0.84, 0.44, 1);
       transition: transform 0.85s cubic-bezier(0.165, 0.84, 0.44, 1);
       margin-bottom: 10px; }
-    .home__agenda .agenda-text__item {
+    .home__agenda .agenda-text__wrapper {
       width: 100%; }
-    .home__agenda .agenda-text__body {
-      padding: 0 2rem; }
+      @media screen and (min-width: 991px) {
+        .home__agenda .agenda-text__wrapper {
+          text-align: left; } }
     .home__agenda .agenda-text__date {
       font-size: 29px;
-      margin-bottom: 20px;
-      padding: 0 2rem; }
+      margin-bottom: 20px; }
     .home__agenda .agenda-text__title {
       font-size: 24px;
       padding: 0;
@@ -1566,7 +1605,6 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       margin-top: 30px;
       width: 150px;
       height: 40px;
-      margin: 0 2rem;
       padding: 0 15px;
       color: #e7b116;
       font-family: "proximanova-semibold";
@@ -1574,6 +1612,9 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       border: 2px solid #e7b116;
       position: relative;
       overflow: hidden; }
+      @media screen and (max-width: 991px) {
+        .home__agenda .agenda-text__button {
+          margin-top: 10px; } }
       .home__agenda .agenda-text__button:before {
         content: attr(data-hover);
         display: -webkit-flex;
@@ -1672,22 +1713,44 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       .actualites .gallery .filters__item span:hover {
         background-color: #e7b116;
         color: white; }
-  .actualites .gallery__list.row {
-    height: auto; }
-  @media screen and (max-width: 767px) {
-    .actualites .gallery__wrapper {
-      padding: 0 20px; } }
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    .actualites .gallery__wrapper.col-custom {
-      -ms-flex-preferred-size: 75%;
-      -webkit-flex-basis: 75%;
-      flex-basis: 75%;
-      max-width: 75%; } }
+    .actualites .gallery .filters__item--checked span {
+      background-color: #e7b116;
+      color: white; }
+  .actualites .gallery__list {
+    min-height: 90px; }
+    .actualites .gallery__list.row {
+      height: auto; }
+  .actualites .gallery__wrapper {
+    display: none;
+    opacity: 0; }
+    @media screen and (max-width: 767px) {
+      .actualites .gallery__wrapper {
+        padding: 0 20px; } }
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      .actualites .gallery__wrapper.col-custom {
+        -ms-flex-preferred-size: 75%;
+        -webkit-flex-basis: 75%;
+        flex-basis: 75%;
+        max-width: 75%; } }
   .actualites .gallery__item {
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.4);
     margin-top: 20px; }
     .actualites .gallery__item .image {
-      height: 210px; }
+      height: 210px;
+      position: relative; }
+      .actualites .gallery__item .image:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: opacity .3s ease; }
+      .actualites .gallery__item .image:hover:before {
+        opacity: 1; }
     .actualites .gallery__item .article {
       min-height: 210px;
       padding: 12px; }
@@ -1695,6 +1758,9 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         margin-bottom: 15px;
         text-align: left;
         font-family: "proximanova-semibold"; }
+        .actualites .gallery__item .article__title a {
+          text-decoration: none;
+          color: inherit; }
         .actualites .gallery__item .article__title.row {
           height: auto; }
       .actualites .gallery__item .article__body {
@@ -2534,22 +2600,42 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       .chiffres .gallery .filters__item span:hover {
         background-color: #e7b116;
         color: white; }
+    .chiffres .gallery .filters__item--checked span {
+      background-color: #e7b116;
+      color: white; }
   .chiffres .gallery__list.row {
     height: auto; }
-  @media screen and (max-width: 767px) {
-    .chiffres .gallery__wrapper {
-      padding: 0 20px; } }
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    .chiffres .gallery__wrapper.col-custom {
-      -ms-flex-preferred-size: 75%;
-      -webkit-flex-basis: 75%;
-      flex-basis: 75%;
-      max-width: 75%; } }
+  .chiffres .gallery__wrapper {
+    display: none;
+    opacity: 0; }
+    @media screen and (max-width: 767px) {
+      .chiffres .gallery__wrapper {
+        padding: 0 20px; } }
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      .chiffres .gallery__wrapper.col-custom {
+        -ms-flex-preferred-size: 75%;
+        -webkit-flex-basis: 75%;
+        flex-basis: 75%;
+        max-width: 75%; } }
   .chiffres .gallery__item {
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.4);
     margin-top: 20px; }
     .chiffres .gallery__item .image {
-      height: 210px; }
+      height: 210px;
+      position: relative; }
+      .chiffres .gallery__item .image:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: opacity .3s ease; }
+      .chiffres .gallery__item .image:hover:before {
+        opacity: 1; }
     .chiffres .gallery__item .article {
       min-height: 210px;
       padding: 12px; }
@@ -2725,6 +2811,120 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     margin-top: 10px; }
   .admin .admin-content .competence span {
     margin-right: 10px; }
+
+.echo-article {
+  border-top: solid 1px #e7b116;
+  min-height: calc(100vh - 100px - 75px); }
+  .echo-article .row.row {
+    height: auto; }
+  .echo-article__title {
+    padding-top: 30px;
+    font-size: 26px;
+    text-align: left;
+    font-family: "proximanova-bold"; }
+    .echo-article__title.row {
+      height: auto; }
+  .echo-article__summary {
+    font-size: 20px;
+    text-align: left; }
+    .echo-article__summary.row {
+      height: auto; }
+  .echo-article__content {
+    text-align: left;
+    font-size: 18px; }
+  .echo-article__author {
+    margin-top: 40px;
+    text-align: end;
+    font-size: 18px; }
+  .echo-article__links {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-bottom: 30px; }
+    .echo-article__links a {
+      text-decoration: none;
+      color: inherit;
+      color: #e7b116; }
+  .echo-article__table {
+    padding: 15px 0; }
+    .echo-article__table td, .echo-article__table tr {
+      border: 1px solid grey;
+      padding: 3px 8px;
+      text-align: left;
+      line-height: 1.3; }
+      .echo-article__table td.full, .echo-article__table tr.full {
+        text-align: center;
+        font-family: "proximanova-semibold"; }
+  .echo-article__suggestions {
+    padding-bottom: 30px;
+    padding-top: 15px; }
+    .echo-article__suggestions.row {
+      height: auto; }
+    .echo-article__suggestions:before {
+      content: '';
+      height: 2px;
+      background-color: #1d1e1c;
+      opacity: .8;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+      max-width: 50%; }
+    .echo-article__suggestions h3 {
+      font-family: "proximanova-semibold";
+      font-weight: normal;
+      font-size: 23px; }
+    .echo-article__suggestions .wrapper.row {
+      height: auto; }
+    .echo-article__suggestions .suggestion {
+      margin-top: 20px;
+      overflow: hidden; }
+      .echo-article__suggestions .suggestion a {
+        text-decoration: none;
+        color: inherit; }
+      .echo-article__suggestions .suggestion__cover {
+        height: 150px;
+        max-height: 150px;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-repeat: no-repeat;
+        overflow: hidden; }
+        .echo-article__suggestions .suggestion__cover a {
+          height: 100%;
+          -webkit-flex-basis: 100%;
+          -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+          transition: -webkit-transform 2.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+          transition: transform 2.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+          position: relative; }
+          .echo-article__suggestions .suggestion__cover a:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            opacity: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            transition: opacity .3s ease; }
+          .echo-article__suggestions .suggestion__cover a:hover:before {
+            opacity: 1; }
+      .echo-article__suggestions .suggestion__caption {
+        padding: 10px 7px;
+        min-height: 70px;
+        text-align: left;
+        font-size: 18px;
+        font-family: "proximanova-semibold"; }
 
 html, body {
   width: 100%;

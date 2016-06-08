@@ -1,8 +1,8 @@
 <?php $__env->startSection('content'); ?>
 <div class="row center-xs articles-list">
   <?php foreach($articles as $article): ?>
-    <div href="/admin/article/<?php echo e($article->id); ?>" class="col-sm-6 article">
-      <div class="row center-xs middle-xs rowfix wrapper">
+    <div class="col-sm-6 article">
+      <div class="row center-xs middle-xs wrapper">
         <div class="col-xs">
           <p><?php echo e($article->title); ?></p>
           <p><?php echo e($article->content); ?></p>

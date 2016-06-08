@@ -13,9 +13,12 @@
           <div class="row center-xs form__content">
             <div class="col-md-11 col-xs-12">
               <div class="row between-xs middle-xs form__fields">
+                <?php /* <input class="input__field" name="_token" type="hidden" value="<?php echo e(csrf_token()); ?>" id="form-token"/> */ ?>
+                <?php echo e(csrf_field()); ?>
+
                 <div class="col-sm-5 col-custom field">
                   <span class="input">
-                    <input class="input__field " type="text"/>
+                    <input class="input__field" type="text" id="form-identity"/>
                     <label class="input__label">
                       <span class="input__label-content">Nom & Prénom</span>
                     </label>
@@ -24,7 +27,7 @@
                 </div>
                 <div class="col-sm-5 col-custom field">
                   <span class="input">
-                    <input class="input__field " type="text"/>
+                    <input class="input__field " type="text" id="form-company"/>
                     <label class="input__label">
                       <span class="input__label-content">Votre entreprise</span>
                     </label>
@@ -33,7 +36,7 @@
                 </div>
                 <div class="col-sm-5 col-custom field">
                   <span class="input">
-                    <input class="input__field" type="email"/>
+                    <input class="input__field" type="email" id="form-mail"/>
                     <label class="input__label">
                       <span class="input__label-content">Mail</span>
                     </label>
@@ -42,7 +45,7 @@
                 </div>
                 <div class="col-sm-5 col-custom field">
                   <span class="input">
-                    <input class="input__field" type="text"/>
+                    <input class="input__field" type="text" id="form-purpose"/>
                     <label class="input__label">
                       <span class="input__label-content">Objet</span>
                     </label>
@@ -53,7 +56,7 @@
               <div class="row form__message">
                 <div class="col-xs-12 col-custom field field--textarea">
                   <span class="input">
-                    <textarea class="input__field input__field--textarea"></textarea>
+                    <textarea class="input__field input__field--textarea" id="form-message"></textarea>
                     <label class="input__label input__label--textarea">
                       <span class="input__label-content input__label-content--textarea">Votre message</span>
                     </label>

@@ -16,7 +16,7 @@
                   <p class="article__body">
                     {{$article->content}}
                   </p>
-                  <span class="article__date">Publié le {{$article->created_at}}</span>
+                  <span class="article__date">{{$article->created_at}}</span>
                 </div>
             </article>
           @endforeach
@@ -35,7 +35,7 @@
                 </div>
                 <div class="article__footer">
                   <span class="date">{{$echosarticles[$i]->date}}</span>
-                  <a href="#" class="button"><span >Lire +</span></a>
+                  <a href="/actus/{{$echosarticles[$i]->slug}}" class="button"><span >Lire +</span></a>
                 </div>
               </div>
             </article>

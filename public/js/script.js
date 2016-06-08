@@ -77,5 +77,46 @@ $(document).ready(function () {
             proceed = false; //set do not proceed flag
         }
     });
+    if(proceed) {
+      var data = {
+        _token   : $('input[name="_token"]').attr('value'),
+        identity : $('#form-identity').val(),
+        company  : $('#form-company').val(),
+        email    : $('#form-mail').val(),
+        purpose  : $('#form-purpose').val(),
+        message  : $('#form-message').val()
+      }
+      console.log(data);
+      var options = {
+        url : '/contact/send',
+        type : 'post',
+        data: data,
+        success: function (response) {
+          var sucessText = "Le message à été envoyé avec succès !";
+          var sucessToken =  '<div class="success"><span class="success__icon"><i class="fa fa-check-circle"></i></span><span class="success__message">'+sucessText+'</span></div>'
+          $('body').append('<div class="success">'+sucessText+'</div>')
+          $(".input__field").val('').removeClass('input__field--missing');
+          console.log(response);
+        },
+        error: function (xhr,status,error) {
+          console.log(xhr,error);
+          $('body').append(xhr.responseText)
+        }
+      }
+      $.ajax(options);
+    } // end if proceed
   }) // end button click
+  $('.filters__item').on( 'click', function() {
+    $('.filters__item').removeClass('filters__item--checked');
+    $(this).addClass('filters__item--checked');
+  });
+})
+
+$(function() {
+  $('.gallery__list').mixitup({
+    targetSelector: '.gallery__wrapper',
+    filterSelector: '.filters__item',
+    effects: ['fade'],
+    easing: 'snap'
+  });
 })

@@ -1,70 +1,105 @@
 Agenda = function () {
   this.selector = null;
-  this.number = null;
-  this.translate = null;
-  this.width = null;
   this.active = null;
-  this.dates = [];
+  this.year = null;
+  this.parsedDates = [];
+  this.monthList = [];
+  this.datepicker = null;
   this.init();
 }
 
 Agenda.prototype.init = function () {
+  var that = this;
   this.selector = '.agenda-text';
-  this.number = $(this.selector).data('appointements');
   this.translate = 0;
-  this.width = $(this.selector).width();
-  this.active = 0;
-  this.sizing();
+  setTimeout(function () {
+    that.datepicker = hillsDatepicker;
+  }, 10);
+  this.year = new Date().getFullYear();
+  this.monthList = ['Décembre','Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre'];
   this.clickListener();
-  this.resizeListener();
-  this.dates = this.getDates();
-};
-
-Agenda.prototype.sizing = function () {
-  $('.agenda-text__carousel').width(this.width * this.number);
-  $('.agenda-text__item').css({
-    'width': $('.agenda-text__carousel').width() / this.number,
-    'flex-basis': this.width
-  })
-  console.log('resized');
+  this.parseResumes();
+  this.getDatas();
+  this.initActive();
 };
 
 Agenda.prototype.getNext = function () {
-  if(this.active<this.number-1) {
-    this.active++;
-    this.setTranslate();
-    $('.agenda-text__carousel').css('transform','translate3d(-'+this.translate+'px,0,0)');
+  if(this.active<this.dates.length) {
+      this.active++;
+      var that = this;
+      $('.agenda-text__wrapper').fadeOut().fadeIn();
+      setTimeout(function () {
+        $('.agenda-text__date').text(that.dates[that.active]);
+        $('.agenda-text__content').text(that.listContent[that.active]);
+        var parsed = $.parseHTML($('.agenda-text__content').text());
+        $('.agenda-text__content').html(parsed);
+      }, 400);// 400 is default transition time of fadeout.
+      if(this.active>1) {
+        var lastActiveMonth = this.dates[this.active-1].split(' ')[1]; // the second word contains the month.
+        var currMonth = this.dates[this.active].split(' ')[1];// the second word contains the month.
+        if(lastActiveMonth!==currMonth) { // FIXME
+          this.datepicker.getNext();
+        }
+      }
   }
-  console.log(this.translate);
 };
 
-Agenda.prototype.setTranslate = function () {
-  var value = this.active* this.width;
-  this.translate = value;
+Agenda.prototype.getIndex = function (index) {
+  this.active = index;
+  var that = this;
+  $('.agenda-text__wrapper').fadeOut().fadeIn();
+  setTimeout(function () {
+    $('.agenda-text__date').text(that.dates[that.active]);
+    $('.agenda-text__content').text(that.listContent[that.active]);
+    var parsed = $.parseHTML($('.agenda-text__content').text());
+    $('.agenda-text__content').html(parsed);
+  }, 400);// 400 is default transition time of fadeout.
 };
 
-Agenda.prototype.getDates = function () {
+Agenda.prototype.getMonth = function (index) {
+  return this.monthList[index]; // return current month as String (e.g: Dimanche)
+};
+
+Agenda.prototype.initActive = function () {
+  var val = $('.agenda-text__date').text();
+  var that = this;
+  setTimeout(function() {
+      that.active = that.dates.indexOf(val);
+  }, 10);
+};
+
+Agenda.prototype.getDatas = function () {
   var listDates = [];
-  $('.agenda-text__date').each(function () {
-    var number = $(this).html().split(' ')[0];
-    var month =  $(this).html().split(' ')[1];
-    var year =  $(this).html().split(' ')[2];
-    listDates.push({day: number, month: month, year: year});
+  var listFullDates = [];
+  var listContent =  [];
+  $.getJSON('/collection/exceptions/appointements')
+  .done(function (data) {
+    for (var i = 0; i < data.length; i++) {
+      var dates = data[i].date.split(' ');
+      var day = dates[0];
+      var month = dates[1];
+      listFullDates.push(data[i].date);
+      listContent.push(data[i].content);
+      listDates.push({day: day ,month: month });
+    }
   })
-  return listDates;
+  this.listContent = listContent;
+  this.parsedDates = listDates;
+  this.dates = listFullDates;
 };
 
 Agenda.prototype.clickListener = function () {
   var that = this;
   $('.agenda-text__button').click(function () {
     that.getNext()
+  });
+};
+
+Agenda.prototype.parseResumes = function () {
+  $('.agenda-text__content').each(function () {
+    var parsedAgenda = $.parseHTML($(this).text());
+    $(this).html(parsedAgenda);
   })
 };
 
-Agenda.prototype.resizeListener = function () {
-  var that = this;
-  $(window).on('resize', function () {
-    that.sizing()
-  })
-};
 comptaAgenda = new Agenda();

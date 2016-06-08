@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFluxTable extends Migration
+class CreateFaqKeywordsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,15 +12,9 @@ class CreateFluxTable extends Migration
      */
     public function up()
     {
-        Schema::create('flux_articles', function (Blueprint $table) {
+        Schema::create('faq_keywords', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('image');
-            $table->string('auteur');
-            $table->string('date');
-            $table->string('summary');
-            $table->string('content');
-            $table->string('title');
-            $table->string('rubrique');
+            $table->integer('faq_id')->unsigned()->index();
             $table->string('keyword');
             $table->timestamps();
         });
@@ -33,6 +27,6 @@ class CreateFluxTable extends Migration
      */
     public function down()
     {
-        Schema::drop('flux_articles');
+        Schema::drop('faqkeywords');
     }
 }

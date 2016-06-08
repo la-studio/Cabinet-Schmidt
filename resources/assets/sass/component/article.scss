@@ -1,0 +1,116 @@
+.echo-article {
+  border-top: solid 1px $yellow;
+  min-height: calc(100vh - 100px - 75px); // 100 and 75 are header/footer height.
+  .row {
+    @include fixheight(auto);
+  }
+  &__title {
+    padding-top: 30px;
+    @include fixheight(auto);
+    font-size: 26px;
+    text-align: left;
+    font-family: $font-bold;
+  }
+  &__summary {
+    @include fixheight(auto);
+    font-size: 20px;
+    text-align: left;
+  }
+  &__content {
+    text-align: left;
+    font-size: 18px;
+  }
+  &__author {
+    margin-top: 40px;
+    text-align: end;
+    font-size: 18px;
+  }
+  &__links {
+    a {
+      @include link-off;
+      color: $yellow;
+    }
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+  &__table {
+    padding: 15px 0;
+    td,tr {
+      border: 1px solid grey;
+      padding: 3px 8px;
+      text-align: left;
+      line-height: 1.3;
+      &.full {
+        text-align: center;
+        font-family: $font-semibold;
+      }
+    }
+  }
+  &__suggestions {
+    @include fixheight(auto);
+    padding-bottom: 30px;
+    padding-top: 15px;
+    &:before {
+      content: '';
+      height: 2px;
+      background-color: $black;
+      opacity: .8;
+      -webkit-box-flex: 0;
+      flex: 0 0 auto;
+      flex-basis: 50%;
+      max-width: 50%;
+    }
+    h3 {
+      font-family: $font-semibold;
+      font-weight: normal;
+      font-size: 23px;
+    }
+    .wrapper {
+      @include fixheight(auto);
+    }
+    .suggestion {
+      margin-top: 20px;
+      overflow: hidden;
+      a {
+        @include link-off;
+      }
+      &__cover {
+        height: 150px;
+        max-height: 150px;
+        display: flex;
+        @include bg-regular;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        a {
+          height: 100%;
+          flex-basis: 100%;
+          transition: transform 2.5s $easeOutSine;
+          position: relative;
+          &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            opacity: 0;
+            background-color: transparentize(black, .7);
+            transition: opacity .3s ease;
+          }
+          &:hover:before {
+            opacity: 1;
+          }
+        }
+      }
+      &__caption {
+        padding: 10px 7px;
+        min-height: 70px;
+        text-align: left;
+        font-size: 18px;
+        font-family: $font-semibold;
+      }
+    }
+  } // end suggestions
+}

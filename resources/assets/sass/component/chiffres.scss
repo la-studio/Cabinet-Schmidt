@@ -46,7 +46,7 @@
           @include custom-col(33.33%);
         }
         @media screen and (max-width: 1310px) {
-          margin-top: 20px
+          margin-top: 20px;
         }
         span {
           margin: 0 1.5rem;
@@ -58,7 +58,12 @@
           cursor: pointer;
           height: 30px;
         }
-
+        &--checked {
+          span {
+            background-color: $yellow;
+            color:white;
+          }
+        }
       }
     } // end filters
     &__list {
@@ -67,6 +72,8 @@
       }
     }
     &__wrapper {
+      display: none;
+      opacity: 0;
       @media screen and (max-width: $mobile) {
         padding: 0 20px;
       }
@@ -81,6 +88,22 @@
       margin-top: 20px;
       .image {
         height: 210px;
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          z-index: 1;
+          opacity: 0;
+          background-color: transparentize(black, .7);
+          transition: opacity .3s ease;
+        }
+        &:hover:before {
+          opacity: 1;
+        }
       }
       .article {
         min-height: 210px;

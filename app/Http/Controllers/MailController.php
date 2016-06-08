@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+use App\Http\Requests;
+use Mail;
+
+class MailController extends Controller
+{
+    public function index()
+    {
+        $check = "i'm here to check something.";
+        return view('contact')->with('check',$check);
+    }
+    public function send()
+    {
+        $identity = Input::get('identity');
+        $email = Input::get('email');
+        $company = Input::get('company');
+        $purpose = Input::get('purpose');
+        $message = Input::get('message');
+        $content = 'De '.$identity."(".$email."),de l'entreprise ".$company." vous contacte pour : ".$purpose.'. Et vous adresse le message suivant : '.$message;
+        Mail::raw($content,function($message) {
+            $message->from('ismael.sebbane@gmail.com');
+            $message->to('ismael.11@hotmail.fr');
+        });
+    }
+}

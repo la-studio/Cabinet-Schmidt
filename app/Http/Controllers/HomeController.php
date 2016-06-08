@@ -7,6 +7,8 @@ use App\Article;
 use App\Partenaire;
 use App\Competence;
 use App\Echosarticle;
+use App\Appointment;
+use DateTime;
 
 class HomeController extends Controller
 {
@@ -20,6 +22,9 @@ class HomeController extends Controller
         $temoignages = Temoignage::all();
         $partenaires = Partenaire::all();
         $competences = Competence::all();
-        return view('home', compact('articles', 'temoignages', 'partenaires','competences','echosarticles'));
+        $appointmentLen = Appointment::all()->count();
+        $appointment = Appointment::orderBy('created_at','asc')->where('created_at','>', new DateTime())->first();
+        // return $appointment;
+        return view('home', compact('articles', 'temoignages', 'partenaires','competences','echosarticles','appointment'))->withCount($appointment);
     }
 }
