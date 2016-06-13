@@ -15,7 +15,6 @@
           <div class="row center-xs form__content">
             <div class="col-md-11 col-xs-12">
               <div class="row between-xs middle-xs form__fields">
-                {{-- <input class="input__field" name="_token" type="hidden" value="{{csrf_token()}}" id="form-token"/> --}}
                 {{csrf_field()}}
                 <div class="col-sm-5 col-custom field">
                   <span class="input">

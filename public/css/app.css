@@ -2926,6 +2926,44 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         font-size: 18px;
         font-family: "proximanova-semibold"; }
 
+.email {
+  height: 100vh; }
+  .email__head .logo {
+    height: 100px;
+    margin-top: 20px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    max-width: 200px;
+    overflow: hidden;
+    padding-left: 20px; }
+    .email__head .logo svg {
+      height: 90px; }
+  .email__content {
+    padding-top: 30px; }
+    .email__content:before {
+      content: '';
+      height: 2px;
+      background-color: #1d1e1c;
+      opacity: .8;
+      -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+      -webkit-flex-basis: 40%;
+      -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+      max-width: 40%; }
+    .email__content a {
+      text-decoration: none;
+      color: inherit;
+      color: #e7b116; }
+    .email__content .sb {
+      font-family: "proximanova-semibold"; }
+
 html, body {
   width: 100%;
   color: #1d1e1c;

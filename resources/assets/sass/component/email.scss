@@ -1,0 +1,36 @@
+.email {
+  height: 100vh;
+  &__head {
+    .logo {
+      height: 100px;
+      margin-top: 20px;
+      @include flex-middle(y);
+      max-width: 200px;
+      overflow: hidden;
+      padding-left: 20px;
+      svg {
+        height: 90px;
+      }
+    }
+  }
+  &__content {
+    padding-top: 30px;
+    &:before {
+      content: '';
+      height: 2px;
+      background-color: $black;
+      opacity: .8;
+      -webkit-box-flex: 0;
+      flex: 0 0 auto;
+      flex-basis: 40%;
+      max-width: 40%;
+    }
+    a {
+      @include link-off;
+      color: $yellow;
+    }
+    .sb {
+      font-family: $font-semibold;
+    }
+  }
+}

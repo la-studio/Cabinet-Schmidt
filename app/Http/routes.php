@@ -11,6 +11,10 @@
 |
 */
 
+// Route::get('/email', function()
+// {
+//     return view('email');
+// });
 Route::group(['middleware' => ['web']], function () {
     // Admin routes.
     Route::auth();
@@ -64,6 +68,11 @@ Route::group(['middleware' => ['web']], function () {
         $remove_footer = "Disappear.";
         return view('about')->with('remove_footer',$remove_footer);
     });
+    Route::get('/faq', function()
+    {
+        $faq = App\Faq::all();
+        return view('faq',compact('faq'));
+    });
     Route::get('/contact', 'MailController@index');
     Route::post('/contact/send', 'MailController@send');
     //Toolbox
@@ -75,7 +84,6 @@ Route::group(['middleware' => ['web']], function () {
     });
 
     Route::get('/logout','AuthController@logout');
-    //Route::get('/login','AuthController@login');
 });
 
 Route::get('/', 'HomeController@index');
@@ -94,10 +102,12 @@ Route::get('/collection/exceptions/appointements', function()
     return App\Appointment::orderBy('created_at','asc')->get();
 });
 
-Route::get('/faq', function()
+Route::get('/getfaq', function()
 {
     App\FaqReference::truncate();
     App\FaqKeyword::truncate();
+    // App\FaqListKeyword::truncate();
+    // App\FaqListRubrique::truncate();
     App\Faq::truncate();
     $directoryName = 'ec_tout_flux';
     $fileName = 'ec_flux_faq.xml';
@@ -125,16 +135,25 @@ Route::get('/faq', function()
         $section_content = $element->content->section->section_content;
         $rubriques = [];
         $keywords = [];
+        $keyList = [];
+        $rubriquesList = [];
         $merged_content = [];
         foreach ($tags as $tag) {
             $tag_attr = $tag->attributes();
             if($tag_attr['type']=="rubrique") {
+                $rubrique_unique = new App\FaqListRubrique();
+                $rubrique_unique->name = $tag->__toString();
                 array_push($rubriques,$tag->__toString());
+                array_push($rubriquesList,$rubrique_unique);
+                // Essaie de créer tout ici sinon fais plus bas
             }
             if($tag_attr['type']=="keyword") {
                 $keyword = new App\FaqKeyword();
+                $keyword_unique = new App\FaqListKeyword();
+                $keyword_unique->name = $tag->__toString();
                 $keyword->keyword = $tag->__toString();
                 array_push($keywords,$keyword);
+                array_push($keyList,$keyword_unique);
             }
         }
         $rubriques = implode(' ',$rubriques); // Collapsing my array in one string separated by spaces.
@@ -172,8 +191,41 @@ Route::get('/faq', function()
         foreach ($keywords as $keyword) {
             $article->keywords()->save($keyword);
         }
+        foreach ($rubriquesList as $element) { // saving unique rubriques
+            //$query = App\FaqListRubrique::where('name','=',$element->name);
+            $queryList = App\FaqListRubrique::lists('name')->toArray();
+            if(!in_array($element->name, $queryList)) {
+                $element->save();
+                foreach ($keyList as $keyword) { // saving unique keywords binded to rubrique
+                    $queryListTwo = App\FaqListKeyword::lists('name')->toArray();
+                    if(!in_array($keyword->name, $queryListTwo)) {
+                        $keyword->save();
+                        $element->keywords()->attach($keyword->id);
+                    } else {
+                        $existing_key = App\FaqListKeyword::where('name','=',$keyword->name)->first();
+                        $element->keywords()->attach($existing_key->id);
+                    }
+                }
+            } else {
+                  foreach ($keyList as $keyword) { // saving unique keywords binded to rubrique
+                      $queryListTwo = App\FaqListKeyword::lists('name')->toArray();
+                      $query = App\FaqListRubrique::where('name','=',$element->name);
+                      if(!in_array($keyword->name, $queryListTwo)) {
+                          $keyword->save();
+                          $query->first()->keywords()->attach($keyword->id);
+                      } else {
+                          $existing_key = App\FaqListKeyword::where('name','=',$keyword->name)->first();
+                          $el = $query->first()->keywords;
+                          foreach($el as $attached_key) {
+                              if($attached_key->id!==$existing_key->id) {
+                                  $query->first()->keywords()->attach($existing_key->id);
+                              }
+                          }
+                      }
+                  }
+              }// insert else here.
+        }
     }
-
 });
 
 Route::get('digitarticle', function() {

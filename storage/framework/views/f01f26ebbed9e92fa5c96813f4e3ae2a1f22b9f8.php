@@ -17,7 +17,7 @@
     <?php echo $__env->make('layout.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     <?php echo $__env->yieldContent('content'); ?>
     <?php if ( ! (isset($remove_footer))): ?>
-    <?php echo $__env->make('layout.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+      <?php echo $__env->make('layout.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     <?php endif; ?>
     <?php echo $__env->make('layout.toolbox', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     <script type="text/javascript" src="/js/jquery.js"></script>

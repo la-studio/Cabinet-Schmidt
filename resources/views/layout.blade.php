@@ -17,7 +17,7 @@
     @include('layout.header')
     @yield('content')
     @unless(isset($remove_footer))
-    @include('layout.footer')
+      @include('layout.footer')
     @endunless
     @include('layout.toolbox')
     <script type="text/javascript" src="/js/jquery.js"></script>
