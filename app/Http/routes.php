@@ -70,8 +70,46 @@ Route::group(['middleware' => ['web']], function () {
     });
     Route::get('/faq', function()
     {
-        $faq = App\Faq::all();
-        return view('faq',compact('faq'));
+        $request = App\FaqListRubrique::lists('name');
+        return view('faq',compact('request'));
+    });
+    Route::get('/faq/list', function()
+    {
+        $request = App\FaqListRubrique::lists('name');
+        return compact('request');
+    });
+    Route::get('/faq/data', function()
+    {
+        $request = App\FaqListRubrique::all();
+        $result = [];
+        $rubriques = [];
+        foreach ($request as $element) {
+            $result_arr = App\FaqListRubrique::where('name','=',$element->name)->first()->keywords;
+            $rubriques_arr = $element->name;
+            array_push($result,$result_arr);
+            array_push($rubriques,$rubriques_arr);
+        }
+        return compact('rubriques','result');
+    });
+    Route::get('/faq/keywords/{rubrique}', function($rubrique)
+    {
+        $keywords = App\FaqListRubrique::where('name','=',$rubrique)->first()->keywords;
+        $res = [];
+        $id_arr = [];
+        foreach ($keywords as $element) {
+            $result_name = $element->name;
+            $keybind = App\FaqKeyword::where('keyword','=',$result_name)->get();
+            foreach ($keybind as $sub_element) {
+                $id = $sub_element->id;
+                $article = $sub_element->faq;
+                if($article!==null && !in_array($id,$id_arr)) {
+                    $article->from_keyword = $result_name;
+                    array_push($res,$article);
+                    array_push($id_arr,$id);
+                }
+            }
+        }
+        return $res;
     });
     Route::get('/contact', 'MailController@index');
     Route::post('/contact/send', 'MailController@send');
@@ -125,6 +163,7 @@ Route::get('/getfaq', function()
     Storage::disk('local')->put($fileName.'.xml', $file);
     $xml = XmlParser::load(storage_path('app/'.$fileName.'.xml'));
     $articles = $xml->getContent();
+    $x = 0;
     foreach ($articles as $element) {
         $title = $element->title->__toString();
         $date = $element->create_date->__toString();
@@ -174,7 +213,9 @@ Route::get('/getfaq', function()
                 str_replace('\n','',$collapsing);
                 array_push($merged_content, '<p>'.$collapsing.'<p>');
                 } else if($sub->getName()!=="reference") {
-                    array_push($merged_content, '<p>'.$sub->__toString().'<p>');
+                    if($sub->__toString()!=="") {
+                        array_push($merged_content, '<p>'.$sub->__toString().'<p>');
+                    }
                 } //end last else if
             }
         }
@@ -191,15 +232,19 @@ Route::get('/getfaq', function()
         foreach ($keywords as $keyword) {
             $article->keywords()->save($keyword);
         }
+        $queryList = App\FaqListRubrique::lists('name')->toArray(); // new hook for sorting
+        $queryListTwo = App\FaqListKeyword::lists('name')->toArray();
         foreach ($rubriquesList as $element) { // saving unique rubriques
             //$query = App\FaqListRubrique::where('name','=',$element->name);
-            $queryList = App\FaqListRubrique::lists('name')->toArray();
+            // $queryList = App\FaqListRubrique::lists('name')->toArray(); // original hook for storing.
             if(!in_array($element->name, $queryList)) {
                 $element->save();
+                array_push($queryList,$element->name);
                 foreach ($keyList as $keyword) { // saving unique keywords binded to rubrique
-                    $queryListTwo = App\FaqListKeyword::lists('name')->toArray();
+                    //$queryListTwo = App\FaqListKeyword::lists('name')->toArray();// original hook for storing.
                     if(!in_array($keyword->name, $queryListTwo)) {
                         $keyword->save();
+                        array_push($queryListTwo,$keyword->name);
                         $element->keywords()->attach($keyword->id);
                     } else {
                         $existing_key = App\FaqListKeyword::where('name','=',$keyword->name)->first();
@@ -208,22 +253,23 @@ Route::get('/getfaq', function()
                 }
             } else {
                   foreach ($keyList as $keyword) { // saving unique keywords binded to rubrique
-                      $queryListTwo = App\FaqListKeyword::lists('name')->toArray();
+                      //$queryListTwo = App\FaqListKeyword::lists('name')->toArray();
                       $query = App\FaqListRubrique::where('name','=',$element->name);
                       if(!in_array($keyword->name, $queryListTwo)) {
                           $keyword->save();
+                          array_push($queryListTwo,$keyword->name);
                           $query->first()->keywords()->attach($keyword->id);
                       } else {
-                          $existing_key = App\FaqListKeyword::where('name','=',$keyword->name)->first();
-                          $el = $query->first()->keywords;
-                          foreach($el as $attached_key) {
-                              if($attached_key->id!==$existing_key->id) {
-                                  $query->first()->keywords()->attach($existing_key->id);
-                              }
-                          }
-                      }
+                            $existing_key = App\FaqListKeyword::where('name','=',$keyword->name)->first();
+                            $res = DB::table('faq_list_keyword_faq_list_rubrique')->where('faq_list_keyword_id','=',$existing_key->id)->get();
+                            foreach ($res as $obj) {
+                                if($obj->faq_list_keyword_id!==$existing_key->id) {
+                                    $query->first()->keywords()->attach($existing_key->id);
+                                }
+                            }
+                       }
                   }
-              }// insert else here.
+              }
         }
     }
 });

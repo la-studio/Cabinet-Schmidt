@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class FaqKeyword extends Model
 {
     protected $fillable = ['keyword'];
-    
+
     public function faq()
     {
-        $this->belongsTo(Faq::class);
+        return $this->belongsTo('App\Faq','id');
     }
 }

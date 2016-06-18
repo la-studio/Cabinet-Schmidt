@@ -1,0 +1,146 @@
+.faq {
+  @include fixheight(auto);
+  min-height: calc(100vh - 175px);
+  border-top: 1px solid $yellow;
+  .search {
+    @include fixheight(auto);
+    margin-top: 60px;
+    transition: transform .5s ease-out, opacity .4s ease-in-out;
+    &.fade-out {
+      transform: translate3d(0,-50px,0);
+      opacity: 0;
+    }
+    &.hide {
+      display: none;
+    }
+    &__label {
+      font-size: 26px;
+      font-family: $font-semibold;
+      transition: transform .25s $easeOutSine;
+      &--down {
+        transform: translate3d(0,35px,0)
+      }
+    }
+    &__reload {
+      margin-right: 10px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .25s ease;
+      &--show {
+        opacity: 1;
+        visibility: visible;
+      }
+      i {
+        font-size: 30px;
+        color: $yellow;
+        cursor: pointer;
+      }
+    }
+    &__head {
+      @include fixheight(auto);
+      overflow: hidden;
+    }
+    &__bar {
+      @include fixheight(auto);
+      margin-top: 5px;
+      background-color: lighten($light-grey,15%);
+      position: relative;
+    }
+    &__progress {
+      $light-yellow : lighten($yellow,7%);
+      height: 8px;
+      background-color: transparentize($yellow, .6);
+      overflow: hidden;
+      .fill {
+        background-color: lighten($yellow,12%);
+        width: 100%;
+        height: inherit;
+        transform: translate3d(-100%,0,0);
+        transition: transform .55s ease-in-out;
+        &.step-2 {
+          transform: translate3d(-50%,0,0);
+          z-index: -1;
+        }
+        &.step-3 {
+          transform: translate3d(0,0,0);
+          z-index: -1;
+        }
+      }
+    }
+    &__current {
+      height: 55px;
+      padding-left: 25px;
+      text-align: left;
+      font-family: $font-semibold;
+      color: $grey;
+      display: flex;
+      align-items: center;
+    }
+    &__select {
+      width: 100%;
+      max-height: 283px;
+      overflow: auto;
+      outline: 0;
+      border: none;
+      padding-left: 20px;
+      list-style: none;
+      text-align: left;
+      @include reset;
+      font-family: $font-semibold;
+      color: $grey;
+      .option {
+        height: 55px;
+        @include flex-middle(y);
+        cursor: pointer;
+        background-color: lighten($light-grey,15%);
+        padding-left: 25px;
+        transition: transform .4s $easeOutSine, opacity .3s $easeOutSine,color .15s ease, background-color .15s ease;
+        &:hover,&--selected {
+          background-color: transparentize($yellow, .4);
+          color: white;
+        }
+      }
+    }
+    &__next {
+      height: 55px;
+      @include flex-middle(y);
+      flex-grow: 0;
+      flex-basis: 40px;
+      background-color: transparent;
+      position: absolute;
+      right: 20px;
+      top: 0;
+      z-index: 1;
+      i {
+        font-size: 28px;
+        color: $grey;
+        cursor: pointer;
+        transition: color .2s ease, transform .3s $easeOutCubic;
+        transform: rotate(90deg);
+        user-select: none;
+        &:hover {
+          color: $yellow;
+        }
+        &.ready {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }// end search
+  .list {
+    @include fixheight(auto);
+    padding: 15px 0;
+    .faq-item {
+      font-family: $font-semibold;
+      font-size: 17px;
+      margin-top: 20px;
+      text-align: left;
+      &__question,&__reponse  {
+        @include fixheight(auto);
+      }
+      &__reponse {
+        font-family: $font;
+      }
+    }
+  }
+}

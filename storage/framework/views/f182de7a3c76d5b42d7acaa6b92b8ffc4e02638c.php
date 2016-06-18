@@ -17,7 +17,6 @@
   <ul class="toolbox__list">
     <li class="toolbox__item"><a href="<?php echo e(URL::to('sites-utiles')); ?>">Liens utiles</a></li>
     <li class="toolbox__item"><a href="<?php echo e(URL::to('chiffres-utiles')); ?>">Chiffres utiles</a></li>
-    <li class="toolbox__item"><a href="#">Simulateur</a></li>
-    <li class="toolbox__item"><a href="#">FAQ</a></li>
+    <li class="toolbox__item"><a href="<?php echo e(URL::to('faq')); ?>">FAQ</a></li>
   </ul>
 </div>

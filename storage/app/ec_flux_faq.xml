@@ -2,6 +2,33 @@
 <!DOCTYPE articles SYSTEM "FluxXmlClient.dtd">
 <articles>
 <article>
+  <id>k4_8088276</id>
+  <create_date>2016-06-16 09:23:00</create_date>
+  <display_date>2016-06-16 09:23:00</display_date>
+  <author>La rédaction</author>
+  <language>fr</language>
+  <title>Conservation d’un Livret de développement durable après un départ à l’étranger</title>
+  <summary>Je pars vivre à l’étranger dans quelques semaines. Je me demande si je pourrai conserver mon Livret de développement durable (LDD) qui est détenu par ma banque actuelle.</summary>
+  <content>
+      <section>
+         <section_content>
+            <texteparagraphe>Oui. Après votre départ à l’étranger, vous pourrez conserver votre Livret de développement durable. À l’instar du plan d’épargne en actions, le transfert de son domicile fiscal hors de France par le titulaire d’un LDD n’entraîne pas automatiquement sa clôture, sauf si ce transfert s’effectue dans un État ou un territoire non coopératif (ETNC), autrement dit un paradis fiscal. Précisons qu’un État ou un territoire est qualifié de non coopératif lorsqu’il n’est pas membre de l’Union européenne, qu’il fait l’objet d’une évaluation par l’OCDE en matière d’échange d’informations à des fins fiscales et qu’il n’a pas conclu avec la France une convention d’assistance administrative. En pratique, ces ETNC sont aujourd’hui au nombre de 6 : Nauru, Guatemala, Brunei, Iles Marshall, Botswana et Niue.</texteparagraphe>
+         </section_content>
+      </section>
+   </content>
+  <tag type="rubrique">Patrimoine</tag>
+  <tag type="rubrique">Fiscal</tag>
+  <tag type="keyword">Procédure fiscale</tag>
+  <tag type="keyword">Fiscalité</tag>
+  <tag type="keyword">Placement</tag>
+  <tag type="typo">Question Réponse</tag>
+  <copyright>
+    <holder>Les Echos Publishing</holder>
+    <year>2016</year>
+  </copyright>
+</article>
+
+<article>
   <id>k4_7981021</id>
   <create_date>2016-05-26 09:15:00</create_date>
   <display_date>2016-05-26 11:17:00</display_date>

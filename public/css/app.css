@@ -67,8 +67,8 @@
     opacity: 1; }
   35% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 30px, 0);
-    transform: translate3d(0, 30px, 0); }
+    -webkit-transform: translate3d(0, 60px, 0);
+    transform: translate3d(0, 60px, 0); }
   50% {
     opacity: 0;
     -webkit-transform: translate3d(0, -15px, 0);
@@ -89,8 +89,8 @@
     opacity: 1; }
   35% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 30px, 0);
-    transform: translate3d(0, 30px, 0); }
+    -webkit-transform: translate3d(0, 60px, 0);
+    transform: translate3d(0, 60px, 0); }
   50% {
     opacity: 0;
     -webkit-transform: translate3d(0, -15px, 0);
@@ -123,6 +123,14 @@
 @font-face {
   font-family: "proxima-nova-italic";
   src: url("/fonts/proxima-nova-italic.ttf"); }
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/MaterialIcons-Regular.eot);
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(/fonts/MaterialIcons-Regular.woff2) format("woff2"), url(/fonts/MaterialIcons-Regular.woff) format("woff"), url(/fonts/MaterialIcons-Regular.ttf) format("truetype"); }
 
 .admin .admin-content .slider-list .slide-add {
   display: -webkit-flex;
@@ -2964,10 +2972,192 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     .email__content .sb {
       font-family: "proximanova-semibold"; }
 
+.faq {
+  min-height: calc(100vh - 175px);
+  border-top: 1px solid #e7b116; }
+  .faq.row {
+    height: auto; }
+  .faq .search {
+    margin-top: 60px;
+    transition: -webkit-transform .5s ease-out, opacity .4s ease-in-out;
+    transition: transform .5s ease-out, opacity .4s ease-in-out; }
+    .faq .search.row {
+      height: auto; }
+    .faq .search.fade-out {
+      -webkit-transform: translate3d(0, -50px, 0);
+      transform: translate3d(0, -50px, 0);
+      opacity: 0; }
+    .faq .search.hide {
+      display: none; }
+    .faq .search__label {
+      font-size: 26px;
+      font-family: "proximanova-semibold";
+      transition: -webkit-transform 0.25s cubic-bezier(0.39, 0.575, 0.565, 1);
+      transition: transform 0.25s cubic-bezier(0.39, 0.575, 0.565, 1); }
+      .faq .search__label--down {
+        -webkit-transform: translate3d(0, 35px, 0);
+        transform: translate3d(0, 35px, 0); }
+    .faq .search__reload {
+      margin-right: 10px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .25s ease; }
+      .faq .search__reload--show {
+        opacity: 1;
+        visibility: visible; }
+      .faq .search__reload i {
+        font-size: 30px;
+        color: #e7b116;
+        cursor: pointer; }
+    .faq .search__head {
+      overflow: hidden; }
+      .faq .search__head.row {
+        height: auto; }
+    .faq .search__bar {
+      margin-top: 5px;
+      background-color: #eeeeee;
+      position: relative; }
+      .faq .search__bar.row {
+        height: auto; }
+    .faq .search__progress {
+      height: 8px;
+      background-color: rgba(231, 177, 22, 0.4);
+      overflow: hidden; }
+      .faq .search__progress .fill {
+        background-color: #eec44c;
+        width: 100%;
+        height: inherit;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        transition: -webkit-transform .55s ease-in-out;
+        transition: transform .55s ease-in-out; }
+        .faq .search__progress .fill.step-2 {
+          -webkit-transform: translate3d(-50%, 0, 0);
+          transform: translate3d(-50%, 0, 0);
+          z-index: -1; }
+        .faq .search__progress .fill.step-3 {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+          z-index: -1; }
+    .faq .search__current {
+      height: 55px;
+      padding-left: 25px;
+      text-align: left;
+      font-family: "proximanova-semibold";
+      color: #9c9c9c;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .faq .search__select {
+      width: 100%;
+      max-height: 283px;
+      overflow: auto;
+      outline: 0;
+      border: none;
+      padding-left: 20px;
+      list-style: none;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      font-family: "proximanova-semibold";
+      color: #9c9c9c; }
+      .faq .search__select .option {
+        height: 55px;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        float: none;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: #eeeeee;
+        padding-left: 25px;
+        transition: -webkit-transform 0.4s cubic-bezier(0.39, 0.575, 0.565, 1), opacity 0.3s cubic-bezier(0.39, 0.575, 0.565, 1), color 0.15s ease, background-color 0.15s ease;
+        transition: transform 0.4s cubic-bezier(0.39, 0.575, 0.565, 1), opacity 0.3s cubic-bezier(0.39, 0.575, 0.565, 1), color 0.15s ease, background-color 0.15s ease; }
+        .faq .search__select .option:hover, .faq .search__select .option--selected {
+          background-color: rgba(231, 177, 22, 0.6);
+          color: white; }
+    .faq .search__next {
+      height: 55px;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      float: none;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-flex-grow: 0;
+      -ms-flex-positive: 0;
+      flex-grow: 0;
+      -webkit-flex-basis: 40px;
+      -ms-flex-preferred-size: 40px;
+      flex-basis: 40px;
+      background-color: transparent;
+      position: absolute;
+      right: 20px;
+      top: 0;
+      z-index: 1; }
+      .faq .search__next i {
+        font-size: 28px;
+        color: #9c9c9c;
+        cursor: pointer;
+        transition: color 0.2s ease, -webkit-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition: color 0.2s ease, transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none; }
+        .faq .search__next i:hover {
+          color: #e7b116; }
+        .faq .search__next i.ready {
+          -webkit-transform: rotate(0deg);
+          transform: rotate(0deg); }
+  .faq .list {
+    padding: 15px 0; }
+    .faq .list.row {
+      height: auto; }
+    .faq .list .faq-item {
+      font-family: "proximanova-semibold";
+      font-size: 17px;
+      margin-top: 20px;
+      text-align: left; }
+      .faq .list .faq-item__question.row, .faq .list .faq-item__reponse.row {
+        height: auto; }
+      .faq .list .faq-item__reponse {
+        font-family: "proximanova-regular"; }
+
 html, body {
   width: 100%;
   color: #1d1e1c;
   font-family: "proximanova-light"; }
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga'; }
 
 .row {
   margin: 0; }
