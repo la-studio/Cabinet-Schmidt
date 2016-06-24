@@ -15,9 +15,7 @@ $(document).ready(function () {
         grabCursor: true,
         autoplay: 4000,
         loop: true,
-        slidesPerView: 3,
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev'
+        slidesPerView: 2
       }
       var optionsSlider3 = {
           pagination: '.swiper-pagination',
@@ -29,10 +27,13 @@ $(document).ready(function () {
           nextButton: '.swiper-button-next',
           prevButton: '.swiper-button-prev'
         }
-      if($('.swiper').length >0 && $('.slider').length >0) {
-        var swiper = new Swiper('.swiper',optionsSlider);
+      if($('.slider').length >0) {
+        //var swiper = new Swiper('.swiper',optionsSlider);
         var swiper2 = new Swiper('#slider-partenaires',optionsSlider2);
         var swiper3 = new Swiper('#slider-temoignage',optionsSlider3);
+      }
+      if($('.swiper').length >0) {
+        var swiper = new Swiper('.swiper',optionsSlider);
         var sliderController = new Slider('.swiper',swiper); // Connecting Swiper to my object and initializing it.
       }
   //Responsive menu switch on/off. No obj because way too simple.

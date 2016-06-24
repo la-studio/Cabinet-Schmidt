@@ -1,4 +1,4 @@
-$(function() {
+
   Slider = function (selector,originalSlider) {
     this.element = $(selector);
     this.connection = originalSlider;
@@ -16,6 +16,10 @@ $(function() {
     this.connection.on('transitionEnd', function () {
       that.show();
     });
+    setTimeout(function () {
+      $('.slider-caption').addClass('slider-caption--shown');
+      $('.slider-caption__title').addClass('slider-caption__title--shown');
+    }, 150);
   };
 
   Slider.prototype.toggleClasses = function () {
@@ -35,4 +39,3 @@ $(function() {
       that.toggleClasses();
     },this.speed - 190)
   };
-});

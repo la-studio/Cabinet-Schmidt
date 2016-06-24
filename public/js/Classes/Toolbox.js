@@ -63,6 +63,11 @@ ToolBox.prototype.clickListener = function () {
   this.el.click(function () {
     that.toggleState();
   });
+  $('body >*:not(.toolbox)').click(function () {
+    if(that.enabled) {
+      that.close();
+    }
+  })
 };
 
 ToolBox.prototype.open = function () {

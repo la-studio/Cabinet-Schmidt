@@ -6,6 +6,7 @@ Faq = function () {
   this.step = null;
   this.selected = {};
   this.articles = [];
+  this.currentArticles = [];
   this.init();
 };
 
@@ -36,6 +37,13 @@ Faq.prototype.clickListener = function () {
     if(that.canSkip) {
       that.next();
     }
+  })
+  $('.faq .buttons__full').click(function () {
+    that.addMore();
+    $(this).addClass('buttons__full--disabled')
+  })
+  $('.faq .buttons__search').click(function () {
+    that.newSearch();
   })
   $('.search__reload').click(function () {
     that.prev();
@@ -149,18 +157,27 @@ Faq.prototype.getResult = function () {
   that.articles = [];
   $.getJSON('faq/keywords/'+this.selected.topic).done(function (data) {
       console.log(data);
+      var x = 0;
       setTimeout(function () {
         that.isDone = true;
         for (var i = 0; i < data.length; i++) {
-          if(that.selected.keywords.indexOf(data[i].from_keyword)!==-1) {
-          var reponse = data[i].reponse;
-          var template =  '<div class="col-xs-9 faq-item">'+
-                            '<div class="row faq-item__question">'+data[i].question+'</div>'+
-                            '<div class="row faq-item__reponse">'+reponse+'</div>'+
-                          '</div>';
-            $('.faq .list').append(template);
+          if(that.isKeywordInSelection(data[i])) { //that.selected.keywords.indexOf(data[i].from_keyword
+            that.currentArticles.push(data[i]);
+            if(x<5) { // the if nesting is necessary here.
+              var reponse = data[i].reponse;
+              var template =  '<div class="col-xs-9 faq-item">'+
+                                '<div class="row faq-item__question">'+data[i].question+'</div>'+
+                                '<div class="row faq-item__reponse">'+reponse+'</div>'+
+                              '</div>';
+                $('.faq .list').append(template);
+                x++;
+            }
           }
         }
+        if(that.currentArticles.length>5) {
+          $('.buttons__full').addClass('buttons__full--show')
+        }
+        $('.buttons__search').addClass('buttons__search--show')
         $('.faq-item p').each(function () {
           if($(this).text()=='' || $(this).text()==' ') {
             $(this).remove();
@@ -168,6 +185,44 @@ Faq.prototype.getResult = function () {
         })
       }, 1000);
   })
+};
+
+Faq.prototype.isKeywordInSelection = function (iteration) {
+  for (var i = 0; i < iteration.keywords.length; i++) {
+    if(this.selected.keywords.indexOf(iteration.keywords[i].keyword)!==-1 && this.currentArticles.indexOf(iteration.id)) {
+      return true
+    } else {
+      return false
+    }
+  }
+};
+
+Faq.prototype.addMore = function () {
+  for (var i = 6; i < this.currentArticles.length; i++) {
+    var template =  '<div class="col-xs-9 faq-item">'+
+                      '<div class="row faq-item__question">'+this.currentArticles[i].question+'</div>'+
+                      '<div class="row faq-item__reponse">'+this.currentArticles[i].reponse+'</div>'+
+                    '</div>';
+      $('.faq .list').append(template);
+  }
+  $('.faq-item p').each(function () {
+    if($(this).text()=='' || $(this).text()==' ') {
+      $(this).remove();
+    }
+  })
+};
+
+Faq.prototype.newSearch = function () {
+  this.step = 1;
+  $('.search').removeClass('hide fade-out');
+  $('.search__select .option').remove();
+  this.createList('.search__select',this.topicsList,true);
+  $('.search__progress .fill').removeClass('step-3 step-2');
+  $('.search__current').text('');
+  $('.buttons__search').removeClass('buttons__search--show');
+  $('.buttons__full').removeClass('buttons__full--show');
+  this.slideTitle('Sélectionnez une rubrique');
+  $('.faq-item').fadeOut(500);
 };
 
 Faq.prototype.createList = function (target, datas, isRollback) {

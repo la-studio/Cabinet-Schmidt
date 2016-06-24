@@ -14,7 +14,7 @@ Agenda.prototype.init = function () {
   this.translate = 0;
   setTimeout(function () {
     that.datepicker = hillsDatepicker;
-  }, 10);
+  }, 50);
   this.year = new Date().getFullYear();
   this.monthList = ['Décembre','Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre'];
   this.clickListener();
@@ -38,7 +38,9 @@ Agenda.prototype.getNext = function () {
         var lastActiveMonth = this.dates[this.active-1].split(' ')[1]; // the second word contains the month.
         var currMonth = this.dates[this.active].split(' ')[1];// the second word contains the month.
         if(lastActiveMonth!==currMonth) { // FIXME
+          var month = this.datepicker.getMonthIndex(currMonth);
           this.datepicker.getNext();
+          // this.datepicker.getCalendarMonth(month);
         }
       }
   }

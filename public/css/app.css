@@ -145,6 +145,20 @@
     color: white;
     background-color: #e7b116; }
 
+.admin .admin-content .articles-list .article__form .delete, .admin .admin-content .articles-list .article__form .edit span, .admin .admin-content .article__save, .admin .admin-content .temoignages-list .temoignage__form .delete, .admin .admin-content .temoignages-list .temoignage__form .edit span, .admin .admin-content .temoignage__save, .admin .admin-content .partenaires-list .delete-form input, .admin .admin-content .partenaire__save, .admin .admin-content .partenaire-create__save, .admin .admin-content .slide__save, .admin .admin-content .competence__save, .admin .admin-content .story__save {
+  margin-top: 20px;
+  background-color: transparent;
+  height: 30px;
+  font-family: "proximanova-semibold";
+  outline: 0;
+  color: #e7b116;
+  border: 2px solid #e7b116;
+  cursor: pointer;
+  transition: color .2s ease, background-color .2s ease; }
+  .admin .admin-content .articles-list .article__form .delete:hover, .admin .admin-content .articles-list .article__form .edit span:hover, .admin .admin-content .article__save:hover, .admin .admin-content .temoignages-list .temoignage__form .delete:hover, .admin .admin-content .temoignages-list .temoignage__form .edit span:hover, .admin .admin-content .temoignage__save:hover, .admin .admin-content .partenaires-list .delete-form input:hover, .admin .admin-content .partenaire__save:hover, .admin .admin-content .partenaire-create__save:hover, .admin .admin-content .slide__save:hover, .admin .admin-content .competence__save:hover, .admin .admin-content .story__save:hover {
+    background-color: #e7b116;
+    color: white; }
+
 /**
  * Ismaël SEBBANE's mixins.
  * @author Ismaël
@@ -273,7 +287,10 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
             .header .header__right .head-upper .socials__text {
               display: none; } }
         .header .header__right .head-upper .socials__icon {
-          padding: 15px; }
+          padding: 15px;
+          transition: color .15s ease; }
+          .header .header__right .head-upper .socials__icon:hover {
+            color: #e7b116; }
     .header .header__right .head-nav {
       height: 50px;
       color: #1d1e1c;
@@ -353,6 +370,9 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
           margin: 0;
           list-style: none;
           height: inherit; }
+          @media screen and (max-width: 630px) {
+            .header .header__right .head-nav .main-nav__list {
+              font-size: 17px; } }
         .header .header__right .head-nav .main-nav__item {
           text-align: center;
           height: 100%;
@@ -507,7 +527,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       letter-spacing: 0.01rem; }
   .toolbox__list {
     list-style: none;
-    width: 100%; }
+    width: 100%;
+    margin-top: 25px; }
     .toolbox__list a {
       text-decoration: none;
       color: inherit;
@@ -558,7 +579,7 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       .toolbox--open-x svg path {
         fill: #e7b116; }
   .toolbox--open-y {
-    height: 200px; }
+    height: 170px; }
     .toolbox--open-y .toolbox__item {
       -webkit-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
@@ -950,7 +971,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     .home__actus .actus-header__title {
       font-size: 26px;
       text-transform: uppercase;
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      text-align: center; }
     .home__actus .actus-header__label {
       padding: 0;
       margin: 0;
@@ -991,7 +1013,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         border-radius: 2px;
         box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.4);
         margin-top: 20px;
-        height: 180px; }
+        height: 210px;
+        text-align: left; }
         @media screen and (max-width: 1065px) {
           .home__actus .actus-articles__cabinet .article {
             height: 187px; } }
@@ -1025,20 +1048,17 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
           max-width: 100%;
           padding: 0 20px; } }
       .home__actus .actus-articles__entreprises .article {
-        height: 180px;
+        height: auto;
+        min-height: 210px;
         background-color: #fff;
         margin-top: 20px;
         box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.4);
         max-width: 700px; }
-        @media screen and (max-width: 1065px) {
-          .home__actus .actus-articles__entreprises .article {
-            height: 187px; } }
-        @media screen and (max-width: 920px) {
-          .home__actus .actus-articles__entreprises .article {
-            height: 209px; } }
         @media screen and (min-width: 1600px), screen and (max-width: 840px) {
           .home__actus .actus-articles__entreprises .article {
             max-width: none; } }
+        .home__actus .actus-articles__entreprises .article__header {
+          max-width: 700px; }
         .home__actus .actus-articles__entreprises .article__picture {
           background-size: cover;
           background-position: center;
@@ -1068,10 +1088,19 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
               max-width: none; } }
         .home__actus .actus-articles__entreprises .article__body {
           text-align: left; }
+          @media screen and (max-width: 991px) {
+            .home__actus .actus-articles__entreprises .article__body {
+              display: none; } }
         .home__actus .actus-articles__entreprises .article__name {
           margin: 0;
           font-family: "proximanova-semibold";
-          font-size: 21px; }
+          font-size: 19px;
+          text-align: left; }
+          .home__actus .actus-articles__entreprises .article__name--small {
+            font-size: 18px; }
+          .home__actus .actus-articles__entreprises .article__name a {
+            text-decoration: none;
+            color: inherit; }
         .home__actus .actus-articles__entreprises .article__footer {
           display: -webkit-flex;
           display: -ms-flexbox;
@@ -1117,7 +1146,7 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 30px 0; }
+  padding: 45px 0; }
   .home .services__head {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1165,7 +1194,7 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
           flex-basis: 80%;
           max-width: 80%; } }
       .home .services__list .service .wrapper {
-        padding: 0 30px;
+        padding: 15px 30px;
         background-color: #fff;
         min-height: 300px; }
         @media screen and (max-width: 930px) {
@@ -1239,38 +1268,28 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       font-size: 19px; }
       .home__partenaires .partenaires-header__label a {
         color: #e7b116; }
-  .home__partenaires .slider {
-    height: 300px;
+  .home__partenaires .partenaires-list {
+    margin-top: 20px; }
+    .home__partenaires .partenaires-list.row {
+      height: auto; }
+    .home__partenaires .partenaires-list > .row.row {
+      height: auto; }
+  .home__partenaires .partenaires-logo {
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex; }
-    .home__partenaires .slider .swiper-slide {
-      -webkit-flex-basis: 33.33%;
-      -ms-flex-preferred-size: 33.33%;
-      flex-basis: 33.33%;
-      max-width: 33.33%;
-      min-width: 33.33%; }
-      .home__partenaires .slider .swiper-slide img {
-        max-height: 100%;
-        display: block;
-        margin: 0 auto;
-        max-width: 100%; }
-    .home__partenaires .slider .swiper-button-prev, .home__partenaires .slider .swiper-button-next {
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      float: none;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-justify-content: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      background-image: none;
-      color: #283466;
-      opacity: 1;
-      font-size: 55px;
-      top: calc(50% + 44px); }
+    display: flex;
+    float: none;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 25px; }
+    .home__partenaires .partenaires-logo img {
+      height: inherit;
+      max-height: 90px;
+      max-width: 90%; }
 
 .home__temoignages {
   overflow: hidden; }
@@ -1289,6 +1308,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       @media screen and (max-width: 767px) {
         .home__temoignages .slider .temoignage .col-xs {
           padding: 0 1rem; } }
+      .home__temoignages .slider .temoignage__photo.row {
+        height: auto; }
       .home__temoignages .slider .temoignage__photo img {
         width: 80px;
         height: 80px;
@@ -1302,6 +1323,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column; }
+        .home__temoignages .slider .temoignage__body.row {
+          height: auto; }
         .home__temoignages .slider .temoignage__body:before {
           content: '';
           height: 2px;
@@ -1314,6 +1337,10 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column; }
+        .home__temoignages .slider .temoignage__identity.row {
+          height: auto; }
+        .home__temoignages .slider .temoignage__identity.row.row {
+          height: auto; }
         .home__temoignages .slider .temoignage__identity h3 {
           font-family: "proximanova-semibold"; }
     .home__temoignages .slider .swiper {
@@ -2094,7 +2121,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
   background-image: url("/images/cover-contact.jpg"); }
 
 .contact__wrapper {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .contact__map {
   max-height: 800px;
@@ -2408,18 +2436,21 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       .useful-sites__main-nav .partner .wrapper {
         min-height: 230px; } }
   .useful-sites__main-nav .partner__logo.row {
-    height: 90px;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    float: none;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    height: 90px; }
     .useful-sites__main-nav .partner__logo.row img {
       max-height: 100%;
       max-width: 60%;
       display: block; }
+    .useful-sites__main-nav .partner__logo.row .link {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      float: none;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 100%;
+      height: 100%; }
   .useful-sites__main-nav .partner__description {
     text-align: left; }
     .useful-sites__main-nav .partner__description p {
@@ -2427,7 +2458,9 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       margin-bottom: 0; }
 
 .useful-sites__second-nav {
-  padding: 20px 0; }
+  margin: 40px 0; }
+  .useful-sites__second-nav > .row.row {
+    height: auto; }
   .useful-sites__second-nav h2.row {
     text-align: center;
     margin-bottom: 1.3em;
@@ -2653,6 +2686,9 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         font-family: "proximanova-semibold"; }
         .chiffres .gallery__item .article__title.row {
           height: auto; }
+        .chiffres .gallery__item .article__title a {
+          text-decoration: none;
+          color: inherit; }
       .chiffres .gallery__item .article__body {
         padding-top: 0;
         margin-bottom: 15px;
@@ -2693,7 +2729,7 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
           color: white; }
 
 .admin .admin-menu {
-  background-color: #283466;
+  background-color: #12182f;
   height: 100vh;
   color: white; }
   .admin .admin-menu.col-custom {
@@ -2702,9 +2738,10 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     flex-basis: 20%;
     max-width: 20%; }
   .admin .admin-menu__logo {
-    background-color: #fff;
     margin: 10px; }
     .admin .admin-menu__logo.row {
+      height: 200px; }
+    .admin .admin-menu__logo svg {
       height: 200px; }
   .admin .admin-menu__nav.row {
     height: auto; }
@@ -2716,91 +2753,311 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    padding: 0;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
   .admin .admin-menu__item {
-    font-size: 18px;
+    font-size: 17px;
     font-family: "proximanova-semibold";
     letter-spacing: 0.02rem;
+    padding-left: 40px;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     float: none;
     -webkit-align-items: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease; }
     .admin .admin-menu__item.row {
       height: 40px; }
+    .admin .admin-menu__item--selected {
+      border-left: 4px solid white; }
     .admin .admin-menu__item:last-child {
-      margin-top: auto; }
+      margin-top: auto;
+      border: none; }
+    .admin .admin-menu__item:hover {
+      -webkit-transform: translate3d(15px, 0, 0);
+      transform: translate3d(15px, 0, 0); }
     .admin .admin-menu__item i {
       margin-right: 15px; }
 
 .admin .admin-content {
   height: 100vh;
   overflow-y: scroll; }
+  .admin .admin-content .admin-home {
+    font-size: 21px;
+    font-family: "proximanova-semibold"; }
+  .admin .admin-content .articles-list.row {
+    height: auto; }
   .admin .admin-content .articles-list .article {
     margin-top: 20px;
     text-decoration: none;
     color: inherit; }
-    .admin .admin-content .articles-list .article .wrapper {
-      border: 1px solid grey; }
-      .admin .admin-content .articles-list .article .wrapper.row {
-        height: inherit; }
-  .admin .admin-content .articles-list .article-add {
-    margin-top: 15px;
-    padding: 5px 10px;
-    color: white;
-    background-color: #e7b116; }
+    .admin .admin-content .articles-list .article__title {
+      font-family: "proximanova-semibold"; }
+    .admin .admin-content .articles-list .article__form .delete {
+      margin-top: 10px; }
+    .admin .admin-content .articles-list .article__form .edit {
+      margin-top: 10px;
+      margin-right: 5px; }
+      .admin .admin-content .articles-list .article__form .edit span {
+        padding: 0 7px;
+        margin-top: 0;
+        display: block;
+        box-sizing: border-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        float: none;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
+    .admin .admin-content .articles-list .article .wrapper.row {
+      height: inherit; }
+    .admin .admin-content .articles-list .article .wrapper p {
+      margin: 10px 0; }
+  .admin .admin-content .article-add {
+    margin-top: 30px; }
+    .admin .admin-content .article-add.row {
+      height: auto; }
+    .admin .admin-content .article-add span {
+      padding: 5px 10px;
+      color: white;
+      background-color: #e7b116; }
   .admin .admin-content .article {
     margin-top: 30px; }
     .admin .admin-content .article.row {
       height: auto; }
+    .admin .admin-content .article__field {
+      margin-top: 15px; }
+      .admin .admin-content .article__field.row {
+        height: auto; }
+      .admin .admin-content .article__field > * {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        float: none;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        display: flex;
+        float: none;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: left;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center; }
+      .admin .admin-content .article__field span {
+        font-family: "proximanova-semibold"; }
+      .admin .admin-content .article__field input {
+        min-width: 250px; }
+      .admin .admin-content .article__field textarea {
+        height: 60px;
+        min-width: 250px; }
   .admin .admin-content .article-create {
     margin-top: 30px; }
-  .admin .admin-content .temoignages-list .row.row {
-    height: auto; }
+  .admin .admin-content .temoignages-list {
+    margin-top: 20px; }
+    .admin .admin-content .temoignages-list .temoignage > *.row {
+      height: auto; }
+    .admin .admin-content .temoignages-list .temoignage__form .delete {
+      margin-top: 10px; }
+    .admin .admin-content .temoignages-list .temoignage__form .edit {
+      margin-top: 10px;
+      margin-right: 5px; }
+      .admin .admin-content .temoignages-list .temoignage__form .edit span {
+        padding: 0 7px;
+        margin-top: 0;
+        display: block;
+        box-sizing: border-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        float: none;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
   .admin .admin-content .temoignage {
-    margin-top: 15px; }
+    margin-top: 15px;
+    margin-top: 30px; }
     .admin .admin-content .temoignage img {
       max-width: 100px;
       max-height: 100px; }
+    .admin .admin-content .temoignage__logo.row {
+      height: auto; }
+    .admin .admin-content .temoignage__field {
+      margin-top: 15px; }
+      .admin .admin-content .temoignage__field.row {
+        height: auto; }
+      .admin .admin-content .temoignage__field > * {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        float: none;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        display: flex;
+        float: none;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: left;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center; }
+      .admin .admin-content .temoignage__field span {
+        font-family: "proximanova-semibold"; }
   .admin .admin-content .temoignage-create {
     margin-top: 30px; }
-  .admin .admin-content .partenaires-list img {
-    max-width: 100px;
-    max-height: 100px; }
-  .admin .admin-content .partenaires-list a {
+  .admin .admin-content .partenaires-list .article__edit {
     text-decoration: none;
-    color: inherit; }
+    color: inherit;
+    border: 2px solid #e7b116;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 30px;
+    padding: 0 7px;
+    color: #e7b116;
+    transition: background-color .2s ease, color .2s ease; }
+    .admin .admin-content .partenaires-list .article__edit span {
+      font-family: "proximanova-semibold"; }
+    .admin .admin-content .partenaires-list .article__edit i {
+      font-size: 20px; }
+    .admin .admin-content .partenaires-list .article__edit:hover {
+      background-color: #e7b116;
+      color: white; }
+  .admin .admin-content .partenaires-list .article img {
+    max-width: 130px;
+    max-height: 130px; }
+  .admin .admin-content .partenaires-list .delete-form {
+    text-align: center;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+    .admin .admin-content .partenaires-list .delete-form input {
+      height: 34px;
+      margin-top: 0;
+      margin-right: 5px; }
   .admin .admin-content .partenaires-list .partenaire-add {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
-    justify-content: center; }
+    justify-content: center;
+    margin: 15px 0; }
     .admin .admin-content .partenaires-list .partenaire-add span {
-      margin-top: 15px;
+      margin-top: 30px;
       padding: 5px 10px;
       color: white;
       background-color: #e7b116; }
-  .admin .admin-content .partenaire img {
-    max-width: 100px;
-    max-height: 100px; }
+  .admin .admin-content .partenaire {
+    margin-top: 30px; }
+    .admin .admin-content .partenaire__logo.row {
+      height: auto; }
+    .admin .admin-content .partenaire__field {
+      margin-top: 15px; }
+      .admin .admin-content .partenaire__field.row {
+        height: auto; }
+      .admin .admin-content .partenaire__field > * {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        float: none;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        display: flex;
+        float: none;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: left;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center; }
+      .admin .admin-content .partenaire__field span {
+        font-family: "proximanova-semibold"; }
   .admin .admin-content .partenaire-create {
     margin-top: 30px; }
-  .admin .admin-content .slider-list .slide.row {
-    height: 400px; }
-  .admin .admin-content .slider-list .slide__bg {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; }
-  .admin .admin-content .slider-list .slide__edit {
-    padding: 5px 10px;
-    color: white;
-    background-color: #e7b116; }
+    .admin .admin-content .partenaire-create__field {
+      margin-top: 15px; }
+      .admin .admin-content .partenaire-create__field.row {
+        height: auto; }
+      .admin .admin-content .partenaire-create__field > * {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        float: none;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        display: flex;
+        float: none;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: left;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center; }
+      .admin .admin-content .partenaire-create__field span {
+        font-family: "proximanova-semibold"; }
+  .admin .admin-content .slider-list .slide {
+    margin-left: 20px;
+    margin-top: 20px; }
+    .admin .admin-content .slider-list .slide.row {
+      height: auto; }
+    .admin .admin-content .slider-list .slide__header {
+      padding: 15px 0; }
+      .admin .admin-content .slider-list .slide__header.row {
+        height: auto; }
+      .admin .admin-content .slider-list .slide__header h2 {
+        font-family: "proximanova-bold";
+        margin: 0 10px 0 0; }
+      .admin .admin-content .slider-list .slide__header a {
+        text-decoration: none;
+        color: inherit; }
+      .admin .admin-content .slider-list .slide__header span {
+        transition: color .2s ease; }
+        .admin .admin-content .slider-list .slide__header span:hover {
+          color: #e7b116; }
+    .admin .admin-content .slider-list .slide__bg {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 400px; }
+    .admin .admin-content .slider-list .slide__content.row {
+      height: auto; }
+    .admin .admin-content .slider-list .slide__content .properties > *.row {
+      height: auto; }
+    .admin .admin-content .slider-list .slide__content .properties__title {
+      font-size: 19px;
+      font-family: "proximanova-semibold"; }
   .admin .admin-content .slide__cover {
     background-size: cover;
     background-position: center;
@@ -2811,6 +3068,56 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     margin-top: 20px; }
     .admin .admin-content .slide__form input {
       margin-right: 10px; }
+  .admin .admin-content .slide__field {
+    margin-top: 15px; }
+    .admin .admin-content .slide__field.row {
+      height: auto; }
+    .admin .admin-content .slide__field > * {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      float: none;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      text-align: left;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .admin .admin-content .slide__field span {
+      font-family: "proximanova-semibold"; }
+  .admin .admin-content .competences-list .competences-item a {
+    text-decoration: none;
+    color: inherit;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    transition: color .15s ease; }
+    .admin .admin-content .competences-list .competences-item a:hover {
+      color: #e7b116; }
+    .admin .admin-content .competences-list .competences-item a i {
+      font-size: 20px; }
+    .admin .admin-content .competences-list .competences-item a span {
+      margin-left: 5px;
+      font-family: "proximanova-semibold";
+      font-size: 18px;
+      height: 24px;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      float: none;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+  .admin .admin-content .competences-list .competences-item .title {
+    font-family: "proximanova-semibold"; }
   .admin .admin-content .competence > * {
     margin-top: 10px; }
   .admin .admin-content .competence textarea {
@@ -2819,6 +3126,122 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     margin-top: 10px; }
   .admin .admin-content .competence span {
     margin-right: 10px; }
+  .admin .admin-content .competence__field.row {
+    height: auto; }
+  .admin .admin-content .competence__field > * {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .admin .admin-content .competence__field span {
+    font-family: "proximanova-semibold"; }
+  .admin .admin-content .story.row {
+    height: auto; }
+  .admin .admin-content .story__cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+    .admin .admin-content .story__cover.row {
+      height: 500px; }
+  .admin .admin-content .story__form .list {
+    margin-top: 15px;
+    list-style: none;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .admin .admin-content .story__form .list.row {
+      height: auto; }
+    .admin .admin-content .story__form .list__item {
+      height: 30px;
+      margin-right: 10px;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      float: none;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      .admin .admin-content .story__form .list__item i {
+        cursor: pointer; }
+  .admin .admin-content .story__form .add {
+    margin-left: 5px;
+    border: 2px solid #e7b116;
+    padding: 5px 7px;
+    color: #e7b116;
+    cursor: pointer;
+    transition: color .2s ease, background-color .2s ease; }
+    .admin .admin-content .story__form .add:hover {
+      background-color: #e7b116;
+      color: white; }
+  .admin .admin-content .story__field {
+    margin-top: 25px; }
+    .admin .admin-content .story__field.row {
+      height: auto; }
+    .admin .admin-content .story__field > * {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      float: none;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      display: flex;
+      float: none;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+    .admin .admin-content .story__field span {
+      margin-right: 10px;
+      font-family: "proximanova-semibold"; }
+    .admin .admin-content .story__field input {
+      min-width: 250px; }
+    .admin .admin-content .story__field textarea {
+      min-width: 270px;
+      height: 60px; }
+  .admin .admin-content .storytelling-list {
+    margin-top: 30px;
+    margin-left: 1.5rem; }
+    .admin .admin-content .storytelling-list.row {
+      height: auto; }
+    .admin .admin-content .storytelling-list .story {
+      margin-top: 20px; }
+      .admin .admin-content .storytelling-list .story.row {
+        height: auto; }
+      .admin .admin-content .storytelling-list .story__header {
+        padding: 15px 0; }
+        .admin .admin-content .storytelling-list .story__header.row {
+          height: auto; }
+        .admin .admin-content .storytelling-list .story__header h2 {
+          font-family: "proximanova-bold";
+          margin: 0 10px 0 0; }
+        .admin .admin-content .storytelling-list .story__header a {
+          text-decoration: none;
+          color: inherit; }
+        .admin .admin-content .storytelling-list .story__header span {
+          transition: color .2s ease; }
+          .admin .admin-content .storytelling-list .story__header span:hover {
+            color: #e7b116; }
+      .admin .admin-content .storytelling-list .story__cover {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; }
+      .admin .admin-content .storytelling-list .story__content.row {
+        height: 350px; }
+      .admin .admin-content .storytelling-list .story__text .slogan {
+        padding: 0 10px;
+        font-size: 19px; }
+        .admin .admin-content .storytelling-list .story__text .slogan.row {
+          height: auto; }
 
 .echo-article {
   border-top: solid 1px #e7b116;
@@ -3131,6 +3554,134 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         height: auto; }
       .faq .list .faq-item__reponse {
         font-family: "proximanova-regular"; }
+  .faq .buttons {
+    padding: 15px 0;
+    min-height: 60px; }
+    .faq .buttons.row {
+      height: auto; }
+    .faq .buttons__full, .faq .buttons__search {
+      display: none;
+      padding: 5px 8px;
+      border: 2px solid #e7b116;
+      font-family: "proximanova-semibold";
+      color: #e7b116;
+      cursor: pointer;
+      transition: background-color .35s ease, color .35s ease; }
+      .faq .buttons__full:hover, .faq .buttons__search:hover {
+        background-color: #e7b116;
+        color: white; }
+      .faq .buttons__full:first-child, .faq .buttons__search:first-child {
+        margin-right: 10px; }
+      .faq .buttons__full--show, .faq .buttons__search--show {
+        display: initial; }
+    .faq .buttons__full--disabled {
+      border: 2px solid #c7c8c8;
+      cursor: default;
+      color: #c7c8c8; }
+      .faq .buttons__full--disabled:hover {
+        background-color: inherit;
+        color: #c7c8c8; }
+
+.not-found {
+  min-height: calc(100vh - 170px); }
+  .not-found.row {
+    height: auto; }
+  .not-found__image svg {
+    height: 400px; }
+  .not-found__body {
+    text-align: left;
+    margin: 20px 0; }
+    @media screen and (max-width: 767px) {
+      .not-found__body {
+        padding: 0 1rem;
+        margin: 35px 0;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column; } }
+    .not-found__body h2 {
+      font-size: 35px;
+      font-family: "proximanova-semibold";
+      padding: 0;
+      margin: 0; }
+    .not-found__body h3 {
+      margin-top: 15px;
+      font-size: 25px; }
+    .not-found__body span {
+      border: 2px solid #e7b116;
+      color: #e7b116;
+      font-size: 19px;
+      font-family: "proximanova-semibold";
+      padding: 5px 7px;
+      transition: color .2s ease, background-color .2s ease; }
+      .not-found__body span:hover {
+        color: white;
+        background-color: #e7b116; }
+      .not-found__body span a {
+        text-decoration: none;
+        color: inherit; }
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: none; }
+  .modal--show {
+    display: block; }
+  .modal .body {
+    background-color: #fff;
+    width: 50%;
+    height: 70%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    padding-left: 20px;
+    position: relative; }
+    .modal .body__exit {
+      position: absolute;
+      right: -30px;
+      top: -30px;
+      color: white;
+      opacity: .7;
+      cursor: pointer;
+      transition: opacity .2s ease; }
+      .modal .body__exit i {
+        font-size: 30px; }
+      .modal .body__exit:hover {
+        opacity: 1; }
+    .modal .body__title {
+      color: #e7b116;
+      text-align: center; }
+    .modal .body__label {
+      margin-top: 25px;
+      font-family: "proximanova-semibold"; }
+      .modal .body__label:after {
+        content: '';
+        height: 3px;
+        background-color: #1d1e1c;
+        width: 50px;
+        display: block;
+        margin-top: 10px; }
+    .modal .body .info {
+      margin-top: 15px; }
+      .modal .body .info__label {
+        font-family: "proximanova-semibold"; }
 
 html, body {
   width: 100%;

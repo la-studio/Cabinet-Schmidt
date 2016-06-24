@@ -12,40 +12,10 @@ About.prototype.init = function () {
   this.el = 'panel';
   this.lastSlide = new Date();
   var suffix = this.imagesSuffixPath;
-  this.slides = [
-    {
-      title: "Une équipe pluridisciplinaire",
-      slogan: 'À votre écoute pour vous conseiller et vous accompagner dans différents secteurs',
-      list: ['Conseil','Comptabilité','Social','Fiscalité',"Création d'entreprise",'Audit'],
-      conclusion: null,
-      cover: suffix+'cover-about.jpg'
-    },
-    {
-      title: "Auprès des TPE et artisans",
-      slogan: 'Nous accompagnons des entreprises issues de différents secteurs tels que :',
-      list: ['Artisanat','Commerce','Professions libérales','Loueurs de meubles','CMI','Agricole','Restauration'],
-      conclusion: 'Et bien plus encore !',
-      cover: suffix+'artisan.jpg'
-    },
-    {
-      title: "Implantée dans le Grésivaudan",
-      slogan: "Implantée dans la vallée du Grésivaudan de l'axe Grenoble - Chambéry, les entreprises sont principalement issues de :",
-      list: ['Crolles','Pontcharra','Grenoble','Meylan','Voiron'],
-      conclusion: 'Et dans les alentours !',
-      cover: suffix+'Gresivaudan.jpg'
-    },
-    {
-      title: "Depuis plus de 20 ans",
-      slogan: 'Le cabinet a acquis une expérience durant ses années de métier',
-      list: ['Plus de 300 clients','Plus de 3000 liasses fiscales bouclées','Et des milliers de litres de café'],
-      conclusion: 'Rejoignez nous pour faire partie de cette aventure !',
-      cover: suffix+'cover-comptable.jpg'
-    }
-  ];
   this.active = 1;
 
   //Methods executed at init.
-  this.initFirstView();
+  this.getDatasAndInitView();
   this.forceScroll();
   this.enableKeyboardListener();
   this.scrollListener();
@@ -56,7 +26,28 @@ About.prototype.init = function () {
   setTimeout(function () {
       that.clickListener();
   },50)
+};
 
+About.prototype.getDatasAndInitView = function () {
+  var that = this;
+  var list = [];
+  $.getJSON('/about/datas').done(function(data) {
+    for (var i = 0; i < data.length; i++) {
+      var obj = {};
+      obj.list = [];
+      obj.title = data[i].title;
+      obj.conclusion = data[i].conclusion;
+      obj.slogan = data[i].summary;
+      obj.cover = data[i].cover;
+      for (var n = 0; n < data[i].list_item.length; n++) {
+        obj.list.push(data[i].list_item[n]);
+      }
+      list.push(obj)
+    }
+    // that.slides = list;
+    that.slides = list;
+    that.initFirstView();
+  })
 };
 
 About.prototype.forceScroll = function () {
@@ -248,7 +239,7 @@ About.prototype.getInfos = function (el,index) {
   el.find('.panel__title').text(title);
   el.find('.panel__slogan').text(slogan);
   for (var i = 0; i < this.slides[index].list.length; i++) {
-    var elemList = this.slides[index].list[i];
+    var elemList = this.slides[index].list[i].name;
     el.find('.arguments__list').append('<li class="arguments__item arguments__item--slided">'+elemList+'</li>')
   }
   // if(this.slides[this.active-1].conclusion) { // TODO: DONT ERASE. Conclusion removed. I let the js here just in case.
@@ -270,7 +261,7 @@ About.prototype.initFirstView = function () {
   el.find('.panel__title').text(title);
   el.find('.panel__slogan').text(slogan);
   for (var i = 0; i < this.slides[this.active-1].list.length; i++) {
-    var elemList = this.slides[this.active-1].list[i];
+    var elemList = this.slides[this.active-1].list[i].name;
     el.find('.arguments__list').append('<li class="arguments__item arguments__item--slided">'+elemList+'</li>')
   }
   this.highlightCurrent(this.active-1);

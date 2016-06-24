@@ -124,12 +124,14 @@ Datepicker.prototype.enableClickListeners = function () {
     that.getNext()
   })
   $('.col[data-day]').click(function () {
-    var month = $(this).parent().parent().data('month');
-    var day = $(this).data('day');
-    var date = new Date();
-    var sentence = day+' '+that.getMonth(month)+' '+date.getFullYear();
-    var index = that.agenda.dates.indexOf(sentence);
-    that.agenda.getIndex(index);
+    if($(this).hasClass('col--highlight')) {
+      var month = $(this).parent().parent().data('month');
+      var day = $(this).data('day');
+      var date = new Date();
+      var sentence = day+' '+that.getMonth(month)+' '+date.getFullYear();
+      var index = that.agenda.dates.indexOf(sentence);
+      that.agenda.getIndex(index);
+    }
   })
 };
 Datepicker.prototype.translation = function (type, string) {
@@ -139,6 +141,13 @@ Datepicker.prototype.translation = function (type, string) {
       return this.dayList[position];
     }
   }
+};
+
+Datepicker.prototype.getCalendarMonth = function (index) {
+  this.active==index;
+  this.setTranslate();
+  $('.calendar-list').css('transform','translate3d('+this.translate+'px,0,0)');
+  $('.month__text').text(this.getMonth(this.active)+' '+this.year);
 };
 
 Datepicker.prototype.getNext = function () {
