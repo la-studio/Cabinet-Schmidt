@@ -1,4 +1,4 @@
-<div class="col-xs-12 home__temoignages">
+<div id="testimony" class="col-xs-12 home__temoignages">
   <div class="row center-xs">
     <header class="col-xs-12 temoignages-header">
       <h2 class="temoignages-header__title">Ils nous font confiance</h2>

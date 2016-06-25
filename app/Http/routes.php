@@ -57,6 +57,10 @@ Route::group(['middleware' => ['web']], function () {
             Route::get('competence/create', 'CompetencesController@create');
             Route::post('competence/store', 'CompetencesController@store');
             Route::patch('competence/update/{id}', 'CompetencesController@update');
+            //Storytelling
+            Route::get('storytelling','StorytellingController@index');
+            Route::get('storytelling/edit/{id}', 'StorytellingController@show');
+            Route::put('storytelling/update/{id}', 'StorytellingController@update');
         });
     });
     // Common nav.
@@ -67,6 +71,14 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/about', function () {
         $remove_footer = "Disappear.";
         return view('about')->with('remove_footer',$remove_footer);
+    });
+    Route::get('/about/datas', function()
+    {
+        $result = App\AboutSlide::all();
+        foreach ($result as $slide) {
+            $slide->list_item;
+        }
+        return $result;
     });
     Route::get('/faq', function()
     {
@@ -103,7 +115,7 @@ Route::group(['middleware' => ['web']], function () {
                 $id = $sub_element->id;
                 $article = $sub_element->faq;
                 if($article!==null && !in_array($id,$id_arr)) {
-                    $article->from_keyword = $result_name;
+                    $article->keywords; // Just call it it'll attach the fetched collection in the array with the article object
                     array_push($res,$article);
                     array_push($id_arr,$id);
                 }
@@ -118,7 +130,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/chiffres-utiles','DigitController@index');
     Route::get('/chiffres-utiles/{slug}','DigitController@show');
     Route::get('/sites-utiles', function () {
-        return view('useful');
+        $partenaires_shown = App\Partenaire::where('enabled','=',1)->get();
+        return view('useful',compact('partenaires_shown'));
     });
 
     Route::get('/logout','AuthController@logout');
@@ -281,22 +294,16 @@ Route::get('digitarticle', function() {
     {
         // replace non letter or digits by -
         $text = preg_replace('~[^\pL\d]+~u', '-', $text);
-
         // transliterate
         $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
-
         // remove unwanted characters
         $text = preg_replace('~[^-\w]+~', '', $text);
-
         // trim
         $text = trim($text, '-');
-
         // remove duplicate -
         $text = preg_replace('~-+~', '-', $text);
-
         // lowercase
         $text = strtolower($text);
-
         if (empty($text)) {
         return 'n-a';
         }
@@ -338,6 +345,7 @@ Route::get('digitarticle', function() {
         $rubriques = [];
         $merged_content = [];
         $current_table = '';
+        $references = [];
         foreach ($tags as $tag) {
             $tag_attr = $tag->attributes();
             if($tag_attr['type']=="rubrique") {
@@ -351,6 +359,7 @@ Route::get('digitarticle', function() {
                 $reference = new App\Digitreference();
                 $reference->link = $link->ref_lien['href']->__toString();
                 $reference->label = $link->ref_lien->__toString();
+                array_push($references, $reference);
             }
         }
         if($media_attr['type']=="image") {
@@ -392,8 +401,8 @@ Route::get('digitarticle', function() {
         $article->table_html = $current_table;
         $article->article_id = $id;
         $article->save();
-        if(isset($section_content->reference)) {
-            $article->references()->save($reference);
+        foreach ($references as $elem) {
+            $article->references()->save($elem);
         }
         array_push($titles,$element->title->__toString());
 

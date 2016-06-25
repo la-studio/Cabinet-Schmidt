@@ -1,6 +1,6 @@
 .admin {
   .admin-menu {
-    background-color: $blue;
+    background-color: darken($blue, 15%);
     height: 100vh;
     color: white;
     &.col-custom {
@@ -8,8 +8,10 @@
     }
     &__logo {
       @include fixheight(200px);
-      background-color: #fff;
       margin: 10px;
+      svg {
+        height: 200px;
+      }
     }
     &__nav {
       @include fixheight(auto);
@@ -20,16 +22,26 @@
     &__list {
       height: calc(100vh - 260px);
       display: flex;
+      padding: 0;
       flex-direction: column;
     }
     &__item {
-      font-size: 18px;
+      font-size: 17px;
       font-family: $font-semibold;
       letter-spacing: 0.02rem;
+      padding-left: 40px;
       @include fixheight(40px);
       @include flex-middle(y);
+      transition: transform .3s ease;
+      &--selected {
+        border-left: 4px solid white;
+      }
       &:last-child {
         margin-top: auto;
+        border: none;
+      }
+      &:hover {
+        transform: translate3d(15px,0,0);
       }
       i {
         margin-right: 15px;
@@ -39,32 +51,107 @@
   .admin-content {
     height: 100vh;
     overflow-y: scroll;
+    .admin-home {
+      font-size: 21px;
+      font-family: $font-semibold;
+    }
     .articles-list {
+      @include fixheight(auto);
       .article {
         margin-top: 20px;
-        @include link-off();
+        @include link-off;
+        &__title {
+          font-family: $font-semibold;
+        }
+        &__form {
+          .delete {
+            @extend %admin__save;
+            margin-top: 10px;
+          }
+          .edit {
+            margin-top: 10px;
+            margin-right: 5px;
+            span {
+              @extend %admin__save;
+              padding: 0 7px;
+              margin-top: 0;
+              display: block;
+              box-sizing: border-box;
+              @include flex-middle(xy);
+            }
+          }
+        }
         .wrapper {
-          border: 1px solid grey;
           @include fixheight(inherit);
+          p {
+            margin: 10px 0;
+          }
         }
       }
-      .article-add {
-        margin-top: 15px;
+    } // end articles-list
+    .article-add {
+      @include fixheight(auto);
+      margin-top: 30px;
+      span {
         padding: 5px 10px;
         color: white;
         background-color: $yellow;
       }
-    } // end articles-list
+    }
     .article {
       @include fixheight(auto);
       margin-top: 30px;
+      &__field {
+        @include fixheight(auto);
+        margin-top: 15px;
+        > * {
+          @include flex-between();
+          @include flex-middle(y);
+          text-align: left;
+          align-items: center;
+        }
+        span {
+          font-family: $font-semibold;
+        }
+        input {
+          min-width: 250px
+        }
+        textarea {
+          height: 60px;
+          min-width: 250px;
+        }
+      }
+      &__save {
+        @extend %admin__save;
+      }
     }
     .article-create {
       margin-top: 30px;
     }
     .temoignages-list {
-      .row {
-        @include fixheight(auto);
+      margin-top: 20px;
+      .temoignage{
+        > * {
+          @include fixheight(auto);
+        }
+        &__form {
+          .delete {
+            @extend %admin__save;
+            margin-top: 10px;
+          }
+          .edit {
+            margin-top: 10px;
+            margin-right: 5px;
+            span {
+              @extend %admin__save;
+              padding: 0 7px;
+              margin-top: 0;
+              display: block;
+              box-sizing: border-box;
+              @include flex-middle(xy);
+            }
+          }
+        }
       }
     }
     .temoignage {
@@ -73,23 +160,72 @@
         max-width: 100px; // for now.
         max-height:100px;
       }
+      margin-top: 30px;
+      &__logo {
+        @include fixheight(auto);
+      }
+      &__field {
+        @include fixheight(auto);
+        margin-top: 15px;
+        > * {
+          @include flex-between();
+          @include flex-middle(y);
+          text-align: left;
+          align-items: center;
+        }
+        span {
+          font-family: $font-semibold;
+        }
+      }
+      &__save {
+        @extend %admin__save;
+      }
     }
     .temoignage-create {
       margin-top: 30px;
     }
     .partenaires-list {
-      img {
-        max-width: 100px; // for now.
-        max-height:100px;
+      .article {
+        &__edit {
+          @include link-off;
+          border: 2px solid $yellow;
+          @include flex-middle(xy);
+          height: 30px;
+          padding: 0 7px;
+          color: $yellow;
+          transition: background-color .2s ease, color .2s ease;
+          span {
+            font-family: $font-semibold;
+          }
+          i {
+            font-size: 20px;
+          }
+          &:hover {
+            background-color: $yellow;
+            color: white;
+          }
+        }
+        img {
+          max-width: 130px; // for now.
+          max-height:130px;
+        }
       }
-      a {
-        @include link-off;
+      .delete-form {
+        text-align: center;
+        @include flex-start(y);
+        input {
+          height: 34px;
+          margin-top: 0;
+          @extend %admin__save;
+          margin-right: 5px;
+        }
       }
       .partenaire-add {
         display: flex;
         justify-content: center;
+        margin: 15px 0;
         span {
-          margin-top: 15px;
+          margin-top: 30px;
           padding: 5px 10px;
           color: white;
           background-color: $yellow;
@@ -97,24 +233,83 @@
       } // end partenaire-add;
     } // end partenaire list ;
     .partenaire {
-      img {
-        max-width: 100px; // for now.
-        max-height:100px;
+      margin-top: 30px;
+      &__logo {
+        @include fixheight(auto);
+      }
+      &__field {
+        @include fixheight(auto);
+        margin-top: 15px;
+        > * {
+          @include flex-between();
+          @include flex-middle(y);
+          text-align: left;
+          align-items: center;
+        }
+        span {
+          font-family: $font-semibold;
+        }
+      }
+      &__save {
+        @extend %admin__save;
       }
     }
     .partenaire-create {
       margin-top: 30px;
+      &__field {
+        @include fixheight(auto);
+        margin-top: 15px;
+        > * {
+          @include flex-between();
+          @include flex-middle(y);
+          text-align: left;
+          align-items: center;
+        }
+        span {
+          font-family: $font-semibold;
+        }
+      }
+      &__save {
+        @extend %admin__save;
+      }
     }
     .slider-list {
       .slide {
-        @include fixheight(400px);
+        @include fixheight(auto);
+        margin-left: 20px;
+        margin-top: 20px;
+        &__header {
+          @include fixheight(auto);
+          padding: 15px 0;
+          h2 {
+            font-family: $font-bold;
+            margin: 0 10px 0 0;
+          }
+          a {
+            @include link-off;
+          }
+          span {
+            transition: color .2s ease;
+            &:hover {
+              color: $yellow;
+            }
+          }
+        }
         &__bg {
           @include bg-regular;
+          height: 400px;
         }
-        &__edit {
-          padding: 5px 10px;
-          color: white;
-          background-color: $yellow;
+        &__content {
+          @include fixheight(auto);
+          .properties {
+            > * {
+              @include fixheight(auto);
+            }
+            &__title {
+              font-size: 19px;
+              font-family: $font-semibold;
+            }
+          }
         }
       }
       .slide-add {
@@ -132,9 +327,46 @@
           margin-right: 10px ;
         }
       }
+      &__field {
+        @include fixheight(auto);
+        margin-top: 15px;
+        > * {
+          @include flex-between;
+          text-align: left;
+          align-items: center;
+        }
+        span {
+          font-family: $font-semibold;
+        }
+      }
+      &__save {
+        @extend %admin__save;
+      }
     } // end slide
     .competences-list {
-
+      .competences-item {
+        a {
+          @include link-off;
+          @include flex-middle(xy);
+          transition: color .15s ease;
+          &:hover {
+            color: $yellow;
+          }
+          i {
+            font-size: 20px;
+          }
+          span {
+            margin-left: 5px;
+            font-family: $font-semibold;
+            font-size: 18px;
+            height: 24px;
+            @include flex-middle(y);
+          }
+        }
+        .title {
+          font-family: $font-semibold;
+        }
+      }
     }
     .competence {
       > * {
@@ -147,6 +379,115 @@
       }
       span {
         margin-right: 10px;
+      }
+      &__field {
+        @include fixheight(auto);
+        > * {
+          @include flex-between;
+          align-items: center;
+        }
+        span {
+          font-family: $font-semibold;
+        }
+      }
+      &__save {
+        @extend %admin__save;
+      }
+    }
+    .story {
+      @include fixheight(auto);
+      &__cover {
+        @include fixheight(500px);
+        @include bg-regular;
+      }
+      &__save {
+        @extend %admin__save;
+      }
+      &__form {
+        .list {
+          margin-top: 15px;
+          list-style: none;
+          @include fixheight(auto);
+          @include flex-middle(x);
+          &__item {
+            height: 30px;
+            margin-right: 10px;
+            @include flex-middle(y);
+            i {
+              cursor: pointer;
+            }
+          }
+        }
+        .add {
+          margin-left: 5px;
+          border: 2px solid $yellow;
+          padding: 5px 7px;
+          color: $yellow;
+          cursor: pointer;
+          transition: color .2s ease, background-color .2s ease;
+          &:hover {
+            background-color: $yellow;
+            color: white;
+          }
+        }
+      }
+      &__field {
+        @include fixheight(auto);
+        margin-top: 25px;
+        > * {
+          @include flex-middle(y);
+          @include flex-between;
+        }
+        span {
+          margin-right: 10px;
+          font-family: $font-semibold;
+        }
+        input {
+          min-width: 250px;
+        }
+        textarea {
+          min-width: 270px;
+          height: 60px;
+        }
+      }
+    }
+    .storytelling-list {
+      @include fixheight(auto);
+      margin-top: 30px;
+      margin-left: 1.5rem;
+      .story {
+        @include fixheight(auto);
+        margin-top: 20px;
+        &__header {
+          @include fixheight(auto);
+          padding: 15px 0;
+          h2 {
+            font-family: $font-bold;
+            margin: 0 10px 0 0;
+          }
+          a {
+            @include link-off;
+          }
+          span {
+            transition: color .2s ease;
+            &:hover {
+              color: $yellow;
+            }
+          }
+        }
+        &__cover {
+          @include bg-regular;
+        }
+        &__content {
+          @include fixheight(350px);
+        }
+        &__text {
+          .slogan {
+            @include fixheight(auto);
+            padding: 0 10px;
+            font-size: 19px;
+          }
+        }
       }
     }
   }

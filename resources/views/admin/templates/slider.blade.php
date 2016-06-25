@@ -7,27 +7,37 @@
         <div class="col-xs">
           {{ method_field('PATCH') }}
           {{csrf_field()}}
-          <label class="row center-xs">
-          Changer de photo
-            <input type="file" name="photo"/>
-          </label>
-          <label class="row center-xs">
-          Changer le titre
-            <input type="text" name="title" value="{{$slide->title}}"/>
-          </label>
-          <label class="row center-xs">
-          Changer le nom du bouton
-            <input type="text" name="title" value="{{$slide->button_name}}"/>
-          </label>
-          <label class="row center-xs">
-          Changer le lien du bouton (mettre une ancre ou bien l'url suivant le nom de domaine)
-            <input type="text" name="title" value="{{$slide->button_name}}"/>
-          </label>
-          <label class="row center-xs">
-          Changer la description
-            <textarea type="text" name="description">{{$slide->description}}</textarea>
-          </label>
-          <button type="submit" name="button">Enregistrer</button>
+          <div class="row center-xs slide__field">
+            <div class="col-md-8 col-sm-10 col-xs-12">
+              <span>Changer de couverture</span>
+              <input type="file" class="file-input" name="photo"/>
+            </div>
+          </div>
+          <div class="row center-xs slide__field">
+            <div class="col-md-8 col-sm-10 col-xs-12">
+              <span>Changer de titre</span>
+              <input type="text" name="title" value="{{$slide->title}}"/>
+            </div>
+          </div>
+          <div class="row center-xs slide__field">
+            <div class="col-md-8 col-sm-10 col-xs-12">
+              <span>Changer le nom du bouton</span>
+              <input type="text" name="title" value="{{$slide->button_name}}"/>
+            </div>
+          </div>
+          <div class="row center-xs slide__field">
+            <div class="col-md-8 col-sm-10 col-xs-12">
+              <span>Changer le lien du bouton</span>
+              <input type="text" name="title" value="{{$slide->button_link}}"/>
+            </div>
+          </div>
+          <div class="row center-xs slide__field">
+            <div class="col-md-8 col-sm-10 col-xs-12">
+              <span>Changer la description</span>
+              <input type="text" name="title" value="{{$slide->description}}"/>
+            </div>
+          </div>
+          <input type="submit" class="competence__save" value="Enregistrer"/>
         </div>
       </form>
     </div>

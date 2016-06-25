@@ -37,6 +37,10 @@
         }
         &__icon {
           padding: 15px;
+          transition: color .15s ease;
+          &:hover {
+            color: $yellow;
+          }
         }
       }
     } // end head-upper
@@ -107,6 +111,9 @@
           @include reset();
           list-style: none;
           height: inherit;
+          @media screen and (max-width: 630px) {
+            font-size: 17px;
+          }
         }
         &__item {
           text-align: center;
@@ -244,6 +251,7 @@
   &__list {
     list-style: none;
     width: 100%;
+    margin-top: 25px;
     a {
       @include link-off();
       -moz-transition: color .2s ease;
@@ -291,7 +299,7 @@
     }
   }
   &--open-y {
-    height: 200px;
+    height: 170px;
     .toolbox__item {
       transform: translate3d(0,0,0);
     }

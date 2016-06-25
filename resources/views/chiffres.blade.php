@@ -21,7 +21,11 @@
             <div class="col-xs-12">
               <h3 class="row article__title"><a href="/chiffres-utiles/{{$article->slug}}">{{$article->title}}</a></h3>
               <p class="row article__body">
-                {{$article->summary}}
+                @if(strlen($article->summary)>200)
+                  {{substr($article->summary,0,200).'...'}}
+                @else
+                  {{$article->summary}}
+                @endif
               </p>
             </div>
             <div class="col-xs-12 article__footer">

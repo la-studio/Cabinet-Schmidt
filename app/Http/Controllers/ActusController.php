@@ -14,8 +14,13 @@ class ActusController extends Controller {
         ->take(2)
         ->get();
         $echosarticles = Echosarticle::orderBy('date','desc')->get();
+        if(strlen($echosarticles[0]->title) > 85 || strlen($echosarticles[1]->title) > 85) {
+            $is_large = true;
+        } else {
+            $is_large = false;
+        }
         $temoignages = Temoignage::all();
-        return view('actusgallery', compact('articles','echosarticles'));
+        return view('actusgallery', compact('articles','echosarticles','is_large'));
     }
     public function redirect($id)
     {

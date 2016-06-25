@@ -16,7 +16,7 @@
     <div class="row admin">
       <div class="col-custom admin-menu">
         <div class="row admin-menu__logo">
-
+          <a href="<?php echo e(URL::to('/admin/dashboard')); ?>"><?php echo $__env->make('admin.dashboard-logo', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?></a>
         </div>
         <nav class="row admin-menu__nav">
           <ul class="col-xs admin-menu__list">
@@ -25,9 +25,10 @@
             <li class="row admin-menu__item"><a href="<?php echo e(URL::to('/admin/partenaires')); ?>">Partenaires</a></li>
             <li class="row admin-menu__item"><a href="<?php echo e(URL::to('/admin/slider')); ?>">Slider</a></li>
             <li class="row admin-menu__item"><a href="<?php echo e(URL::to('/admin/competences')); ?>">Compétences</a></li>
+            <li class="row admin-menu__item"><a href="<?php echo e(URL::to('/admin/storytelling')); ?>">Storytelling</a></li>
             <li class="row admin-menu__item"><a href="<?php echo e(URL::to('/admin/register')); ?>">Créer un compte</a></li>
             <?php /* Let disconnect as last-child. */ ?>
-            <li class="row admin-menu__item"><i class="fa fa-power-off"></i><a href="<?php echo e(URL::to('/logout')); ?>">Déconnexion ()</a></li>
+            <li class="row admin-menu__item"><i class="fa fa-power-off"></i><a href="<?php echo e(URL::to('/logout')); ?>">Déconnexion</a></li>
           </ul>
         </nav>
       </div>
@@ -35,5 +36,7 @@
         <?php echo $__env->yieldContent('content'); ?> <?php /* the 1st child of admin-content has to have a row class. */ ?>
       </div>
     </div>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script src="/js/admin-script.js"></script>
   </body>
 </html>

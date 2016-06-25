@@ -1,4 +1,4 @@
-<section id="tes" class="col-md-10 col-custom col-xs-12 services__list">
+<section class="col-md-10 col-custom col-xs-12 services__list">
   <div class="row around-lg between-md center-xs">
     <article class="col-md-6 col-sm-6 col-xs-12 col-custom service">
       <div class="row wrapper">

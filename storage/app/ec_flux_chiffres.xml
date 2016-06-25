@@ -7013,8 +7013,8 @@
 
 <article>
   <id>k4_1141278</id>
-  <create_date>2016-05-12 07:23:19</create_date>
-  <display_date>2016-05-12 09:00:00</display_date>
+  <create_date>2016-06-15 08:57:31</create_date>
+  <display_date>2016-06-15 10:00:00</display_date>
   <author>La rédaction</author>
   <language>fr</language>
   <title>Indices mensuels des prix à la consommation</title>
@@ -7029,23 +7029,23 @@
                <table>
                   <tbody>
                      <tr>
-                        <td class="TABLEAU-Titre" rowspan="1" colspan="2">Nouvel indice INSEE des prix « tous ménages » (tabac compris) - Base 100 en 2015 - Avril 2016</td>
+                        <td class="TABLEAU-Titre" rowspan="1" colspan="2">Nouvel indice INSEE des prix « tous ménages » (tabac compris) - Base 100 en 2015 - Mai 2016</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Base</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">100,09*</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">100,50*</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Variation mensuelle</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">+ 0,1 %</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">+ 0,4 %</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Hausse des prix (1)
                         </td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">- 0,2 %</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1"> 0,0 %</td>
                      </tr>
                      <tr>
-                        <td class="TABLEAU-legende" rowspan="1" colspan="2">* Indice définitif publié par l’INSEE le 12 mai 2016.(1) sur les 12 derniers mois.</td>
+                        <td class="TABLEAU-legende" rowspan="1" colspan="2">* Indice définitif publié par l’INSEE le 15 juin 2016.(1) sur les 12 derniers mois.</td>
                      </tr>
                   </tbody>
                </table>
@@ -7096,9 +7096,9 @@
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">M</td>
-                        <td class="" rowspan="1" colspan="1"/>
-                        <td class="" rowspan="1" colspan="1"/>
-                        <td class="" rowspan="1" colspan="1"/>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">100,50</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">+0,4 %</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,0 %</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">J</td>
@@ -7250,19 +7250,19 @@
                <table>
                   <tbody>
                      <tr>
-                        <td class="TABLEAU-Titre" rowspan="1" colspan="2">Ancien indice des prix des ménages urbains dont le chef est ouvrier ou employé (hors tabac) - Base 100 en 2015 - Avril 2016</td>
+                        <td class="TABLEAU-Titre" rowspan="1" colspan="2">Ancien indice des prix des ménages urbains dont le chef est ouvrier ou employé (hors tabac) - Base 100 en 2015 - Mai 2016</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Base</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">100,10*</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">100,51*</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Hausse des prix (1)
                         </td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1"> -0,2 %</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1"> 0,0 %</td>
                      </tr>
                      <tr>
-                        <td class="TABLEAU-legende" rowspan="1" colspan="2">* Indice définitif publié par l'INSEE le 12 mai 2016.(1) sur les 12 derniers mois.</td>
+                        <td class="TABLEAU-legende" rowspan="1" colspan="2">* Indice définitif publié par l'INSEE le 15 juin 2016.(1) sur les 12 derniers mois.</td>
                      </tr>
                   </tbody>
                </table>
@@ -7308,8 +7308,8 @@
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">M</td>
-                        <td class="" rowspan="1" colspan="1"/>
-                        <td class="" rowspan="1" colspan="1"/>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">100,51</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,0 %</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">J</td>

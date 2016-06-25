@@ -1,0 +1,44 @@
+.not-found {
+  @include fixheight(auto);
+  min-height: calc(100vh - 170px);
+  &__image {
+    svg {
+      height: 400px;
+    }
+  }
+  &__body {
+    text-align: left;
+    margin: 20px 0;
+    @media screen and (max-width: $mobile) {
+      padding: 0 1rem;
+      margin: 35px 0;
+      display: flex;
+      align-items: center;
+      flex-direction: column
+    }
+    h2 {
+      font-size: 35px;
+      font-family: $font-semibold;
+      @include reset;
+    }
+    h3 {
+      margin-top: 15px;
+      font-size: 25px;
+    }
+    span {
+      border: 2px solid $yellow;
+      color: $yellow;
+      font-size: 19px;
+      font-family: $font-semibold;
+      padding: 5px 7px;
+      transition: color .2s ease, background-color .2s ease;
+      &:hover {
+        color: white;
+        background-color: $yellow;
+      }
+      a {
+        @include link-off;
+      }
+    }
+  }
+}

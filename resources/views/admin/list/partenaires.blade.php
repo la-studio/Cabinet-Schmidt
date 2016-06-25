@@ -5,13 +5,16 @@
     <div href="/admin/partenaire/{{$partenaire->id}}" class="col-sm-6 article">
       <div class="row center-xs middle-xs rowfix wrapper">
         <div class="col-xs">
-          <img src="{{$partenaire->logo}}" alt>
-          <form action="/admin/partenaire/delete/{{$partenaire->id}}" method="post">
-            {{ method_field('DELETE') }}
-            {{csrf_field()}}
-            <button type="submit" name="button">Delete</button>
-          </form>
-          <a href="/admin/partenaire/edit/{{$partenaire->id}}"><span>Edit</span></a>
+          <div class=""><img src="{{$partenaire->logo}}" alt></div>
+          <p>{{$partenaire->description}}</p>
+          <div class="row center-xs">
+            <form class="delete-form" action="/admin/partenaire/delete/{{$partenaire->id}}" method="post">
+              {{ method_field('DELETE')}}
+              {{csrf_field()}}
+              <input type="submit" value="Supprimer"/>
+            </form>
+            <a class="article__edit" href="/admin/partenaire/edit/{{$partenaire->id}}"><span>Éditer</span></a>
+          </div>
         </div>
       </div>
     </div>

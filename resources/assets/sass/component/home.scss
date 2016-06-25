@@ -171,6 +171,7 @@
         font-size: 26px;
         text-transform: uppercase;
         margin-bottom: 15px;
+        text-align: center;
       }
       &__label {
         @include reset();
@@ -209,7 +210,8 @@
           border-radius: 2px;
           box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.4);
           margin-top: 20px;
-          height: 180px;
+          height: 210px;
+          text-align: left;
           @media screen and (max-width: 1065px) {
             height: 187px;
           }
@@ -243,13 +245,15 @@
           padding: 0 20px;
         }
         .article {
-          height: 180px;
-          @media screen and (max-width: 1065px) {
-            height: 187px;
-          }
-          @media screen and (max-width: 920px) {
-            height: 209px;
-          }
+          // height: 200px;
+          // @media screen and (max-width: 1065px) {
+          //   height: 210px;
+          // }
+          // @media screen and (max-width: 920px) {
+          //   height: 220px;
+          // }
+          height: auto;
+          min-height: 210px;
           $size-pic: 220px;
           background-color: #fff;
           margin-top: 20px;
@@ -257,6 +261,9 @@
           max-width: 700px;
           @media screen and (min-width: 1600px) , screen and (max-width: 840px) {
             max-width: none;
+          }
+          &__header {
+            max-width: 700px;
           }
           &__picture {
             @include bg-regular();
@@ -275,11 +282,21 @@
           }
           &__body {
               text-align: left;
+              @media screen and (max-width: $tablet-max) {
+                display: none;
+              }
           }
           &__name {
             margin: 0;
             font-family: $font-semibold;
-            font-size: 21px;
+            font-size: 19px;
+            text-align: left;
+            &--small {
+              font-size: 18px;
+            }
+            a {
+              @include link-off;
+            }
           }
           &__footer {
             @include flex-between();
@@ -309,10 +326,9 @@
     }
   } // end actus
   .services {
-    //background-image: url('../images/slider/slider1920x1080_Collaboration.JPG');
     background-image: url('../images/cover-services.jpg');
     @include bg-regular();
-    padding: 30px 0;
+    padding: 45px 0;
     &__head {
       @include flex-middle(x,column);
       flex-direction: column;
@@ -351,7 +367,7 @@
           }
         }
         .wrapper {
-          padding: 0 30px;
+          padding: 15px 30px;
           background-color: #fff;
           min-height: 300px;
           @media screen and (max-width: 930px) {
@@ -421,29 +437,20 @@
         }
       }
     } // end partenaires-header
-    .slider {
-      height: 300px;
-      display: flex;
-      .swiper-slide {
-        flex-basis: 33.33%;
-        max-width: 33.33%;
-        min-width: 33.33%;
-        img {
-          max-height: 100%;
-          display: block;
-          margin: 0 auto;
-          max-width: 100%;
-        }
+    .partenaires-list {
+      @include fixheight(auto);
+      margin-top: 20px;
+      > .row {
+        @include fixheight(auto);
       }
-      .swiper-button {
-        &-prev,&-next {
-          @include flex-middle(xy);
-          background-image: none;
-          color: $blue;
-          opacity: 1;
-          font-size: 55px;
-          top: calc(50% + 44px);
-        }
+    }
+    .partenaires-logo {
+      @include flex-middle(xy);
+      margin-top: 25px;
+      img {
+        height: inherit;
+        max-height: 90px;
+        max-width: 90%;
       }
     }
   } // end partenaires-header
@@ -471,6 +478,7 @@
           }
         }
         &__photo {
+          @include fixheight(auto);
           img {
             width: 80px;
             height: 80px;
@@ -478,6 +486,7 @@
           }
         }
         &__body {
+          @include fixheight(auto);
           margin-top: 20px;
           font-family: $font;
           position: relative;
@@ -495,6 +504,10 @@
         &__identity {
           margin-top: 15px;
           flex-direction: column;
+          @include fixheight(auto);
+          &.row {
+            @include fixheight(auto);
+          }
           h3 {
             font-family: $font-semibold;
           }

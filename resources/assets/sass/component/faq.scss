@@ -143,4 +143,39 @@
       }
     }
   }
+  .buttons {
+    padding: 15px 0;
+    @include fixheight(auto);
+    min-height: 60px;
+    &__full,&__search {
+      display: none;
+      padding: 5px 8px;
+      border: 2px solid $yellow;
+      font-family: $font-semibold;
+      color: $yellow;
+      cursor: pointer;
+      transition: background-color .35s ease, color .35s ease;
+      &:hover {
+        background-color: $yellow;
+        color: white;
+      }
+      &:first-child {
+        margin-right: 10px;
+      }
+      &--show {
+        display: initial;
+      }
+    }
+    &__full {
+      &--disabled {
+        border: 2px solid $light-grey;
+        cursor: default;
+        color: $light-grey;
+        &:hover {
+          background-color: inherit;
+          color: $light-grey;
+        }
+      }
+    }
+  }
 }

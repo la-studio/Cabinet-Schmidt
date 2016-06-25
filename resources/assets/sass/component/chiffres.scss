@@ -115,6 +115,9 @@
           &.row {
             height: auto;
           }
+          a {
+            @include link-off;
+          }
         }
         &__body {
           padding-top: 0;

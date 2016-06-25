@@ -5,12 +5,14 @@
     @include('home.contact')
     @include('home.actus')
     @include('home.services')
-    @include('home.partenaires')
+    @if($temoignagesLen>0)
+      @include('home.temoignages')
+    @endif
     @if(count($count))
       @include('home.agenda')
     @else
       @include('home.agenda-empty')
     @endif
-    @include('home.temoignages')
+    @include('home.partenaires')
   </div>
 @stop

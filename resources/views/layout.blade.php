@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="/css/flexboxgrid.css" media="screen">
     <link rel="stylesheet" href="/css/normalize.css" media="screen">
     <link rel="stylesheet" href="/css/font-awesome-4.3.0/css/font-awesome.min.css" media="screen">
@@ -16,6 +19,7 @@
   <body>
     @include('layout.header')
     @yield('content')
+    @include('layout.popup')
     @unless(isset($remove_footer))
       @include('layout.footer')
     @endunless

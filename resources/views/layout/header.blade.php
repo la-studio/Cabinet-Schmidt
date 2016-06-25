@@ -1,6 +1,6 @@
 <header class="row header">
   <div class="col-xs header__logo">
-    @include('layout.logo')
+    <a href="{{URL::to('/')}}"> @include('layout.logo')</a>
   </div>
   <div class="col-xs header__right">
     <div class="row full-row">
@@ -11,10 +11,10 @@
               <span>rejoignez nous sur les réseaux sociaux !</span>
             </div>
             <div class="socials__icon">
-              <i class="fa fa-linkedin"></i>
+              <a target="_blank" href="https://www.linkedin.com/company/cabinet-schmidt---conseil-audit-et-r%C3%A9vision"><i class="fa fa-linkedin"></i></a>
             </div>
             <div class="socials__icon">
-              <i class="fa fa-facebook"></i>
+              <a target="_blank" href="https://www.facebook.com/cabinetSchmidt"><i class="fa fa-facebook"></i></a>
             </div>
           </div>
         </div>

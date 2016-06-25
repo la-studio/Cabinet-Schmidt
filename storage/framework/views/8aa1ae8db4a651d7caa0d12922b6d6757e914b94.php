@@ -6,13 +6,21 @@
 
         <?php echo e(csrf_field()); ?>
 
-        <div class="row center-xs">
-          <input type="text" name="title" value="<?php echo e($article->title); ?>">
+        <div class="col-xs">
+          <div class="row center-xs article__field">
+            <div class="col-md-8 col-sm-10 col-xs-12">
+              <span>Titre de l'article</span>
+              <input type="text" name="title" value="<?php echo e($article->title); ?>">
+            </div>
+          </div>
+          <div class="row center-xs article__field">
+            <div class="col-md-8 col-sm-10 col-xs-12">
+              <span>Contenu de l'article</span>
+              <textarea name="content"><?php echo e($article->content); ?></textarea>
+            </div>
+          </div>
+          <input type="submit" class="article__save" value="Enregistrer">
         </div>
-        <div class="row center-xs">
-          <input type="text" name="content" value="<?php echo e($article->content); ?>">
-        </div>
-        <button type="submit" name="button">Enregistrer</button>
       </form>
     </div>
   </div>

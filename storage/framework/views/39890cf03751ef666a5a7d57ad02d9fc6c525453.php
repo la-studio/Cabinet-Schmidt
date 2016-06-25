@@ -1,5 +1,5 @@
 <?php $__env->startSection('content'); ?>
-<div class>
+<div class="row center-xs middle-xs admin-home">
   Bienvenue sur le panel d'administration !
 </div>
 <?php $__env->stopSection(); ?>

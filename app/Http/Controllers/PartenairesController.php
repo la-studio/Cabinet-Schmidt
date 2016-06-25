@@ -12,7 +12,6 @@ class PartenairesController extends Controller
     {
         return view('admin.templates.partenaire')->with('partenaire',$id);
     }
-
     public function index()
     {
         $partenaires = Partenaire::all();
@@ -33,9 +32,15 @@ class PartenairesController extends Controller
         $destinationPath = public_path()."/images/partenaires";
         $filename        = $file->getClientOriginalName();
         $uploadSuccess   = $file->move($destinationPath, $filename);
-        $temoignage = new Partenaire($request->all());
-        $temoignage->logo = "/images/partenaires/".$filename; // Filling this property manually
-        $temoignage->save();
+        $partenaire = new Partenaire($request->all());
+        $partenaire->logo = "/images/partenaires/".$filename; // Filling this property manually
+        $switch = $request->enabled; // This one aswell.
+        if($switch==='on') {
+            $partenaire->enabled = 1;
+        } elseif($switch==null) {
+            $partenaire->enabled = 0;
+        }
+        $partenaire->save();
         return redirect('/admin/partenaires');
     }
     public function update(Request $request, Partenaire $id)
@@ -47,10 +52,28 @@ class PartenairesController extends Controller
             $filename        = $file->getClientOriginalName();
             $uploadSuccess   = $file->move($destinationPath, $filename);
             $partenaire->logo = "/images/partenaires/".$filename;
+            $switch = $request->enabled;
+            if($switch==='on') {
+                $partenaire->enabled = 1;
+            } elseif($switch==null) {
+                $partenaire->enabled = 0;
+            }
+            $partenaire->name = $request->name;
+            $partenaire->link = $request->link;
+            $partenaire->description = $request->description;
             $partenaire->save();
             return redirect('/admin/partenaires');
         } else {
-            $partenaire->update($request->all());
+            $switch = $request->enabled;
+            if($switch==='on') {
+                $partenaire->enabled = 1;
+            } elseif($switch==null) {
+                $partenaire->enabled = 0;
+            }
+            $partenaire->name = $request->name;
+            $partenaire->link = $request->link;
+            $partenaire->description = $request->description;
+            $partenaire->save();
             return redirect('/admin/partenaires');
         }
     }

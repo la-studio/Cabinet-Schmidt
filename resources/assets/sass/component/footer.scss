@@ -44,6 +44,9 @@
       &__link {
         color: $yellow;
         text-decoration: none;
+        &--mention {
+          cursor: pointer;
+        }
       }
     }
     .lower {

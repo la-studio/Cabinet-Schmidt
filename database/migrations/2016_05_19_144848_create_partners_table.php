@@ -17,6 +17,8 @@ class CreatePartnersTable extends Migration
             $table->string('logo');
             $table->string('name');
             $table->string('link');
+            $table->boolean('enabled');
+            $table->longText('description');e('<p>html</p>');
             $table->timestamps();
         });
     }

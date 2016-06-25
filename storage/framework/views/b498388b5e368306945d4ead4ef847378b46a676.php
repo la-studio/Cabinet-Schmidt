@@ -4,15 +4,18 @@
     <div href="/admin/partenaire/<?php echo e($partenaire->id); ?>" class="col-sm-6 article">
       <div class="row center-xs middle-xs rowfix wrapper">
         <div class="col-xs">
-          <img src="<?php echo e($partenaire->logo); ?>" alt>
-          <form action="/admin/partenaire/delete/<?php echo e($partenaire->id); ?>" method="post">
-            <?php echo e(method_field('DELETE')); ?>
+          <div class=""><img src="<?php echo e($partenaire->logo); ?>" alt></div>
+          <p><?php echo e($partenaire->description); ?></p>
+          <div class="row center-xs">
+            <form class="delete-form" action="/admin/partenaire/delete/<?php echo e($partenaire->id); ?>" method="post">
+              <?php echo e(method_field('DELETE')); ?>
 
-            <?php echo e(csrf_field()); ?>
+              <?php echo e(csrf_field()); ?>
 
-            <button type="submit" name="button">Delete</button>
-          </form>
-          <a href="/admin/partenaire/edit/<?php echo e($partenaire->id); ?>"><span>Edit</span></a>
+              <input type="submit" value="Supprimer"/>
+            </form>
+            <a class="article__edit" href="/admin/partenaire/edit/<?php echo e($partenaire->id); ?>"><span>Éditer</span></a>
+          </div>
         </div>
       </div>
     </div>

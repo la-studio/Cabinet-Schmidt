@@ -647,6 +647,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     .footer__credits .upper__link {
       color: #e7b116;
       text-decoration: none; }
+      .footer__credits .upper__link--mention {
+        cursor: pointer; }
   .footer__socials {
     padding: 0;
     margin: 0;
@@ -3626,7 +3628,7 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         text-decoration: none;
         color: inherit; }
 
-.modal {
+.modal-bg {
   position: fixed;
   left: 0;
   top: 0;
@@ -3642,46 +3644,67 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: transparent;
+  display: none;
+  transition: background-color .4s; }
+  .modal-bg.show {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .modal-bg.reveal {
+    background-color: rgba(0, 0, 0, 0.25); }
+
+.modal-body {
+  background-color: #fff;
+  position: fixed;
+  left: 25%;
+  top: 15%;
+  width: 50%;
+  height: 70%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  padding-left: 20px;
+  -webkit-transform: translate3d(0, -150px, 0);
+  transform: translate3d(0, -150px, 0);
+  opacity: 0;
+  transition: -webkit-transform 0.7s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.5s ease;
+  transition: transform 0.7s cubic-bezier(0.645, 0.045, 0.355, 1), opacity 0.5s ease;
+  z-index: 10;
   display: none; }
-  .modal--show {
+  .modal-body.show {
     display: block; }
-  .modal .body {
-    background-color: #fff;
-    width: 50%;
-    height: 70%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-    padding-left: 20px;
-    position: relative; }
-    .modal .body__exit {
-      position: absolute;
-      right: -30px;
-      top: -30px;
-      color: white;
-      opacity: .7;
-      cursor: pointer;
-      transition: opacity .2s ease; }
-      .modal .body__exit i {
-        font-size: 30px; }
-      .modal .body__exit:hover {
-        opacity: 1; }
-    .modal .body__title {
-      color: #e7b116;
-      text-align: center; }
-    .modal .body__label {
-      margin-top: 25px;
+  .modal-body.reveal {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1; }
+  .modal-body__exit {
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    color: white;
+    opacity: .7;
+    cursor: pointer;
+    transition: opacity .2s ease; }
+    .modal-body__exit i {
+      font-size: 30px; }
+    .modal-body__exit:hover {
+      opacity: 1; }
+  .modal-body__title {
+    color: #e7b116;
+    text-align: center; }
+  .modal-body__label {
+    margin-top: 25px;
+    font-family: "proximanova-semibold"; }
+    .modal-body__label:after {
+      content: '';
+      height: 3px;
+      background-color: #1d1e1c;
+      width: 50px;
+      display: block;
+      margin-top: 10px; }
+  .modal-body .info {
+    margin-top: 15px; }
+    .modal-body .info__label {
       font-family: "proximanova-semibold"; }
-      .modal .body__label:after {
-        content: '';
-        height: 3px;
-        background-color: #1d1e1c;
-        width: 50px;
-        display: block;
-        margin-top: 10px; }
-    .modal .body .info {
-      margin-top: 15px; }
-      .modal .body .info__label {
-        font-family: "proximanova-semibold"; }
 
 html, body {
   width: 100%;

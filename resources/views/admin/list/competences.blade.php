@@ -1,14 +1,20 @@
 @extends('admin.dashboard-layout')
 @section('content')
+
+  <div class="row competences-list">
   @foreach ($competences as $competence)
-    <div class="col-sm-6 competence-list">
+    <div class="col-sm-6 competences-item">
       <div class="row center-xs middle-xs wrapper">
         <div class="col-xs">
-          <p>{{$competence->title}}</p>
-          <p>{{$competence->description}}</p>
-          <a href="/admin/competence/edit/{{$competence->id}}"><span>Edit</span></a>
+          <p class="title">{{$competence->title}}</p>
+          <p class="description">{{$competence->description}}</p>
+          <a href="/admin/competence/edit/{{$competence->id}}">
+            <i class="material-icons">create</i>
+            <span>Éditer</span>
+          </a>
         </div>
       </div>
     </div>
   @endforeach
+  </div>
 @stop

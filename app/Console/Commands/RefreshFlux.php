@@ -113,6 +113,7 @@ class RefreshFlux extends Command
                 $rubriques = [];
                 $merged_content = [];
                 $current_table = '';
+                $references = [];
                 if(substr($element->create_date->__toString(),0,4)=='2016' && count($titles)<150) {
                     foreach ($tags as $tag) {
                         $tag_attr = $tag->attributes();
@@ -127,7 +128,7 @@ class RefreshFlux extends Command
                         foreach($section_content->reference as $link) {
                             $reference->link = $link->ref_lien['href']->__toString();
                             $reference->label = $link->ref_lien->__toString();
-                            //$reference->save();
+                            array_push($references, $reference);
                         }
                     }
                     if($media_attr['type']=="image") {
@@ -168,8 +169,8 @@ class RefreshFlux extends Command
                     $article->table_html = $current_table;
                     $article->article_id = $id;
                     $article->save();
-                    if(isset($section_content->reference)) {
-                        $article->references()->save($reference);
+                    foreach ($references as $elem) {
+                        $article->references()->save($elem);
                     }
                     array_push($titles,$element->title->__toString());
                 }

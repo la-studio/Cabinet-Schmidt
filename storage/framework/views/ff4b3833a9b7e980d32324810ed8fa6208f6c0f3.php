@@ -20,6 +20,10 @@
         </div>
       </div>
       <div class="row center-xs list"></div>
+      <div class="row center-xs buttons">
+        <span class="buttons__full">Voir les autres résultats</span>
+        <span class="buttons__search">Faire une nouvelle recherche</span>
+      </div>
     </div>
   </div>
   <span class="loader"></span>

@@ -28,8 +28,13 @@
               <div class="col-xs-12">
                 <h3 class="row article__title"><a href="/actus/<?php echo e($article->slug); ?>"><?php echo e($article->title); ?></a></h3>
                 <p class="row article__body">
-                  <?php echo e($article->summary); ?>
+                  <?php if(strlen($article->summary)>200): ?>
+                    <?php echo e(substr($article->summary,0,200).'...'); ?>
 
+                  <?php else: ?>
+                    <?php echo e($article->summary); ?>
+
+                  <?php endif; ?>
                 </p>
               </div>
               <div class="col-xs-12 article__footer">

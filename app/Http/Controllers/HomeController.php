@@ -8,6 +8,7 @@ use App\Partenaire;
 use App\Competence;
 use App\Echosarticle;
 use App\Appointment;
+use App\Slider;
 use DateTime;
 
 class HomeController extends Controller
@@ -22,9 +23,17 @@ class HomeController extends Controller
         $temoignages = Temoignage::all();
         $partenaires = Partenaire::all();
         $competences = Competence::all();
+        $slider = Slider::all();
         $appointmentLen = Appointment::all()->count();
+        $temoignagesLen = $temoignages->count();
         $appointment = Appointment::orderBy('created_at','asc')->where('created_at','>', new DateTime())->first();
+        if(strlen($echosarticles[0]->title) > 85 || strlen($echosarticles[1]->title) > 85) {
+            $is_large = true;
+        } else {
+            $is_large = false;
+        }
+        // return $slider;
         // return $appointment;
-        return view('home', compact('articles', 'temoignages', 'partenaires','competences','echosarticles','appointment'))->withCount($appointment);
+        return view('home', compact('articles', 'temoignages', 'partenaires','competences','echosarticles','appointment','temoignagesLen','is_large','slider'))->withCount($appointment);
     }
 }
