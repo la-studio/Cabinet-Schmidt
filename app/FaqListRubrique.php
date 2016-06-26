@@ -10,6 +10,6 @@ class FaqListRubrique extends Model
 
     public function keywords()
     {
-        return $this->belongsToMany('App\FaqListKeyword')->withTimestamps();
+        return $this->belongsToMany('App\FaqListKeyword', 'faq_list_rubriques_keywords' )->withTimestamps();
     }
 }

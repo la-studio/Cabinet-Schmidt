@@ -17,7 +17,7 @@ class CreateNewKeywordsFaqList extends Migration
             $table->string('name');
             $table->timestamps();
         });
-        Schema::create('faq_list_rubriques_faq_list_keywords', function (Blueprint $table) {
+        Schema::create('faq_list_rubriques_keywords', function (Blueprint $table) {
             $table->integer('faq_list_rubrique_id')->unsigned()->index();
             $table->foreign('faq_list_rubrique_id')->references('id')->on('faq_list_rubriques')->onDelete('cascade');
             $table->integer('faq_list_keyword_id')->unsigned()->index();
