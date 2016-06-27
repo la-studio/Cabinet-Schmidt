@@ -447,6 +447,11 @@
     .partenaires-logo {
       @include flex-middle(xy);
       margin-top: 25px;
+      filter: grayscale(100%);
+      transition: filter .2s ease;
+      &:hover {
+        filter: none;
+      }
       img {
         height: inherit;
         max-height: 90px;
@@ -687,6 +692,9 @@
       @media screen and (max-width: $tablet-max) {
         align-items: center;
         flex-direction: column-reverse;
+      }
+      &--full {
+        align-items: center;
       }
       &__carousel {
         display: flex;

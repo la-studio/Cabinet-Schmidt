@@ -46,6 +46,32 @@
         </article>
         <?php endforeach; ?>
       </section>
+      <?php if(isset($page_number)): ?>
+      <div class="row middle-xs center-xs gallery__pagination">
+        <a href="/actus/page/<?php echo e($page_number-1); ?>" class="arrow"><i class="material-icons">chevron_left</i></a>
+        <a href="/actus/page/<?php echo e($page_number-2); ?>" class="number"><?php echo e($page_number-2); ?></a>
+        <a href="/actus/page/<?php echo e($page_number-1); ?>" class="number"><?php echo e($page_number-1); ?></a>
+        <span class="number number--selected"><?php echo e($page_number); ?></span>
+        <?php if($page_number+1<=$max_page): ?>
+        <a href="/actus/page/<?php echo e($page_number+1); ?>" class="number"><?php echo e($page_number+1); ?></a>
+        <?php endif; ?>
+        <?php if($page_number+2<=$max_page): ?>
+        <a href="/actus/page/<?php echo e($page_number+2); ?>" class="number"><?php echo e($page_number+2); ?></a>
+        <?php endif; ?>
+        <?php if($page_number+1<=$max_page): ?>
+        <a href="/actus/page/<?php echo e($page_number+1); ?>" class="arrow"><i class="material-icons">chevron_right</i></a>
+        <?php endif; ?>
+      </div>
+      <?php else: ?>
+      <div class="row middle-xs center-xs gallery__pagination">
+        <span class="number number--selected">1</span>
+        <a href="/actus/page/2" class="number">2</a>
+        <a href="/actus/page/3" class="number">3</a>
+        <a href="/actus/page/3" class="number">4</a>
+        <a href="/actus/page/3" class="number">5</a>
+        <a href="/actus/page/2" class="arrow"><i class="material-icons">chevron_right</i></a>
+      </div>
+      <?php endif; ?>
     </div>
   </div>
 <?php $__env->stopSection(); ?>

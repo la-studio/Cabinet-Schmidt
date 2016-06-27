@@ -39,14 +39,20 @@ Faq.prototype.clickListener = function () {
     }
   })
   $('.faq .buttons__full').click(function () {
-    that.addMore();
-    $(this).addClass('buttons__full--disabled')
+    $(this).addClass('buttons__full--disabled');
+    if(!$(this).hasClass('buttons__full--disabled')) {
+      that.addMore();
+    }
   })
   $('.faq .buttons__search').click(function () {
     that.newSearch();
   })
   $('.search__reload').click(function () {
     that.prev();
+  });
+  $(document).on('click','.faq .new-search', function () {
+    that.newSearch();
+    $(this).parent().remove();
   })
   $(document).on('click','.faq .option',function () {
     var val = $(this).data('content');
@@ -155,6 +161,7 @@ Faq.prototype.prev = function () {
 Faq.prototype.getResult = function () {
   var that = this;
   that.articles = [];
+  that.currentArticles = [];
   $.getJSON('faq/keywords/'+this.selected.topic).done(function (data) {
       console.log(data);
       var x = 0;
@@ -176,8 +183,12 @@ Faq.prototype.getResult = function () {
         }
         if(that.currentArticles.length>5) {
           $('.buttons__full').addClass('buttons__full--show')
+        } else if(that.currentArticles.length==0) {
+          $('.faq .list').append('<span class="no-results">Aucun résultat de recherche, voulez-vous faire <span class="new-search">une nouvelle recherche ?</span></span>')
         }
-        $('.buttons__search').addClass('buttons__search--show')
+        if(that.currentArticles.length>0) {
+          $('.buttons__search').addClass('buttons__search--show');
+        }
         $('.faq-item p').each(function () {
           if($(this).text()=='' || $(this).text()==' ') {
             $(this).remove();

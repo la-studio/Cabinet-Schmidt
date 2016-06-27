@@ -142,6 +142,15 @@
         font-family: $font;
       }
     }
+    .no-results {
+      margin-top: 40px;
+      font-family: $font-semibold;
+      font-size: 20px;
+      .new-search {
+        color: $yellow;
+        cursor: pointer;
+      }
+    }
   }
   .buttons {
     padding: 15px 0;

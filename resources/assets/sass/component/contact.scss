@@ -1,4 +1,30 @@
 .contact {
+  .success {
+    $width: 350px;
+    position: fixed;
+    bottom: -30px;
+    height: 50px;
+    width: $width;
+    left: calc(50% - #{$width/2});
+    align-items: center;
+    justify-content: center;
+    background-color: $yellow;
+    color: white;
+    display: none;
+    opacity: 0;
+    transition: transform .5s ease, opacity .5s ease;
+    i {
+      margin-right: 15px;
+      font-size: 25px;
+    }
+    &--is-displayed {
+      display: flex;
+    }
+    &--is-visible {
+      transform: translate3d(0,35px,0);
+      opacity: 1;
+    }
+  }
   &__cover {
     height: 550px;
     @include bg-regular();
@@ -53,7 +79,7 @@
       }
       h2 {
         text-transform: uppercase;
-        margin-bottom: 10px;
+        padding-bottom: 15px;
       }
     }
     &__content {

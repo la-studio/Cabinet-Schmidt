@@ -45,6 +45,32 @@
         </article>
         @endforeach
       </section>
+      @if(isset($page_number))
+      <div class="row middle-xs center-xs gallery__pagination">
+        <a href="/actus/page/{{$page_number-1}}" class="arrow"><i class="material-icons">chevron_left</i></a>
+        <a href="/actus/page/{{$page_number-2}}" class="number">{{$page_number-2}}</a>
+        <a href="/actus/page/{{$page_number-1}}" class="number">{{$page_number-1}}</a>
+        <span class="number number--selected">{{$page_number}}</span>
+        @if($page_number+1<=$max_page)
+        <a href="/actus/page/{{$page_number+1}}" class="number">{{$page_number+1}}</a>
+        @endif
+        @if($page_number+2<=$max_page)
+        <a href="/actus/page/{{$page_number+2}}" class="number">{{$page_number+2}}</a>
+        @endif
+        @if($page_number+1<=$max_page)
+        <a href="/actus/page/{{$page_number+1}}" class="arrow"><i class="material-icons">chevron_right</i></a>
+        @endif
+      </div>
+      @else
+      <div class="row middle-xs center-xs gallery__pagination">
+        <span class="number number--selected">1</span>
+        <a href="/actus/page/2" class="number">2</a>
+        <a href="/actus/page/3" class="number">3</a>
+        <a href="/actus/page/3" class="number">4</a>
+        <a href="/actus/page/3" class="number">5</a>
+        <a href="/actus/page/2" class="arrow"><i class="material-icons">chevron_right</i></a>
+      </div>
+      @endif
     </div>
   </div>
 @stop

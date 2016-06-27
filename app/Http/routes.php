@@ -66,6 +66,7 @@ Route::group(['middleware' => ['web']], function () {
     // Common nav.
     Route::get('/', 'HomeController@index');
     Route::get('/actus', 'ActusController@index');
+    Route::get('/actus/page/{page}','ActusController@page');
     Route::get('/actus/{slug}','ActusController@show');
     Route::get('/actus/article/{id}', 'ActusController@redirect');
     Route::get('/about', function () {

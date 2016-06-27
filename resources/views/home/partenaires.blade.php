@@ -10,7 +10,7 @@
       <div class="row">
         @foreach ($partenaires as $partenaire)
           <div class="col-md-3 col-sm-4 col-xs-12 partenaires-logo">
-            <a href="http://{{$partenaire->logo}}" target="_blank"></a><img src="{{$partenaire->logo}}" alt title="{{$partenaire->name}}" />
+            <a href="http://{{$partenaire->link}}" target="_blank"><img src="{{$partenaire->logo}}" alt title="{{$partenaire->name}}" /></a>
           </div>
         @endforeach
       </div>

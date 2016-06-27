@@ -1287,7 +1287,13 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-top: 25px; }
+    margin-top: 25px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transition: -webkit-filter .2s ease, filter .2s ease; }
+    .home__partenaires .partenaires-logo:hover {
+      -webkit-filter: none;
+      filter: none; }
     .home__partenaires .partenaires-logo img {
       height: inherit;
       max-height: 90px;
@@ -1604,6 +1610,10 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         -webkit-flex-direction: column-reverse;
         -ms-flex-direction: column-reverse;
         flex-direction: column-reverse; } }
+    .home__agenda .agenda-text--full {
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
     .home__agenda .agenda-text__carousel {
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -1838,6 +1848,49 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         .actualites .gallery__item .article__button:hover {
           background-color: #e7b116;
           color: white; }
+  .actualites .gallery__pagination.row {
+    height: 60px; }
+  .actualites .gallery__pagination .number {
+    text-decoration: none;
+    color: inherit;
+    height: 30px;
+    width: 30px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    float: none;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    transition: color .2s ease;
+    border-radius: 100%;
+    font-size: 20px;
+    margin: 0 2px;
+    font-family: "proximanova-bold"; }
+    .actualites .gallery__pagination .number:not(.number--selected):hover {
+      color: #e7b116; }
+    .actualites .gallery__pagination .number--selected {
+      color: white;
+      background-color: #e7b116; }
+  .actualites .gallery__pagination .arrow {
+    text-decoration: none;
+    color: inherit;
+    transition: color .2s ease; }
+    .actualites .gallery__pagination .arrow:hover {
+      color: #e7b116; }
+    .actualites .gallery__pagination .arrow i {
+      font-size: 35px;
+      height: 30px;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      float: none;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
 
 .mouse-template, .nav-template {
   display: none; }
@@ -2114,6 +2167,36 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
   .about__responsive {
     display: none; }
 
+.contact .success {
+  position: fixed;
+  bottom: -30px;
+  height: 50px;
+  width: 350px;
+  left: calc(50% - 175px);
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #e7b116;
+  color: white;
+  display: none;
+  opacity: 0;
+  transition: -webkit-transform .5s ease, opacity .5s ease;
+  transition: transform .5s ease, opacity .5s ease; }
+  .contact .success i {
+    margin-right: 15px;
+    font-size: 25px; }
+  .contact .success--is-displayed {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  .contact .success--is-visible {
+    -webkit-transform: translate3d(0, 35px, 0);
+    transform: translate3d(0, 35px, 0);
+    opacity: 1; }
+
 .contact__cover {
   height: 550px;
   background-size: cover;
@@ -2177,7 +2260,7 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       height: auto; }
     .contact .form__head h2 {
       text-transform: uppercase;
-      margin-bottom: 10px; }
+      padding-bottom: 15px; }
   .contact .form__content {
     padding: 15px; }
     @media screen and (min-width: 537px) {
@@ -3556,6 +3639,13 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         height: auto; }
       .faq .list .faq-item__reponse {
         font-family: "proximanova-regular"; }
+    .faq .list .no-results {
+      margin-top: 40px;
+      font-family: "proximanova-semibold";
+      font-size: 20px; }
+      .faq .list .no-results .new-search {
+        color: #e7b116;
+        cursor: pointer; }
   .faq .buttons {
     padding: 15px 0;
     min-height: 60px; }
@@ -3661,6 +3751,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
   top: 15%;
   width: 50%;
   height: 70%;
+  overflow-y: auto;
+  overflow-x: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   padding-left: 20px;
   -webkit-transform: translate3d(0, -150px, 0);
@@ -3701,6 +3793,8 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       width: 50px;
       display: block;
       margin-top: 10px; }
+  .modal-body__main:last-child {
+    margin-bottom: 25px; }
   .modal-body .info {
     margin-top: 15px; }
     .modal-body .info__label {
@@ -3732,6 +3826,9 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   /* Support for IE. */
   font-feature-settings: 'liga'; }
+
+.is-hidden {
+  display: none; }
 
 .row {
   margin: 0; }

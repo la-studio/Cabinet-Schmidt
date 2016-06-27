@@ -144,5 +144,38 @@
         }
       }
     }
+    &__pagination {
+      @include fixheight(60px);
+      .number {
+        @include link-off;
+        height: 30px;
+        width: 30px;
+        @include flex-middle(xy);
+        transition: color .2s ease;
+        border-radius: 100%;
+        font-size: 20px;
+        margin: 0 2px;
+        font-family: $font-bold;
+        &:not(.number--selected):hover {
+          color: $yellow;
+        }
+        &--selected {
+          color: white;
+          background-color: $yellow;
+        }
+      }
+      .arrow {
+        @include link-off;
+        transition: color .2s ease;
+        &:hover {
+          color: $yellow;
+        }
+        i {
+          font-size: 35px;
+          height: 30px;
+          @include flex-middle(y);
+        }
+      }
+    }
   }
 }

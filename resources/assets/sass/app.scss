@@ -58,4 +58,7 @@ html, body {
   font-feature-settings: 'liga';
 }
 
+.is-hidden {
+  display: none;
+}
 @include addon-grid(); // Some fixes for bothering defauts of flexgrid we're using.

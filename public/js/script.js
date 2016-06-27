@@ -7,6 +7,12 @@ $(document).ready(function () {
       $('.modal-bg, .modal-body').removeClass('show');
     }, 500);
   }
+  var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
+               navigator.userAgent && !navigator.userAgent.match('CriOS');
+  if(isSafari) {
+    $('.agenda-datepicker').addClass('is-hidden');
+    $('.agenda-text').addClass('agenda-text--full');
+  }
   var optionsSlider = {
       pagination: '.swiper-pagination',
       paginationClickable: true,
@@ -100,9 +106,16 @@ $(document).ready(function () {
         type : 'post',
         data: data,
         success: function (response) {
-          var sucessText = "Le message à été envoyé avec succès !";
-          var sucessToken =  '<div class="success"><span class="success__icon"><i class="fa fa-check-circle"></i></span><span class="success__message">'+sucessText+'</span></div>'
-          $('body').append('<div class="success">'+sucessText+'</div>')
+          // var template = '<div class="success"><i class="material-icons">check_circle</i><span class="success__message">Le message a été envoyé avec succès !</span></div>';
+          // $('.contact').append(template)
+          $('.contact .success').addClass('success--is-displayed');
+          $('.input__field').removeClass('input--filled')
+          setTimeout(function () {
+            $('.contact .success').addClass('success--is-visible');
+          }, 10);
+          setTimeout(function () {
+            $('.contact .success').remove()
+          }, 6000);
           $(".input__field").val('').removeClass('input__field--missing');
           console.log(response);
         },

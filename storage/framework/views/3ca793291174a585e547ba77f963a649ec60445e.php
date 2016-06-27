@@ -10,7 +10,7 @@
     </div>
     <div class="info">
       <span class="info__label">Adresse :</span>
-      <span class="info__desc">81 RUE HENRI FABRE 38920 CROLLES</span>
+      <span class="info__desc">81 Rue Henri Fabre 38920 CROLLES</span>
     </div>
     <div class="info">
       <span class="info__label">SIREN :</span>
@@ -24,5 +24,75 @@
       <span class="info__label">Capital social :</span>
       <span class="info__desc">8 000 €</span>
     </div>
+    <div class="info">
+      <span>Retrouvez toute l’information du cabinet Schmidt sur societe.com</span>
+      <span>N’hésitez pas à nous contacter (par mail : cabinet.pierre.schmidt@orange.fr ou téléphone : 04 76 08 10 50)</span>
+    </div>
   </div>
+  <h3 class="modal-body__label">Hébergeur du site</h3>
+  <div class="modal-body__main">
+    <div class="info">
+      <span class="info__label">Nom de l’hébergeur :</span>
+      <span class="info__desc">OVH</span>
+    </div>
+    <div class="info">
+      <span class="info__label">Raison sociale :</span>
+      <span class="info__desc">SAS au capital de 10 000 000 €</span>
+    </div>
+    <div class="info">
+      <span class="info__label">RCS :</span>
+      <span class="info__desc">Roubaix – Tourcoing 424 761 419 00045</span>
+    </div>
+    <div class="info">
+      <span class="info__label">Code APE :</span>
+      <span class="info__desc">6202A</span>
+    </div>
+    <div class="info">
+      <span class="info__label">N° TVA :</span>
+      <span class="info__desc">FR 22 424 761 419</span>
+    </div>
+    <div class="info">
+      <span class="info__label">Nom de l’hébergeur :</span>
+      <span class="info__desc">OVH</span>
+    </div>
+    <div class="info">
+      <span class="info__label">Siège social :</span>
+      <span class="info__desc">2 rue Kellermann – 59100 Roubaix</span>
+    </div>
+    <div class="info">
+      <span class="info__label">Téléphone :</span>
+      <span class="info__desc">0 820 698 765</span>
+    </div>
+    <div class="info">
+      <span class="info__label">Mail : </span>
+      <span class="info__desc">support@ovh.com</span>
+    </div>
+      <h3 class="modal-body__label">Responsable des actualités</h3>
+      <div class="modal-body__main">
+        <div class="info">
+          <span class="info__label">Editeur :</span>
+          <span class="info__desc">SAS Les Echos Publishing</span>
+        </div>
+        <div class="info">
+          <span class="info__label">Siège social :</span>
+          <span class="info__desc">16, rue du 4 Septembre 75002 Paris</span>
+        </div>
+        <div class="info">
+          <span class="info__label">Capital social :</span>
+          <span class="info__desc">1 728 750 euros</span>
+        </div>
+        <div class="info">
+          <span class="info__label">RCS :</span>
+          <span class="info__desc">381 123 868 Paris</span>
+        </div>
+        <div class="info">
+          <span class="info__label">Téléphone/Fax :</span>
+          <span class="info__desc">05 49 60 20 60/05 49 01 87 08</span>
+        </div>
+        <div class="info">
+          <span class="info__label">Production et administratif :</span>
+          <span class="info__desc">15, rue de la Demi-lune - BP 1119 86061 Poitiers Cedex 9</span>
+        </div>
+    </div>
+</div>
 </div>

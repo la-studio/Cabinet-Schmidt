@@ -20,9 +20,9 @@
     @include('layout.header')
     @yield('content')
     @include('layout.popup')
-    @unless(isset($remove_footer))
+    {{-- @unless(isset($remove_footer)) --}}
       @include('layout.footer')
-    @endunless
+    {{-- @endunless --}}
     @include('layout.toolbox')
     <script type="text/javascript" src="/js/jquery.js"></script>
     <script type="text/javascript" src="/js/Swiper-master/dist/js/swiper.min.js"></script>
