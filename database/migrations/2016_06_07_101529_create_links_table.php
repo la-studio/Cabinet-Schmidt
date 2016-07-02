@@ -23,7 +23,7 @@ class CreateLinksTable extends Migration
             $table->string('title');
             $table->string('rubrique');
             $table->string('slug');
-            $table->string('table_html')->nullable();
+            $table->longText('table_html')->nullable();
             $table->timestamps();
         });
     }

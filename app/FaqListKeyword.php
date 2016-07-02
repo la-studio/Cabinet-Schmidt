@@ -10,6 +10,6 @@ class FaqListKeyword extends Model
 
     public function rubriques()
     {
-        return $this->belongsToMany(FaqListRubrique::class,'rubrique_keyword','faq_list_rubrique_id', 'faq_list_keyword_id');
+        return $this->belongsToMany(FaqListRubrique::class, 'faq_list_rubriques_keywords', 'faq_list_rubrique_id', 'faq_list_keyword_id');
     }
 }

@@ -1296,8 +1296,7 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       filter: none; }
     .home__partenaires .partenaires-logo img {
       height: inherit;
-      max-height: 90px;
-      max-width: 90%; }
+      max-height: 90px; }
 
 .home__temoignages {
   overflow: hidden; }
@@ -3345,6 +3344,9 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     text-align: left; }
     .echo-article__summary.row {
       height: auto; }
+  .echo-article__date {
+    text-align: left;
+    font-style: italic; }
   .echo-article__content {
     text-align: left;
     font-size: 18px; }

@@ -29,7 +29,7 @@ class MailController extends Controller
         // });
         Mail::send('email',$data, function($message) use($identity, $email,$company,$purpose,$comment ) {
             $message->from('ismael.sebbane@gmail.com');
-            $message->to('ismael.11@hotmail.fr');
+            $message->to('a.perrier721@gmail.com');
         });
     }
 }

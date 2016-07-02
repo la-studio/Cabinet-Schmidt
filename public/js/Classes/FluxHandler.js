@@ -11,7 +11,7 @@ FluxHandler.prototype.init = function () {
 
 FluxHandler.prototype.parsingDates = function () {
   var that = this;
-  $('.actus-articles__entreprises .article__footer .date, .actus-articles__cabinet .article__date,.gallery__item .article__date').each(function () {
+  $('.actus-articles__entreprises .article__footer .date, .actus-articles__cabinet .article__date, .gallery__item .article__date, .echo-article__date').each(function () {
     var val = $(this).text();
     var year = val.substring(0,4);
     var month = val.substring(6,7);

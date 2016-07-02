@@ -5,6 +5,7 @@
         <h1 class="echo-article__title"><?php echo e($compacted_article->title); ?></h1>
         <h2 class="echo-article__summary"><?php echo e($compacted_article->summary); ?></h2>
       </header>
+      <p class="echo-article__date"><?php echo e($compacted_article->created_at); ?></p>
       <div class="echo-article__content">
         <?php echo e($compacted_article->content); ?>
 
@@ -23,7 +24,7 @@
       <nav class="row start-xs echo-article__links">
         <h3>Liens de référence : </h3>
         <?php foreach($compacted_article->references as $link): ?>
-          <span><a href="<?php echo e($link->link); ?>"><?php echo e($link->label); ?></a></span>
+          <span><a target="_blank" href="<?php echo e($link->link); ?>"><?php echo e($link->label); ?></a></span>
         <?php endforeach; ?>
       </nav>
       <?php endif; ?>
