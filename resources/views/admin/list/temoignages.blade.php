@@ -27,4 +27,5 @@
     </div>
   @endforeach
 </div>
+<a href="/admin/temoignage/create" class="row center-xs article-add"><span>Ajouter un témoignage</span></a>
 @stop

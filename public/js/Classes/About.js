@@ -31,7 +31,7 @@ About.prototype.init = function () {
 About.prototype.getDatasAndInitView = function () {
   var that = this;
   var list = [];
-  $.getJSON('/about/datas').done(function(data) {
+  $.getJSON('/a-propos/datas').done(function(data) {
     for (var i = 0; i < data.length; i++) {
       var obj = {};
       obj.list = [];

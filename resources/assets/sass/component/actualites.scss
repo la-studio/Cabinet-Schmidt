@@ -146,34 +146,42 @@
     }
     &__pagination {
       @include fixheight(60px);
-      .number {
+      ul{
+        list-style-type: none;
+        padding: 0;
+      }
+      ul li {
+        display: inline-block !important;
+        line-height: 30px;
+        vertical-align: middle;
         @include link-off;
         height: 30px;
         width: 30px;
         @include flex-middle(xy);
-        transition: color .2s ease;
         border-radius: 100%;
         font-size: 20px;
         margin: 0 2px;
         font-family: $font-bold;
-        &:not(.number--selected):hover {
+        a{
+          color: $black;
+          transition: color .2s ease;
+        }
+        a[rel="prev"], a[rel="next"]{
+          i {
+            font-size: 35px;
+            height: 30px;
+            @include flex-middle(y);
+          }
+        }
+        a:hover{
           color: $yellow;
         }
-        &--selected {
+        &.active {
           color: white;
           background-color: $yellow;
         }
-      }
-      .arrow {
-        @include link-off;
-        transition: color .2s ease;
-        &:hover {
-          color: $yellow;
-        }
-        i {
-          font-size: 35px;
-          height: 30px;
-          @include flex-middle(y);
+        &.disabled {
+          display: none !important;
         }
       }
     }

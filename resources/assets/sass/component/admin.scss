@@ -130,6 +130,7 @@
     }
     .temoignages-list {
       margin-top: 20px;
+      height: auto;
       .temoignage{
         > * {
           @include fixheight(auto);

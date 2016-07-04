@@ -24,10 +24,10 @@
         @foreach ($echosarticles as $article)
         <article class="col-md-4 col-sm-6 col-xs-12 col-custom gallery__wrapper {{$article->rubrique}}">
           <div class="gallery__item">
-            <a href="/actus/{{$article->slug}}" class="row image" style="background-image: url('{{$article->image}}')"></a>
+            <a href="/actualites/{{$article->slug}}" class="row image" style="background-image: url('{{$article->image}}')"></a>
             <div class="row article">
               <div class="col-xs-12">
-                <h3 class="row article__title"><a href="/actus/{{$article->slug}}">{{$article->title}}</a></h3>
+                <h3 class="row article__title"><a href="/actualites/{{$article->slug}}">{{$article->title}}</a></h3>
                 <p class="row article__body">
                   @if(strlen($article->summary)>200)
                     {{substr($article->summary,0,200).'...'}}
@@ -38,39 +38,47 @@
               </div>
               <div class="col-xs-12 article__footer">
                   <span class="article__date">{{$article->date}}</span>
-                  <a href="/actus/{{$article->slug}}" class="article__button"><span >Lire +</span></a>
+                  <a href="/actualites/{{$article->slug}}" class="article__button"><span >Lire +</span></a>
               </div>
             </div>
           </div>
         </article>
         @endforeach
       </section>
-      @if(isset($page_number))
       <div class="row middle-xs center-xs gallery__pagination">
-        <a href="/actus/page/{{$page_number-1}}" class="arrow"><i class="material-icons">chevron_left</i></a>
-        <a href="/actus/page/{{$page_number-2}}" class="number">{{$page_number-2}}</a>
-        <a href="/actus/page/{{$page_number-1}}" class="number">{{$page_number-1}}</a>
-        <span class="number number--selected">{{$page_number}}</span>
-        @if($page_number+1<=$max_page)
-        <a href="/actus/page/{{$page_number+1}}" class="number">{{$page_number+1}}</a>
-        @endif
-        @if($page_number+2<=$max_page)
-        <a href="/actus/page/{{$page_number+2}}" class="number">{{$page_number+2}}</a>
-        @endif
-        @if($page_number+1<=$max_page)
-        <a href="/actus/page/{{$page_number+1}}" class="arrow"><i class="material-icons">chevron_right</i></a>
-        @endif
-      </div>
-      @else
-      <div class="row middle-xs center-xs gallery__pagination">
-        <span class="number number--selected">1</span>
-        <a href="/actus/page/2" class="number">2</a>
-        <a href="/actus/page/3" class="number">3</a>
-        <a href="/actus/page/3" class="number">4</a>
-        <a href="/actus/page/3" class="number">5</a>
-        <a href="/actus/page/2" class="arrow"><i class="material-icons">chevron_right</i></a>
-      </div>
+        @if ($echosarticles->lastPage() > 1)
+          <ul class="pagination">
+              <li class="{{ ($echosarticles->currentPage() == 1) ? ' disabled' : '' }}">
+                  <a href="{{ $echosarticles->previousPageUrl() }}" rel="prev"><i class="material-icons">chevron_left</i></a>
+               </li>
+              @for ($i = 1; $i <= $echosarticles->lastPage(); $i++)
+                  <?php
+                  $half_total_links = floor(7 / 2);
+                  $from = $echosarticles->currentPage() - $half_total_links;
+                  $to = $echosarticles->currentPage() + $half_total_links;
+                  if ($echosarticles->currentPage() < $half_total_links) {
+                     $to += $half_total_links - $echosarticles->currentPage();
+                  }
+                  if ($echosarticles->lastPage() - $echosarticles->currentPage() < $half_total_links) {
+                      $from -= $half_total_links - ($echosarticles->lastPage() - $echosarticles->currentPage()) - 1;
+                  }
+                  ?>
+                  @if ($from < $i && $i < $to)
+                      <li class="{{ ($echosarticles->currentPage() == $i) ? ' active' : '' }}">
+                        @if($echosarticles->currentPage() == $i)
+                          {{ $i }}
+                        @else
+                          <a href="{{ $echosarticles->url($i) }}">{{ $i }}</a>
+                        @endif
+                      </li>
+                  @endif
+              @endfor
+              <li class="{{ ($echosarticles->currentPage() == $echosarticles->lastPage()) ? ' disabled' : '' }}">
+                  <a href="{{ $echosarticles->nextPageUrl() }}" rel="next"><i class="material-icons">chevron_right</i></a>
+              </li>
+          </ul>
       @endif
+      </div>
     </div>
   </div>
 @stop

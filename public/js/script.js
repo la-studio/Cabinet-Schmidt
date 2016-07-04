@@ -7,12 +7,13 @@ $(document).ready(function () {
       $('.modal-bg, .modal-body').removeClass('show');
     }, 500);
   }
-  var isSafari = navigator.vendor && navigator.vendor.indexOf('Apple') > -1 &&
-               navigator.userAgent && !navigator.userAgent.match('CriOS');
-  if(isSafari) {
-    $('.agenda-datepicker').addClass('is-hidden');
+  var isSafari = navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1;
+
+  if(isSafari){
+    $('.agenda-datepicker').hide();
     $('.agenda-text').addClass('agenda-text--full');
   }
+  
   var optionsSlider = {
       pagination: '.swiper-pagination',
       paginationClickable: true,
@@ -109,7 +110,8 @@ $(document).ready(function () {
           // var template = '<div class="success"><i class="material-icons">check_circle</i><span class="success__message">Le message a été envoyé avec succès !</span></div>';
           // $('.contact').append(template)
           $('.contact .success').addClass('success--is-displayed');
-          $('.input__field').removeClass('input--filled')
+          $('.input').removeClass('input--filled');
+
           setTimeout(function () {
             $('.contact .success').addClass('success--is-visible');
           }, 10);
@@ -146,6 +148,7 @@ $(document).ready(function () {
       closeModal();
     }
   })
+
 })
 
 $(function() {

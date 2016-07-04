@@ -3,7 +3,7 @@
     <header class="col-xs-12 actus-header">
       <h2 class="actus-header__title">Les dernières actualités</h2>
       @if($page == 'home')
-        <h3 class="actus-header__label">Accéder à toute <a href="/actus">l'actu</a></h3>
+        <h3 class="actus-header__label">Accéder à toute <a href="/actualites">l'actu</a></h3>
       @else
         <h3 class="actus-header__label">Accéder à toute l'actu</h3>
       @endif
@@ -28,10 +28,10 @@
           <h3 class="actus-articles__header">L'actualité des TPE-PME</h3>
            @for ($i = 0; $i < 2; $i++)
             <article class="row article">
-              <a href="/actus/{{$echosarticles[$i]->slug}}" class="col-xs article__picture" style="background-image: url('{{$echosarticles[$i]->image}}')"></a>
+              <a href="/actualites/{{$echosarticles[$i]->slug}}" class="col-xs article__picture" style="background-image: url('{{$echosarticles[$i]->image}}')"></a>
               <div class="col-xs article__content">
                 <div class="row article__wrapper">
-                  <h4 class="article__name @if($is_large)article__name--small"@endif><a href="/actus/{{$echosarticles[$i]->slug}}">{{$echosarticles[$i]->title}}</a></h4>
+                  <h4 class="article__name @if($is_large)article__name--small"@endif><a href="/actualites/{{$echosarticles[$i]->slug}}">{{$echosarticles[$i]->title}}</a></h4>
                   <p class="article__body">
                     @if(strlen($echosarticles[$i]->summary)>200)
                       {{substr($echosarticles[$i]->summary,0,200).'...'}}
@@ -42,7 +42,7 @@
                 </div>
                 <div class="article__footer">
                   <span class="date">{{$echosarticles[$i]->date}}</span>
-                  <a href="/actus/{{$echosarticles[$i]->slug}}" class="button"><span >Lire +</span></a>
+                  <a href="/actualites/{{$echosarticles[$i]->slug}}" class="button"><span >Lire +</span></a>
                 </div>
               </div>
             </article>

@@ -15,65 +15,62 @@
 // {
 //     return view('email');
 // });
-Route::group(['middleware' => ['web']], function () {
     // Admin routes.
     Route::auth();
-    Route::group(['middleware'=> 'auth'],function() { // FIXME: Il faudrait merge ces deux groupes.
-        Route::group(['prefix'=>'admin'],function(){
-            //Articles
-            Route::get('/','AuthController@index');
-            Route::get('dashboard','AdminController@index');
-            Route::get('register', 'AuthController@register');
-            Route::get('articles','ArticlesController@index');
-            Route::get('article/edit/{id}', 'ArticlesController@show');
-            Route::get('article/create', 'ArticlesController@create');
-            Route::post('article/store', 'ArticlesController@store');
-            Route::patch('article/update/{id}', 'ArticlesController@update');
-            Route::delete('article/delete/{id}','ArticlesController@destroy');
-            // Temoignages
-            Route::get('temoignages', 'TemoignagesController@index');
-            Route::get('temoignage/edit/{id}', 'TemoignagesController@show');
-            Route::get('temoignage/create', 'TemoignagesController@create');
-            Route::delete('temoignage/delete/{id}','TemoignagesController@destroy');
-            Route::post('temoignage/store', 'TemoignagesController@store');
-            Route::patch('temoignage/update/{id}', 'TemoignagesController@update');
-            //Slider
-            Route::get('slider', 'SliderController@index');
-            Route::get('slide/edit/{id}', 'SliderController@show');
-            Route::get('slider/create', 'SliderController@create');
-            Route::delete('slider/delete/{id}','SliderController@destroy');
-            Route::post('slider/store', 'SliderController@store');
-            Route::patch('slider/update/{id}', 'SliderController@update');
-            //Partenaires
-            Route::get('partenaires', 'PartenairesController@index');
-            Route::get('partenaire/edit/{id}', 'PartenairesController@show');
-            Route::get('partenaire/create', 'PartenairesController@create');
-            Route::delete('partenaire/delete/{id}','PartenairesController@destroy');
-            Route::post('partenaire/store', 'PartenairesController@store');
-            Route::patch('partenaire/update/{id}', 'PartenairesController@update');
-            //Compétences
-            Route::get('competences', 'CompetencesController@index');
-            Route::get('competence/edit/{id}', 'CompetencesController@show');
-            Route::get('competence/create', 'CompetencesController@create');
-            Route::post('competence/store', 'CompetencesController@store');
-            Route::patch('competence/update/{id}', 'CompetencesController@update');
-            //Storytelling
-            Route::get('storytelling','StorytellingController@index');
-            Route::get('storytelling/edit/{id}', 'StorytellingController@show');
-            Route::put('storytelling/update/{id}', 'StorytellingController@update');
-        });
+    Route::group(['prefix'=>'admin', 'middleware'=> 'auth'],function(){
+        //Articles
+        Route::get('/','AuthController@index');
+        Route::get('dashboard','AdminController@index');
+        Route::get('register', 'AuthController@register');
+        Route::get('articles','ArticlesController@index');
+        Route::get('article/edit/{id}', 'ArticlesController@show');
+        Route::get('article/create', 'ArticlesController@create');
+        Route::post('article/store', 'ArticlesController@store');
+        Route::patch('article/update/{id}', 'ArticlesController@update');
+        Route::delete('article/delete/{id}','ArticlesController@destroy');
+        // Temoignages
+        Route::get('temoignages', 'TemoignagesController@index');
+        Route::get('temoignage/edit/{id}', 'TemoignagesController@show');
+        Route::get('temoignage/create', 'TemoignagesController@create');
+        Route::delete('temoignage/delete/{id}','TemoignagesController@destroy');
+        Route::post('temoignage/store', 'TemoignagesController@store');
+        Route::patch('temoignage/update/{id}', 'TemoignagesController@update');
+        //Slider
+        Route::get('slider', 'SliderController@index');
+        Route::get('slide/edit/{id}', 'SliderController@show');
+        Route::get('slider/create', 'SliderController@create');
+        Route::delete('slider/delete/{id}','SliderController@destroy');
+        Route::post('slider/store', 'SliderController@store');
+        Route::patch('slider/update/{id}', 'SliderController@update');
+        //Partenaires
+        Route::get('partenaires', 'PartenairesController@index');
+        Route::get('partenaire/edit/{id}', 'PartenairesController@show');
+        Route::get('partenaire/create', 'PartenairesController@create');
+        Route::delete('partenaire/delete/{id}','PartenairesController@destroy');
+        Route::post('partenaire/store', 'PartenairesController@store');
+        Route::patch('partenaire/update/{id}', 'PartenairesController@update');
+        //Compétences
+        Route::get('competences', 'CompetencesController@index');
+        Route::get('competence/edit/{id}', 'CompetencesController@show');
+        Route::get('competence/create', 'CompetencesController@create');
+        Route::post('competence/store', 'CompetencesController@store');
+        Route::patch('competence/update/{id}', 'CompetencesController@update');
+        //Storytelling
+        Route::get('storytelling','StorytellingController@index');
+        Route::get('storytelling/edit/{id}', 'StorytellingController@show');
+        Route::put('storytelling/update/{id}', 'StorytellingController@update');
     });
     // Common nav.
     Route::get('/', 'HomeController@index');
-    Route::get('/actus', 'ActusController@index');
-    Route::get('/actus/page/{page}','ActusController@page');
-    Route::get('/actus/{slug}','ActusController@show');
-    Route::get('/actus/article/{id}', 'ActusController@redirect');
-    Route::get('/about', function () {
+    Route::get('/actualites', 'ActusController@index');
+    Route::get('/actualites/page/{page}','ActusController@page');
+    Route::get('/actualites/{slug}','ActusController@show');
+    Route::get('/actualites/article/{id}', 'ActusController@redirect');
+    Route::get('/a-propos', function () {
         $remove_footer = "Disappear.";
         return view('about')->with('remove_footer',$remove_footer);
     });
-    Route::get('/about/datas', function()
+    Route::get('/a-propos/datas', function()
     {
         $result = App\AboutSlide::all();
         foreach ($result as $slide) {
@@ -127,7 +124,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/contact', 'MailController@index');
     Route::post('/contact/send', 'MailController@send');
     //Toolbox
-    Route::get('/test', 'FluxController@store');
     Route::get('/chiffres-utiles','DigitController@index');
     Route::get('/chiffres-utiles/{slug}','DigitController@show');
     Route::get('/sites-utiles', function () {
@@ -136,9 +132,9 @@ Route::group(['middleware' => ['web']], function () {
     });
 
     Route::get('/logout','AuthController@logout');
-});
 
 Route::get('/', 'HomeController@index');
+
 Route::get('/ftp', function () {
     Artisan::call('refreshxml');
 });

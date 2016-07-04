@@ -37,6 +37,40 @@
       </article>
       @endforeach
     </section>
+    <div class="row middle-xs center-xs gallery__pagination">
+        @if ($digitarticles->lastPage() > 1)
+          <ul class="pagination">
+              <li class="{{ ($digitarticles->currentPage() == 1) ? ' disabled' : '' }}">
+                  <a href="{{ $digitarticles->previousPageUrl() }}" rel="prev"><i class="material-icons">chevron_left</i></a>
+               </li>
+              @for ($i = 1; $i <= $digitarticles->lastPage(); $i++)
+                  <?php
+                  $half_total_links = floor(7 / 2);
+                  $from = $digitarticles->currentPage() - $half_total_links;
+                  $to = $digitarticles->currentPage() + $half_total_links;
+                  if ($digitarticles->currentPage() < $half_total_links) {
+                     $to += $half_total_links - $digitarticles->currentPage();
+                  }
+                  if ($digitarticles->lastPage() - $digitarticles->currentPage() < $half_total_links) {
+                      $from -= $half_total_links - ($digitarticles->lastPage() - $digitarticles->currentPage()) - 1;
+                  }
+                  ?>
+                  @if ($from < $i && $i < $to)
+                      <li class="{{ ($digitarticles->currentPage() == $i) ? ' active' : '' }}">
+                        @if($digitarticles->currentPage() == $i)
+                          {{ $i }}
+                        @else
+                          <a href="{{ $digitarticles->url($i) }}">{{ $i }}</a>
+                        @endif
+                      </li>
+                  @endif
+              @endfor
+              <li class="{{ ($digitarticles->currentPage() == $digitarticles->lastPage()) ? ' disabled' : '' }}">
+                  <a href="{{ $digitarticles->nextPageUrl() }}" rel="next"><i class="material-icons">chevron_right</i></a>
+              </li>
+          </ul>
+      @endif
+    </div>
   </div>
 </div>
 @stop

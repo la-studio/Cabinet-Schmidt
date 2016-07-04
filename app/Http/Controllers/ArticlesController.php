@@ -15,7 +15,7 @@ class ArticlesController extends Controller
     }
     public function index()
     {
-        $articles = Article::all();
+        $articles = Article::orderBy('created_at', 'desc')->get();
         return view('admin.list.articles')->with('articles',$articles);
     }
     public function store(Request $request)

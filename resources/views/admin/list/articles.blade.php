@@ -5,7 +5,7 @@
     <div class="col-sm-6 article">
       <div class="row center-xs middle-xs wrapper">
         <div class="col-xs">
-          <p class="article__title">Titre :{{$article->title}}</p>
+          <p class="article__title">Titre : {{$article->title}}</p>
           <p class="article__content">Contenu : {{$article->content}}</p>
         </div>
       </div>

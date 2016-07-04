@@ -28,8 +28,8 @@
             <nav class="col-xs main-nav">
               <ul class="row main-nav__list">
                 <li class="col-xs main-nav__item"><a data-hover="Accueil" href="{{ URL::to('/') }}">Accueil</a></li>
-                <li class="col-xs main-nav__item"><a data-hover="À propos" href="{{ URL::to('about') }}">À propos</a></li>
-                <li class="col-xs main-nav__item"><a data-hover="Actualité" href="{{ URL::to('actus') }}">Actualité</a></li>
+                <li class="col-xs main-nav__item"><a data-hover="À propos" href="{{ URL::to('a-propos') }}">À propos</a></li>
+                <li class="col-xs main-nav__item"><a data-hover="Actualité" href="{{ URL::to('actualites') }}">Actualité</a></li>
                 <li class="col-xs main-nav__item"><a data-hover="Contact" href="{{ URL::to('contact') }}">Contact</a></li>
               </ul>
             </nav>

@@ -7,14 +7,14 @@ use App\Temoignage;
 use App\Article;
 use App\Echosarticle;
 use App\Http\Requests;
-use Log;
+use DB;
 
 class ActusController extends Controller {
     public function index() {
         $articles = Article::orderBy('created_at', 'desc')
         ->take(2)
         ->get();
-        $echosarticles = Echosarticle::orderBy('date','desc')->take(6)->get();
+        $echosarticles = DB::table('echosarticles')->orderBy('date', 'desc')->paginate(6);
         if(strlen($echosarticles[0]->title) > 85 || strlen($echosarticles[1]->title) > 85) {
             $is_large = true;
         } else {
@@ -26,35 +26,10 @@ class ActusController extends Controller {
         return view('actusgallery', compact('articles','echosarticles', 'is_large', 'page'));
     }
 
-    public function page($page) // $page is an integer.
-    {
-        $page_number = $page;
-        $articles = Article::orderBy('created_at', 'desc')
-        ->take(2)
-        ->get();
-        $to_skip = ($page * 6)-6;
-        $count = Echosarticle::all()->count();
-        $max_page = ($count/6) - 6;
-        ceil($max_page);
-        if($to_skip > $count) {
-            return view('errors.404');
-        }
-        if($page==1) {
-            return redirect('/actus');
-        }
-        $echosarticles = Echosarticle::orderBy('date','desc')->skip($to_skip)->take(6)->get();
-        if(strlen($echosarticles[0]->title) > 85 || strlen($echosarticles[1]->title) > 85) {
-            $is_large = true;
-        } else {
-            $is_large = false;
-        }
-        $temoignages = Temoignage::all();
-        return view('actusgallery', compact('articles','echosarticles','is_large','page_number','max_page'));
-    }
     public function redirect($id)
     {
         $article= Echosarticle::where('article_id','=',$id)->get();
-        return redirect('/actus/'.$article[0]->slug);
+        return redirect('/actualites/'.$article[0]->slug);
     }
 
     public function show($slug)

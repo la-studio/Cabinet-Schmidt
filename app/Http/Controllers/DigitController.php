@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Digitarticle;
 use App\Http\Requests;
+use DB;
 
 class DigitController extends Controller
 {
     public function index()
     {
-        $digitarticles = Digitarticle::all();
-        return view('chiffres',compact('digitarticles'));
+        $digitarticles = DB::table('digitarticles')->paginate(6);
+        return view('chiffres', compact('digitarticles'));
     }
     public function show($slug)
     {
@@ -21,34 +22,21 @@ class DigitController extends Controller
         $rubrique = $article[0]->rubrique;
         if(preg_match('/\s/',$rubrique)>0) {
             $rubriques =  preg_split('/\s+/', $rubrique);
-            $suggestions = [];
-            foreach($rubriques as $element) {
-                $collection = Digitarticle::where('rubrique','LIKE','%'.$element.'%');
-                $len = $collection->count();
-                $randIndex = rand(0,$len);
-                $pick = $collection->skip($randIndex)->take(2)->get();
-                if(count($pick)<2) {
-                    $collection = Digitarticle::all();
-                    $pick = $collection->take(2)->get();
-                    array_push($suggestions, $pick); // find by rand
-                } else {
-                    array_push($suggestions, $pick); // mettre le desordre dans le tableau
+            for ($i = 0; $i < count($rubriques); $i++){
+                if($i == 0){
+                    $query = "(rubrique LIKE '%".$rubriques[$i]."%'";
+                }elseif($i == ((count($rubriques)) - 1)){
+                    $query .=  " OR rubrique LIKE '%".$rubriques[$i]."%')";
+                }else{
+                    $query .= " OR rubrique LIKE '%".$rubriques[$i]."%'";
                 }
             }
-            $result = [$suggestions[0][0],$suggestions[0][1],$suggestions[1][0]];
-            return view('actus.article',compact('compacted_article','result'));
+            $collection = Digitarticle::whereRaw($query)->get();
+            $result = $collection->random(3);
         } else {
-            $collection = Digitarticle::where('rubrique',"=",$rubrique);
-            $len = $collection->count();
-            $randIndex = rand(0,$len);
-            $result = $collection->skip($randIndex)->take(3)->get();
-            if(count($result)<3) {
-                $collection = Digitarticle::all();
-                $len = $collection->count();
-                $randIndex = rand(0,$len);
-                $result = $collection->skip($randIndex)->take(3)->get(); // find by rand
-            }
-            return view('chiffres.article',compact('compacted_article','result'));
+            $collection = Digitarticle::where('rubrique',"=",$rubrique)->get();
+            $result = $collection->random(3);
         }
+        return view('chiffres.article',compact('compacted_article','result'));
     }
 }

@@ -31,8 +31,8 @@
         @foreach($result as $suggestion)
         <div class="col-md col-sm-6 col-xs-12 suggestion">
           <div class="row wrapper">
-            <span class="col-xs-12 suggestion__cover"><a href="/actus/{{$suggestion->slug}}" style="background-image:url('{{$suggestion->image}}')"></a></span>
-            <a href="/actus/{{$suggestion->slug}}" class="col-xs-12 suggestion__caption">{{$suggestion->title}}</a>
+            <span class="col-xs-12 suggestion__cover"><a href="/actualites/{{$suggestion->slug}}" style="background-image:url('{{$suggestion->image}}')"></a></span>
+            <a href="/actualites/{{$suggestion->slug}}" class="col-xs-12 suggestion__caption">{{$suggestion->title}}</a>
           </div>
         </div>
         @endforeach
