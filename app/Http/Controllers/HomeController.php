@@ -32,7 +32,6 @@ class HomeController extends Controller
         } else {
             $is_large = false;
         }
-        $page = 'home';
-        return view('home', compact('articles', 'temoignages', 'partenaires','competences','echosarticles','appointment','temoignagesLen','is_large','slider', 'page'))->withCount($appointment);
+        return view('home', compact('articles', 'temoignages', 'partenaires','competences','echosarticles','appointment','temoignagesLen','is_large','slider'))->withCount($appointment);
     }
 }

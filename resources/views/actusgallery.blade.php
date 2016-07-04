@@ -5,9 +5,6 @@
     <div class="col-xs-12 actualites__banner">
       <h1>L'actualité que nous vous partageons</h1>
     </div>
-    <div class="col-xs-12 actualites__preview">
-      @include('home.actus')
-    </div>
     <div class="col-md-10 col-xs-12 gallery">
       <header class="row center-xs gallery__head">
         <h2>Toute l'actualité des tpe & pme</h2>

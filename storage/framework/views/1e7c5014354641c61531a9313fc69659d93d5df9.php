@@ -2,11 +2,7 @@
   <div class="row">
     <header class="col-xs-12 actus-header">
       <h2 class="actus-header__title">Les dernières actualités</h2>
-      <?php if($page == 'home'): ?>
-        <h3 class="actus-header__label">Accéder à toute <a href="/actualites">l'actu</a></h3>
-      <?php else: ?>
-        <h3 class="actus-header__label">Accéder à toute l'actu</h3>
-      <?php endif; ?>
+      <h3 class="actus-header__label">Accéder à toute <a href="/actualites">l'actu</a></h3>
     </header>
     <div class="col-xs-12 actus-articles">
       <div class="row center-lg">

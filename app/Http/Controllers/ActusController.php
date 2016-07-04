@@ -22,8 +22,7 @@ class ActusController extends Controller {
         }
         $temoignages = Temoignage::all();
         $is_large = true;
-        $page = 'actu';
-        return view('actusgallery', compact('articles','echosarticles', 'is_large', 'page'));
+        return view('actusgallery', compact('articles','echosarticles', 'is_large'));
     }
 
     public function redirect($id)
