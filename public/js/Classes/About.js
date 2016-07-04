@@ -91,9 +91,9 @@ About.prototype.mouseListener = function () {
             if(that.canSlide() && that.isDown()) { // ev.originalEvent.wheelDelta < 0 == Scroll down.
              that.getNext();
            }
-           console.log(that.canSlide(),that.isDown());
+           //console.log(that.canSlide(),that.isDown());
         } else {
-          console.log(ev.originalEvent,ev.originalEvent.wheelDelta==undefined,ev.originalEvent.clientY,$(window).height());
+          //console.log(ev.originalEvent,ev.originalEvent.wheelDelta==undefined,ev.originalEvent.clientY,$(window).height());
           // Debug hook.
         }
      }
@@ -131,7 +131,6 @@ About.prototype.clickListener = function () {
       setTimeout(function () { // Timeout to reach the next created DOM element, if i don't use this, the dom catched will be the dom destroyed.
         $('.panel__nav .item').eq(that.active-1).addClass('current');
       }, 1100);
-     console.log('active is now '+that.active+' in clickListener');
      that.getNext()
     }
      // getNext will increment it.
@@ -144,7 +143,6 @@ About.prototype.getNext = function () {
   if(this.active>=0 && this.active<4) {
     this.active++;
     this.handleThisAndCall(el,that.active-1)
-    console.log('this.active is now '+this.active);
   } else if(this.active==4) {
     this.active = 1;
     this.handleThisAndCall(el,that.active-1)
@@ -228,7 +226,6 @@ About.prototype.appendChildren = function (el,index) {
   setTimeout(function () {
     $('.panel__mouse svg').addClass('slided')
     that.highlightCurrent(index);
-    console.log(index);
   },50)
   el.append(childrenTemplate);
 };
@@ -255,7 +252,6 @@ About.prototype.getCover = function (index) {
 
 About.prototype.initFirstView = function () {
   var el = $('.'+this.el+'--active'); // Don't define it before otherwise it won't catch any dom element.
-  console.log(el);
   var title = this.slides[this.active-1].title;
   var slogan = this.slides[this.active-1].slogan;
   el.find('.panel__title').text(title);

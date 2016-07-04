@@ -148,13 +148,12 @@ $(document).ready(function () {
       closeModal();
     }
   })
-
 })
 
 $(function() {
   $('.gallery__list').mixitup({
     targetSelector: '.gallery__wrapper',
-    filterSelector: '.filters__item',
+    //filterSelector: '.filters__item',
     effects: ['fade'],
     easing: 'snap'
   });

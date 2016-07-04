@@ -48,6 +48,10 @@
         @media screen and (max-width: 1310px) {
           margin-top: 20px
         }
+        a{
+          text-decoration: none;
+          color: inherit;
+        }
         span {
           margin: 0 1.5rem;
           @include colorToBg($yellow, white, .3s,ease);
@@ -141,6 +145,16 @@
           cursor: pointer;
           @include colorToBg($yellow, white,.3s,ease);
           @include flex-middle(xy);
+        }
+        &__category{
+          position:absolute; 
+          background-color:$yellow; 
+          color:white; right:0px; 
+          bottom: 10px; 
+          height:30px; 
+          line-height:30px; 
+          padding: 4px; 
+          vertical-align:middle;
         }
       }
     }

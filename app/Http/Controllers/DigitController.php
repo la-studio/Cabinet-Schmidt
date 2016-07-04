@@ -11,9 +11,32 @@ class DigitController extends Controller
 {
     public function index()
     {
-        $digitarticles = DB::table('digitarticles')->paginate(6);
-        return view('chiffres', compact('digitarticles'));
+        $digitarticles = DB::table('digitarticles')->orderBy('date', 'desc')->paginate(6);
+        $page = 'digit';
+        return view('chiffres', compact('digitarticles', 'page'));
     }
+
+    public function indexByCategory($rubrique)
+    {
+        if(preg_match('/\s/',$rubrique)>0) {
+            $rubriques =  preg_split('/\s+/', $rubrique);
+                for ($i = 0; $i < count($rubriques); $i++){
+                    if($i == 0){
+                        $query = "(rubrique LIKE '%".$rubriques[$i]."%'";
+                    }elseif($i == ((count($rubriques)) - 1)){
+                        $query .=  " OR rubrique LIKE '%".$rubriques[$i]."%')";
+                    }else{
+                        $query .= " OR rubrique LIKE '%".$rubriques[$i]."%'";
+                    }
+                }
+            }else{
+                $query = "rubrique LIKE '%".$rubrique."%'";
+        }
+        $digitarticles = Digitarticle::whereRaw($query)->orderBy('date', 'desc')->paginate(6);
+        $page = $rubrique;
+        return view('chiffres', compact('digitarticles', 'page'));
+    }
+
     public function show($slug)
     {
         $article = Digitarticle::where('slug',"=",$slug)->get();

@@ -65,6 +65,7 @@
     Route::get('/actualites', 'ActusController@index');
     Route::get('/actualites/page/{page}','ActusController@page');
     Route::get('/actualites/{slug}','ActusController@show');
+    Route::get('/actualites/rubrique/{rubrique}', 'ActusController@indexByCategory');
     Route::get('/actualites/article/{id}', 'ActusController@redirect');
     Route::get('/a-propos', function () {
         $remove_footer = "Disappear.";
@@ -126,6 +127,7 @@
     //Toolbox
     Route::get('/chiffres-utiles','DigitController@index');
     Route::get('/chiffres-utiles/{slug}','DigitController@show');
+    Route::get('/chiffres-utiles/rubrique/{rubrique}','DigitController@indexByCategory');
     Route::get('/sites-utiles', function () {
         $partenaires_shown = App\Partenaire::where('enabled','=',1)->get();
         return view('useful',compact('partenaires_shown'));

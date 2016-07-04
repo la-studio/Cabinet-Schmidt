@@ -10,19 +10,42 @@ use App\Http\Requests;
 use DB;
 
 class ActusController extends Controller {
-    public function index() {
-        $articles = Article::orderBy('created_at', 'desc')
-        ->take(2)
-        ->get();
+    public function index(Request $request) {
         $echosarticles = DB::table('echosarticles')->orderBy('date', 'desc')->paginate(6);
         if(strlen($echosarticles[0]->title) > 85 || strlen($echosarticles[1]->title) > 85) {
             $is_large = true;
         } else {
             $is_large = false;
         }
-        $temoignages = Temoignage::all();
         $is_large = true;
-        return view('actusgallery', compact('articles','echosarticles', 'is_large'));
+        $page = 'actus';
+        return view('actusgallery', compact('echosarticles', 'is_large', 'page'));
+    }
+
+    public function indexByCategory($rubrique) {
+        if(preg_match('/\s/',$rubrique)>0) {
+            $rubriques =  preg_split('/\s+/', $rubrique);
+            for ($i = 0; $i < count($rubriques); $i++){
+                if($i == 0){
+                    $query = "(rubrique LIKE '%".$rubriques[$i]."%'";
+                }elseif($i == ((count($rubriques)) - 1)){
+                    $query .=  " OR rubrique LIKE '%".$rubriques[$i]."%')";
+                }else{
+                    $query .= " OR rubrique LIKE '%".$rubriques[$i]."%'";
+                }
+            }
+        }else{
+            $query = "rubrique LIKE '%".$rubrique."%'";
+        }
+        $echosarticles = Echosarticle::whereRaw($query)->orderBy('date', 'desc')->paginate(6);
+        if(strlen($echosarticles[0]->title) > 85 || strlen($echosarticles[1]->title) > 85) {
+            $is_large = true;
+        } else {
+            $is_large = false;
+        }
+        $is_large = true;
+        $page = $rubrique;
+        return view('actusgallery', compact('echosarticles', 'is_large', 'page'));
     }
 
     public function redirect($id)

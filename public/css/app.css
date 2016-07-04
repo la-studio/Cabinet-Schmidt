@@ -1474,6 +1474,9 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     @media screen and (max-width: 1310px) {
       .actualites .gallery .filters__item {
         margin-top: 20px; } }
+    .actualites .gallery .filters__item a {
+      text-decoration: none;
+      color: inherit; }
     .actualites .gallery .filters__item span {
       margin: 0 1.5rem;
       transition: background-color 0.3s, color 0.3s ease;
@@ -1573,6 +1576,16 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         .actualites .gallery__item .article__button:hover {
           background-color: #e7b116;
           color: white; }
+      .actualites .gallery__item .article__category {
+        position: absolute;
+        background-color: #e7b116;
+        color: white;
+        right: 0px;
+        bottom: 10px;
+        height: 30px;
+        line-height: 30px;
+        padding: 4px;
+        vertical-align: middle; }
   .actualites .gallery__pagination.row {
     height: 60px; }
   .actualites .gallery__pagination ul {
@@ -2342,6 +2355,9 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
     @media screen and (max-width: 1310px) {
       .chiffres .gallery .filters__item {
         margin-top: 20px; } }
+    .chiffres .gallery .filters__item a {
+      text-decoration: none;
+      color: inherit; }
     .chiffres .gallery .filters__item span {
       margin: 0 1.5rem;
       transition: background-color 0.3s, color 0.3s ease;
@@ -2481,6 +2497,16 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
         .chiffres .gallery__item .article__button:hover {
           background-color: #e7b116;
           color: white; }
+      .chiffres .gallery__item .article__category {
+        position: absolute;
+        background-color: #e7b116;
+        color: white;
+        right: 0px;
+        bottom: 10px;
+        height: 30px;
+        line-height: 30px;
+        padding: 4px;
+        vertical-align: middle; }
 
 .admin .admin-menu {
   background-color: #12182f;
