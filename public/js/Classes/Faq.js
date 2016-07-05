@@ -226,6 +226,7 @@ Faq.prototype.addMore = function (index) {
   }
   for (var i = index; i < iterationIndex; i++) {
     var template =  '<div class="col-xs-9 faq-item">'+
+                      '<div class="row faq-item__title">'+this.currentArticles[i].title+'</div>'+
                       '<div class="row faq-item__question">'+this.currentArticles[i].question+'</div>'+
                       '<div class="row faq-item__reponse">'+this.currentArticles[i].reponse+'</div>'+
                     '</div>';
