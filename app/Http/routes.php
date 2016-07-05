@@ -234,7 +234,7 @@ Route::get('/getfaq', function()
         }
         $queryList = App\FaqListRubrique::lists('name')->toArray(); // new hook for sorting
         $queryListTwo = App\FaqListKeyword::lists('name')->toArray();
-        dd($keylist);
+        dd($keyList);
         foreach ($rubriquesList as $element) { // saving unique rubriques
             //$query = App\FaqListRubrique::where('name','=',$element->name);
             // $queryList = App\FaqListRubrique::lists('name')->toArray(); // original hook for storing.
