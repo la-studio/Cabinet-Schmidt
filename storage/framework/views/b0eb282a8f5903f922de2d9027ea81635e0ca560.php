@@ -48,18 +48,11 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
-                    <?php if(Auth::guest()): ?>
+                    <p class="hidden"><?php echo e(isset($fromAdminPannel) ? $fromAdminPannel : $fromAdminPannel = false); ?></p>
+                    <?php if(Auth::guest() && $fromAdminPannel == false): ?>
                         <li><a href="<?php echo e(url('/')); ?>">Retour à l'accueil</a></li>
                     <?php else: ?>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                <?php echo e(Auth::user()->name); ?> <span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="<?php echo e(url('/logout')); ?>"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                            </ul>
-                        </li>
+                        <li><a href="<?php echo e(url('admin')); ?>">Retour au panneau d'administration</a></li>
                     <?php endif; ?>
                 </ul>
             </div>

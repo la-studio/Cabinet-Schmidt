@@ -170,8 +170,11 @@ Faq.prototype.getResult = function () {
             that.currentArticles.push(data[i]);
             if(x<5) { // the if nesting is necessary here.
               var reponse = data[i].reponse;
+              var question = data[i].question;
+              var title = data[i].title;
               var template =  '<div class="col-xs-9 faq-item">'+
-                                '<div class="row faq-item__question">'+data[i].question+'</div>'+
+                                '<div class="row faq-item__title">'+title+'</div>'+
+                                '<div class="row faq-item__question">'+question+'</div>'+
                                 '<div class="row faq-item__reponse">'+reponse+'</div>'+
                               '</div>';
                 $('.faq .list').append(template);
@@ -179,6 +182,7 @@ Faq.prototype.getResult = function () {
             }
           }
         }
+        console.log(data);
         if(that.currentArticles.length>5) {
           $('.buttons__full').addClass('buttons__full--show')
         } else if(that.currentArticles.length==0) {

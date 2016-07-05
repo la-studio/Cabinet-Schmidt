@@ -3249,10 +3249,15 @@ So mixins level 2 includes level 1 mixins in the code. When it's the case, it's 
       font-size: 17px;
       margin-top: 20px;
       text-align: left; }
-      .faq .list .faq-item__question.row, .faq .list .faq-item__reponse.row {
+      .faq .list .faq-item__question.row, .faq .list .faq-item__reponse.row, .faq .list .faq-item__title.row {
         height: auto; }
       .faq .list .faq-item__reponse {
         font-family: "proximanova-regular"; }
+      .faq .list .faq-item__title {
+        color: #e7b116;
+        text-transform: uppercase;
+        font-size: 120%;
+        margin-bottom: 5px; }
     .faq .list .no-results {
       margin-top: 40px;
       font-family: "proximanova-semibold";

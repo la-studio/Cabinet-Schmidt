@@ -26,7 +26,8 @@
             <li class="row admin-menu__item"><a href="<?php echo e(URL::to('/admin/slider')); ?>">Slider</a></li>
             <li class="row admin-menu__item"><a href="<?php echo e(URL::to('/admin/competences')); ?>">Compétences</a></li>
             <li class="row admin-menu__item"><a href="<?php echo e(URL::to('/admin/storytelling')); ?>">Storytelling</a></li>
-            <li class="row admin-menu__item"><a href="<?php echo e(URL::to('/admin/register')); ?>">Créer un compte</a></li>
+            <li class="row admin-menu__item"><a href="<?php echo e(URL::to('/admin/register')); ?>">Créer un compte</a></li>     
+
             <?php /* Let disconnect as last-child. */ ?>
             <li class="row admin-menu__item"><i class="fa fa-power-off"></i><a href="<?php echo e(URL::to('/logout')); ?>">Déconnexion</a></li>
           </ul>

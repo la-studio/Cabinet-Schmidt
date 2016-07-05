@@ -135,11 +135,17 @@
       font-size: 17px;
       margin-top: 20px;
       text-align: left;
-      &__question,&__reponse  {
+      &__question,&__reponse, &__title {
         @include fixheight(auto);
       }
       &__reponse {
         font-family: $font;
+      }
+      &__title{
+        color : $yellow;
+        text-transform: uppercase;
+        font-size: 120%;
+        margin-bottom: 5px;
       }
     }
     .no-results {
