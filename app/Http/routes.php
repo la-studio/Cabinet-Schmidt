@@ -233,43 +233,25 @@ Route::get('/getfaq', function()
         }
         $queryList = App\FaqListRubrique::lists('name')->toArray(); // new hook for sorting
         $queryListTwo = App\FaqListKeyword::lists('name')->toArray();
-        // foreach ($rubriquesList as $element) { // saving unique rubriques
-        //     //$query = App\FaqListRubrique::where('name','=',$element->name);
-        //     // $queryList = App\FaqListRubrique::lists('name')->toArray(); // original hook for storing.
-        //     if(!in_array($element->name, $queryList)) {
-        //         $element->save();
-        //         array_push($queryList,$element->name);
-        //         foreach ($keyList as $keyword) { // saving unique keywords binded to rubrique
-        //             //$queryListTwo = App\FaqListKeyword::lists('name')->toArray();// original hook for storing.
-        //             if(!in_array($keyword->name, $queryListTwo)) {
-        //                 $keyword->save();
-        //                 array_push($queryListTwo,$keyword->name);
-        //                 $element->keywords()->attach($keyword->id);
-        //             } else {
-        //                 $existing_key = App\FaqListKeyword::where('name','=',$keyword->name)->first();
-        //                 $element->keywords()->attach($existing_key->id);
-        //             }
-        //         }
-        //     } else {
-        //           foreach ($keyList as $keyword) { // saving unique keywords binded to rubrique
-        //               //$queryListTwo = App\FaqListKeyword::lists('name')->toArray();
-        //               $query = App\FaqListRubrique::where('name','=',$element->name);
-        //               if(!in_array($keyword->name, $queryListTwo)) {
-        //                   $keyword->save();
-        //                   array_push($queryListTwo,$keyword->name);
-        //                   $query->first()->keywords()->attach($keyword->id);
-        //               } else {
-        //                     $existing_key = App\FaqListKeyword::where('name','=',$keyword->name)->first();
-        //                     $res = DB::table('faq_list_rubriques_keywords')->where('faq_list_keyword_id','=',$existing_key->id)->get();
-        //                     foreach ($res as $obj) {
-        //                         if($obj->faq_list_keyword_id!==$existing_key->id) {
-        //                             $query->first()->keywords()->attach($existing_key->id);
-        //                         }
-        //                     }
-        //                }
-        //           }
-        //       }
-        // }
+        foreach ($rubriquesList as $element) { // saving unique rubriques
+            //$query = App\FaqListRubrique::where('name','=',$element->name);
+            // $queryList = App\FaqListRubrique::lists('name')->toArray(); // original hook for storing.
+            if(!in_array($element->name, $queryList)) {
+                $element->save();
+                array_push($queryList,$element->name);
+                foreach ($keyList as $keyword) { // saving unique keywords binded to rubrique
+                    //$queryListTwo = App\FaqListKeyword::lists('name')->toArray();// original hook for storing.
+                    if(!in_array($keyword->name, $queryListTwo)) {
+                        $keyword->save();
+                        array_push($queryListTwo,$keyword->name);
+                        $element->keywords()->attach($keyword->id);
+                    } else {
+                        $existing_key = App\FaqListKeyword::where('name','=',$keyword->name)->first();
+                        $element->keywords()->attach($existing_key->id);
+                    }
+                }
+            } 
+        }
     }
 });
 
