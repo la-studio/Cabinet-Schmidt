@@ -244,10 +244,10 @@ Route::get('/getfaq', function()
                     if(!in_array($keyword->name, $queryListTwo)) {
                         $keyword->save();
                         array_push($queryListTwo,$keyword->name);
-                        //$element->keywords()->attach($keyword->id);
+                        $element->keywords()->attach($keyword->id);
                     } else {
                         $existing_key = App\FaqListKeyword::where('name','=',$keyword->name)->first();
-                        //$element->keywords()->attach($existing_key->id);
+                        $element->keywords()->attach($existing_key->id);
                     }
                 }
             } else {
@@ -263,7 +263,7 @@ Route::get('/getfaq', function()
                             $res = DB::table('faq_list_rubriques_keywords')->where('faq_list_keyword_id','=',$existing_key->id)->get();
                             foreach ($res as $obj) {
                                 if($obj->faq_list_keyword_id!==$existing_key->id) {
-                                    //$query->first()->keywords()->attach($existing_key->id);
+                                    $query->first()->keywords()->attach($existing_key->id);
                                 }
                             }
                        }
@@ -271,6 +271,10 @@ Route::get('/getfaq', function()
               }
         }
     }
+});
+
+Route::get('reorderPivotTable', function() {
+    
 });
 
 Route::get('digitarticle', function() {
