@@ -18,12 +18,14 @@ class AuthController extends Controller
             return redirect('login');
         }
     }
+    
     public function logout()
     {
         Auth::logout();
         Session::flush();
         return redirect('/');
     }
+
     public function register()
     {
         $fromAdminPannel = false;
