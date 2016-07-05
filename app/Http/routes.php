@@ -261,7 +261,7 @@ Route::get('/getfaq', function()
                           $query->first()->keywords()->attach($keyword->id);
                       } else {
                             $existing_key = App\FaqListKeyword::where('name','=',$keyword->name)->first();
-                            $res = DB::table('faq_list_keyword_faq_list_rubrique')->where('faq_list_keyword_id','=',$existing_key->id)->get();
+                            $res = DB::table('faq_list_rubriques_keywords')->where('faq_list_keyword_id','=',$existing_key->id)->get();
                             foreach ($res as $obj) {
                                 if($obj->faq_list_keyword_id!==$existing_key->id) {
                                     $query->first()->keywords()->attach($existing_key->id);
