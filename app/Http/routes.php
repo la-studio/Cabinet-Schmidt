@@ -163,7 +163,6 @@ Route::get('/getfaq', function()
     Storage::disk('local')->put($fileName.'.xml', $file);
     $xml = XmlParser::load(storage_path('app/'.$fileName.'.xml'));
     $articles = $xml->getContent();
-    $x = 0;
     foreach ($articles as $element) {
         $title = $element->title->__toString();
         $date = $element->create_date->__toString();
@@ -265,34 +264,11 @@ Route::get('/getfaq', function()
 Route::get('reorderPivotTable', function() {
     $rubriques = App\FaqListRubrique::all();
     $keywords = App\FaqListKeyword::all();
-    $rubriquesKeywords = DB::table('faq_list_rubriques_keywords')->get();
-    $rubriqueKeywords = [];
-    if(!empty($rubriquesKeywords)){
-        
-        $rubriqueIdsAndNames = [];
-        foreach ($rubriques as $rubrique) {
-            $rubriqueIdsAndNames[$rubrique->id] = $rubrique->name;
-            $rubriqueKeywords[$rubrique->name] = [];
-        }
-
-        $keywordIdsAndNames = [];
-        foreach ($keywords as $keyword) {
-            $keywordIdsAndNames[$keyword->id] = $keyword->name;
-        }
-
-        $rubriquesKeywordsLength = count($rubriquesKeywords);
-        for($i = 0; $i < $rubriquesKeywordsLength; $i++){
-            $rubriqueName = $rubriqueIdsAndNames[$rubriquesKeywords[$i]->faq_list_rubrique_id];
-            $keywordId = $rubriquesKeywords[$i]->faq_list_keyword_id;
-            array_push($rubriqueKeywords[$rubriqueName], $keywordId);
-        }
-    }
+    DB::table('faq_list_rubriques_keywords')->truncate();
     
     foreach($rubriques as $rubrique){
         $rubriqueId = $rubrique->id;
-        if(empty($rubriquesKeywords)){
-            $rubriqueKeywords[$rubrique->name] = [];
-        }
+        $rubriqueKeywords[$rubrique->name] = [];
         $allArticlesRelated = App\Faq::where('rubrique','like', '%'.$rubrique->name.'%')->with('keywords')->get();
         foreach ($allArticlesRelated as $article) {
             foreach ($article->keywords as $keyword) {
@@ -333,9 +309,6 @@ Route::get('digitarticle', function() {
     $directoryName = 'ec_tout_flux';
     $fileName = 'ec_flux_chiffres.xml';
     $file = Storage::disk('ftp')->get($directoryName.'/'.$fileName);
-    Storage::disk('local')->put($fileName, $file);
-    $fileName = 'ec_flux_chiffres';
-    $file = Storage::disk('ftp')->get($directoryName.'/'.$fileName.'.xml');
     $file = str_replace('<lien', '<a', $file);
     $file = str_replace('</lien>', '</a>', $file);
     $file = str_replace('<exposant>', '', $file);
@@ -343,8 +316,8 @@ Route::get('digitarticle', function() {
     $file = str_replace('<retourligne/>', '', $file);
     $file = str_replace('<exposant>', '', $file);
     $file = str_replace('</exposant>', '', $file);
-    Storage::disk('local')->put($fileName.'.xml', $file);
-    $xml = XmlParser::load(storage_path('app/'.$fileName.'.xml'));
+    Storage::disk('local')->put($fileName, $file);
+    $xml = XmlParser::load(storage_path('app/'.$fileName));
 
     $articles = $xml->getContent();
     $titles = [];
@@ -431,60 +404,60 @@ Route::get('digitarticle', function() {
 
 Route::get('rdv', function()
 {
-App\Appointment::truncate();
-$directoryNamerdv = 'ec_tout_flux';
-$fileNamerdv = 'ec_flux_echeanciers.xml';
-$filerdv = Storage::disk('ftp')->get($directoryNamerdv.'/'.$fileNamerdv);
-Storage::disk('local')->put($fileNamerdv, $filerdv);
-$fileNamerdv = 'ec_flux_echeanciers';
-$filerdv = Storage::disk('ftp')->get($directoryNamerdv.'/'.$fileNamerdv.'.xml');
-$filerdv = str_replace('<gras>', '', $filerdv);
-$filerdv = str_replace('</gras>', '', $filerdv);
-$filerdv = str_replace('<exposant>', '', $filerdv);
-$filerdv = str_replace('</exposant>', '', $filerdv);
-Storage::disk('local')->put($fileNamerdv.'.xml', $filerdv);
-$xmlrdv = XmlParser::load(storage_path('app/'.$fileNamerdv.'.xml'));
-$dates = $xmlrdv->getContent();
-function datetimify($string) {
-    $arr = preg_split('/\s+/',$string);
-    $monthArr = ['Décembre','Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre'];
-    $monthIndex = array_search($arr[1], $monthArr);
-    $day = $arr[0];
-    if(intval($monthIndex) > 0 && intval($monthIndex) < 10 ) {
-        $monthIndex = '0'.$monthIndex;
-        intval($monthIndex);
+    App\Appointment::truncate();
+    $directoryNamerdv = 'ec_tout_flux';
+    $fileNamerdv = 'ec_flux_echeanciers.xml';
+    $filerdv = Storage::disk('ftp')->get($directoryNamerdv.'/'.$fileNamerdv);
+    Storage::disk('local')->put($fileNamerdv, $filerdv);
+    $fileNamerdv = 'ec_flux_echeanciers';
+    $filerdv = Storage::disk('ftp')->get($directoryNamerdv.'/'.$fileNamerdv.'.xml');
+    $filerdv = str_replace('<gras>', '', $filerdv);
+    $filerdv = str_replace('</gras>', '', $filerdv);
+    $filerdv = str_replace('<exposant>', '', $filerdv);
+    $filerdv = str_replace('</exposant>', '', $filerdv);
+    Storage::disk('local')->put($fileNamerdv.'.xml', $filerdv);
+    $xmlrdv = XmlParser::load(storage_path('app/'.$fileNamerdv.'.xml'));
+    $dates = $xmlrdv->getContent();
+    function datetimify($string) {
+        $arr = preg_split('/\s+/',$string);
+        $monthArr = ['Décembre','Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre'];
+        $monthIndex = array_search($arr[1], $monthArr);
+        $day = $arr[0];
+        if(intval($monthIndex) > 0 && intval($monthIndex) < 10 ) {
+            $monthIndex = '0'.$monthIndex;
+            intval($monthIndex);
+        }
+        if(intval($day) > 0 && intval($day) < 10 ) {
+            $day = '0'.$day;
+            intval($day);
+        }
+        $datetime = $arr[2].'-'.$monthIndex.'-'.$day;
+        return $datetime;
     }
-    if(intval($day) > 0 && intval($day) < 10 ) {
-        $day = '0'.$day;
-        intval($day);
-    }
-    $datetime = $arr[2].'-'.$monthIndex.'-'.$day;
-    return $datetime;
-}
-foreach($dates->article as $date) {
-    $sections = $date->content->section;
-    $created = $date->create_date->__toString();
-    foreach($sections as $section) {
-        $data = [];
-        $title = $section->section_title;
-        $content = $section->section_content->texteparagraphe;
-        $rdv = new App\Appointment();
-        $first_caracter = substr($title,0,1);
-        if($title->__toString()!=='Délai variable' && $title->__toString()!=='' && is_numeric($first_caracter)) {
-            $rdv->date = $title->__toString();
-            for($i=0; $i < count($content); $i++) {
-                if($i<3) {
-                    //var_dump($content[$i]->__toString());
-                    var_dump(datetimify($title));
-                    array_push($data,'<p>'.$content[$i]->__toString().'</p>');
-                } else {
-                    break;
+    foreach($dates->article as $date) {
+        $sections = $date->content->section;
+        $created = $date->create_date->__toString();
+        foreach($sections as $section) {
+            $data = [];
+            $title = $section->section_title;
+            $content = $section->section_content->texteparagraphe;
+            $rdv = new App\Appointment();
+            $first_caracter = substr($title,0,1);
+            if($title->__toString()!=='Délai variable' && $title->__toString()!=='' && is_numeric($first_caracter)) {
+                $rdv->date = $title->__toString();
+                for($i=0; $i < count($content); $i++) {
+                    if($i<3) {
+                        //var_dump($content[$i]->__toString());
+                        var_dump(datetimify($title));
+                        array_push($data,'<p>'.$content[$i]->__toString().'</p>');
+                    } else {
+                        break;
+                    }
                 }
+                $rdv->content = implode(' ',$data);
+                $rdv->created_at = datetimify($title);
+                $rdv->save();
             }
-            $rdv->content = implode(' ',$data);
-            $rdv->created_at = datetimify($title);
-            $rdv->save();
         }
     }
-}
 });
