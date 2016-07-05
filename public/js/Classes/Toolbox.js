@@ -74,7 +74,7 @@ ToolBox.prototype.open = function () {
   var that = this;
   this.enabled = true;
   var transitionValue = this.transition.timers.transform;
-  console.log(this.transition.timers);
+  //console.log(this.transition.timers);
   this.el.addClass('toolbox--open-x');
   this.el.removeClass('toolbox--delay');
   setTimeout(function () {
@@ -86,7 +86,7 @@ ToolBox.prototype.close = function () {
   var that = this;
   var transitionValue = this.transition.timers.height;//Fix for firefox, setTimeout second argument uses window scope in Firefox.
   // console.log(transitionValue);
-  console.log(this);
+  //console.log(this);
   this.el.removeClass('toolbox--open-y');
   that.el.addClass('toolbox--delay');
   setTimeout(function () {

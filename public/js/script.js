@@ -101,7 +101,7 @@ $(document).ready(function () {
         purpose  : $('#form-purpose').val(),
         message  : $('#form-message').val()
       }
-      console.log(data);
+      //console.log(data);
       var options = {
         url : '/contact/send',
         type : 'post',
@@ -119,10 +119,10 @@ $(document).ready(function () {
             $('.contact .success').remove()
           }, 6000);
           $(".input__field").val('').removeClass('input__field--missing');
-          console.log(response);
+          //console.log(response);
         },
         error: function (xhr,status,error) {
-          console.log(xhr,error);
+          //console.log(xhr,error);
           $('body').append(xhr.responseText)
         }
       }

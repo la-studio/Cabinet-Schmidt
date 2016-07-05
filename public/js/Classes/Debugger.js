@@ -39,9 +39,9 @@ Debugger.prototype.enableKeyListener = function () {
       if(key==13 && keyword=="debug") { // 13 is enter
         that.setScopeDebug(true)
         if(that.parentScope.debug) {
-          console.log('Debug mode activated !')
+          //console.log('Debug mode activated !')
         } else {
-          console.log('Debug mode Failed !')
+          //console.log('Debug mode Failed !')
         }
       }
     })
@@ -106,11 +106,11 @@ Debugger.prototype.addMessage = function (method,sentence,position) {
 
 Debugger.prototype.checkMessage = function (method,sentence) {
   if(method===undefined) {
-    console.log("La phrase de debug '"+sentence+"' ne peut pas être ajoutée car la méthode cible n'est pas spécifiée dans la fonction !");
+    //console.log("La phrase de debug '"+sentence+"' ne peut pas être ajoutée car la méthode cible n'est pas spécifiée dans la fonction !");
     return false
   } else if(typeof method==="string") {
     if(this.listProperties.indexOf(method)==-1) {
-      console.log("La phrase de debug '"+sentence+"' ne peut pas être ajoutée car la méthode cible ne fait pas partie des méthodes de l'objet !");
+      //console.log("La phrase de debug '"+sentence+"' ne peut pas être ajoutée car la méthode cible ne fait pas partie des méthodes de l'objet !");
       return false
     } else {
       return true
@@ -126,9 +126,9 @@ Debugger.prototype.logInfos = function (sentences,method,args) {
   if(this.enabled && sentences.length > 0) {
     for (var i = 0; i < args.length; i++) {
       if(sentences[i].placement=="end") {
-        console.log(sentences[i].title+' '+args[i]);
+        //console.log(sentences[i].title+' '+args[i]);
       } else if(sentences[i].placement=="start") {
-        console.log(args[i]+' '+sentences[i].title);
+        //console.log(args[i]+' '+sentences[i].title);
       }
     }
   }

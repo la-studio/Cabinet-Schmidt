@@ -104,22 +104,9 @@
     });
     Route::get('/faq/keywords/{rubrique}', function($rubrique)
     {
-        $keywords = App\FaqListRubrique::where('name','=',$rubrique)->first()->keywords;
-        $res = [];
-        $id_arr = [];
-        foreach ($keywords as $element) {
-            $result_name = $element->name;
-            $keybind = App\FaqKeyword::where('keyword','=',$result_name)->get();
-            foreach ($keybind as $sub_element) {
-                $id = $sub_element->id;
-                $article = $sub_element->faq;
-                if($article!==null && !in_array($id,$id_arr)) {
-                    $article->keywords; // Just call it it'll attach the fetched collection in the array with the article object
-                    array_push($res,$article);
-                    array_push($id_arr,$id);
-                }
-            }
-        }
+        $articles = App\Faq::where('rubrique','like', '%'.$rubrique.'%')->with('keywords')->get();
+        $res = $articles;
+       
         return $res;
     });
     Route::get('/contact', 'MailController@index');

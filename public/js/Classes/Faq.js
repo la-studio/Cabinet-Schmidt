@@ -7,6 +7,7 @@ Faq = function () {
   this.selected = {};
   this.articles = [];
   this.currentArticles = [];
+  this.addMoreTimes = 1;
   this.init();
 };
 
@@ -39,10 +40,8 @@ Faq.prototype.clickListener = function () {
     }
   })
   $('.faq .buttons__full').click(function () {
-    $(this).addClass('buttons__full--disabled');
-    if(!$(this).hasClass('buttons__full--disabled')) {
-      that.addMore();
-    }
+      that.addMore(that.addMoreTimes);
+      that.addMoreTimes++;
   })
   $('.faq .buttons__search').click(function () {
     that.newSearch();
@@ -163,7 +162,6 @@ Faq.prototype.getResult = function () {
   that.articles = [];
   that.currentArticles = [];
   $.getJSON('faq/keywords/'+this.selected.topic).done(function (data) {
-      console.log(data);
       var x = 0;
       setTimeout(function () {
         that.isDone = true;
@@ -199,17 +197,30 @@ Faq.prototype.getResult = function () {
 };
 
 Faq.prototype.isKeywordInSelection = function (iteration) {
+  bool = false;
   for (var i = 0; i < iteration.keywords.length; i++) {
     if(this.selected.keywords.indexOf(iteration.keywords[i].keyword)!==-1 && this.currentArticles.indexOf(iteration.id)) {
-      return true
+      bool = true;
     } else {
-      return false
+      if(bool == true){
+        bool = true;
+      }else{
+        bool = false;
+      }
     }
   }
+  return bool;
 };
 
-Faq.prototype.addMore = function () {
-  for (var i = 6; i < this.currentArticles.length; i++) {
+Faq.prototype.addMore = function (index) {
+  iterationNumber = 5;
+  index = (index * iterationNumber) + 1;
+  iterationIndex = iterationNumber + index;
+  if(this.currentArticles.length < iterationIndex){
+    iterationIndex = this.currentArticles.length;
+    $('.buttons__full').removeClass('buttons__full--show');
+  }
+  for (var i = index; i < iterationIndex; i++) {
     var template =  '<div class="col-xs-9 faq-item">'+
                       '<div class="row faq-item__question">'+this.currentArticles[i].question+'</div>'+
                       '<div class="row faq-item__reponse">'+this.currentArticles[i].reponse+'</div>'+
