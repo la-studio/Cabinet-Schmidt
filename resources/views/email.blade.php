@@ -6,9 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="/css/flexboxgrid.css" media="screen">
-    <link rel="stylesheet" href="/css/normalize.css" media="screen">
-    <link rel="stylesheet" href="/css/font-awesome-4.3.0/css/font-awesome.min.css" media="screen">
+    <link rel="stylesheet" href="/css/tools.css" media="screen">
     <link rel="stylesheet" href="/css/app.css" media="screen">
     <title>Cabinet Schmidt</title>
   </head>

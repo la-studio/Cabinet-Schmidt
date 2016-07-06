@@ -1,5 +1,7 @@
 var elixir = require('laravel-elixir');
 
+require('laravel-elixir-imagemin');
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -16,11 +18,38 @@ elixir(function(mix) {
 });
 
 elixir(function(mix) {
-    mix.babel([
-        'scriptu.js'
-    ]);
+    mix.styles([
+        "normalize.css",
+        "font-awesome.min.css",
+        "flexboxgrid.css",
+        "swiper.min.css"
+    ], "public/css/tools.css");
+});
+
+elixir(function(mix) {
+    mix.scriptsIn("resources/assets/js/Classes", "public/js/Classes.js");
+});
+
+elixir(function(mix) {
+    mix.scripts([
+        "swiper.min.js",
+        "mixitup.js",
+        "script.js"
+    ], "public/js/script.js");
+});
+
+elixir(function(mix) {
+    mix.scripts("initMap.js", "public/js/map.js");
+});
+
+elixir(function(mix) {
+    mix.scripts("admin-script.js", "public/js/admin.js");
+});
+
+elixir(function(mix) {
+   mix.imagemin();
 });
 
 // elixir(function(mix) {
-//     mix.browserSync({proxy: 'localhost:8000'});
+//     mix.browserSync({proxy: 'loclayouthost:8000'});
 // });

@@ -1,1 +1,0 @@
-{"version":3,"sources":["scriptu.js"],"names":[],"mappings":";;;;IAAA,S,GACA,mBAAA,MAAA,EAAA;AAAA;;AACA,OAAA,MAAA,GAAA,MAAA;AACA,C","file":"all.js","sourcesContent":["class ClassName {\r\n  constructor(argent) {\r\n    this.argent = argent\r\n  }\r\n}\r\n"],"sourceRoot":"/source/"}
