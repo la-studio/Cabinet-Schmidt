@@ -29,6 +29,11 @@
     text-align: end;
     font-size: 18px;
   }
+  &__publisher {
+    margin-top: 5px;
+    text-align: end;
+    font-size: 15px;
+  }
   &__links {
     a {
       @include link-off;

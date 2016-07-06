@@ -24,6 +24,9 @@
       <div class="echo-article__author">
         {{$compacted_article->auteur}}
       </div>
+      <div class="echo-article__publisher">
+        Publié par les Echos Publishing
+      </div>
       @if(count($compacted_article->references)>0)
       <nav class="row start-xs echo-article__links">
         <h3>Liens de référence : </h3>
