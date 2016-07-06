@@ -144,8 +144,8 @@ Route::get('/getfaq', function()
 {
     App\FaqReference::truncate();
     App\FaqKeyword::truncate();
-    // App\FaqListKeyword::truncate();
-    // App\FaqListRubrique::truncate();
+    App\FaqListKeyword::truncate();
+    App\FaqListRubrique::truncate();
     App\Faq::truncate();
     $directoryName = 'ec_tout_flux';
     $fileName = 'ec_flux_faq.xml';
