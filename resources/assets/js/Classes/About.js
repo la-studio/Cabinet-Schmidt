@@ -77,33 +77,33 @@ About.prototype.loadListener = function () {
   })
 };
 
-About.prototype.mouseListener = function () {
-  var that = this;
-  $(document).on('mousewheel DOMMouseScroll',function (ev) { // DOMMouseScroll ev too for shitty Firefox.
-    if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-      if (ev.originalEvent.detail > 0) {
-          //scroll down
-          if(that.canSlide() && that.isDown()) { // ev.originalEvent.wheelDelta < 0 == Scroll down.
-            that.getNext();
-          }
-      }
-    } else {
-        ev.delta = null;
-      if (ev.originalEvent) {
-        if (ev.originalEvent.wheelDelta) {
-          ev.delta = ev.originalEvent.wheelDelta;
-          if(that.canSlide() && that.isDown() && ev.delta < 0) { // ev.originalEvent.wheelDelta < 0 == Scroll down.
-            that.getNext();
-          }
-        } else if (ev.originalEvent.clientY && $(window).scrollTop()==$('.header').height() && ev.originalEvent.wheelDelta==undefined) {
-          if(that.canSlide() && that.isDown()) { // ev.originalEvent.wheelDelta < 0 == Scroll down.
-            that.getNext();
-          }
+About.prototype.mouseListener = function() {
+    var that = this;
+    $(document).on('mousewheel DOMMouseScroll', function(ev) { // DOMMouseScroll ev too for shitty Firefox.
+        if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+            if (ev.originalEvent.detail > 0) {
+                //scroll down
+                if (that.canSlide() && that.isDown()) { // ev.originalEvent.wheelDelta < 0 == Scroll down.
+                    that.getNext();
+                }
+            }
+        } else {
+            ev.delta = null;
+            if (ev.originalEvent) {
+                if (ev.originalEvent.wheelDelta) {
+                    ev.delta = ev.originalEvent.wheelDelta;
+                    if (that.canSlide() && that.isDown() && ev.delta < 0) { // ev.originalEvent.wheelDelta < 0 == Scroll down.
+                        that.getNext();
+                    }
+                } else if (ev.originalEvent.clientY && $(window).scrollTop() == $('.header').height() && ev.originalEvent.wheelDelta == undefined) {
+                    if (that.canSlide() && that.isDown()) { // ev.originalEvent.wheelDelta < 0 == Scroll down.
+                        that.getNext();
+                    }
+                }
+            }
         }
-      }
-    }
 
-  })
+    })
 };
 
 About.prototype.isDown = function () {
@@ -209,11 +209,11 @@ About.prototype.appendSlide = function (index) {
 About.prototype.preloadImages = function () {
   for (var i = 0; i < this.slides.length; i++) {
     img = new Image()
-    img.src = this.slides[i].cover;
     $('body').append('<span id="#preloader"></span>')
     img.onload = function () {
       $('#preloader').css('background-image','url("'+img.src+'")');
     }
+    img.src = this.slides[i].cover;
   }
   $('#preloader').remove();
 };
