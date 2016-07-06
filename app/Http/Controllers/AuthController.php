@@ -34,7 +34,7 @@ class AuthController extends Controller
             Auth::logout(); // DON'T flush the session here ! Otherwise when you'll try to reach the register route from the panel, you'll be redirected by the middleware.
             return view('auth.register', compact('fromAdminPannel'));
         }
-        return view('auth.register', compact('fromAdminPannel'));
-        //return redirect('/');
+        //return view('auth.register', compact('fromAdminPannel'));
+        return redirect('/');
     }
 }
