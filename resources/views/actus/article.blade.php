@@ -1,4 +1,12 @@
 @extends('layout')
+@section('title')
+{{$compacted_article->title}}
+@stop
+
+@section('description')
+{{$compacted_article->summary}}
+@stop
+
 @section('content')
   <div class="row center-xs echo-article">
     <div class="col-xs-9">
