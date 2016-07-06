@@ -1,10 +1,19 @@
 @extends('layout')
+
+@section('title')
+A propos de l'entreprise et l'équipe
+@stop
+
+@section('description')
+Notre équipe à taille humaine accompagne et conseille les TPE et artisans du Grésivaudan sur la plan comptable, fiscal, social…
+@stop
+
 @section('content')
 <main class="row end-xs about">
   <div class="col-xs-6 col-custom panel panel--active">
     <div class="row wrapper">
       <div class="col-xs sub-wrapper">
-        <h2 class="row panel__title"></h2>
+        <h1 class="row panel__title">Cabinet d'expertise comptable implanté dans le Grésivaudan</h1>
         <div class="row panel__slogan"></div>
         <div class="row arguments">
           <ul class="arguments__list"></ul>

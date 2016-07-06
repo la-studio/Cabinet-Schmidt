@@ -215,7 +215,7 @@ About.prototype.appendChildren = function (el,index) {
   var that = this;
   var childrenTemplate = '<div class="row wrapper">'+
                             '<div class="col-xs">'+
-                              '<h2 class="row panel__title"></h2>'+
+                              '<h1 class="row panel__title"></h1>'+
                               '<div class="row panel__slogan panel__slogan--slided"></div>'+
                               '<div class="row arguments"><ul class="arguments__list"></ul></div>'+
                               '<div class="row panel__mouse">'+$('.mouse-template').clone().html()+'</div>'+

@@ -1,3 +1,13 @@
+<?php $__env->startSection('title'); ?>
+<?php echo e($compacted_article->title); ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('description'); ?>
+<?php echo e($compacted_article->summary); ?>
+
+<?php $__env->stopSection(); ?>
+
 <?php $__env->startSection('content'); ?>
   <div class="row center-xs echo-article">
     <div class="col-xs-9">

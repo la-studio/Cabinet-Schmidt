@@ -1,3 +1,11 @@
+<?php $__env->startSection('title'); ?>
+Votre cabinet d’expertise comptable à Crolles
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('description'); ?>
+Cabinet d’expertise comptable à Crolles, entre Grenoble et Chambéry qui vous accompagne dans la création d’entreprise, la comptabilité, la tenue des comptes…
+<?php $__env->stopSection(); ?>
+
 <?php $__env->startSection('content'); ?>
   <div class="row home"> <?php /* children have col-xs-12 markup on their global wrapper. */ ?>
     <?php echo $__env->make('home.slider', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

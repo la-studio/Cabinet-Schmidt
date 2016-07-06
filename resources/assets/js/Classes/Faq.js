@@ -33,6 +33,9 @@ Faq.prototype.getData = function () {
 };
 
 Faq.prototype.clickListener = function () {
+  $('.list').addClass('is-hidden');
+  $('.buttons').addClass('is-hidden');
+
   var that = this;
   $('.search__next i').click(function () {
     if(that.canSkip) {
@@ -130,6 +133,8 @@ Faq.prototype.next = function () {
     }, 600);
     setTimeout(function () {
       $('.search').addClass('hide');
+      $('.list').removeClass('is-hidden');
+      $('.buttons').removeClass('is-hidden');
     }, 1100);
   }
 };
@@ -247,6 +252,8 @@ Faq.prototype.newSearch = function () {
   this.step = 1;
   this.canSkip = false;
   this.isReady = false;
+  $('.list').addClass('is-hidden');
+  $('.buttons').addClass('is-hidden');
   $('.search__next i').removeClass('ready');
   $('.search').removeClass('hide fade-out');
   $('.search__select .option').remove();

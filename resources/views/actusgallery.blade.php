@@ -1,9 +1,18 @@
 @extends('layout')
+
+@section('title')
+L’actualité des chefs d’entreprise
+@stop
+
+@section('description')
+Suivez l’actualité de votre cabinet comptable : fiscal, juridique, social, gestion, innovation…
+@stop
+
 @section('content')
   <div class="row center-xs actualites">
     <div class="col-xs-12 actualites__cover"></div>
     <div class="col-xs-12 actualites__banner">
-      <h1>L'actualité que nous vous partageons</h1>
+      <h1>L’actualité des chefs d’entreprise</h1>
     </div>
     <div class="col-md-10 col-xs-12 gallery" id="gallery">
       <header class="row center-xs gallery__head">

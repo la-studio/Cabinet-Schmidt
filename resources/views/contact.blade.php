@@ -1,5 +1,13 @@
 @extends('layout')
 
+@section('title')
+Contact
+@stop
+
+@section('description')
+Prenez contact avec un cabinet comptable à taille humaine situé à Crolles, entre Grenoble et Chambéry
+@stop
+
 @section('content')
   <div class="row contact">
     <div class="col-xs-12 contact__cover"></div>
@@ -9,8 +17,8 @@
       <form class="row center-xs form">
         <div class="col-xs">
           <header class="row form__head">
-            <h2 class="center-xs row">Parlez nous de vous</h2>
-            <h3 class="center-xs row">Nous vous répondrons dans les plus brefs délais</h3>
+            <h1 class="center-xs row">Contactez-nous</h1>
+            <h2 class="center-xs row">Nous vous répondrons dans les plus brefs délais</h2>
           </header>
           <div class="row center-xs form__content">
             <div class="col-md-11 col-xs-12">

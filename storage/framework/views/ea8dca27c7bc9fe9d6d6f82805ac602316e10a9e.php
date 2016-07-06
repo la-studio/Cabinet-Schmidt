@@ -1,9 +1,17 @@
+<?php $__env->startSection('title'); ?>
+A propos de l'entreprise et l'équipe
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('description'); ?>
+Notre équipe à taille humaine accompagne et conseille les TPE et artisans du Grésivaudan sur la plan comptable, fiscal, social…
+<?php $__env->stopSection(); ?>
+
 <?php $__env->startSection('content'); ?>
 <main class="row end-xs about">
   <div class="col-xs-6 col-custom panel panel--active">
     <div class="row wrapper">
       <div class="col-xs sub-wrapper">
-        <h2 class="row panel__title"></h2>
+        <h1 class="row panel__title">Cabinet d'expertise comptable implanté dans le Grésivaudan</h1>
         <div class="row panel__slogan"></div>
         <div class="row arguments">
           <ul class="arguments__list"></ul>

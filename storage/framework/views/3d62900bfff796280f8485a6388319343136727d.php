@@ -1,8 +1,16 @@
+<?php $__env->startSection('title'); ?>
+L’actualité des chefs d’entreprise
+<?php $__env->stopSection(); ?>
+
+<?php $__env->startSection('description'); ?>
+Suivez l’actualité de votre cabinet comptable : fiscal, juridique, social, gestion, innovation…
+<?php $__env->stopSection(); ?>
+
 <?php $__env->startSection('content'); ?>
   <div class="row center-xs actualites">
     <div class="col-xs-12 actualites__cover"></div>
     <div class="col-xs-12 actualites__banner">
-      <h1>L'actualité que nous vous partageons</h1>
+      <h1>L’actualité des chefs d’entreprise</h1>
     </div>
     <div class="col-md-10 col-xs-12 gallery" id="gallery">
       <header class="row center-xs gallery__head">

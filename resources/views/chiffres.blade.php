@@ -1,9 +1,18 @@
 @extends('layout')
+
+@section('title')
+Tous les chiffres utiles aux entrepreneurs
+@stop
+
+@section('description')
+Taux de TVA, taux de cotisations, retraites, gratification de stagiaires, apprentis… Tous les chiffres utiles à noter !
+@stop
+
 @section('content')
 <div class="row center-xs chiffres">
   <div class="col-xs-12 chiffres__cover"></div>
   <div class="col-xs-12 chiffres__banner">
-    <h1>Chiffres utiles</h1>
+    <h1>Les chiffres utiles aux entrepreneurs</h1>
   </div>
   <div class="col-md-10 col-xs-12 gallery" id="gallery">
     <ul class="row center-xs filters">

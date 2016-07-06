@@ -66,7 +66,6 @@ Route::get('/', 'HomeController@index');
 
 //Actus
 Route::get('/actualites', 'ActusController@index');
-Route::get('/actualites/page/{page}','ActusController@page');
 Route::get('/actualites/{slug}','ActusController@show');
 Route::get('/actualites/rubrique/{rubrique}', 'ActusController@indexByCategory');
 Route::get('/actualites/article/{id}', 'ActusController@redirect');
@@ -132,13 +131,8 @@ Route::get('/sites-utiles', function () {
     return view('useful',compact('partenaires_shown'));
 });
 
-//JS routes
-Route::get('/collection/{collection}', function($collection)
-{
-    $result = DB::table($collection)->get();
-    return $result;
-});
-Route::get('/collection/exceptions/appointements', function()
+//JS route for appointments
+Route::get('/collection/exceptions/appointments', function()
 {
     return App\Appointment::orderBy('created_at','asc')->get();
 });

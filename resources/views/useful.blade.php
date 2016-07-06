@@ -1,9 +1,18 @@
 @extends('layout')
+
+@section('title')
+Liens utiles pour entreprendre
+@stop
+
+@section('description')
+Découvrez la sélection des liens utiles faite par le cabinet Schmidt !
+@stop
+
 @section('content')
   <div class="row center-xs useful-sites">
     <div class="col-xs-12 useful-sites__cover"></div>
     <div class="col-xs-12 useful-sites__banner">
-      <h1>Liens utiles</h1>
+      <h1>Le cabinet vous partage ses sites utiles</h1>
     </div>
     <section class="col-xs-12 useful-sites__main-nav">
       <div class="row center-xs">

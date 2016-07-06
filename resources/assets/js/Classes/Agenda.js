@@ -74,7 +74,7 @@ Agenda.prototype.getDatas = function () {
   var listDates = [];
   var listFullDates = [];
   var listContent =  [];
-  $.getJSON('/collection/exceptions/appointements')
+  $.getJSON('/collection/exceptions/appointments')
   .done(function (data) {
     for (var i = 0; i < data.length; i++) {
       var dates = data[i].date.split(' ');

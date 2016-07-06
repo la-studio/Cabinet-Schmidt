@@ -72,10 +72,18 @@ class ActusController extends Controller {
                 }
             }
             $collection = Echosarticle::whereRaw($query)->get();
-            $result = $collection->random(3);
+            if($collection->count()<3){
+                $result = $collection->random($collection->count());
+            }else{
+                $result = $collection->random(3);
+            }
         } else {
             $collection = Echosarticle::where('rubrique',"=",$rubrique)->get();
-            $result = $collection->random(3);
+            if($collection->count()<3){
+                $result = $collection->random($collection->count());
+            }else{
+                $result = $collection->random(3);
+            }
         }
         return view('actus.article',compact('compacted_article','result'));
     }

@@ -2,9 +2,12 @@
   @include fixheight(auto);
   min-height: calc(100vh - 175px);
   border-top: 1px solid $yellow;
+  .title{
+    margin: 0 auto;
+  }
   .search {
     @include fixheight(auto);
-    margin-top: 60px;
+    margin-top: 30px;
     transition: transform .5s ease-out, opacity .4s ease-in-out;
     &.fade-out {
       transform: translate3d(0,-50px,0);

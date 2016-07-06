@@ -3,15 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
-    <meta name="author" content="">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Cabinet Schmidt - <?php echo $__env->yieldContent('title'); ?></title>
+    <meta name="description" content="<?php echo $__env->yieldContent('description'); ?>">
+    <meta name="author" content="Cabinet Schmidt">
+
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="stylesheet" type="text/css" href="/css/tools.css">
     <link rel="stylesheet" href="/css/app.css" media="screen">
-    <title>Cabinet Schmidt</title>
   </head>
   <body>
     <?php echo $__env->make('layout.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

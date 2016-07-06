@@ -1,8 +1,8 @@
 <div class="col-xs-12 home__actus">
   <div class="row">
     <header class="col-xs-12 actus-header">
-      <h2 class="actus-header__title">Les dernières actualités</h2>
-      <h3 class="actus-header__label">Accéder à toute <a href="/actualites">l'actu</a></h3>
+      <h1 class="actus-header__title">L’actualité de votre cabinet d’expertise comptable</h1>
+      <h2 class="actus-header__label">Découvrez <a href="/actualites">plus d'actualités</a></h2>
     </header>
     <div class="col-xs-12 actus-articles">
       <div class="row center-lg">
