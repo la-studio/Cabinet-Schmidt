@@ -4,7 +4,7 @@
       <span class="upper"><span class="upper__link upper__link--mention">Mentions légales</span> - Copyright <a class="upper__link"  target="_blank" href="http://la-studio.fr">LA Studio</a></span>
     </div>
     <div class="row middle-xs">
-      <spanclass="lower">Cabinet-Schmidt © 2016 | Tous droits réservés </span>
+      <span class="lower">Cabinet-Schmidt © 2016 | Tous droits réservés </span>
     </div>
   </div>
   <div class="footer__call-action">
