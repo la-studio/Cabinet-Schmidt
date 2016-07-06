@@ -114,7 +114,7 @@ class RefreshFlux extends Command
                 $merged_content = [];
                 $current_table = '';
                 $references = [];
-                if(substr($element->create_date->__toString(),0,4)=='2016' && count($titles)<150) {
+                if(substr($element->create_date->__toString(),0,4)>='2016' && count($titles)<150) {
                     foreach ($tags as $tag) {
                         $tag_attr = $tag->attributes();
                         if($tag_attr['type']=="rubrique") {
