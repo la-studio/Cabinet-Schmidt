@@ -9,7 +9,6 @@ Datepicker = function (langage) {
   this.dayList = null;
   this.engDayList =  null;
   this.container = null;
-  this.tool = null;
   this.monthProperties = null;
   this.langage = null;
   this.defaults = {
@@ -27,8 +26,6 @@ Datepicker.prototype.init = function () {
   this.year = date.getFullYear();
   this.month = date.getMonth()+1; // Index for months starts by 0;
   this.day = date.getDay();
-  this.tool = new Debugger(this);
-  this.tool.enabled = true;
   this.dayList = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
   this.engDayList = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
   this.monthList = ['Décembre','Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre'];
@@ -40,7 +37,6 @@ Datepicker.prototype.init = function () {
   this.width = $('.datepicker__body').width();
   this.selector = '.calendar-list';
   this.transition = this.setTranslate();
-  this.send();
   this.createBoards();
   this.updateDayLabel();
   this.enableClickListeners();
@@ -53,16 +49,8 @@ Datepicker.prototype.init = function () {
     $('.col').removeClass('col--selected');
     $(this).addClass('col--selected');
   })*/
-  this.tool.debug('init',this.translate);
 };
 
-Datepicker.prototype.send = function () {
-  this.tool.addMessage('init', 'La valeur de translate est de', 'end');
-  //this.tool.addMessage('isPrevDayTheSameMonth','Le mois actuel est','end');
-  //this.tool.addMessage('isPrevDayTheSameMonth',"L'ancien mois est",'end');
-  this.tool.addMessage('getNext',"Le mois actif est",'end');
-  this.tool.addMessage('getPrev',"Le mois actif est",'end');
-};
 Datepicker.prototype.getToday = function () {
   return this.dayList[this.day]; // return current day as String (e.g: Dimanche)
 };
@@ -110,8 +98,6 @@ Datepicker.prototype.isPrevDayTheSameMonth = function (year,monthIndex,index) {
   var currentMonth = lastDay.split(' ')[1]; // Extracting the second word of sentence of get the month on the returned date
   var prevDay = new Date(year,monthIndex, index).toString() // Making the same to check if the prev day month is still on the same month
   var monthToken = prevDay.split(' ')[1];
-  //this.tool.debug('isPrevDayTheSameMonth', currentMonth)
-  //this.tool.debug('isPrevDayTheSameMonth', monthToken)
   return currentMonth==monthToken ? true : false // If the day before the current day is from the same month, this function will return true
 }
 
@@ -162,7 +148,6 @@ Datepicker.prototype.getNext = function () {
     $('.calendar-list').css('transform','translate3d('+this.translate+'px,0,0)');
     $('.month__text').text(this.getMonth(this.active)+' '+this.year);// Setting parameter manually because activ is defined to 0
   }
-  this.tool.debug('getNext',this.active)
 };
 Datepicker.prototype.getPrev = function () {
   if(this.active>1) {
@@ -176,7 +161,6 @@ Datepicker.prototype.getPrev = function () {
     $('.calendar-list').css('transform','translate3d('+this.translate+'px,0,0)');
     $('.month__text').text(this.getMonth(this.active)+' '+this.year); // Setting parameter manually because activ is defined to 0
   }
-  this.tool.debug('getNext',this.active)
 };
 Datepicker.prototype.getDayIndex = function (today) {
   var index = this.dayList.indexOf(today);

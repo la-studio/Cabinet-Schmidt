@@ -27,7 +27,6 @@
     <script type="text/javascript" src="/js/jquery.js"></script>
     <script type="text/javascript" src="/js/Swiper-master/dist/js/swiper.min.js"></script>
     <script type="text/javascript" src="/js/Classes/Slider.js"></script>
-    <script type="text/javascript" src="/js/Classes/Debugger.js"></script>
     <script type="text/javascript" src="/js/Classes/Agenda.js" ></script>
     <script type="text/javascript" src="/js/Classes/Toolbox.js"></script>
     <script type="text/javascript" src="/js/Classes/Datepicker.js"></script>

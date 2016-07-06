@@ -14,7 +14,10 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         // Commands\Inspire::class,
-        'App\Console\Commands\RefreshFlux'
+        Commands\RefreshEchosArticlesFlux::class,
+        Commands\RefreshAppointmentsFlux::class,
+        Commands\RefreshFaqFlux::class,
+        Commands\RefreshDigitArticlesFlux::class
     ];
 
     /**
@@ -25,9 +28,6 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('refreshxml')
-                 ->weekly()
-                 ->sundays()
-                 ->at('4:00');
+        //
     }
 }
