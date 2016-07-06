@@ -47,6 +47,7 @@ Faq.prototype.clickListener = function () {
     that.newSearch();
   })
   $('.search__reload').click(function () {
+    that.step = 1;
     that.prev();
   });
   $(document).on('click','.faq .new-search', function () {
