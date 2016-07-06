@@ -261,28 +261,7 @@ Route::get('/getfaq', function()
               }
         }
     }
-    $rubriques = App\FaqListRubrique::all();
-    $keywords = App\FaqListKeyword::all();
-    DB::table('faq_list_rubriques_keywords')->truncate();
-    
-    foreach($rubriques as $rubrique){
-        $rubriqueId = $rubrique->id;
-        $rubriqueKeywords[$rubrique->name] = [];
-        $allArticlesRelated = App\Faq::where('rubrique','like', '%'.$rubrique->name.'%')->with('keywords')->get();
-        foreach ($allArticlesRelated as $article) {
-            foreach ($article->keywords as $keyword) {
-                //ajouter l'id de la rubrique et du keyword dans un tableau
-                $keywordId = App\FaqListKeyword::where('name', '=', $keyword->keyword)->first()->id;
-                if(!in_array($keywordId, $rubriqueKeywords[$rubrique->name])){
-                    array_push($rubriqueKeywords[$rubrique->name], $keywordId);
-                    $rubrique->keywords()->attach($keywordId);
-                }
-            }
-        }
-    }
-});
-
-Route::get('reorderPivotTable', function() {
+    //Associate keywords id and rubrique id to the pivot Table
     $rubriques = App\FaqListRubrique::all();
     $keywords = App\FaqListKeyword::all();
     DB::table('faq_list_rubriques_keywords')->truncate();
