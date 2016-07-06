@@ -68,7 +68,8 @@
             </div>
           </div>
         </div>
-        <div class="success"><i class="material-icons">check_circle</i><span class="success__message">Le message a été envoyé avec succès !</span></div>
+        <div class="success success-color"><i class="material-icons">check_circle</i><span class="success__message">Le message a été envoyé avec succès !</span></div>
+        <div class="fail fail-color"><span class="fail__message">Le message n'a pas pu être envoyé</span></div>
       </form>
     </div>
   </div>

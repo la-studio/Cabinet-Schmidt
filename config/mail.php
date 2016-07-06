@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'contact@cabinet-schmidt.com', 'name' => 'Cabinet Schmidt'],
 
     /*
     |--------------------------------------------------------------------------

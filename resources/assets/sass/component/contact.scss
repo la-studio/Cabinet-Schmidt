@@ -1,5 +1,11 @@
 .contact {
-  .success {
+  .success-color{
+    background-color: $yellow;
+  }
+  .fail-color{
+    background-color: #ce1212;
+  }
+  .success, .fail {
     $width: 350px;
     position: fixed;
     bottom: -30px;
@@ -8,7 +14,6 @@
     left: calc(50% - #{$width/2});
     align-items: center;
     justify-content: center;
-    background-color: $yellow;
     color: white;
     display: none;
     opacity: 0;

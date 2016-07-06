@@ -20,6 +20,9 @@ class PasswordController extends Controller
 
     use ResetsPasswords;
 
+    protected $redirectTo = '/admin';
+
+
     /**
      * Create a new password controller instance.
      *
@@ -27,6 +30,7 @@ class PasswordController extends Controller
      */
     public function __construct()
     {
+        $this->subject = 'Lien de réinitialisation du mot de passe - Cabinet Schmidt';
         $this->middleware('guest');
     }
 }

@@ -6,6 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="robots" content="noindex">
     <link rel="stylesheet" href="/css/tools.css" media="screen">
     <link rel="stylesheet" href="/css/app.css" media="screen">
     <title>Cabinet Schmidt - Dashboard</title>

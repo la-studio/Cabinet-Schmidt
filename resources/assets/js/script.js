@@ -116,14 +116,26 @@ $(document).ready(function () {
             $('.contact .success').addClass('success--is-visible');
           }, 10);
           setTimeout(function () {
-            $('.contact .success').remove()
+            $('.contact .success').removeClass('success--is-visible');
+            $('.contact .success').removeClass('success--is-displayed');
           }, 6000);
           $(".input__field").val('').removeClass('input__field--missing');
           //console.log(response);
         },
         error: function (xhr,status,error) {
           //console.log(xhr,error);
-          $('body').append(xhr.responseText)
+          $('.contact .fail').addClass('success--is-displayed');
+          $('.input').removeClass('input--filled');
+
+          setTimeout(function () {
+            $('.contact .fail').addClass('success--is-visible');
+          }, 10);
+          setTimeout(function () {
+            $('.contact .fail').removeClass('success--is-visible');
+            $('.contact .fail').removeClass('success--is-displayed');
+          }, 6000);
+          $(".input__field").val('').removeClass('input__field--missing');
+          //console.log(response);
         }
       }
       $.ajax(options);
