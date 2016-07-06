@@ -1,4 +1,4 @@
-<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" id="Calque_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 150 150">
 <g>
 	<polygon fill="#E7B116" points="12.125,70.646 13.981,31.598 103.245,27.874 126.958,35.313 132.535,52.978 122.772,81.341 	"/>

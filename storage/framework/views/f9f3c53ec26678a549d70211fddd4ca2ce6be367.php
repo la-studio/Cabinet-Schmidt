@@ -1,7 +1,7 @@
 <footer class="row between-xs footer">
   <div class="col-md-4 col-custom footer__credits">
     <div class="row middle-xs">
-      <span class="upper"><span class="upper__link upper__link--mention" href="">Mentions légales</span> - Copyright <a class="upper__link"  target="_blank" href="http://la-studio.fr">LA Studio</a></span>
+      <span class="upper"><span class="upper__link upper__link--mention">Mentions légales</span> - Copyright <a class="upper__link"  target="_blank" href="http://la-studio.fr">LA Studio</a></span>
     </div>
     <div class="row middle-xs">
       <spanclass="lower">Cabinet-Schmidt © 2016 | Tous droits réservés </span>
