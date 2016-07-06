@@ -11,7 +11,7 @@ Notre équipe à taille humaine accompagne et conseille les TPE et artisans du G
   <div class="col-xs-6 col-custom panel panel--active">
     <div class="row wrapper">
       <div class="col-xs sub-wrapper">
-        <h1 class="row panel__title">Cabinet d'expertise comptable implanté dans le Grésivaudan</h1>
+        <h1 class="row panel__title"></h1>
         <div class="row panel__slogan"></div>
         <div class="row arguments">
           <ul class="arguments__list"></ul>
