@@ -26,7 +26,7 @@ class MailController extends Controller
         $data = ['identity'=>$identity,'email'=>$email,'company'=>$company,'purpose'=>$purpose,'comment'=>$comment];
 
         Mail::send('email',$data, function($message) use($identity, $email, $company, $purpose, $comment ) {
-            $message->to(['schmidtlea.pro@gmail.com', 'a.perrier721@gmail.com']);
+            $message->to(['cabinet.pierre.schmidt@orange.fr', 'cabinetschmidt.crolles@gmail.com']);
             $message->subject($purpose);
         });
 
