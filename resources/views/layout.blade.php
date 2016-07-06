@@ -36,7 +36,7 @@
     <script type="text/javascript" src="/js/Classes/Faq.js"></script>
     @if (isset($check))
         <script type="text/javascript" src="/js/initMap.js"></script>
-        <script type="text/javascript" async src="https://maps.google.com/maps/api/js?v3.exp&key=AIzaSyDaqvAJy_P9DqqR8ClhZJG0L5ldEOiEYDs&callback=initMaps"></script>
+        <script type="text/javascript" async src="https://maps.google.com/maps/api/js?v3.exp&key=AIzaSyCXezNBO39ejsNwTN-4Lxj-d-gzh866rLY&callback=initMaps"></script>
     @endif
     <script type="text/javascript" src="/js/mixitup.js"></script>
     <script type="text/javascript" src="/js/script.js"></script>
