@@ -80,28 +80,35 @@ About.prototype.loadListener = function () {
 About.prototype.mouseListener = function () {
   var that = this;
   $(document).on('mousewheel DOMMouseScroll',function (ev) { // DOMMouseScroll ev too for shitty Firefox.
-    ev.delta = null;
-     if (ev.originalEvent) {
-         if (ev.originalEvent.wheelDelta) {
-           ev.delta = ev.originalEvent.wheelDelta;
-           if(that.canSlide() && that.isDown() && ev.delta < 0) { // ev.originalEvent.wheelDelta < 0 == Scroll down.
+    if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+      if (ev.originalEvent.detail > 0) {
+          //scroll down
+          if(that.canSlide() && that.isDown()) { // ev.originalEvent.wheelDelta < 0 == Scroll down.
+            that.getNext();
+          }
+      }
+    } else {
+        ev.delta = null;
+      if (ev.originalEvent) {
+        if (ev.originalEvent.wheelDelta) {
+          ev.delta = ev.originalEvent.wheelDelta;
+          if(that.canSlide() && that.isDown() && ev.delta < 0) { // ev.originalEvent.wheelDelta < 0 == Scroll down.
             that.getNext();
           }
         } else if (ev.originalEvent.clientY && $(window).scrollTop()==$('.header').height() && ev.originalEvent.wheelDelta==undefined) {
-            if(that.canSlide() && that.isDown()) { // ev.originalEvent.wheelDelta < 0 == Scroll down.
-             that.getNext();
-           }
-           //console.log(that.canSlide(),that.isDown());
-        } else {
-          //console.log(ev.originalEvent,ev.originalEvent.wheelDelta==undefined,ev.originalEvent.clientY,$(window).height());
-          // Debug hook.
+          if(that.canSlide() && that.isDown()) { // ev.originalEvent.wheelDelta < 0 == Scroll down.
+            that.getNext();
+          }
         }
-     }
+      }
+    }
+
   })
 };
 
 About.prototype.isDown = function () {
-  if($(document).scrollTop()>=$('.header').height()) {
+  var headerHeight = $('.header').height();
+  if($(document).scrollTop()>=headerHeight) {
     return true
   } else {
     return false
