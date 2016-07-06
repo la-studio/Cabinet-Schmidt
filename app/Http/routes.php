@@ -144,8 +144,10 @@ Route::get('/getfaq', function()
 {
     App\FaqReference::truncate();
     App\FaqKeyword::truncate();
+    DB::statement('SET FOREIGN_KEY_CHECKS=0;');
     App\FaqListKeyword::truncate();
     App\FaqListRubrique::truncate();
+    DB::statement('SET FOREIGN_KEY_CHECKS=1;');
     App\Faq::truncate();
     $directoryName = 'ec_tout_flux';
     $fileName = 'ec_flux_faq.xml';
