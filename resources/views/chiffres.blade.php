@@ -5,12 +5,12 @@
   <div class="col-xs-12 chiffres__banner">
     <h1>Chiffres utiles</h1>
   </div>
-  <div class="col-md-10 col-xs-12 gallery">
+  <div class="col-md-10 col-xs-12 gallery" id="gallery">
     <ul class="row center-xs filters">
-      <li class="col-lg-2 col-md-2 col-sm-4 col-xs-6 filters__item {{ ($page == 'digit') ? 'filters__item--checked' : '' }}" data-filter="all"><a href="{{ URL::to('chiffres-utiles') }}"><span>Tous</span></a></li>
-      <li class="col-lg-2 col-md-2 col-sm-4 col-xs-6 filters__item {{ ($page == 'Social') ? 'filters__item--checked' : '' }}" data-filter="Social"><a href="{{ URL::to('chiffres-utiles/rubrique/Social') }}"><span>Social</span></a></li>
-      <li class="col-lg-2 col-md-2 col-sm-4 col-xs-6 filters__item {{ ($page == 'Fiscal') ? 'filters__item--checked' : '' }}" data-filter="Fiscal"><a href="{{ URL::to('chiffres-utiles/rubrique/Fiscal') }}"><span>Fiscal</span></a></li>
-      <li class="col-lg-2 col-md-2 col-sm-4 col-xs-6 filters__item {{ ($page == 'Juridique') ? 'filters__item--checked' : '' }}" data-filter="Juridique"><a href="{{ URL::to('chiffres-utiles/rubrique/Juridique') }}"><span>Juridique</span></a></li>
+      <li class="col-lg-2 col-md-2 col-sm-4 col-xs-6 filters__item {{ ($page == 'digit') ? 'filters__item--checked' : '' }}" data-filter="all"><a href="{{ URL::to('chiffres-utiles#gallery') }}"><span>Tous</span></a></li>
+      <li class="col-lg-2 col-md-2 col-sm-4 col-xs-6 filters__item {{ ($page == 'Social') ? 'filters__item--checked' : '' }}" data-filter="Social"><a href="{{ URL::to('chiffres-utiles/rubrique/Social#gallery') }}"><span>Social</span></a></li>
+      <li class="col-lg-2 col-md-2 col-sm-4 col-xs-6 filters__item {{ ($page == 'Fiscal') ? 'filters__item--checked' : '' }}" data-filter="Fiscal"><a href="{{ URL::to('chiffres-utiles/rubrique/Fiscal#gallery') }}"><span>Fiscal</span></a></li>
+      <li class="col-lg-2 col-md-2 col-sm-4 col-xs-6 filters__item {{ ($page == 'Juridique') ? 'filters__item--checked' : '' }}" data-filter="Juridique"><a href="{{ URL::to('chiffres-utiles/rubrique/Juridique#gallery') }}"><span>Juridique</span></a></li>
     </ul>
     <section class="row center-xs gallery__list">
       @foreach($digitarticles as $article)

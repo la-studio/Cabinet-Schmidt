@@ -4,17 +4,17 @@
     <div class="col-xs-12 actualites__banner">
       <h1>L'actualité que nous vous partageons</h1>
     </div>
-    <div class="col-md-10 col-xs-12 gallery">
+    <div class="col-md-10 col-xs-12 gallery" id="gallery">
       <header class="row center-xs gallery__head">
         <h2>Toute l'actualité des tpe &amp; pme</h2>
       </header>
       <ul class="row center-xs filters">
-        <li class="col-lg col-md col-sm-4 col-xs-6 filters__item <?php echo e(($page == 'actus') ? 'filters__item--checked' : ''); ?>" data-filter="all"><a href="<?php echo e(URL::to('actualites')); ?>"><span>Tous</span></a></li>
-        <li class="col-lg col-md col-sm-4 col-xs-6 filters__item <?php echo e(($page == 'Social') ? 'filters__item--checked' : ''); ?>" data-filter="Social"><a href="<?php echo e(URL::to('actualites/rubrique/Social')); ?>"><span>Social</span></a></li>
-        <li class="col-lg col-md col-sm-4 col-xs-6 filters__item <?php echo e(($page == 'Fiscal') ? 'filters__item--checked' : ''); ?>" data-filter="Fiscal"><a href="<?php echo e(URL::to('actualites/rubrique/Fiscal')); ?>"><span>Fiscal</span></a></li>
-        <li class="col-lg col-md col-sm-4 col-xs-6 filters__item <?php echo e(($page == 'Innovation Multimédia Création') ? 'filters__item--checked' : ''); ?>" data-filter="Innovation Multimédia Création"><a href="<?php echo e(URL::to('actualites/rubrique/Innovation Multimédia Création')); ?>"><span>Innovation</span></a></li>
-        <li class="col-lg col-md col-sm-4 col-xs-6 filters__item <?php echo e(($page == 'Gestion') ? 'filters__item--checked' : ''); ?>" data-filter="Gestion Patrimoine"><a href="<?php echo e(URL::to('actualites/rubrique/Gestion')); ?>"><span>Gestion</span></a></li>
-        <li class="col-lg col-md col-sm-4 col-xs-6 filters__item <?php echo e(($page == 'Juridique') ? 'filters__item--checked' : ''); ?>" data-filter="Juridique"><a href="<?php echo e(URL::to('actualites/rubrique/Juridique')); ?>"><span>Juridique</span></a></li>
+        <li class="col-lg col-md col-sm-4 col-xs-6 filters__item <?php echo e(($page == 'actus') ? 'filters__item--checked' : ''); ?>" data-filter="all"><a href="<?php echo e(URL::to('actualites#gallery')); ?>"><span>Tous</span></a></li>
+        <li class="col-lg col-md col-sm-4 col-xs-6 filters__item <?php echo e(($page == 'Social') ? 'filters__item--checked' : ''); ?>" data-filter="Social"><a href="<?php echo e(URL::to('actualites/rubrique/Social#gallery')); ?>"><span>Social</span></a></li>
+        <li class="col-lg col-md col-sm-4 col-xs-6 filters__item <?php echo e(($page == 'Fiscal') ? 'filters__item--checked' : ''); ?>" data-filter="Fiscal"><a href="<?php echo e(URL::to('actualites/rubrique/Fiscal#gallery')); ?>"><span>Fiscal</span></a></li>
+        <li class="col-lg col-md col-sm-4 col-xs-6 filters__item <?php echo e(($page == 'Innovation Multimédia Création') ? 'filters__item--checked' : ''); ?>" data-filter="Innovation Multimédia Création"><a href="<?php echo e(URL::to('actualites/rubrique/Innovation Multimédia Création#gallery')); ?>"><span>Innovation</span></a></li>
+        <li class="col-lg col-md col-sm-4 col-xs-6 filters__item <?php echo e(($page == 'Gestion') ? 'filters__item--checked' : ''); ?>" data-filter="Gestion Patrimoine"><a href="<?php echo e(URL::to('actualites/rubrique/Gestion#gallery')); ?>"><span>Gestion</span></a></li>
+        <li class="col-lg col-md col-sm-4 col-xs-6 filters__item <?php echo e(($page == 'Juridique') ? 'filters__item--checked' : ''); ?>" data-filter="Juridique"><a href="<?php echo e(URL::to('actualites/rubrique/Juridique#gallery')); ?>"><span>Juridique</span></a></li>
       </ul>
       <section class="row center-xs gallery__list">
           <?php foreach($echosarticles as $article): ?>
