@@ -47,7 +47,6 @@ Faq.prototype.clickListener = function () {
     that.newSearch();
   })
   $('.search__reload').click(function () {
-    that.step = 1;
     that.prev();
   });
   $(document).on('click','.faq .new-search', function () {
@@ -119,6 +118,7 @@ Faq.prototype.next = function () {
     this.slideTitle('Sélectionnez un ou plusieurs mots-clés');
     this.step++;
   } else if(this.step==2 && this.isReady) {
+    this.canSkip = false;
     $('.search__progress .fill').addClass('step-3');
     this.selected.keywords = []
     $('.search__select').find('.option--selected').each(function () {
@@ -153,8 +153,11 @@ Faq.prototype.prev = function () {
     $('.search__select').find('li').remove();
     this.createList('.search__select',this.topicsList,true);
     this.slideTitle('Sélectionnez une rubrique');
+    $('.search__next i').removeClass('ready');
+    this.isReady = false;
     $('.search__reload').removeClass('search__reload--show');
     this.step--;
+    this.canSkip = false;
   }
 };
 
@@ -242,6 +245,9 @@ Faq.prototype.addMore = function (index) {
 
 Faq.prototype.newSearch = function () {
   this.step = 1;
+  this.canSkip = false;
+  this.isReady = false;
+  $('.search__next i').removeClass('ready');
   $('.search').removeClass('hide fade-out');
   $('.search__select .option').remove();
   this.createList('.search__select',this.topicsList,true);
