@@ -1,4 +1,4 @@
-<div class="col-xs-12 home__agenda">
+<div class="col-xs-12 home__agenda" id="agenda">
   <div class="row center-xs">
     <header class="col-xs-12 agenda-header">
       <h2 class="agenda-header__title">L'agenda de la compta</h2>

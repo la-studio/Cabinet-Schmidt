@@ -70,4 +70,10 @@ class DigitController extends Controller
         }
         return view('chiffres.article',compact('compacted_article','result'));
     }
+
+    public function redirect($id)
+    {
+        $article= Digitarticle::where('article_id','=',$id)->get();
+        return redirect('/chiffres-utiles/'.$article[0]->slug);
+    }
 }

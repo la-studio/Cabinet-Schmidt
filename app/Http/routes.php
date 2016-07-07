@@ -122,8 +122,9 @@ Route::post('/contact/send', 'MailController@send');
 
 //Chiffres utiles
 Route::get('/chiffres-utiles','DigitController@index');
-Route::get('/chiffres-utiles/{slug}','DigitController@show');
 Route::get('/chiffres-utiles/rubrique/{rubrique}','DigitController@indexByCategory');
+Route::get('/chiffres-utiles/{slug}','DigitController@show');
+Route::get('/chiffres-utiles/article/{id}', 'DigitController@redirect');
 
 //Sites utiles
 Route::get('/sites-utiles', function () {
