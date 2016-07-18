@@ -77,7 +77,7 @@ $(document).ready(function () {
     var proceed = true;
     //simple validation at client's end
     //loop through each field and we simply change border color to red for invalid fields
-    $(".input__field").each(function() {
+    $(".input__field").not("#form-company").each(function() {
         if(!$.trim($(this).val())){ //if this field is empty
             $(this).addClass('input__field--error');
             $(this).siblings().filter('.input__label').addClass('input__label--missing');
