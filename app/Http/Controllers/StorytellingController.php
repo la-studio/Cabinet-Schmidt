@@ -31,6 +31,8 @@ class StorytellingController extends Controller
             $filename        = $file->getClientOriginalName();
             $uploadSuccess   = $file->move($destinationPath, $filename);
             $slide->cover = "/images/".$filename;
+            $slide->title = $request->title;
+            $slide->summary = $request->summary;
             $slide->save();
             return redirect('/admin/storytelling');
         } else {
@@ -38,10 +40,12 @@ class StorytellingController extends Controller
             return redirect('/admin/storytelling');
         }
     }
+
     public function show(AboutSlide $id)
     {
         return view('admin.templates.storytelling')->with('slide',$id);
     }
+
     public function destroy(AboutSlide $id)
     {
         $id->delete();

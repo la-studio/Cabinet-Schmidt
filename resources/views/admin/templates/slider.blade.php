@@ -22,19 +22,19 @@
           <div class="row center-xs slide__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
               <span>Changer le nom du bouton</span>
-              <input type="text" name="title" value="{{$slide->button_name}}"/>
+              <input type="text" name="button_name" value="{{$slide->button_name}}"/>
             </div>
           </div>
           <div class="row center-xs slide__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
               <span>Changer le lien du bouton</span>
-              <input type="text" name="title" value="{{$slide->button_link}}"/>
+              <input type="text" name="button_link" value="{{$slide->button_link}}"/>
             </div>
           </div>
           <div class="row center-xs slide__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
               <span>Changer la description</span>
-              <input type="text" name="title" value="{{$slide->description}}"/>
+              <input type="text" name="description" value="{{$slide->description}}"/>
             </div>
           </div>
           <input type="submit" class="competence__save" value="Enregistrer"/>

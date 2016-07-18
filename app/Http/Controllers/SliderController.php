@@ -34,22 +34,12 @@ class SliderController extends Controller
             $slider->description = $request->description;
             $slider->title = $request->title;
             $slider->button_name = $request->button_name;
+            $slider->button_link = $request->button_link;
             $slider->save();
             return redirect('/admin/slider');
         } else {
             $slider->update($request->all());
             return redirect('/admin/slider');
         }
-    }
-    public function store(Request $request, Slider $id)
-    {
-        $file = $request->cover;
-        $destinationPath = public_path()."/images/slider";
-        $filename        = $file->getClientOriginalName();
-        $uploadSuccess   = $file->move($destinationPath, $filename);
-        $id = new Slider($request->all());
-        $id->cover = "/images/slider/".$filename; // Filling this property manually
-        $id->save();
-        return redirect('/admin/slider');
     }
 }
