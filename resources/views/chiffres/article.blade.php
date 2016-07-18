@@ -7,6 +7,10 @@
 {{$compacted_article->summary}}
 @stop
 
+@section('robots')
+<meta name="robots" content="noindex">
+@stop
+
 @section('content')
   <div class="row center-xs echo-article">
     <div class="col-xs-9">
@@ -40,8 +44,8 @@
         @foreach($result as $suggestion)
         <div class="col-md col-sm-6 col-xs-12 suggestion">
           <div class="row wrapper">
-            <span class="col-xs-12 suggestion__cover"><a href="/chiffres-utiles/{{$suggestion->slug}}" style="background-image:url('{{$suggestion->image}}')"></a></span>
-            <a href="/chiffres-utiles/{{$suggestion->slug}}" class="col-xs-12 suggestion__caption">{{$suggestion->title}}</a>
+            <span class="col-xs-12 suggestion__cover"><a href="/chiffres-utiles/{{$suggestion->slug}}" rel="nofollow" style="background-image:url('{{$suggestion->image}}')"></a></span>
+            <a href="/chiffres-utiles/{{$suggestion->slug}}" class="col-xs-12 suggestion__caption" rel="nofollow">{{$suggestion->title}}</a>
           </div>
         </div>
         @endforeach

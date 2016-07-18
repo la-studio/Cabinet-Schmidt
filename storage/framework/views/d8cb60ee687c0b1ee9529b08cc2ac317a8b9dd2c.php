@@ -9,6 +9,8 @@
     <title>Cabinet Schmidt - <?php echo $__env->yieldContent('title'); ?></title>
     <meta name="description" content="<?php echo $__env->yieldContent('description'); ?>">
     <meta name="author" content="Cabinet Schmidt">
+    <?php echo $__env->yieldContent('robots'); ?>
+
 
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">

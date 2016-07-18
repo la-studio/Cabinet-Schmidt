@@ -8,6 +8,10 @@
 
 <?php $__env->stopSection(); ?>
 
+<?php $__env->startSection('robots'); ?>
+<meta name="robots" content="noindex">
+<?php $__env->stopSection(); ?>
+
 <?php $__env->startSection('content'); ?>
   <div class="row center-xs echo-article">
     <div class="col-xs-9">
@@ -46,8 +50,8 @@
         <?php foreach($result as $suggestion): ?>
         <div class="col-md col-sm-6 col-xs-12 suggestion">
           <div class="row wrapper">
-            <span class="col-xs-12 suggestion__cover"><a href="/actualites/<?php echo e($suggestion->slug); ?>" style="background-image:url('<?php echo e($suggestion->image); ?>')"></a></span>
-            <a href="/actualites/<?php echo e($suggestion->slug); ?>" class="col-xs-12 suggestion__caption"><?php echo e($suggestion->title); ?></a>
+            <span class="col-xs-12 suggestion__cover"><a href="/actualites/<?php echo e($suggestion->slug); ?>" rel="nofollow" style="background-image:url('<?php echo e($suggestion->image); ?>')"></a></span>
+            <a href="/actualites/<?php echo e($suggestion->slug); ?>" class="col-xs-12 suggestion__caption" rel="nofollow"><?php echo e($suggestion->title); ?></a>
           </div>
         </div>
         <?php endforeach; ?>

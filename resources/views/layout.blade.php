@@ -9,6 +9,8 @@
     <title>Cabinet Schmidt - @yield('title')</title>
     <meta name="description" content="@yield('description')">
     <meta name="author" content="Cabinet Schmidt">
+    @yield('robots')
+
 
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">

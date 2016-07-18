@@ -7,6 +7,10 @@ La FAQ des entrepreneurs
 Question de la vie quotidienne ou problématiques d’entrepreneurs, recherchez les informations dont vous avez besoin : fiscal, patrimoine, juridique, social…
 @stop
 
+@section('robots')
+<meta name="robots" content="noindex">
+@stop
+
 @section('content')
   <div class="row faq">
     <div class="col-xs">
