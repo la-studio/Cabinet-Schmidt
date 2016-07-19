@@ -543,9 +543,6 @@
         }
       }
     }
-    .agenda-datepicker {
-      @include flex-middle(x);
-    }
     .datepicker {
       @media screen and (min-width:$tablet-max) {
         padding-left: 150px;
