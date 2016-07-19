@@ -16,6 +16,7 @@
             <textarea name="content"></textarea>
           </div>
         </div>
+        <div class="count">255 caratères restants</div>
         <input type="submit" class="article__save" value="Enregistrer">
       </div>
     </form>

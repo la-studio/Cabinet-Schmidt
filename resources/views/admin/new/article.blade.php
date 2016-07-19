@@ -13,9 +13,10 @@
         <div class="row center-xs article__field">
           <div class="col-md-8 col-sm-10 col-xs-12">
             <span>Contenu de l'article</span>
-            <textarea name="content"></textarea>
+            <textarea id="cabinet-article" name="content"></textarea>
           </div>
         </div>
+        <div class="count">255 caratères restants</div>
         <input type="submit" class="article__save" value="Enregistrer">
       </div>
     </form>
