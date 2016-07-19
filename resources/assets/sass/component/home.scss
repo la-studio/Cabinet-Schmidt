@@ -212,7 +212,7 @@
           margin-top: 20px;
           height: 210px;
           text-align: left;
-          @media screen and (max-width: 800px) {
+          @media screen and (max-width: 500px) {
             height: 309px;
           }
           &__wrapper {
@@ -249,8 +249,7 @@
           // @media screen and (max-width: 920px) {
           //   height: 220px;
           // }
-          height: auto;
-          min-height: 210px;
+          height: 210px;
           $size-pic: 220px;
           background-color: #fff;
           margin-top: 20px;
