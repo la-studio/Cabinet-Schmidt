@@ -249,7 +249,8 @@
           // @media screen and (max-width: 920px) {
           //   height: 220px;
           // }
-          height: 210px;
+          height: auto;
+          min-height: 210px;
           $size-pic: 220px;
           background-color: #fff;
           margin-top: 20px;
