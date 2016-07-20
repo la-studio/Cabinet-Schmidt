@@ -12,6 +12,9 @@ class DigitController extends Controller
     public function index()
     {
         $digitarticles = DB::table('digitarticles')->orderBy('date', 'desc')->paginate(6);
+        if($digitarticles->isEmpty()){
+            return view('errors.articlesNotFound');
+        }
         $page = 'digit';
         return view('chiffres', compact('digitarticles', 'page'));
     }
@@ -33,6 +36,9 @@ class DigitController extends Controller
                 $query = "rubrique LIKE '%".$rubrique."%'";
         }
         $digitarticles = Digitarticle::whereRaw($query)->orderBy('date', 'desc')->paginate(6);
+        if($digitarticles->isEmpty()){
+            return view('errors.articlesNotFound');
+        }
         $page = $rubrique;
         return view('chiffres', compact('digitarticles', 'page'));
     }
@@ -41,6 +47,9 @@ class DigitController extends Controller
     {
         $article = Digitarticle::where('slug',"=",$slug)->get();
         $unique_article = Digitarticle::where('slug',"=",$slug)->take(1)->get();
+        if($article->isEmpty() || $unique_article->isEmpty()){
+            return abort(404);
+        }
         $compacted_article = $unique_article[0];
         $rubrique = $article[0]->rubrique;
         if(preg_match('/\s/',$rubrique)>0) {
@@ -55,16 +64,16 @@ class DigitController extends Controller
                 }
             }
             $collection = Digitarticle::whereRaw($query)->get();
-            if($collection->count()<3){
+            if($collection->count()<3 && $collection->count()>0){
                 $result = $collection->random($collection->count());
-            }else{
+            }elseif($collection->count()>=3){
                 $result = $collection->random(3);
             }
         } else {
             $collection = Digitarticle::where('rubrique',"=",$rubrique)->get();
-            if($collection->count()<3){
+            if($collection->count()<3 && $collection->count()>0){
                 $result = $collection->random($collection->count());
-            }else{
+            }elseif($collection->count()>=3){
                 $result = $collection->random(3);
             }
         }
@@ -74,6 +83,9 @@ class DigitController extends Controller
     public function redirect($id)
     {
         $article= Digitarticle::where('article_id','=',$id)->get();
+        if($article->isEmpty()){
+            return abort(404);
+        }
         return redirect('/chiffres-utiles/'.$article[0]->slug);
     }
 }

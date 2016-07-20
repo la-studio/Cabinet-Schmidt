@@ -27,10 +27,12 @@ class HomeController extends Controller
         $appointmentLen = Appointment::all()->count();
         $temoignagesLen = $temoignages->count();
         $appointment = Appointment::orderBy('created_at','asc')->where('created_at','>', new DateTime())->first();
-        if(strlen($echosarticles[0]->title) > 85 || strlen($echosarticles[1]->title) > 85) {
-            $is_large = true;
-        } else {
-            $is_large = false;
+        if(!$echosarticles->isEmpty()){
+            if(strlen($echosarticles[0]->title) > 85 || strlen($echosarticles[1]->title) > 85) {
+                $is_large = true;
+            } else {
+                $is_large = false;
+            }
         }
         return view('home', compact('articles', 'temoignages', 'partenaires','competences','echosarticles','appointment','temoignagesLen','is_large','slider'))->withCount($appointment);
     }

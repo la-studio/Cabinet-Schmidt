@@ -88,6 +88,9 @@ Route::get('/a-propos/datas', function()
 Route::get('/faq', function()
 {
     $request = App\FaqListRubrique::lists('name');
+    if($request->isEmpty()){
+        return view('errors.faqNotFound');
+    }
     return view('faq',compact('request'));
 });
 Route::get('/faq/list', function()

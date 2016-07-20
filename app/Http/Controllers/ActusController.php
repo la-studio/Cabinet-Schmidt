@@ -12,6 +12,9 @@ use DB;
 class ActusController extends Controller {
     public function index(Request $request) {
         $echosarticles = DB::table('echosarticles')->orderBy('date', 'desc')->paginate(6);
+        if($echosarticles->isEmpty()){
+            return view('errors.articlesNotFound');
+        }
         if(strlen($echosarticles[0]->title) > 85 || strlen($echosarticles[1]->title) > 85) {
             $is_large = true;
         } else {
@@ -38,6 +41,9 @@ class ActusController extends Controller {
             $query = "rubrique LIKE '%".$rubrique."%'";
         }
         $echosarticles = Echosarticle::whereRaw($query)->orderBy('date', 'desc')->paginate(6);
+        if($echosarticles->isEmpty()){
+            return view('errors.articlesNotFound');
+        }
         if(strlen($echosarticles[0]->title) > 85 || strlen($echosarticles[1]->title) > 85) {
             $is_large = true;
         } else {
@@ -51,12 +57,18 @@ class ActusController extends Controller {
     public function redirect($id)
     {
         $article= Echosarticle::where('article_id','=',$id)->get();
+        if($article->isEmpty()){
+            return abort(404);
+        }
         return redirect('/actualites/'.$article[0]->slug);
     }
 
     public function show($slug)
     {
         $article = Echosarticle::where('slug',"=",$slug)->get();
+        if($article->isEmpty()){
+            return abort(404);
+        }
         $unique_article = Echosarticle::where('slug',"=",$slug)->take(1)->get();
         $compacted_article = $unique_article[0];
         $rubrique = $article[0]->rubrique;
@@ -72,16 +84,16 @@ class ActusController extends Controller {
                 }
             }
             $collection = Echosarticle::whereRaw($query)->get();
-            if($collection->count()<3){
+            if($collection->count()<3 && $collection->count()>0){
                 $result = $collection->random($collection->count());
-            }else{
+            }elseif($collection->count()>=3){
                 $result = $collection->random(3);
             }
         } else {
             $collection = Echosarticle::where('rubrique',"=",$rubrique)->get();
-            if($collection->count()<3){
+            if($collection->count()<3 && $collection->count()>0){
                 $result = $collection->random($collection->count());
-            }else{
+            }elseif($collection->count()>=3){
                 $result = $collection->random(3);
             }
         }

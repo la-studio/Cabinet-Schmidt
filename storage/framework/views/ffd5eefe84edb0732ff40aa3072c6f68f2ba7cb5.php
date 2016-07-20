@@ -1,10 +1,10 @@
-<div class="col-xs-12 home__agenda">
+<div class="col-xs-12 home__agenda" id="agenda">
   <div class="row center-xs">
     <header class="col-xs-12 agenda-header">
       <h2 class="agenda-header__title">L'agenda de la compta</h2>
       <h3 class="agenda-header__label">Pour connaître les échéanciers</h3>
     </header>
-    <div class="col-md-5 col-xs-12 agenda-datepicker">
+    <div class="col-md-5 agenda-datepicker">
       <div class="row end-xs">
         <div class="datepicker">
           <div class="datepicker__caption">

@@ -12,12 +12,14 @@ Découvrez la sélection des liens utiles faite par le cabinet Schmidt !
     <div class="col-xs-12 useful-sites__banner">
       <h1>Le cabinet vous partage ses sites utiles</h1>
     </div>
+    <?php if(!$partenaires_shown->isEmpty()): ?>
     <section class="col-xs-12 useful-sites__main-nav">
       <div class="row center-xs">
         <?php echo $__env->make('useful.list-partners', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
         <?php /*in this list there're articles classes col-sm-5 col-custom col-xs-12 partner */ ?>
       </div>
     </section>
+    <?php endif; ?>
     <nav class="col-md-11 col-xs-12 useful-sites__second-nav">
       <h2 class="row center-xs">D'autres sites utiles pour les créateurs d'entreprise</h2>
       <div class="row center-xs">

@@ -2,9 +2,7 @@
   <div class="row">
     <header class="col-xs-12 partenaires-header">
       <h2 class="partenaires-header__title">Nous travaillons ensemble</h2>
-      @if($temoignagesLen>0)
       <h3 class="partenaires-header__label">Découvrez aussi <a href="/sites-utiles">les liens utiles</a></h3>
-      @endif
     </header>
     <div class="col-xs-12 center-xs partenaires-list">
       <div class="row">
