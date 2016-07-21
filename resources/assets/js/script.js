@@ -13,6 +13,21 @@ $(document).ready(function () {
     $('.agenda-datepicker').hide();
     $('.agenda-text').addClass('agenda-text--full');
   }
+
+  if (navigator.userAgent.indexOf('MSIE') != -1){
+    var detectIEregexp = /MSIE (\d+\.\d+);/ //test for MSIE x.x
+  }else{
+    var detectIEregexp = /Trident.*rv[ :]*(\d+\.\d+)/ //test for rv:x.x or rv x.x where Trident string exists
+  } // if no "MSIE" string in userAgent
+
+  var isIe = detectIEregexp.test(navigator.userAgent);
+
+  if (isIe){ //if some form of IE
+    $('.home__contact .row').css({ "min-height": "initial"});
+    $('.home__contact .center-xs').css({ "align-item": "center"});
+    $('.home__contact .center-xs').css({ "align-item": "center"});
+    $('.home__contact .contact-item').css({ "flex-basis": "20%"});
+  }
   
   var optionsSlider = {
       pagination: '.swiper-pagination',

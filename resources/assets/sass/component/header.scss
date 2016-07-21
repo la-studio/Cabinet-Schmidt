@@ -6,7 +6,7 @@
     @include link-off();
   }
   &__logo {
-    @include flex-middle(y);
+    margin-top: 5px;
     max-width: 200px;
     overflow: hidden;
     padding-left: 20px;
