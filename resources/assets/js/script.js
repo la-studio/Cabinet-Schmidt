@@ -38,8 +38,10 @@ $(document).ready(function () {
 
     $('.services article').addClass("ie-flex40");
 
-    $('footer').addClass("ie-verticalalign");
+    $('footer').addClass("ie-verticalalign ie-minheight");
     $('.footer__socials .col-xs').addClass("ie-flex20");
+
+    $('.link .link__label').addClass("ie-flex20");
   }
   
   var optionsSlider = {
