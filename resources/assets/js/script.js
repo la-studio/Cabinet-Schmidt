@@ -41,7 +41,7 @@ $(document).ready(function () {
     $('footer').addClass("ie-verticalalign ie-minheight");
     $('.footer__socials .col-xs').addClass("ie-flex20");
 
-    $('.link .link__label').addClass("ie-flex20");
+    $('.link .link__label, .link .link__logo').addClass("ie-flex20");
   }
   
   var optionsSlider = {
