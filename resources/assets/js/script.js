@@ -14,9 +14,9 @@ $(document).ready(function () {
     $('.agenda-text').addClass('agenda-text--full');
   }
 
-  var isIe = navigator.userAgent.indexOf("MSIE") != -1;
+  function isIE() { return ((navigator.appName == 'Microsoft Internet Explorer') || ((navigator.appName == 'Netscape') && (new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent) != null))); }
 
-  if (isIe){ //if some form of IE
+  if (isIe()){ //if some form of IE
     $('.home__contact .row').css({ "min-height": "initial"});
     $('.home__contact .center-xs').css({ "align-item": "center"});
     $('.home__contact .center-xs').css({ "align-item": "center"});
