@@ -1,5 +1,5 @@
 <div class="col-xs-12 home__contact">
-  <div class="row center-xs">
+  <div class="row center-xs contact-wrapper">
     <div class="contact-item">
       <div class="row middle-xs center-xs">
         <div class="col-xs contact-item__icon">

@@ -32,7 +32,7 @@ $(document).ready(function () {
 
   if (GetIEVersion() > 0){ //if some form of IE
     $('.home__contact, .home__contact .row').addClass("ie-minheight");
-    $('.home__contact .center-xs').addClass("ie-verticalalign ie-spacearound");
+    $('.home__contact .contact-wrapper').addClass("ie-verticalalign ie-spacearound");
     $('.home__contact .contact-item').addClass("ie-flex20");
 
     $('.services article').addClass("ie-flex40");
