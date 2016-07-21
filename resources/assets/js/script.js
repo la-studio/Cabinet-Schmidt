@@ -35,6 +35,11 @@ $(document).ready(function () {
     $('.home__contact .row').addClass("ie-minheight");
     $('.home__contact .center-xs').addClass("ie-verticalalign");
     $('.home__contact .contact-item').addClass("ie-flex20");
+
+    $('.services article').addClass("ie-flex40");
+
+    $('footer').addClass("ie-verticalalign");
+    $('.footer__socials .col-xs').addClass("ie-flex20");
   }
   
   var optionsSlider = {
