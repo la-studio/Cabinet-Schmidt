@@ -14,14 +14,28 @@ $(document).ready(function () {
     $('.agenda-text').addClass('agenda-text--full');
   }
 
-  function isIE() { return ((navigator.appName == 'Microsoft Internet Explorer') || ((navigator.appName == 'Netscape') && (new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent) != null))); }
+  function GetIEVersion() {
+    var sAgent = window.navigator.userAgent;
+    var Idx = sAgent.indexOf("MSIE");
 
-  if (isIe()){ //if some form of IE
-    alert('ie');
+    // If IE, return version number.
+    if (Idx > 0) 
+      return parseInt(sAgent.substring(Idx+ 5, sAgent.indexOf(".", Idx)));
+
+    // If IE 11 then look for Updated user agent string.
+    else if (!!navigator.userAgent.match(/Trident\/7\./)) 
+      return 11;
+
+    else
+      return 0; //It is not IE
+  }
+
+  if (GetIEVersion() > 0){ //if some form of IE
     $('.home__contact .row').css({ "min-height": "initial"});
     $('.home__contact .center-xs').css({ "align-item": "center"});
     $('.home__contact .center-xs').css({ "align-item": "center"});
     $('.home__contact .contact-item').css({ "flex-basis": "20%"});
+    alert('ie'); 
   }
   
   var optionsSlider = {
