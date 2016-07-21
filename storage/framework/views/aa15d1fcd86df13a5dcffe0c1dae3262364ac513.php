@@ -1,17 +1,16 @@
-@extends('layout')
-@section('title')
+<?php $__env->startSection('title'); ?>
 La FAQ des entrepreneurs
-@stop
+<?php $__env->stopSection(); ?>
 
-@section('description')
+<?php $__env->startSection('description'); ?>
 Question de la vie quotidienne ou problématiques d’entrepreneurs, recherchez les informations dont vous avez besoin : fiscal, patrimoine, juridique, social…
-@stop
+<?php $__env->stopSection(); ?>
 
-@section('robots')
+<?php $__env->startSection('robots'); ?>
 <meta name="robots" content="noindex">
-@stop
+<?php $__env->stopSection(); ?>
 
-@section('content')
+<?php $__env->startSection('content'); ?>
   <div class="row faq">
     <div class="col-xs">
       <div class="row center-xs search">
@@ -27,9 +26,9 @@ Question de la vie quotidienne ou problématiques d’entrepreneurs, recherchez 
             <div class="col-xs-12 search__current"></div>
             <div class="col-xs-12 search__progress"><div class="fill"></div></div>
             <ul class="col-xs-12 search__select">
-              @foreach($request as $option)
-                <li data-content="{{$option}}" class="option">{{$option}}</li>
-              @endforeach
+              <?php foreach($request as $option): ?>
+                <li data-content="<?php echo e($option); ?>" class="option"><?php echo e($option); ?></li>
+              <?php endforeach; ?>
             </ul>
             <span class="col-xs search__next">
               <i class="material-icons">arrow_forward</i>
@@ -46,4 +45,6 @@ Question de la vie quotidienne ou problématiques d’entrepreneurs, recherchez 
     </div>
   </div>
   <span class="loader"></span>
-@stop
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

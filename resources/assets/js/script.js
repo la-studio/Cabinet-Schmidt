@@ -31,8 +31,7 @@ $(document).ready(function () {
   }
 
   if (GetIEVersion() > 0){ //if some form of IE
-    $('.home__contact').addClass("ie-minheight");
-    $('.home__contact .row').addClass("ie-minheight");
+    $('.home__contact, .home__contact .row').addClass("ie-minheight");
     $('.home__contact .center-xs').addClass("ie-verticalalign");
     $('.home__contact .contact-item').addClass("ie-flex20");
 

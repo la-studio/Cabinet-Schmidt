@@ -54,6 +54,11 @@
         <?php endif; ?>
       </div>
     </div>
+    <header class="col-xs-12 actus-header margintop">
+      <h2 class="actus-header__label">Consultez également les <a href="/chiffres-utiles">chiffres utiles</a> aux entrepreneurs</h2> 
+      <br>
+      <h2 class="actus-header__label">Et trouvez réponse à vos questions comptables, fiscales, sociales... dans <a href="/faq">la FAQ</a> !</h2>
+    </header>
   </div>
 </div>
 <?php endif; ?>

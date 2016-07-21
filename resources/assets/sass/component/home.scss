@@ -164,6 +164,10 @@
   &__actus {
     background-color: lighten($light-grey,17%);
     padding: 30px 0;
+    .margintop{
+      margin-top: 50px;
+      text-align: center;
+    }
     .actus-header {
       @include flex-middle(x,column);
       flex-direction: column;
