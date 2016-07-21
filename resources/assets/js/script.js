@@ -31,11 +31,11 @@ $(document).ready(function () {
   }
 
   if (GetIEVersion() > 0){ //if some form of IE
+    $('.home__contact').css({ "min-height": "initial"});
     $('.home__contact .row').css({ "min-height": "initial"});
     $('.home__contact .center-xs').css({ "align-item": "center"});
     $('.home__contact .center-xs').css({ "align-item": "center"});
     $('.home__contact .contact-item').css({ "flex-basis": "20%"});
-    alert('ie'); 
   }
   
   var optionsSlider = {
