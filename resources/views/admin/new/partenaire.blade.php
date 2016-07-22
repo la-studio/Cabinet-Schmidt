@@ -1,4 +1,4 @@
-@extends('admin.dashboard-layout')
+ @extends('admin.dashboard-layout')
 @section('content')
   <div class="partenaire-create">
     <form class="row center-xs" action="/admin/partenaire/store" enctype="multipart/form-data" accept-charset="UTF-8" method="post">
@@ -43,5 +43,10 @@
         <input type="submit" class="partenaire-create__save" value="Enregistrer"/>
       </div>
     </form>
+    @if(\Session::has('emptyFile'))
+    <div class="row center-xs partenaire-create__field">
+      <p style="color:red">Vous devez ajouter le logo du partenaire</p>
+    </div>
+    @endif
   </div>
 @stop

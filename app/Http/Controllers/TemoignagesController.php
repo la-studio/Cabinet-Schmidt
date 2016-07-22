@@ -26,6 +26,9 @@ class TemoignagesController extends Controller
     }
     public function store(Request $request)
     {
+        if(is_null($request->photo)){
+            return back()->with('emptyFile', 'Yes');
+        }
         $file = $request->photo;
         $destinationPath = public_path()."/images/partenaires";
         $filename        = $file->getClientOriginalName();

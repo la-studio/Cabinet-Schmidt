@@ -36,6 +36,9 @@
             </div>
           </div>
           <input type="submit" class="competence__save" value="Enregistrer"/>
+        <?php if(\Session::has('emptyFile')): ?>
+        <p style="color:red">Vous devez ajouter le logo de l'entreprise</p>
+        <?php endif; ?>
         </div>
       </form>
     </div>
