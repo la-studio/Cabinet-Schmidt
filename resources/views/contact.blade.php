@@ -28,7 +28,7 @@ Prenez contact avec un cabinet comptable à taille humaine situé à Crolles, en
                   <span class="input">
                     <input class="input__field" type="text" id="form-identity"/>
                     <label class="input__label">
-                      <span class="input__label-content">Nom & Prénom</span>
+                      <span class="input__label-content">Nom & Prénom*</span>
                     </label>
                     <span class="input__error">Ce champ est requis</span>
                   </span>
@@ -46,7 +46,7 @@ Prenez contact avec un cabinet comptable à taille humaine situé à Crolles, en
                   <span class="input">
                     <input class="input__field" type="email" id="form-mail"/>
                     <label class="input__label">
-                      <span class="input__label-content">Mail</span>
+                      <span class="input__label-content">Mail*</span>
                     </label>
                     <span class="input__error">Ce champ est requis</span>
                   </span>
@@ -55,7 +55,7 @@ Prenez contact avec un cabinet comptable à taille humaine situé à Crolles, en
                   <span class="input">
                     <input class="input__field" type="text" id="form-purpose"/>
                     <label class="input__label">
-                      <span class="input__label-content">Objet</span>
+                      <span class="input__label-content">Objet*</span>
                     </label>
                     <span class="input__error">Ce champ est requis</span>
                   </span>
@@ -66,7 +66,7 @@ Prenez contact avec un cabinet comptable à taille humaine situé à Crolles, en
                   <span class="input">
                     <textarea class="input__field input__field--textarea" id="form-message"></textarea>
                     <label class="input__label input__label--textarea">
-                      <span class="input__label-content input__label-content--textarea">Votre message</span>
+                      <span class="input__label-content input__label-content--textarea">Votre message*</span>
                     </label>
                   </span>
                 </div>
