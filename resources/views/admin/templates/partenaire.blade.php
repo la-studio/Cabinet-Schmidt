@@ -11,31 +11,37 @@
         <div class="col-xs">
           <div class="row center-xs partenaire__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
-              <span>Changer le logo du partenaire</span>
-              <input type="file" name="photo"/>
+              <span>Logo du partenaire</span>
+              <input class="large-file" type="file" name="photo"/>
             </div>
           </div>
           <div class="row center-xs partenaire__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
-              <span>Changer le nom du partenaire</span>
-              <input type="text" name="name" value="{{$partenaire->name}}"/>
+              <span>Nom du partenaire</span>
+              <input class="large-field" type="text" name="name" value="{{$partenaire->name}}"/>
             </div>
           </div>
           <div class="row center-xs partenaire__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
-              <span>Changer le lien du partenaire</span>
-              <input type="text" name="link" value="{{$partenaire->link}}"/>
+              <span>Lien du partenaire</span>
+              <input class="large-field" type="text" name="link" value="{{$partenaire->link}}"/>
             </div>
           </div>
           <div class="row center-xs partenaire__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
-              <span>Changer la description du partenaire</span>
-              <textarea name="description">{{$partenaire->description}}</textarea>
+              <span>Description du partenaire</span>
+              <textarea id="cabinet-article" class="large-field text-field" name="description">{{$partenaire->description}}</textarea>
+            </div>
+          </div>
+          <div class="row center-xs slide__field">
+            <div class="col-md-8 col-sm-10 col-xs-12">
+              <span></span>
+              <div class="count">255 caratères restants</div>
             </div>
           </div>
           <div class="row center-xs partenaire__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
-              <span>Afficher sur la page Liens utiles</span>
+              <span>Afficher dans les liens utiles</span>
               <input type="checkbox" name="enabled" @if($partenaire->enabled==1)checked @endif/>
             </div>
           </div>

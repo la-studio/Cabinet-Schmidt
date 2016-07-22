@@ -263,6 +263,7 @@ About.prototype.initFirstView = function () {
   var slogan = this.slides[this.active-1].slogan;
   el.find('.panel__title').text(title);
   el.find('.panel__slogan').text(slogan);
+  $('.about__cover').css('background-image','url("'+this.getCover(0)+'")');
   for (var i = 0; i < this.slides[this.active-1].list.length; i++) {
     var elemList = this.slides[this.active-1].list[i].name;
     el.find('.arguments__list').append('<li class="arguments__item arguments__item--slided">'+elemList+'</li>')

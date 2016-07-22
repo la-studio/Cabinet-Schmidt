@@ -61,7 +61,7 @@ Suivez l’actualité de votre cabinet comptable : fiscal, juridique, social, ge
           @if ($echosarticles->lastPage() > 1)
             <ul class="pagination">
                 <li class="{{ ($echosarticles->currentPage() == 1) ? ' disabled' : '' }}">
-                    <a href="{{ $echosarticles->previousPageUrl() }}" rel="prev nofollow"><i class="material-icons">chevron_left</i></a>
+                    <a href="{{ $echosarticles->previousPageUrl() }}#gallery" rel="prev nofollow"><i class="material-icons">chevron_left</i></a>
                  </li>
                 @for ($i = 1; $i <= $echosarticles->lastPage(); $i++)
                     <?php
@@ -80,13 +80,13 @@ Suivez l’actualité de votre cabinet comptable : fiscal, juridique, social, ge
                           @if($echosarticles->currentPage() == $i)
                             {{ $i }}
                           @else
-                            <a href="{{ $echosarticles->url($i) }}" rel="nofollow">{{ $i }}</a>
+                            <a href="{{ $echosarticles->url($i) }}#gallery" rel="nofollow">{{ $i }}</a>
                           @endif
                         </li>
                     @endif
                 @endfor
                 <li class="{{ ($echosarticles->currentPage() == $echosarticles->lastPage()) ? ' disabled' : '' }}">
-                    <a href="{{ $echosarticles->nextPageUrl() }}" rel="next nofollow"><i class="material-icons">chevron_right</i></a>
+                    <a href="{{ $echosarticles->nextPageUrl() }}#gallery" rel="next nofollow"><i class="material-icons">chevron_right</i></a>
                 </li>
             </ul>
           @endif

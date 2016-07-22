@@ -18,10 +18,7 @@ class SliderController extends Controller
         $slides = Slider::all();
         return view('admin.list.slider')->with('slider',$slides);
     }
-    public function create()
-    {
-        return view('admin.new.slide');
-    }
+
     public function update(Request $request, $id)
     {
         $slider = Slider::find($id);

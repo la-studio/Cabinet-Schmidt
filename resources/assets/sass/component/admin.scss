@@ -237,6 +237,10 @@
       margin-top: 30px;
       &__logo {
         @include fixheight(auto);
+        img{
+          max-width: 100px;
+          max-height: 100px;
+        }
       }
       &__field {
         @include fixheight(auto);
@@ -396,6 +400,9 @@
       }
     }
     .story {
+      .margintop{
+        margin-top: 5px !important;
+      }
       @include fixheight(auto);
       &__cover {
         @include fixheight(500px);
@@ -451,6 +458,16 @@
           height: 60px;
         }
       }
+    }
+    .large-field{
+      width: 60%;
+      margin: 0 !important;
+    }
+    .large-file{
+      width: 60%;
+    }
+    .text-field{
+      height: 110px !important;
     }
     .storytelling-list {
       @include fixheight(auto);

@@ -3621,7 +3621,7 @@
 <article>
   <id>k4_1107278</id>
   <create_date>2013-10-01 15:25:18</create_date>
-  <display_date>2016-03-21 15:00:00</display_date>
+  <display_date>2016-06-21 10:00:00</display_date>
   <author>La rédaction</author>
   <language>fr</language>
   <title>Indice des loyers des activités tertiaires</title>
@@ -3641,13 +3641,6 @@
                         <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">2e trim.</td>
                         <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">3e trim.</td>
                         <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">4e trim.</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2009</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">100,97</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">100,49</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">99,86</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">99,76</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">2010</td>
@@ -3689,10 +3682,17 @@
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">107,69</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">107,86</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">107,98</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">108,16*</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">108,16</td>
                      </tr>
                      <tr>
-                        <td class="TABLEAU-legende" rowspan="1" colspan="5">* publié le 21 mars 2016</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2016</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">108,20*</td>
+                        <td class="" rowspan="1" colspan="1"/>
+                        <td class="" rowspan="1" colspan="1"/>
+                        <td class="" rowspan="1" colspan="1"/>
+                     </tr>
+                     <tr>
+                        <td class="TABLEAU-legende" rowspan="1" colspan="5">* publié le 21 juin 2016</td>
                      </tr>
                   </tbody>
                </table>
@@ -3826,6 +3826,11 @@
                         <td class="" rowspan="1" colspan="1"/>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">4e trim.</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,33 %</td>
+                     </tr>
+                     <tr>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2016</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1er trim.</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,47 %</td>
                      </tr>
                   </tbody>
                </table>
@@ -7013,8 +7018,8 @@
 
 <article>
   <id>k4_1141278</id>
-  <create_date>2016-06-15 08:57:31</create_date>
-  <display_date>2016-06-15 10:00:00</display_date>
+  <create_date>2016-07-13 07:11:56</create_date>
+  <display_date>2016-07-13 09:00:00</display_date>
   <author>La rédaction</author>
   <language>fr</language>
   <title>Indices mensuels des prix à la consommation</title>
@@ -7029,23 +7034,23 @@
                <table>
                   <tbody>
                      <tr>
-                        <td class="TABLEAU-Titre" rowspan="1" colspan="2">Nouvel indice INSEE des prix « tous ménages » (tabac compris) - Base 100 en 2015 - Mai 2016</td>
+                        <td class="TABLEAU-Titre" rowspan="1" colspan="2">Nouvel indice INSEE des prix « tous ménages » (tabac compris) - Base 100 en 2015 - Juin 2016</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Base</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">100,50*</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">100,63*</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Variation mensuelle</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">+ 0,4 %</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">+ 0,1 %</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Hausse des prix (1)
                         </td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1"> 0,0 %</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1"> + 0,2 %</td>
                      </tr>
                      <tr>
-                        <td class="TABLEAU-legende" rowspan="1" colspan="2">* Indice définitif publié par l’INSEE le 15 juin 2016.(1) sur les 12 derniers mois.</td>
+                        <td class="TABLEAU-legende" rowspan="1" colspan="2">* Indice définitif publié par l’INSEE le 13 juillet 2016.(1) sur les 12 derniers mois.</td>
                      </tr>
                   </tbody>
                </table>
@@ -7102,9 +7107,9 @@
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">J</td>
-                        <td class="" rowspan="1" colspan="1"/>
-                        <td class="" rowspan="1" colspan="1"/>
-                        <td class="" rowspan="1" colspan="1"/>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">100,63</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">+0,1 %</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">+0,2 %</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Jl</td>
@@ -7250,19 +7255,19 @@
                <table>
                   <tbody>
                      <tr>
-                        <td class="TABLEAU-Titre" rowspan="1" colspan="2">Ancien indice des prix des ménages urbains dont le chef est ouvrier ou employé (hors tabac) - Base 100 en 2015 - Mai 2016</td>
+                        <td class="TABLEAU-Titre" rowspan="1" colspan="2">Ancien indice des prix des ménages urbains dont le chef est ouvrier ou employé (hors tabac) - Base 100 en 2015 - Juin 2016</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Base</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">100,51*</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">100,62*</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Hausse des prix (1)
                         </td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1"> 0,0 %</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1"> + 0,2 %</td>
                      </tr>
                      <tr>
-                        <td class="TABLEAU-legende" rowspan="1" colspan="2">* Indice définitif publié par l'INSEE le 15 juin 2016.(1) sur les 12 derniers mois.</td>
+                        <td class="TABLEAU-legende" rowspan="1" colspan="2">* Indice définitif publié par l'INSEE le 13 juillet 2016.(1) sur les 12 derniers mois.</td>
                      </tr>
                   </tbody>
                </table>
@@ -7313,8 +7318,8 @@
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">J</td>
-                        <td class="" rowspan="1" colspan="1"/>
-                        <td class="" rowspan="1" colspan="1"/>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">100,62</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">+0,2 %</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Jl</td>
@@ -7446,7 +7451,7 @@
 <article>
   <id>k4_1208633</id>
   <create_date>2014-12-09 14:57:00</create_date>
-  <display_date>2016-03-29 13:00:00</display_date>
+  <display_date>2016-06-27 10:00:00</display_date>
   <author>La rédaction</author>
   <language>fr</language>
   <title>Intérêts des comptes courants d’associés</title>
@@ -7463,6 +7468,18 @@
                      <tr>
                         <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Exercice clos à partir du</td>
                         <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Taux maximum déductibles</td>
+                     </tr>
+                     <tr>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">31/08/2016</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,12 %</td>
+                     </tr>
+                     <tr>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">31/07/2016</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,12 %</td>
+                     </tr>
+                     <tr>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">30/06/2016</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,13 %</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">31/05/2016</td>
@@ -7616,18 +7633,6 @@
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">30/04/2013</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,04 %</td>
                      </tr>
-                     <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">31/03/2013</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,09 %</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">28/02/2013</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,22 %</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">31/01/2013</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,31 %</td>
-                     </tr>
                   </tbody>
                </table>
             </texteparagraphe>
@@ -7635,9 +7640,9 @@
       </section>
    </content>
   <tag type="rubrique">Fiscal</tag>
-  <tag type="keyword">Fiscalité professionnelle</tag>
   <tag type="keyword">Impots sur le revenu</tag>
   <tag type="keyword">Fiscalité des résultats</tag>
+  <tag type="keyword">Fiscalité professionnelle</tag>
   <tag type="typo">Chiffre</tag>
   <media type="image">k4_1208633.jpg</media>
   <copyright>
@@ -9151,7 +9156,7 @@
 <article>
   <id>k4_5101634</id>
   <create_date>2013-10-21 08:51:00</create_date>
-  <display_date>2016-06-01 00:05:00</display_date>
+  <display_date>2016-07-01 00:05:00</display_date>
   <author>La rédaction</author>
   <language>fr</language>
   <title>Taux de base bancaire</title>
@@ -9238,7 +9243,7 @@
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Jl</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">6,60</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">6,60</td>
-                        <td class="" rowspan="1" colspan="1"/>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">6,60</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">A</td>
@@ -9336,7 +9341,7 @@
 <article>
   <id>k4_1208154</id>
   <create_date>2015-03-27 11:12:00</create_date>
-  <display_date>2016-06-01 00:05:00</display_date>
+  <display_date>2016-07-01 00:05:00</display_date>
   <author>La rédaction</author>
   <language>fr</language>
   <title>TVA intracommunautaire : taux de change mensuels</title>
@@ -9348,7 +9353,7 @@
                <table>
                   <tbody>
                      <tr>
-                        <td class="TABLEAU-Titre" rowspan="1" colspan="6">Juin 2016</td>
+                        <td class="TABLEAU-Titre" rowspan="1" colspan="6">Juillet 2016</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Pays</td>
@@ -9361,26 +9366,26 @@
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Afrique du Sud</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">ZAR</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">17,9156</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">16,5770</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Israël</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">ILS</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">4,3277</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">4,3471</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Australie</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">AUD</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1,5521</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1,5033</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Japon</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">JPY</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">123,38</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">118,01</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Brésil</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">BRL</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,9891</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,8357</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Malaisie</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">MYR</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">4,5697</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">4,5430</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Bulgarie</td>
@@ -9388,95 +9393,95 @@
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">1,9558</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Mexique</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">MXN</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">20,7883</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">21,0048</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Canada</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">CAD</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1,4637</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1,4399</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Norvège</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">NOK</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">9,2785</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">9,3555</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Chine</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">CNY</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">7,3714</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">7,4227</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Nouvelle-Zélande</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">NZD</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1,6666</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1,5732</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Corée</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">KRW</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1 340,31</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1 297,62</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Philippines</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">PHP</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">52,624</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">52,434</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Croatie</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">HRK</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">7,4880</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">7,5200</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Pologne</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">PLN</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">4,3885</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">4,3785</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Danemark</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">DKK</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">7,4373</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">7,4384</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Roumanie</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">RON</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">4,4990</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">4,5260</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">États-Unis</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">USD</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1,1279</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1,1283</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Russie</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">RUB</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">73,7809</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">72,2660</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Grande-Bretagne</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">GBP</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,77485</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,76793</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Singapour</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">SGD</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1,5539</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1,5112</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Hong Kong</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">HKD</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">8,7575</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">8,7524</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Suède</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">SEK</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">9,3525</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">9,3468</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Hongrie</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">HUF</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">316,05</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">314,42</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Suisse</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">CHF</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1,1086</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1,0830</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Inde</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">INR</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">75,5460</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">76,1553</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">République tchèque</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">CZK</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">27,022</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">27,071</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Indonésie</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">IDR</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">15101,45</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">14988,34</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Thaïlande</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">THB</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">40,165</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">39,716</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Islande</td>
@@ -9484,7 +9489,7 @@
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">-</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Turquie</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">TRY</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,3659</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,2750</td>
                      </tr>
                   </tbody>
                </table>
@@ -9505,14 +9510,14 @@
 <article>
   <id>k4_5110949</id>
   <create_date>2013-10-20 08:57:00</create_date>
-  <display_date>2016-06-03 15:00:00</display_date>
+  <display_date>2016-07-04 16:00:00</display_date>
   <author>La rédaction</author>
   <language>fr</language>
   <title>Taux EONIA (ex-taux du marché monétaire)</title>
   <summary>EONIA (pour Euro Overnight Index Average) est le taux au jour le jour du marché monétaire européen. C’est un taux moyen pondéré par les transactions déclarées par un échantillon représentatif d’établissements de la zone euro.</summary>
   <content>
       <section>
-         <section_title>Taux EONIA - Mai 2016(ex-TMM - moyenne mensuelle)</section_title>
+         <section_title>Taux EONIA - Juin 2016(ex-TMM - moyenne mensuelle)</section_title>
          <section_summary/>
          <section_author/>
          <section_content>
@@ -9520,10 +9525,10 @@
                <table>
                   <tbody>
                      <tr>
-                        <td class="TABLEAU-Titre-colonne TABLEAU-Titre-colonne" rowspan="1" colspan="1">Taux EONIA - Mai 2016(ex-TMM - moyenne mensuelle)</td>
+                        <td class="TABLEAU-Titre-colonne TABLEAU-Titre-colonne" rowspan="1" colspan="1">Taux EONIA - Juin 2016(ex-TMM - moyenne mensuelle)</td>
                      </tr>
                      <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">- 0,3378</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">- 0,3326</td>
                      </tr>
                   </tbody>
                </table>
@@ -9561,7 +9566,7 @@
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">- 0,2930</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">- 0,3376</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">- 0,3378</td>
-                        <td class="" rowspan="1" colspan="1"/>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">- 0,3326</td>
                         <td class="" rowspan="1" colspan="1"/>
                         <td class="" rowspan="1" colspan="1"/>
                         <td class="" rowspan="1" colspan="1"/>
@@ -9663,8 +9668,8 @@
 
 <article>
   <id>k4_1152884</id>
-  <create_date>2016-05-12 10:49:05</create_date>
-  <display_date>2016-05-12 12:00:00</display_date>
+  <create_date>2016-07-13 10:18:06</create_date>
+  <display_date>2016-07-13 12:00:00</display_date>
   <author>La rédaction</author>
   <language>fr</language>
   <title>Indice National du Bâtiment BT01</title>
@@ -9682,10 +9687,10 @@
                         <td class="TABLEAU-Titre" rowspan="1" colspan="1">Indice National du Bâtiment BT 01 (tous corps d’état)</td>
                      </tr>
                      <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Février 2016 : 103,2*</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Avril 2016 : 103,3*</td>
                      </tr>
                      <tr>
-                        <td class="TABLEAU-legende" rowspan="1" colspan="1">* Insee 12 mai 2016 (base 100 en 2010)</td>
+                        <td class="TABLEAU-legende" rowspan="1" colspan="1">* Insee 13 juillet 2016 (base 100 en 2010)</td>
                      </tr>
                   </tbody>
                </table>
@@ -9733,7 +9738,7 @@
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">884,5* / 105,9**</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">881,0* / 105,0**</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">104,5**</td>
-                        <td class="" rowspan="1" colspan="1"/>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">103,2**</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">A</td>
@@ -9741,7 +9746,7 @@
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">882,0* / 105,7**</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">881,4* / 105,0**</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">104,5**</td>
-                        <td class="" rowspan="1" colspan="1"/>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">103,3**</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">M</td>
@@ -9828,7 +9833,7 @@
 <article>
   <id>k4_5092841</id>
   <create_date>2013-10-21 08:37:00</create_date>
-  <display_date>2016-05-30 08:52:00</display_date>
+  <display_date>2016-07-18 08:52:00</display_date>
   <author>La Rédaction</author>
   <language>fr</language>
   <title>Smic horaire et mensuel</title>
@@ -9900,8 +9905,8 @@
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">9,67</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">9,67</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">9,67</td>
-                        <td class="" rowspan="1" colspan="1"/>
-                        <td class="" rowspan="1" colspan="1"/>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">9,67</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">9,67</td>
                         <td class="" rowspan="1" colspan="1"/>
                         <td class="" rowspan="1" colspan="1"/>
                         <td class="" rowspan="1" colspan="1"/>
@@ -9915,8 +9920,8 @@
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,52</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,52</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,52</td>
-                        <td class="" rowspan="1" colspan="1"/>
-                        <td class="" rowspan="1" colspan="1"/>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,52</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,52</td>
                         <td class="" rowspan="1" colspan="1"/>
                         <td class="" rowspan="1" colspan="1"/>
                         <td class="" rowspan="1" colspan="1"/>
@@ -10489,7 +10494,7 @@
 <article>
   <id>k4_1111381</id>
   <create_date>2013-10-04 11:52:00</create_date>
-  <display_date>2016-03-21 15:00:00</display_date>
+  <display_date>2016-06-21 12:00:00</display_date>
   <author>La rédaction</author>
   <language>fr</language>
   <title>Indice des loyers commerciaux</title>
@@ -10509,13 +10514,6 @@
                         <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">2e trim.</td>
                         <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">3e trim.</td>
                         <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">4e trim.</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2008</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">100,00</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">101,20</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">102,46</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">103,01</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">2009</td>
@@ -10564,10 +10562,17 @@
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">108,32</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">108,38</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">108,38</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">108,41*</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">108,41</td>
                      </tr>
                      <tr>
-                        <td class="TABLEAU-legende" rowspan="1" colspan="5">* Publié le 21 mars 2016</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2016</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">108,40*</td>
+                        <td class="" rowspan="1" colspan="1"/>
+                        <td class="" rowspan="1" colspan="1"/>
+                        <td class="" rowspan="1" colspan="1"/>
+                     </tr>
+                     <tr>
+                        <td class="TABLEAU-legende" rowspan="1" colspan="5">* Publié le 21 juin 2016</td>
                      </tr>
                   </tbody>
                </table>
@@ -10702,6 +10707,11 @@
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">4e trim.</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">- 0,06 %</td>
                      </tr>
+                     <tr>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2016</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1er trim.</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">+ 0,07 %</td>
+                     </tr>
                   </tbody>
                </table>
             </texteparagraphe>
@@ -10721,7 +10731,7 @@
 <article>
   <id>k4_1131616</id>
   <create_date>2013-10-04 11:55:00</create_date>
-  <display_date>2016-03-21 15:00:00</display_date>
+  <display_date>2016-06-21 12:00:00</display_date>
   <author>La rédaction</author>
   <language>fr</language>
   <title>Indice trimestriel du coût de la construction</title>
@@ -10810,10 +10820,17 @@
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">1 632</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">1 614</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">1 608</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1 629*</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1 629</td>
                      </tr>
                      <tr>
-                        <td class="TABLEAU-legende" rowspan="1" colspan="5">* Publié le 21 mars 2016</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2016</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1 615*</td>
+                        <td class="" rowspan="1" colspan="1"/>
+                        <td class="" rowspan="1" colspan="1"/>
+                        <td class="" rowspan="1" colspan="1"/>
+                     </tr>
+                     <tr>
+                        <td class="TABLEAU-legende" rowspan="1" colspan="5">* Publié le 21 juin 2016</td>
                      </tr>
                   </tbody>
                </table>
@@ -10829,30 +10846,6 @@
                         <td class="" rowspan="1" colspan="1"/>
                         <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Sur 3 ans</td>
                         <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Sur 1 an</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2005</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1er trim.</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">9,58 %</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,67 %</td>
-                     </tr>
-                     <tr>
-                        <td class="" rowspan="1" colspan="1"/>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2e trim.</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">9,72 %</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,71 %</td>
-                     </tr>
-                     <tr>
-                        <td class="" rowspan="1" colspan="1"/>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3e trim.</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">9,23 %</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,47 %</td>
-                     </tr>
-                     <tr>
-                        <td class="" rowspan="1" colspan="1"/>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">4e trim.</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">13,65 %</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">4,96 %</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">2006</td>
@@ -11094,20 +11087,26 @@
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">- 0,61 %</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,25 %</td>
                      </tr>
+                     <tr>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2016</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1er trim.</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">- 1,88 %</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">- 1,04 %</td>
+                     </tr>
                   </tbody>
                </table>
             </texteparagraphe>
             <texteparagraphe>Exemple de révision d’un bail commercial :</texteparagraphe>
-            <texteparagraphe>Votre bail commercial a pris effet le 1er avril 2013, le dernier indice connu étant celui du 4e trimestre 2012, soit 1 639.Trois ans plus tard, le 1er avril 2016, au moment de la révision, une règle de trois vous permet de calculer l’évolution de cet indice et de connaître l’augmentation de votre loyer commercial.Loyer annuel : 10000 euros au 01/04/2013.Révision triennale du loyer : le dernier indice connu au 1er avril 2016 est celui du 4e trimestre 2015, soit 1 629.Diminution du loyer commercial : [(1 639 - 1 629) / 1 639] x 100 = 0,61 % (pourcentage de diminution de l’indice)</texteparagraphe>
-            <texteparagraphe>Montant révisé du loyer commercial : [(10 000 x 1 629)] / 1 639 = 9939 euros</texteparagraphe>
+            <texteparagraphe>Votre bail commercial a pris effet le 1er juillet 2013, le dernier indice connu étant celui du 1er trimestre 2013, soit 1 646.Trois ans plus tard, le 1er juillet 2016, au moment de la révision, une règle de trois vous permet de calculer l’évolution de cet indice et de connaître l’augmentation de votre loyer commercial.Loyer annuel : 10000 euros au 01/07/2013.Révision triennale du loyer : le dernier indice connu au 1er juillet 2016 est celui du 1er trimestre 2016, soit 1 615.Diminution du loyer commercial : [(1 646 - 1 615) / 1 646] x 100 = 1,88 % (pourcentage de diminution de l’indice)</texteparagraphe>
+            <texteparagraphe>Montant révisé du loyer commercial : [(10 000 x 1 615)] / 1 646 = 9812 euros</texteparagraphe>
             <annotation>
                <titreannotation>À noter :</titreannotation> depuis le 1er septembre 2014, l’indice du coût de la construction (ICC) ne peut plus être utilisé, pour les baux conclus ou renouvelés à compter de cette date, comme indice de référence servant au calcul de l’évolution du loyer lors de sa révision triennale et lors du renouvellement du bail. Il est remplacé par l’indice des loyers commerciaux (ILC) pour les activités commerciales et artisanales ou par l’indice des loyers des activités tertiaires (ILAT) pour les activités tertiaires, comme son nom l’indique.</annotation>
          </section_content>
       </section>
    </content>
   <tag type="rubrique">Juridique</tag>
-  <tag type="keyword">Bail commercial</tag>
   <tag type="keyword">Conjoncture économique</tag>
+  <tag type="keyword">Bail commercial</tag>
   <tag type="typo">Chiffre</tag>
   <media type="image">k4_1131616.jpg</media>
   <copyright>
@@ -11119,7 +11118,7 @@
 <article>
   <id>k4_1159494</id>
   <create_date>2015-03-27 13:55:00</create_date>
-  <display_date>2016-03-29 15:00:00</display_date>
+  <display_date>2016-06-24 11:01:00</display_date>
   <author>La rédaction</author>
   <language>fr</language>
   <title>Taux de l’usure en %</title>
@@ -11135,88 +11134,88 @@
                      </tr>
                      <tr>
                         <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1"> Nature</td>
-                        <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">À compter du 1er janvier 2016</td>
                         <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">À compter du 1er avril 2016</td>
+                        <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">À compter du 1er juillet 2016</td>
                      </tr>
                      <tr>
-                        <td class="TABLEAU-Texte-chapitre" rowspan="1" colspan="3">PRÊTS AUX PERSONNES PHYSIQUES AGISSANT POUR LEURS BESOINS PROFESSIONNELS ET AUX PERSONNES MORALES AYANT UNE ACTIVITÉ INDUSTRIELLE, COMMERCIALE, ARTISANALE, AGRICOLE OU PROFESSIONNELLE NON COMMERCIALE (1)
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="3">PRÊTS AUX PERSONNES PHYSIQUES AGISSANT POUR LEURS BESOINS PROFESSIONNELS ET AUX PERSONNES MORALES AYANT UNE ACTIVITÉ INDUSTRIELLE, COMMERCIALE, ARTISANALE, AGRICOLE OU PROFESSIONNELLE NON COMMERCIALE (1)
                         </td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Découverts</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">13,43</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">13,37</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">13,37</td>
                      </tr>
                      <tr>
-                        <td class="TABLEAU-Texte-chapitre" rowspan="1" colspan="3">PRÊTS AUX PERSONNES MORALES N’AYANT PAS D’ACTIVITÉ INDUSTRIELLE, COMMERCIALE, ARTISANALE, AGRICOLE OU PROFESSIONNELLE NON COMMERCIALE</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="3">PRÊTS AUX PERSONNES MORALES N’AYANT PAS D’ACTIVITÉ INDUSTRIELLE, COMMERCIALE, ARTISANALE, AGRICOLE OU PROFESSIONNELLE NON COMMERCIALE</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts &gt; 2 ans - taux variable</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,83</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,92</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,77</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts &gt; 2 ans - taux fixe</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,36</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,33</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,16</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Découverts</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">13,43</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">13,37</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">13,37</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts &lt; ou = 2 ans</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,56</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,73</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,72</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts - achats ou ventes à tempérament</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">7,27</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">7,17</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">7,05</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte-chapitre" rowspan="1" colspan="3">PRÊTS AUX PARTICULIERS</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="3">
-                           <gras>Prêts immobiliers (articles L. 312-1 à L. 312-36 du Code de la consommation)</gras>
+                           <gras>Prêts immobiliers (article L. 313-1 1° du Code de la consommation ou constituant une opération de crédit d’un montant supérieur à 75 000 € destinée à financer, pour les immeubles à usage d’habitation ou à usage professionnel et d’habitation, les dépenses relatives à leur réparation, leur amélioration ou leur entretien)</gras>
                         </td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts à taux fixe</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,96</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">4,05</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,92</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts à taux variable</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,64</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,55</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,36</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts relais</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">4,25</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">4,25</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">4,03</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="3">
-                           <gras>Prêts à la consommation (Hors articles L. 312-1 à L. 312-36 du Code de la consommation)</gras>
+                           <gras>Prêts à la consommation (Hors article L. 313-1 1° du Code de la consommation ou ne constituant pas une opération de crédit d’un montant supérieur à 75 000 € destinée à financer, pour les immeubles à usage d’habitation ou à usage professionnel et d’habitation, les dépenses relatives à leur réparation, leur amélioration ou leur entretien)</gras>
                         </td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts &lt; ou = 3 000 euros</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">19,99</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">20,05</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">19,92</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts  &gt; 3 000 euros et &lt;= 6 000 euros</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">13,25</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">13,20</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">12,91</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts  &gt; 6 000 euros</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">7,61</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">7,63</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">7,40</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-legende" rowspan="1" colspan="3">(1) La réglementation de l’usure n’est plus applicable aux prêts consentis aux sociétés et aux entreprises individuelles, sauf aux prêts consentis sous forme de découverts en compte.</td>
@@ -11227,8 +11226,8 @@
          </section_content>
       </section>
    </content>
-  <tag type="rubrique">Juridique</tag>
   <tag type="rubrique">Gestion</tag>
+  <tag type="rubrique">Juridique</tag>
   <tag type="keyword">Financement d'entreprise</tag>
   <tag type="keyword">Conjoncture économique</tag>
   <tag type="typo">Chiffre</tag>
@@ -11242,7 +11241,7 @@
 <article>
   <id>k4_1159040</id>
   <create_date>2013-10-04 09:38:00</create_date>
-  <display_date>2016-03-29 17:00:00</display_date>
+  <display_date>2016-06-24 13:01:00</display_date>
   <author>La rédaction</author>
   <language>fr</language>
   <title>Taux Effectif Global moyen en %</title>
@@ -11258,87 +11257,87 @@
                      </tr>
                      <tr>
                         <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1"> Nature</td>
-                        <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">4e trim. 2015</td>
                         <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">1er trim. 2016</td>
+                        <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">2e trim. 2016</td>
                      </tr>
                      <tr>
-                        <td class="TABLEAU-Texte-chapitre" rowspan="1" colspan="3">PRÊTS AUX PERSONNES PHYSIQUES AGISSANT POUR LEURS BESOINS PROFESSIONNELS ET AUX PERSONNES MORALES AYANT UNE ACTIVITÉ INDUSTRIELLE, COMMERCIALE, ARTISANALE, AGRICOLE OU PROFESSIONNELLE NON COMMERCIALE</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="3">PRÊTS AUX PERSONNES PHYSIQUES AGISSANT POUR LEURS BESOINS PROFESSIONNELS ET AUX PERSONNES MORALES AYANT UNE ACTIVITÉ INDUSTRIELLE, COMMERCIALE, ARTISANALE, AGRICOLE OU PROFESSIONNELLE NON COMMERCIALE</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Découverts</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">10,07</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">10,03</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">10,03</td>
                      </tr>
                      <tr>
-                        <td class="TABLEAU-Texte-chapitre" rowspan="1" colspan="3">PRÊTS AUX PERSONNES MORALES N’AYANT PAS D’ACTIVITÉ INDUSTRIELLE, COMMERCIALE, ARTISANALE, AGRICOLE OU PROFESSIONNELLE NON COMMERCIALE</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="3">PRÊTS AUX PERSONNES MORALES N’AYANT PAS D’ACTIVITÉ INDUSTRIELLE, COMMERCIALE, ARTISANALE, AGRICOLE OU PROFESSIONNELLE NON COMMERCIALE</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts &gt; 2 ans - taux variable</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,12</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,19</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,08</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts &gt; 2 ans - taux fixe</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,52</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,50</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,37</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Découverts</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">10,07</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">10,03</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">10,03</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts &lt; ou = 2 ans</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">1,92</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,05</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,04</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts - achats ou ventes à tempérament</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">5,45</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">5,38</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">5,29</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte-chapitre" rowspan="1" colspan="3">PRÊTS AUX PARTICULIERS</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="3">
-                           <gras>Prêts immobiliers (articles L. 312-1 à L. 312-36 du Code de la consommation)</gras>
+                           <gras>Prêts immobiliers (article L. 313-1 1° du Code de la consommation ou constituant une opération de crédit d’un montant supérieur à 75 000 € destinée à financer, pour les immeubles à usage d’habitation ou à usage professionnel et d’habitation, les dépenses relatives à leur réparation, leur amélioration ou leur entretien)</gras>
                         </td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts à taux fixe</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,97</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,04</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,94</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts à taux variable</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,73</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,66</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2,52</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts relais</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,19</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,19</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3,02</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="3">
-                           <gras>Prêts à la consommation (Hors articles L. 312-1 à L. 312-36 du Code de la consommation)</gras>
+                           <gras>Prêts à la consommation (Hors article L. 313-1 1° du Code de la consommation ou ne constituant pas une opération de crédit d’un montant supérieur à 75 000 € destinée à financer, pour les immeubles à usage d’habitation ou à usage professionnel et d’habitation, les dépenses relatives à leur réparation, leur amélioration ou leur entretien)</gras>
                         </td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts &lt; ou = 3 000 euros</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">14,99</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">15,04</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">14,94</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts  &gt; 3 000 euros et &lt;= 6 000 euros</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">9,94</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">9,90</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">9,68</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Prêts  &gt; 6 000 euros</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">5,71</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">5,72</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">5,55</td>
                      </tr>
                   </tbody>
                </table>
@@ -11351,8 +11350,8 @@
   <tag type="rubrique">Juridique</tag>
   <tag type="keyword">Placement</tag>
   <tag type="keyword">Trésorerie/Délais de paiement</tag>
-  <tag type="keyword">Conjoncture économique</tag>
   <tag type="keyword">Financement d'entreprise</tag>
+  <tag type="keyword">Conjoncture économique</tag>
   <tag type="typo">Chiffre</tag>
   <media type="image">k4_1159040.jpg</media>
   <copyright>
@@ -11363,8 +11362,8 @@
 
 <article>
   <id>k4_1132358</id>
-  <create_date>2016-04-13 07:30:57</create_date>
-  <display_date>2016-04-13 09:00:00</display_date>
+  <create_date>2016-07-13 08:37:39</create_date>
+  <display_date>2016-07-13 09:00:00</display_date>
   <author>La rédaction</author>
   <language>fr</language>
   <title>Indice de référence des loyers</title>
@@ -11384,18 +11383,6 @@
                         <td class="" rowspan="1" colspan="1"/>
                         <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Niveau</td>
                         <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Évolution annuelle</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2009</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">3e trim.</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">117,41</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">+0,32 %</td>
-                     </tr>
-                     <tr>
-                        <td class="" rowspan="1" colspan="1"/>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">4e trim.</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">117,47</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">-0,06 %</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">2010</td>
@@ -11544,19 +11531,25 @@
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">2016</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">1er trim.</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">125,26**</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">125,26</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">+0,06 %</td>
                      </tr>
                      <tr>
-                        <td class="TABLEAU-legende" rowspan="1" colspan="4">* Depuis la loi n° 2008-111 du 8 février 2008, l’indice de référence des loyers correspond à la moyenne, sur les douze derniers mois, de l’indice des prix à la consommation hors tabac et hors loyers.** Publié par l’insee le 13 avril 2016.</td>
+                        <td class="" rowspan="1" colspan="1"/>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2e trim.</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">125,25**</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,00 %</td>
+                     </tr>
+                     <tr>
+                        <td class="TABLEAU-legende" rowspan="1" colspan="4">* Depuis la loi n° 2008-111 du 8 février 2008, l’indice de référence des loyers correspond à la moyenne, sur les douze derniers mois, de l’indice des prix à la consommation hors tabac et hors loyers.** Publié par l’insee le 13 juillet 2016.</td>
                      </tr>
                   </tbody>
                </table>
             </texteparagraphe>
             <titreencadre>Exemple de révision d’un loyer d’habitation :</titreencadre>
             <texteencadre>
-               Soit un bail d’habitation signé le 15 avril 2015 pour un loyer mensuel de 500 euros, révisable annuellement à la date anniversaire du contrat. Le dernier indice à prendre en compte (à défaut de clause particulière) est celui du dernier trimestre connu à la date de la signature du bail, soit le 1er trimestre 2015. Sa valeur est égale à 125,19.Au 15 avril 2016, intervient la première révision du loyer. L’indice de référence des loyers du 1er trimestre 2016 est égal à 125,26. Il a augmenté de 0,06 % par rapport à celui du 1er trimestre de l’année précédente.
-               Le nouveau loyer sera au plus égal à :[(500 x 125,26) / 125,19] = 500,28 euros</texteencadre>
+               Soit un bail d’habitation signé le 15 juillet 2015 pour un loyer mensuel de 1000 euros, révisable annuellement à la date anniversaire du contrat. Le dernier indice à prendre en compte (à défaut de clause particulière) est celui du dernier trimestre connu à la date de la signature du bail, soit le 2e trimestre 2015. Sa valeur est égale à 125,25.Au 15 juillet 2016, intervient la première révision du loyer. L’indice de référence des loyers du 2e trimestre 2016 est égal à 125,25. Il est stable par rapport à celui du 2e trimestre de l’année précédente.
+               Le nouveau loyer sera au plus égal à :[(1000 x 125,25) / 125,25] = 1000 euros</texteencadre>
          </section_content>
       </section>
    </content>
@@ -12595,7 +12588,7 @@
 <article>
   <id>k4_1106278</id>
   <create_date>2013-10-01 15:28:00</create_date>
-  <display_date>2015-12-28 09:00:00</display_date>
+  <display_date>2016-06-27 10:00:00</display_date>
   <author>La rédaction</author>
   <language>fr</language>
   <title>Taux d’intérêt légal</title>
@@ -12676,6 +12669,11 @@
                         <td class="TABLEAU-Texte TABLEAU-Texte" rowspan="1" colspan="1">Créances des personnes physiques n’agissant pas pour des besoins professionnels 4.54 %</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">autres cas 1.01 %</td>
                      </tr>
+                     <tr>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2e semestre 2016</td>
+                        <td class="TABLEAU-Texte TABLEAU-Texte" rowspan="1" colspan="1">Créances des personnes physiques n’agissant pas pour des besoins professionnels 4.35 %</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">autres cas 0.93 %</td>
+                     </tr>
                   </tbody>
                </table>
             </texteparagraphe>
@@ -12689,7 +12687,7 @@
   <media type="image">k4_1106278.jpg</media>
   <copyright>
     <holder>Les Echos Publishing</holder>
-    <year>2015</year>
+    <year>2016</year>
   </copyright>
 </article>
 

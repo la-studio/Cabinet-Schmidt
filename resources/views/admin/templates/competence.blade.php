@@ -6,22 +6,28 @@
         {{ method_field('PATCH') }}
         {{csrf_field()}}
         <div class="col-xs">
-          <div class="row center-xs competence__field">
+          <div class="row center-xs partenaire__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
-              <span>Titre</span>
-              <input type="text" name="title" value="{{$competence->title}}">
+              <span>Compétence</span>
+              <input class="large-field" type="text" name="title" value="{{$competence->title}}">
             </div>
           </div>
-          <div class="row center-xs competence__field">
+          <div class="row center-xs partenaire__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
               <span>Slogan</span>
-              <textarea name="label">{{$competence->label}}</textarea>
+              <input class="large-field" type="text" name="label" value="{{$competence->label}}">
             </div>
           </div>
-          <div class="row center-xs competence__field">
+          <div class="row center-xs partenaire__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
               <span>Description</span>
-              <textarea name="description">{{$competence->description}}</textarea>
+              <textarea id="cabinet-article" class="large-field text-field" name="description">{{$competence->description}}</textarea>
+            </div>
+          </div>
+          <div class="row center-xs slide__field">
+            <div class="col-md-8 col-sm-10 col-xs-12">
+              <span></span>
+              <div class="count">255 caratères restants</div>
             </div>
           </div>
           <input type="submit" class="competence__save" value="Enregistrer">

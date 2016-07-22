@@ -38,9 +38,6 @@ Route::group(['prefix'=>'admin', 'middleware'=> 'auth'],function(){
     //Slider
     Route::get('slider', 'SliderController@index');
     Route::get('slide/edit/{id}', 'SliderController@show');
-    Route::get('slider/create', 'SliderController@create');
-    Route::delete('slider/delete/{id}','SliderController@destroy');
-    Route::post('slider/store', 'SliderController@store');
     Route::patch('slider/update/{id}', 'SliderController@update');
     //Partenaires
     Route::get('partenaires', 'PartenairesController@index');
@@ -52,8 +49,6 @@ Route::group(['prefix'=>'admin', 'middleware'=> 'auth'],function(){
     //Compétences
     Route::get('competences', 'CompetencesController@index');
     Route::get('competence/edit/{id}', 'CompetencesController@show');
-    Route::get('competence/create', 'CompetencesController@create');
-    Route::post('competence/store', 'CompetencesController@store');
     Route::patch('competence/update/{id}', 'CompetencesController@update');
     //Storytelling
     Route::get('storytelling','StorytellingController@index');

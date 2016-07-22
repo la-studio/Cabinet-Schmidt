@@ -22,14 +22,4 @@ class CompetencesController extends Controller
         $id->update($request->all());
         return redirect('/admin/competences');
     }
-    public function create()
-    {
-        return view('admin.new.competence');
-    }
-    public function store(Request $request)
-    {
-        $competence = new Competence($request->all());
-        $competence->save();
-        return back();
-    }
 }

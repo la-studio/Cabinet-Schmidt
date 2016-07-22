@@ -7,30 +7,36 @@
         <div class="row center-xs partenaire-create__field">
           <div class="col-md-8 col-sm-10 col-xs-12">
             <span>Logo du partenaire</span>
-            <input type="file" name="photo"/>
+            <input class="large-file" type="file" name="photo"/>
           </div>
         </div>
         <div class="row center-xs partenaire-create__field">
           <div class="col-md-8 col-sm-10 col-xs-12">
             <span>Nom du partenaire</span>
-            <input type="text" name="name"/>
+            <input class="large-field" type="text" name="name"/>
           </div>
         </div>
         <div class="row center-xs partenaire-create__field">
           <div class="col-md-8 col-sm-10 col-xs-12">
             <span>Lien du partenaire</span>
-            <input type="text" name="link"/>
+            <input class="large-field" type="text" name="link"/>
           </div>
         </div>
         <div class="row center-xs partenaire-create__field">
           <div class="col-md-8 col-sm-10 col-xs-12">
             <span>Description du partenaire</span>
-            <textarea name="description"></textarea>
+            <textarea id="cabinet-article" class="large-field text-field" name="description"></textarea>
+          </div>
+        </div>
+        <div class="row center-xs slide__field">
+          <div class="col-md-8 col-sm-10 col-xs-12">
+            <span></span>
+            <div class="count">255 caratères restants</div>
           </div>
         </div>
         <div class="row center-xs partenaire-create__field">
           <div class="col-md-8 col-sm-10 col-xs-12">
-            <span>Afficher sur la page Liens utiles</span>
+            <span>Afficher dans les liens utiles</span>
             <input type="checkbox" name="enabled"/>
           </div>
         </div>

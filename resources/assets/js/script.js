@@ -47,7 +47,7 @@ $(document).ready(function () {
       pagination: '.swiper-pagination',
       paginationClickable: true,
       grabCursor: true,
-      autoplay: 4000,
+      autoplay: 7000,
       loop: true,
       nextButton: '.swiper-button-next',
       prevButton: '.swiper-button-prev'
@@ -56,7 +56,7 @@ $(document).ready(function () {
         pagination: '.swiper-pagination',
         paginationClickable: true,
         grabCursor: true,
-        autoplay: 4000,
+        autoplay: 7000,
         loop: true,
         slidesPerView: 2
       }
@@ -64,7 +64,7 @@ $(document).ready(function () {
           pagination: '.swiper-pagination',
           paginationClickable: true,
           grabCursor: true,
-          autoplay: 3000,
+          autoplay: 7000,
           loop: true,
           slidesPerView: 1,
           nextButton: '.swiper-button-next',

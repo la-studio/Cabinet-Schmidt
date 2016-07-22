@@ -11,26 +11,32 @@
         <div class="col-xs">
           <div class="row center-xs temoignage__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
-              <span>Changer le logo</span>
-              <input type="file" name="photo" value="Changer de photo"/>
+              <span>Logo de l'entreprise</span>
+              <input class="large-file" type="file" name="photo"/>
             </div>
           </div>
           <div class="row center-xs temoignage__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
-              <span>Changer le témoignage</span>
-              <input type="text" name="content" value="{{$temoignage->content}}">
+              <span>Nom du témoin</span>
+              <input class="large-field" type="text" name="person_identity" value="{{$temoignage->person_identity}}">
             </div>
           </div>
           <div class="row center-xs temoignage__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
-              <span>Changer le métier du témoin</span>
-              <input type="text" name="person_job" value="{{$temoignage->person_job}}">
+              <span>Métier et entreprise</span>
+              <input class="large-field" type="text" name="person_job" value="{{$temoignage->person_job}}">
             </div>
           </div>
           <div class="row center-xs temoignage__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
-              <span>Changer l'identité du témoin</span>
-              <input type="text" name="person_identity" value="{{$temoignage->person_identity}}">
+              <span>Le témoignage</span>
+              <textarea id="cabinet-article" class="large-field text-field" name="content">{{$temoignage->content}}</textarea>
+            </div>
+          </div>
+          <div class="row center-xs slide__field">
+            <div class="col-md-8 col-sm-10 col-xs-12">
+              <span></span>
+              <div class="count">255 caratères restants</div>
             </div>
           </div>
           <input type="submit" class="temoignage__save" value="Enregistrer">

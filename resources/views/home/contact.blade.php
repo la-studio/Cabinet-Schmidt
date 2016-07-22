@@ -19,7 +19,7 @@
         <div class="col-xs contact-item__text">
           <span class="label">Nous sommes ouverts de</span>
           <span class="highlight">8h30 à 17h30</span>
-          <span class="label">Vendredi, fermeture à 16 heure !</span>
+          <span class="label">Vendredi, fermeture à 16 heures !</span>
         </div>
       </div>
     </div>

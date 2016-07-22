@@ -44,7 +44,7 @@ Notre équipe à taille humaine accompagne et conseille les TPE et artisans du G
       </div>
     </div>
   </div>
-  <div class="about__cover" style="background-image: url('/images/cover-about.jpg')"></div>
+  <div class="about__cover"></div>
   <?php /* <div class="about__responsive">
   </div> */ ?>
 </main>

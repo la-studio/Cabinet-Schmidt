@@ -56,7 +56,7 @@ Taux de TVA, taux de cotisations, retraites, gratification de stagiaires, appren
         @if ($digitarticles->lastPage() > 1)
           <ul class="pagination">
               <li class="{{ ($digitarticles->currentPage() == 1) ? ' disabled' : '' }}">
-                  <a href="{{ $digitarticles->previousPageUrl() }}" rel="prev nofollow"><i class="material-icons">chevron_left</i></a>
+                  <a href="{{ $digitarticles->previousPageUrl() }}#gallery" rel="prev nofollow"><i class="material-icons">chevron_left</i></a>
                </li>
               @for ($i = 1; $i <= $digitarticles->lastPage(); $i++)
                   <?php
@@ -75,13 +75,13 @@ Taux de TVA, taux de cotisations, retraites, gratification de stagiaires, appren
                         @if($digitarticles->currentPage() == $i)
                           {{ $i }}
                         @else
-                          <a href="{{ $digitarticles->url($i) }}" rel="nofollow">{{ $i }}</a>
+                          <a href="{{ $digitarticles->url($i) }}#gallery" rel="nofollow">{{ $i }}</a>
                         @endif
                       </li>
                   @endif
               @endfor
               <li class="{{ ($digitarticles->currentPage() == $digitarticles->lastPage()) ? ' disabled' : '' }}">
-                  <a href="{{ $digitarticles->nextPageUrl() }}" rel="next nofollow"><i class="material-icons">chevron_right</i></a>
+                  <a href="{{ $digitarticles->nextPageUrl() }}#gallery" rel="next nofollow"><i class="material-icons">chevron_right</i></a>
               </li>
           </ul>
       @endif

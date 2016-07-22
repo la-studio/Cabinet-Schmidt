@@ -2,8 +2,17 @@
 $(function(){$.fn.clearTextLimit=function(){return this.each(function(){this.onkeydown=this.onkeyup=null;});};$.fn.textLimit=function(limit,callback){if(typeof callback!=='function')var callback=function(){};return this.each(function(){this.limit=limit;this.callback=callback;this.onkeydown=this.onkeyup=function(){this.value=this.value.substr(0,this.limit);this.reached=this.limit-this.value.length;this.reached=(this.reached==0)?true:false;return this.callback(this.value.length,this.limit,this.reached);}});};});
 
 $(document).ready(function () {
-  $('#cabinet-article').textLimit(255, function( length, limit, reached  ){
-    var character = limit - length;
+  var character;
+  var value = $('#cabinet-article').val();
+  var limit = 255;
+  if(value != undefined){
+      if (value.length > 0 && value != undefined){
+        character = limit - value.length;
+      $('.count').text(character+' caractères restants');
+    }
+  }
+  $('#cabinet-article').textLimit(limit, function( length, limit, reached  ){
+    character = limit - length;
     if(length == limit){
       $('.count').text(character+' caractère restant');
     }else{

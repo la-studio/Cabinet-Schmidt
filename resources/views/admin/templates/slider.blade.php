@@ -9,32 +9,38 @@
           {{csrf_field()}}
           <div class="row center-xs slide__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
-              <span>Changer de couverture</span>
-              <input type="file" class="file-input" name="photo"/>
+              <span>Photo de couverture</span>
+              <input class="large-file file-input" type="file" name="photo"/>
             </div>
           </div>
           <div class="row center-xs slide__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
-              <span>Changer de titre</span>
-              <input type="text" name="title" value="{{$slide->title}}"/>
+              <span>Titre du slide</span>
+              <input class="large-field" type="text" name="title" value="{{$slide->title}}"/>
             </div>
           </div>
           <div class="row center-xs slide__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
-              <span>Changer le nom du bouton</span>
-              <input type="text" name="button_name" value="{{$slide->button_name}}"/>
+              <span>Nom du bouton</span>
+              <input class="large-field" type="text" name="button_name" value="{{$slide->button_name}}"/>
             </div>
           </div>
           <div class="row center-xs slide__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
-              <span>Changer le lien du bouton</span>
-              <input type="text" name="button_link" value="{{$slide->button_link}}"/>
+              <span>Lien du bouton</span>
+              <input class="large-field" type="text" name="button_link" value="{{$slide->button_link}}"/>
             </div>
           </div>
           <div class="row center-xs slide__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
-              <span>Changer la description</span>
-              <input type="text" name="description" value="{{$slide->description}}"/>
+              <span>Contenu du slide</span>
+              <textarea class="large-field text-field" id="cabinet-article" name="description">{{$slide->description}}</textarea>
+            </div>
+          </div>
+          <div class="row center-xs slide__field">
+            <div class="col-md-8 col-sm-10 col-xs-12">
+              <span></span>
+              <div class="count">255 caratères restants</div>
             </div>
           </div>
           <input type="submit" class="competence__save" value="Enregistrer"/>

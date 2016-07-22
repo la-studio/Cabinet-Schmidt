@@ -45,10 +45,4 @@ class StorytellingController extends Controller
     {
         return view('admin.templates.storytelling')->with('slide',$id);
     }
-
-    public function destroy(AboutSlide $id)
-    {
-        $id->delete();
-        return redirect('/admin/storytelling');
-    }
 }

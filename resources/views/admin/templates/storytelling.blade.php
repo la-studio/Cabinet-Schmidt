@@ -9,24 +9,33 @@
           {{csrf_field()}}
           <div class="row center-xs story__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
-              <span>Changer de couverture</span>
-              <input type="file" class="file-input" name="photo"/>
+              <span>Photo de couverture</span>
+              <input class="large-file" type="file" class="file-input" name="photo"/>
             </div>
           </div>
           <div class="row center-xs story__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
-              <span>Changer de titre</span>
-              <input type="text" name="title" value="{{$slide->title}}"/>
+              <span>Titre</span>
+              <input class="large-field" type="text" name="title" value="{{$slide->title}}"/>
             </div>
           </div>
           <div class="row center-xs story__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
-              <span>Changer le résumé</span>
+              <span>Résumé</span>
               {{-- <input type="text" name="summary" value="{{$slide->summary}}"/> --}}
-              <textarea name="summary">{{$slide->summary}}</textarea>
+              <textarea id="cabinet-article" class="large-field text-field" name="summary">{{$slide->summary}}</textarea>
+            </div>
+          </div>
+          <div class="row center-xs slide__field">
+            <div class="col-md-8 col-sm-10 col-xs-12">
+              <span></span>
+              <div class="count">255 caratères restants</div>
             </div>
           </div>
           <div class="row center-xs story__field">
+            <span>Liste des mots-clés</span>
+          </div>
+          <div class="row center-xs story__field margintop">
             <input type="text" class="to_add"/>
             <span class="add">Ajouter</span>
           </div>
