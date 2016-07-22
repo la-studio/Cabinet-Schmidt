@@ -8432,20 +8432,20 @@
                   <tbody>
                      <tr>
                         <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Type de véhicule</td>
-                        <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Montant autorisé par kilomètre en 2013</td>
+                        <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">barème pour l’année 2015 (par kilomètre)</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Véhicules automobiles</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,306 €</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,308 €</td>
                      </tr>
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Vélomoteurs, scooters, motos</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,119 €</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,120 €</td>
                      </tr>
                   </tbody>
                </table>
             </texteparagraphe>
-            <titreparagraphe>Historique</titreparagraphe>
+            <texteparagraphe>Historique</texteparagraphe>
             <texteparagraphe>
                <table>
                   <tbody>
@@ -8487,6 +8487,16 @@
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,304 €</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,118 €</td>
                      </tr>
+                     <tr>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2013</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,306 €</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,119 €</td>
+                     </tr>
+                     <tr>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">2014</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,308 €</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">0,120 €</td>
+                     </tr>
                   </tbody>
                </table>
             </texteparagraphe>
@@ -8500,7 +8510,7 @@
   <media type="image">k4_1212581.jpg</media>
   <copyright>
     <holder>Les Echos Publishing</holder>
-    <year>2015</year>
+    <year>2016</year>
   </copyright>
 </article>
 

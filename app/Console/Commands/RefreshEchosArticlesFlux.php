@@ -101,7 +101,7 @@ class RefreshEchosArticlesFlux extends Command
         foreach ($articles as $element) {
             $title = $element->title->__toString();
             $author = $element->author->__toString();
-            $date = $element->create_date->__toString();
+            $date = $element->display_date->__toString();
             $media_attr = $element->media->attributes();
             $summary = $element->summary->__toString();
             $id = $element->id->__toString();
@@ -113,7 +113,7 @@ class RefreshEchosArticlesFlux extends Command
             $merged_content = [];
             $current_table = '';
             $references = [];
-            if(substr($element->create_date->__toString(),0,4)>='2016' && count($titles)<150) {
+            if(substr($element->display_date->__toString(),0,4)>='2016' && count($titles)<150) {
                 foreach ($tags as $tag) {
                     $tag_attr = $tag->attributes();
                     if($tag_attr['type']=="rubrique") {

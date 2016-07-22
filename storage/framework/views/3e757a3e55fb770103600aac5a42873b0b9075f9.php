@@ -8,7 +8,7 @@
       <div class="row">
         <?php foreach($partenaires as $partenaire): ?>
           <div class="col-md-3 col-sm-4 col-xs-12 partenaires-logo">
-            <a href="<?php echo e(HTML::link($partenaire->link)); ?>" target="_blank"><img src="<?php echo e($partenaire->logo); ?>" alt title="<?php echo e($partenaire->name); ?>" /></a>
+            <a href="http://<?php echo e($partenaire->link); ?>" target="_blank"><img src="<?php echo e($partenaire->logo); ?>" alt title="<?php echo e($partenaire->name); ?>" /></a>
           </div>
         <?php endforeach; ?>
       </div>

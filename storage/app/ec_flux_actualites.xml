@@ -2,6 +2,67 @@
 <!DOCTYPE articles SYSTEM "FluxXmlClient.dtd">
 <articles>
 <article>
+  <id>k4_8265145</id>
+  <create_date>2016-07-22 14:00:00</create_date>
+  <display_date>2016-07-22 14:00:00</display_date>
+  <author>Sandrine Thomas</author>
+  <language>fr</language>
+  <title>La loi Travail devant le Conseil constitutionnel</title>
+  <summary>Définitivement adopté par le Parlement, le projet de loi Travail reste néanmoins soumis au contrôle du Conseil constitutionnel.</summary>
+  <content>
+      <section>
+         <section_content>
+            <texteparagraphe>Objet de vifs débats depuis plusieurs mois, le projet de loi relatif au travail, à la modernisation du dialogue social et à la sécurisation des parcours professionnels, plus simplement appelé projet de loi « Travail », a été définitivement adopté hier par le Parlement.</texteparagraphe>
+            <texteparagraphe>Comprenant 123 articles, ce texte traite de nombreux sujets tels que la durée du travail, le licenciement économique, les accords collectifs, le compte personnel d’activité ou encore la médecine du travail.</texteparagraphe>
+            <texteparagraphe>Cette loi entrera en vigueur lors de sa publication au Journal officiel et sous réserve de la censure du Conseil constitutionnel qui, saisi hier par des parlementaires, dispose d’un mois pour se prononcer sur sa conformité.</texteparagraphe>
+            <texteparagraphe>Bien évidemment, nous ne manquerons pas, prochainement, de revenir en détail sur les différentes mesures de ce texte.</texteparagraphe>
+            <reference>
+               <ref_lien href="http://www.assemblee-nationale.fr/14/ta/ta0807.asp">Projet de loi, Assemblée nationale, texte adopté n° 807</ref_lien>
+            </reference>
+         </section_content>
+      </section>
+   </content>
+  <tag type="rubrique">Social</tag>
+  <tag type="keyword">Autre droit social</tag>
+  <tag type="typo">Actualité</tag>
+  <media type="image">k4_8265145.jpg</media>
+  <copyright>
+    <holder>Les Echos Publishing</holder>
+    <year>2016</year>
+  </copyright>
+</article>
+
+<article>
+  <id>k4_8230436</id>
+  <create_date>2016-07-22 10:00:00</create_date>
+  <display_date>2016-07-22 10:00:00</display_date>
+  <author>Frédéric Dempuré</author>
+  <language>fr</language>
+  <title>Pour savoir ce que Google sait de nous</title>
+  <summary>Effective depuis quelques jours, la fonction « Mon activité » permet à chacun de savoir ce que le moteur de recherche américain sait de lui.</summary>
+  <content>
+      <section>
+         <section_content>
+            <texteparagraphe>La protection de la vie privée est un sujet très sensible en France. Et Google, en tant que leader mondial des moteurs de recherche, est souvent montré du doigt pour les données qu’il conserve sur chacun de ses utilisateurs, particuliers ou entreprises. Aussi, depuis le début du mois de juillet, le géant américain a décidé de montrer patte blanche en dévoilant à chacun de ses utilisateurs (titulaires d’un compte sur un service de Google) ce qu’il sait de lui via la mise en place d’un service baptisé <a href="https://myactivity.google.com/myactivity">« Mon activité »</a>.</texteparagraphe>
+            <titreparagraphe>Un historique de recherches</titreparagraphe>
+            <texteparagraphe>Une fois connecté, chacun découvre les traces qu’il a laissées sur Google. Classées par date et par type de données (recherche, actualités, solutions publicitaires, vidéos, recherches cartographiques…), lesdites traces correspondent aux pages de sites consultées, aux cartes affichées sur Maps, aux vidéos visionnées sur Youtube. Sachant que Google regroupe ici les activités menées tout au long de chaque journée. Autrement dit, celles initiées dans le cadre du travail et celles lancées, le soir ou le week-end, dans le cadre privé. Pour être honnête, lorsque l’on découvre le résultat, la sensation est assez désagréable. Essayez, vous verrez…</texteparagraphe>
+            <titreparagraphe>Faire le ménage</titreparagraphe>
+            <texteparagraphe>Même si Google, dans ses commentaires, explique que la récolte de toutes ces données n’a pour but que d’améliorer la qualité des services qu’il rend, il n’est pas impossible que certains utilisateurs soient saisis de l’envie de les effacer. Et heureusement, c’est possible. Pour y parvenir, il suffit de cliquer sur le menu de paramétrage sur la gauche de l’écran et de cliquer sur la rubrique « supprimer les données par ». S’affiche alors un menu permettant de définir la période (d’un jour à plusieurs mois) que l’on souhaite effacer. Il est également possible de supprimer chacun des historiques (page consultée, vidéo visionnée…) en cliquant sur la droite du rectangle dans lequel elle est présentée.</texteparagraphe>
+         </section_content>
+      </section>
+   </content>
+  <tag type="rubrique">Multimédia</tag>
+  <tag type="keyword">Tendances</tag>
+  <tag type="keyword">MultiMédia</tag>
+  <tag type="typo">Actualité</tag>
+  <media type="image">k4_8230436.jpg</media>
+  <copyright>
+    <holder>Les Echos Publishing</holder>
+    <year>2016</year>
+  </copyright>
+</article>
+
+<article>
   <id>k4_8217303</id>
   <create_date>2016-07-08 10:38:00</create_date>
   <display_date>2016-07-21 10:00:00</display_date>
@@ -2298,38 +2359,6 @@
   <tag type="keyword">Droit des particuliers</tag>
   <tag type="typo">Actualité</tag>
   <media type="image">k4_8056737.jpg</media>
-  <copyright>
-    <holder>Les Echos Publishing</holder>
-    <year>2016</year>
-  </copyright>
-</article>
-
-<article>
-  <id>k4_8048856</id>
-  <create_date>2016-06-07 15:46:00</create_date>
-  <display_date>2016-06-09 12:00:00</display_date>
-  <author>Fabrice Gomez</author>
-  <language>fr</language>
-  <title>Les prix des forêts françaises flambent !</title>
-  <summary>Selon le dernier rapport de la Société Forestière et de la Fédération nationale des Safer, le prix moyen des forêts a progressé de 2,8 % en 2015.</summary>
-  <content>
-      <section>
-         <section_content>
-            <texteparagraphe>Comme chaque année, la Société Forestière (filiale de la Caisse des Dépôts) et la Fédération Nationale des Safer (Sociétés d’aménagement foncier et d’établissement rural) ont publié leur indicateur 2016 du marché des forêts en France. Selon ce rapport, le prix des forêts françaises est reparti à la hausse : +2,8 % en 2015. Cette reprise du marché, qui intervient après quatre années de stabilité, s’expliquerait en partie par la poursuite de la baisse des taux d’intérêt et par l’intérêt croissant des investisseurs pour cet actif. En effet, après la crise de 2008, les parcelles de forêts ont retrouvé leur statut de valeur refuge. Un regain d’intérêt qui a contribué à faire « flamber » les prix. Ainsi, par exemple, sur la période 1997-2015, le prix minimal par hectare de forêt a été multiplié par 1,6, passant ainsi de 410 € à 650 € par hectare. La progression du prix maximal a été encore plus soutenue : multiplié par 2, il est passé de 5 900 € à 11 730 € par hectare. Faut-il y voir là les prémisses d’une bulle spéculative ?</texteparagraphe>
-            <texteparagraphe>En outre, ce regain d’intérêt vient sans doute du dispositif fiscal très avantageux qui entoure cet investissement. En effet, un investissement dans les forêts peut ouvrir droit, soit immédiatement lorsqu’il est réalisé en direct, soit 2 ans après sa réalisation par l’intermédiaire d’un groupement forestier, à une exonération d’impôt de solidarité sur la fortune (ISF) à hauteur de 75 % de la valeur du bien, sous réserve notamment d’un engagement de gestion durable dûment constaté.</texteparagraphe>
-            <reference>
-               <ref_lien href="https://onedrive.live.com/redir?resid=8C50D5C2188FFF21!2390&amp;authkey=!AHpJh1Bfu4jvR9I&amp;ithint=file%2cpdf">Le marché des forêts en France – Indicateur 2016 – Société Forestière et FnSafer</ref_lien>
-            </reference>
-         </section_content>
-      </section>
-   </content>
-  <tag type="rubrique">Juridique</tag>
-  <tag type="rubrique">Patrimoine</tag>
-  <tag type="keyword">Droit des particuliers</tag>
-  <tag type="keyword">Défiscalisation</tag>
-  <tag type="keyword">Placement</tag>
-  <tag type="typo">Actualité</tag>
-  <media type="image">k4_8048856.jpg</media>
   <copyright>
     <holder>Les Echos Publishing</holder>
     <year>2016</year>
