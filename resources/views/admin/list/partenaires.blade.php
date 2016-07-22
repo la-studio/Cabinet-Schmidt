@@ -11,9 +11,9 @@
             <form class="delete-form" action="/admin/partenaire/delete/{{$partenaire->id}}" method="post">
               {{ method_field('DELETE')}}
               {{csrf_field()}}
-              <input type="submit" value="Supprimer"/>
+              <a class="article__edit" href="/admin/partenaire/edit/{{$partenaire->id}}"><span>Éditer</span></a>
+              <input type="submit" class="delete" value="Supprimer"/>
             </form>
-            <a class="article__edit" href="/admin/partenaire/edit/{{$partenaire->id}}"><span>Éditer</span></a>
           </div>
         </div>
       </div>

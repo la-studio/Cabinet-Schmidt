@@ -12,9 +12,9 @@
 
               <?php echo e(csrf_field()); ?>
 
-              <input type="submit" value="Supprimer"/>
+              <a class="article__edit" href="/admin/partenaire/edit/<?php echo e($partenaire->id); ?>"><span>Éditer</span></a>
+              <input type="submit" class="delete" value="Supprimer"/>
             </form>
-            <a class="article__edit" href="/admin/partenaire/edit/<?php echo e($partenaire->id); ?>"><span>Éditer</span></a>
           </div>
         </div>
       </div>

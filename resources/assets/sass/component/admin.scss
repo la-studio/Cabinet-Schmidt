@@ -188,6 +188,7 @@
     .partenaires-list {
       .article {
         &__edit {
+          margin-right: 5px;
           @include link-off;
           border: 2px solid $yellow;
           @include flex-middle(xy);
