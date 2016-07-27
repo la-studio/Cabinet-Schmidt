@@ -135,3 +135,8 @@ Route::get('/collection/exceptions/appointments', function()
 {
     return App\Appointment::orderBy('created_at','asc')->get();
 });
+
+Route::get('/agenda/{id}', function($id)
+{
+    return redirect('/#agenda');
+});
