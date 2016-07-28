@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Temoignage;
 use App\Article;
+use App\Appointment;
 use App\Echosarticle;
 use App\Http\Requests;
 use DB;
@@ -56,10 +57,15 @@ class ActusController extends Controller {
 
     public function redirect($id)
     {
-        $article= Echosarticle::where('article_id','=',$id)->get();
+        $article = Echosarticle::where('article_id','=',$id)->get();
         if($article->isEmpty()){
-            return abort(404);
+            $rdv = Appointment::where('rdv_id','=',$id)->get();
+            if($rdv->isEmpty()){
+                return abort(404);
+            }
+            return redirect('/#agenda');
         }
+
         return redirect('/actualites/'.$article[0]->slug);
     }
 

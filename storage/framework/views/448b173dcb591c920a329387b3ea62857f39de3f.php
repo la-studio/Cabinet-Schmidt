@@ -1,3 +1,9 @@
+<?php $__env->startSection('title'); ?>
+Page d'erreur
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('robots'); ?>
+<meta name="robots" content="noindex">
+<?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
   <div class="row center-xs middle-xs not-found">
     <div class="not-found__image">

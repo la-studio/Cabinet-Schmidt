@@ -93,6 +93,7 @@ class RefreshAppointmentsFlux extends Command
                     }
                     $rdv->content = implode(' ',$data);
                     $rdv->created_at = datetimify($title);
+                    $rdv->rdv_id = $date->id->__toString();
                     $rdv->save();
                 }
             }

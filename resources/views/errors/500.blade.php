@@ -1,4 +1,10 @@
 @extends('layout')
+@section('title')
+Page d'erreur
+@stop
+@section('robots')
+<meta name="robots" content="noindex">
+@stop
 @section('content')
   <div class="row center-xs middle-xs not-found">
     <div class="not-found__image">

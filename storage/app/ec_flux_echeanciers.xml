@@ -2,6 +2,96 @@
 <!DOCTYPE articles SYSTEM "FluxXmlClient.dtd">
 <articles>
 <article>
+  <id>k4_8172858</id>
+  <create_date>2016-07-01 12:00:00</create_date>
+  <display_date>2016-07-01 12:00:00</display_date>
+  <author>La Rédaction</author>
+  <language>fr</language>
+  <title>Septembre 2016</title>
+  <summary>Sous réserve de confirmation officielle.</summary>
+  <content>
+      <section>
+         <section_title>Délai variable</section_title>
+         <section_summary/>
+         <section_author/>
+         <section_content>
+            <texteparagraphe>• Télédéclaration et télépaiement de la TVA correspondant aux opérations d’août 2016 et, éventuellement, demande de remboursement du crédit de TVA au titre du mois d’août 2016.</texteparagraphe>
+         </section_content>
+      </section>
+      <section>
+         <section_title>5 Septembre 2016</section_title>
+         <section_summary/>
+         <section_author/>
+         <section_content>
+            <texteparagraphe>
+               • Employeurs occupant au moins 50 salariés et payant les salaires d’août 2016 au plus tard le 31 août 2016 : DSN d’août 2016 et paiement des charges sociales sur les salaires. </texteparagraphe>
+            <texteparagraphe>
+               • Artisans, commerçants et industriels : paiement par prélèvement mensuel des cotisations d’assurance maladie-maternité, d’assurance vieillesse, d’invalidité-décès, d’allocations familiales, de la CSG et de la CRDS (le 20 septembre sur demande). </texteparagraphe>
+            <texteparagraphe>
+               • Professionnels libéraux : paiement par prélèvement mensuel des cotisations d’assurance maladie-maternité, d’allocations familiales, de la CSG et de la CRDS (le 20 septembre sur demande).</texteparagraphe>
+         </section_content>
+      </section>
+      <section>
+         <section_title>12 Septembre 2016</section_title>
+         <section_summary/>
+         <section_author/>
+         <section_content>
+            <texteparagraphe>
+               • Assujettis à la TVA réalisant des opérations intracommunautaires : dépôt auprès des douanes de la déclaration d’échanges de biens et de la déclaration européenne des services pour les opérations intervenues en août 2016.</texteparagraphe>
+         </section_content>
+      </section>
+      <section>
+         <section_title>15 Septembre 2016</section_title>
+         <section_summary/>
+         <section_author/>
+         <section_content>
+            <texteparagraphe>
+               • Entreprises dont l’effectif est supérieur à 9 et inférieur à 50 salariés, et entreprises de 9 salariés au plus ayant opté pour le paiement mensuel des charges sociales : DSN d’août 2016 (entreprises dont le montant des cotisations et contributions sociales dues au titre de 2014 est égal ou supérieur à 50 000 €) ou DUCS, et paiement des charges sociales sur les salaires d’août 2016. </texteparagraphe>
+            <texteparagraphe>
+               • Contribuables n’ayant pas opté pour le paiement mensuel de l’impôt sur le revenu : paiement du solde de l’impôt sur le revenu de 2015 et, le cas échéant, de la contribution exceptionnelle sur les hauts revenus. </texteparagraphe>
+            <texteparagraphe>
+               • Sociétés soumises à l’impôt sur les sociétés ayant clos leur exercice le 31 mai 2016 : télépaiement du solde de l’impôt sur les sociétés, de la contribution sociale ainsi que, le cas échéant, de la contribution exceptionnelle.</texteparagraphe>
+            <texteparagraphe>
+               • Sociétés soumises à l’impôt sur les sociétés : télépaiement de l’acompte d’IS, de l’acompte de contribution sociale, ainsi que le cas échéant, du versement anticipé de la contribution exceptionnelle, et de la contribution sur les dividendes distribués. </texteparagraphe>
+            <texteparagraphe>
+               • Employeurs assujettis à la taxe sur les salaires : télépaiement de la taxe sur les salaires payés en août 2016 lorsque le total des sommes dues au titre de 2015 excédait 10 000 €. </texteparagraphe>
+            <texteparagraphe>
+               • Employeurs occupant au moins 50 salariés et payant les salaires d’août 2016 dans les 10 premiers jours de septembre 2016 : DSN d’août 2016 et paiement des charges sociales sur les salaires.</texteparagraphe>
+            <texteparagraphe>
+               • Employeurs occupant au moins 50 salariés et payant les salaires d’août 2016 entre le 11 et le 20 septembre, et employeurs de 9 salariés au plus n’ayant pas opté pour le paiement mensuel des charges sociales : DSN d’août 2016.</texteparagraphe>
+            <texteparagraphe>
+               • Entreprises assujetties à la cotisation sur la valeur ajoutée des entreprises (CVAE) : télédéclaration (n° 1329-AC) et télépaiement, le cas échéant, du 2e acompte de CVAE. </texteparagraphe>
+         </section_content>
+      </section>
+      <section>
+         <section_title>25 Septembre 2016</section_title>
+         <section_summary/>
+         <section_author/>
+         <section_content>
+            <texteparagraphe>
+               • Employeurs occupant au moins 50 salariés et payant les salaires d’août 2016 entre le 11 et le 20 septembre : paiement des charges sociales sur les salaires.</texteparagraphe>
+         </section_content>
+      </section>
+      <section>
+         <section_title>30 Septembre 2016</section_title>
+         <section_summary/>
+         <section_author/>
+         <section_content>
+            <texteparagraphe>
+               • Sociétés soumises à l’impôt sur les sociétés ayant clos leur exercice le 30 juin 2016 : télétransmission de la déclaration annuelle des résultats et des documents annexes. </texteparagraphe>
+            <texteparagraphe>
+               • Contribuables ayant opté pour la mensualisation du paiement de leur cotisation foncière des entreprises (CFE) : dernière faculté de résiliation de l’option pour l’année en cours. </texteparagraphe>
+         </section_content>
+      </section>
+   </content>
+  <tag type="typo">Echéancier</tag>
+  <copyright>
+    <holder>Les Echos Publishing</holder>
+    <year>2016</year>
+  </copyright>
+</article>
+
+<article>
   <id>k4_8010802</id>
   <create_date>2016-06-02 10:00:00</create_date>
   <display_date>2016-06-02 10:02:00</display_date>
@@ -161,118 +251,6 @@
          <section_content>
             <texteparagraphe>
                • Sociétés soumises à l’impôt sur les sociétés ayant clos leur exercice le 30 avril 2016 : télétransmission de la déclaration annuelle des résultats et des documents annexes.</texteparagraphe>
-         </section_content>
-      </section>
-   </content>
-  <tag type="typo">Echéancier</tag>
-  <copyright>
-    <holder>Les Echos Publishing</holder>
-    <year>2016</year>
-  </copyright>
-</article>
-
-<article>
-  <id>k4_7747558</id>
-  <create_date>2016-04-07 13:12:00</create_date>
-  <display_date>2016-04-07 13:12:00</display_date>
-  <author>La Rédaction</author>
-  <language>fr</language>
-  <title>Juin 2016</title>
-  <summary>Sous réserve de confirmation officielle.</summary>
-  <content>
-      <section>
-         <section_title>Délai variable</section_title>
-         <section_summary/>
-         <section_author/>
-         <section_content>
-            <texteparagraphe>• Télédéclaration et télépaiement de la TVA correspondant aux opérations de mai 2016 et, éventuellement, demande de remboursement du crédit de TVA au titre du mois de mai 2016.</texteparagraphe>
-         </section_content>
-      </section>
-      <section>
-         <section_title>5 Juin 2016</section_title>
-         <section_summary/>
-         <section_author/>
-         <section_content>
-            <texteparagraphe>
-               • Employeurs occupant au moins 50 salariés : déclaration (DUCS ou déclaration sociale nominative) et paiement des charges sociales sur les salaires de mai 2016 payés au plus tard le 31 mai 2016. </texteparagraphe>
-            <texteparagraphe>
-               • Artisans, commerçants et industriels : paiement par prélèvement mensuel des cotisations d’assurance maladie-maternité, d’assurance vieillesse, d’invalidité-décès, d’allocations familiales, de la CSG et de la CRDS (le 20 juin sur demande). </texteparagraphe>
-            <texteparagraphe>
-               • Professionnels libéraux : paiement par prélèvement mensuel des cotisations d’assurance maladie-maternité, d’allocations familiales, de la CSG et de la CRDS (le 20 juin sur demande).</texteparagraphe>
-         </section_content>
-      </section>
-      <section>
-         <section_title>7 Juin 2016</section_title>
-         <section_summary/>
-         <section_author/>
-         <section_content>
-            <texteparagraphe>• Date limite de dépôt par Internet de la déclaration des revenus 2015 pour les contribuables résidant dans les départements numérotés 50 à 974/976.</texteparagraphe>
-         </section_content>
-      </section>
-      <section>
-         <section_title>9 Juin 2016</section_title>
-         <section_summary/>
-         <section_author/>
-         <section_content>
-            <texteparagraphe>
-               • Travailleurs non salariés : date limite pour transmettre par Internet la déclaration sociale des indépendants (DSI) aux organismes conventionnés relevant du régime social des indépendants (RSI).</texteparagraphe>
-         </section_content>
-      </section>
-      <section>
-         <section_title>11 Juin 2016</section_title>
-         <section_summary/>
-         <section_author/>
-         <section_content>
-            <texteparagraphe>
-               • Assujettis à la TVA réalisant des opérations intracommunautaires : dépôt auprès des douanes de la déclaration d’échanges de biens et de la déclaration européenne des services pour les opérations intervenues en mai 2016.</texteparagraphe>
-         </section_content>
-      </section>
-      <section>
-         <section_title>15 Juin 2016</section_title>
-         <section_summary/>
-         <section_author/>
-         <section_content>
-            <texteparagraphe>
-               • Employeurs assujettis à la taxe sur les salaires : télépaiement de la taxe sur les salaires versés en mai 2016 lorsque le total des sommes dues au titre de 2015 excédait 10 000 €. </texteparagraphe>
-            <texteparagraphe>
-               • Sociétés soumises à l’impôt sur les sociétés ayant clos leur exercice le 29 février 2016 : télépaiement du solde de l’impôt sur les sociétés, de la contribution sociale ainsi que, le cas échéant, de la contribution exceptionnelle.</texteparagraphe>
-            <texteparagraphe>
-               • Sociétés soumises à l’impôt sur les sociétés : télépaiement de l’acompte d’IS, de l’acompte de contribution sociale, ainsi que le cas échéant, du versement anticipé de la contribution exceptionnelle, et de la contribution sur les revenus distribués. </texteparagraphe>
-            <texteparagraphe>
-               • Redevables de l’impôt de solidarité sur la fortune (ISF) dont le patrimoine net taxable est supérieur ou égal à 2,57 millions d’euros : dépôt de la déclaration annuelle n° 2725 et versement de l’impôt correspondant (le 15 juillet pour les non-résidents). </texteparagraphe>
-            <texteparagraphe>
-               • Assujettis à la cotisation foncière des entreprises (CFE) : télépaiement, le cas échéant, de l’acompte de CFE (sauf en cas de mensualisation). </texteparagraphe>
-            <texteparagraphe>
-               • Assujettis à la cotisation sur la valeur ajoutée des entreprises (CVAE) : télédéclaration (n° 1329-AC) et télépaiement, le cas échéant, du premier acompte de CVAE. </texteparagraphe>
-            <texteparagraphe>• Déclaration n° 3350-SD et paiement de la taxe sur les surfaces commerciales. </texteparagraphe>
-            <texteparagraphe>
-               • Entreprises dont l’effectif est supérieur à 9 et inférieur à 50 salariés, et entreprises de 9 salariés au plus ayant opté pour le paiement mensuel des charges sociales : déclaration (DUCS ou déclaration sociale nominative) et paiement des charges sociales sur les salaires de mai 2016. </texteparagraphe>
-            <texteparagraphe>
-               • Employeurs occupant au moins 50 salariés : déclaration (DUCS ou déclaration sociale nominative) et paiement des charges sociales sur les salaires de mai 2016 payés dans les 10 premiers jours de juin 2016. </texteparagraphe>
-            <texteparagraphe>
-               • Employeurs occupant au moins 50 salariés et payant les salaires de mai 2016 entre le 11 et 20 juin 2016 et employeurs de 9 salariés au plus n’ayant pas opté pour le paiement mensuel des charges sociales : déclaration sociale nominative de mai 2016. </texteparagraphe>
-         </section_content>
-      </section>
-      <section>
-         <section_title>25 Juin 2016</section_title>
-         <section_summary/>
-         <section_author/>
-         <section_content>
-            <texteparagraphe>
-               • Employeurs occupant au moins 50 salariés : DUCS (pour les employeurs hors déclaration sociale nominative) et paiement des charges sociales sur les salaires de mai 2016 payés entre le 11 et le 20 juin 2016.</texteparagraphe>
-         </section_content>
-      </section>
-      <section>
-         <section_title>30 Juin 2016</section_title>
-         <section_summary/>
-         <section_author/>
-         <section_content>
-            <texteparagraphe>
-               • Contribuables ayant opté pour le paiement mensuel de leur impôt sur le revenu et/ou de leurs impôts locaux : dernière faculté de résiliation de cette option pour l’année en cours. </texteparagraphe>
-            <texteparagraphe>
-               • Contribuables n’ayant pas opté pour le paiement mensuel de leur impôt sur le revenu et de leurs impôts locaux : dernière faculté d’option pour l’année en cours. </texteparagraphe>
-            <texteparagraphe>
-               • Sociétés soumises à l’impôt sur les sociétés ayant clos leur exercice le 31 mars 2016 : télétransmission de la déclaration annuelle des résultats et des documents annexes.</texteparagraphe>
          </section_content>
       </section>
    </content>
