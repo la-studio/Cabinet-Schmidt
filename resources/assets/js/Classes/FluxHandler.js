@@ -14,7 +14,11 @@ FluxHandler.prototype.parsingDates = function () {
   $('.actus-articles__entreprises .article__footer .date, .actus-articles__cabinet .article__date, .gallery__item .article__date, .echo-article__date').each(function () {
     var val = $(this).text();
     var year = val.substring(0,4);
-    var month = val.substring(6,7);
+    if (val.substring(5,7) >= 10){
+      var month = val.substring(5,7);
+    }else{
+      var month = val.substring(6,7);
+    }
     month = that.getMonth(month);
     var day = val.substring(8,10);
     var date = 'Publié le '+day+' '+month+' '+year+'.';
