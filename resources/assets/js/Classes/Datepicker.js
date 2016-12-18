@@ -56,11 +56,21 @@ Datepicker.prototype.getToday = function () {
 };
 
 Datepicker.prototype.getThisMonth = function () {
-  return this.monthList[this.month]; // return current month as String (e.g: Juin)
+  if(this.month<12) {
+      return this.monthList[this.month]; // return current month as String (e.g: Juin)
+  } else {
+    // For december
+      return this.monthList[0];
+  }
 };
 
 Datepicker.prototype.getMonth = function (index) {
-  return this.monthList[index]; // return parameter month as String (e.g: Juin)
+    if(this.month<12) {
+        return this.monthList[index]; // return current month as String (e.g: Juin)
+    } else {
+        // For december
+        return this.monthList[0];
+    }
 };
 
 Datepicker.prototype.getTodayNumber = function () {
@@ -74,7 +84,7 @@ Datepicker.prototype.getDayIndex = function (day) {
 
 Datepicker.prototype.getMonthIndex = function (month) {
   var index = this.monthList.indexOf(month);
-  return index // With String day as parameter, returns month  Index.
+  return index; // With String day as parameter, returns month  Index.
 };
 
 Datepicker.prototype.getMonthDayNumber = function(year,monthIndex) {

@@ -59,7 +59,12 @@ Agenda.prototype.getIndex = function (index) {
 };
 
 Agenda.prototype.getMonth = function (index) {
-  return this.monthList[index]; // return current month as String (e.g: Dimanche)
+    if(this.month<12) {
+        return this.monthList[index]; // return current month as String (e.g: Juin)
+    } else {
+        // For december
+        return this.monthList[0];
+    }
 };
 
 Agenda.prototype.initActive = function () {
