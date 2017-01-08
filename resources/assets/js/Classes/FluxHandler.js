@@ -19,7 +19,9 @@ FluxHandler.prototype.parsingDates = function () {
     }else{
       var month = val.substring(6,7);
     }
+    console.log(month);
     month = that.getMonth(month);
+    console.log(month);
     var day = val.substring(8,10);
     var date = 'Publié le '+day+' '+month+' '+year+'.';
     $(this).text(date);
@@ -75,11 +77,10 @@ FluxHandler.prototype.removeSpecials = function (str) {
 
 
 FluxHandler.prototype.getMonth = function (index) {
-    if(this.month<12) {
-        return this.monthList[index]; // return current month as String (e.g: Juin)
+    if(index==12) {
+        return this.monthList[0]; // return current month as String (e.g: Juin)
     } else {
-        // For december
-        return this.monthList[0];
+        return this.monthList[index];
     }
 };
 
