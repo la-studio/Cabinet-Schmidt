@@ -133,6 +133,10 @@ Route::get('/sites-utiles', function () {
     return view('useful',compact('partenaires_shown'));
 });
 
+//Simulateurs
+Route::get('/simulateurs', 'SoapWrapperController@show');
+Route::get('/phpinfo', 'SoapWrapperController@php');
+
 //JS route for appointments
 Route::get('/collection/exceptions/appointments', function()
 {
