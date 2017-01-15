@@ -5,7 +5,7 @@
       <div class="row center-xs middle-xs wrapper">
         <div class="col-xs">
           <p class="article__title">Titre : <?php echo e($article->title); ?></p>
-          <p class="article__content">Contenu : <?php echo e($article->content); ?></p>
+          <p class="article__content">Contenu : <?php echo e($article->description); ?></p>
         </div>
       </div>
       <form class="row center-xs article__form" action="/admin/article/delete/<?php echo e($article->id); ?>" method="post">

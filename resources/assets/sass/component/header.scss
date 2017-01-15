@@ -203,111 +203,119 @@
   }
 }
 
-.toolbox {
-  $value: 250px;
-  $visible: 50px;
-  position : fixed;
-  width: $value;
-  height: 50px;
-  background-color: $yellow;
-  overflow: hidden;
+// Toolbox
+.toolbox{
+  display: table;
+  width: 410px;
+  height: 155px;
+  position: fixed;
   left: 100%;
-  top: 25%;
-  z-index: 10;
+  top: 20%;
+  border-left: $yellow 40px solid;
   cursor: pointer;
-  transform: translate3d(-($visible),0,0);
-  -moz-transition: background-color .3s ease, height .5s ease,transform .3s ease;
-  transition: background-color .3s ease, height .5s ease,transform .3s ease;
-  box-shadow: -2px 2px 4px 0px rgba(80, 80, 80, 0.65);
-  display: flex;
-  svg {
-    height: 35px;
-    width: 35px;
-    margin: 7px 0 5px 5px;
-    transition: transform .3s ease;
-    path {
-      transition: fill .3s ease;
-    }
+  background-color: white;
+  z-index: 10;
+  transform: translate3d(-40px,0,0);
+  transition: transform .3s ease-in-out;
+  //transition: box-shadow .15s ease-out;
+  box-shadow: -2px 2px 4px 0px rgba(80, 80, 80, 0.3);
+  &:hover{
+    box-shadow: -2px 2px 4px 0px rgba(80, 80, 80, 0.5);
   }
-  &__label {
-    left: 100%;
+}
+
+.bounce{
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes bounce {
+  0%   {transform: translate3d(-40px,0,0);}
+  35%  {transform: translate3d(-50px,0,0);}
+  60%  {transform: translate3d(-40px,0,0);}
+  85%  {transform: translate3d(-50px,0,0);}
+  100% {transform: translate3d(-40px,0,0);}
+}
+
+.toolbox--text{
+  display: inline-block;
+  color: white;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-sizing: content-box;
+  span{
+    display: inline-block;
+    width: 155px;
+    transform: translate(0, 0) rotate(-90deg);
+    transition: font-weight 0.15s ease-out;
+    font-size: 23px;
     position: relative;
-    margin-top: 7px;
-    transform: translate3d(-25px,0,0);
-    opacity: 0;
-    -moz-transition: opacity .5s ease .1s;
-    transition: opacity .5s ease .1s;
-    .row.label { // Overriding addon on grid. (row child of col have 100% height)
-      height: auto;
-    }
-    .upper-label {
-      font-size: 23px;
-    }
-    .lower-label {
-      font-size: 17px;
-      letter-spacing: 0.01rem;
-    }
+    left:-95px;
+    top:50px;
   }
-  &__list {
-    list-style: none;
+}
+
+.toolbox--open {
+  transform: translate3d(-410px,0,0);
+}
+
+.toolbox--list{
+  list-style: none;
+  padding:8px; 
+}
+
+.toolbox-item{
+  font-size: 15px;
+  display: inline-block;
+  width: 24%;
+  vertical-align: top;
+  img{
+    display: block;
+    width: 25px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  a{
+    display: block;
+    color: $black;
+    height: 100%;
+    line-height: 100%;
+    text-align: center;
+    transition: font-weight 0.15s ease-out;
+    transition: transform 0.15s ease-out;
+  }
+  a:hover{
+    font-weight: bold;
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 1000px) {
+  .toolbox{
+    width:155px;
+    height: 290px; 
+  }
+
+  .toolbox--open {
+    transform: translate3d(-195px,0,0);
+  }
+
+  .toolbox--text span{
+    top: 150px;
+    text-align: left;
+  }
+
+  .toolbox--list{
+    top:0;
+  }
+
+  .toolbox-item{
+    display: block;
     width: 100%;
-    margin-top: 25px;
-    a {
-      @include link-off();
-      -moz-transition: color .2s ease;
-      transition: color .2s ease;
-      &:hover {
-        color: $yellow;
-      }
-    }
-  }
-  &__item {
-    @include flex-middle(y);
-    padding-left: 15px;
-    border-top: 1px solid $yellow;
-    height: 30px;
-    transform: translate3d(100%,0,0);
-    @for $i from 2 through 4 { // excluding first child because i don't wanna give him delay
-      $offset: $i * .03s;
-      $offset2: $i * 15px;
-      &:nth-child(#{$i}) {
-        transition-delay: $offset;
-        transform: translate3d(calc(100% + #{$offset2}),0,0);
-      }
-    };
-    -moz-transition: transform .6s ease-in-out;
-    transition: transform .6s ease-in-out;
-  }
-  &:hover {
-    background-color: white;
-  }
-  &:hover svg path {
-    fill: $yellow;
-  }
-  &--open-x {
-    background-color: white;
-    transform: translate3d(-($value),0,0);
-    .toolbox__label {
-      left: 0;
-      opacity: 1;
-    }
-    svg {
-      transform: translate3d(200px,0,0);
-      path {
-        fill: $yellow;
-      }
-    }
-  }
-  &--open-y {
-    height: 170px;
-    .toolbox__item {
-      transform: translate3d(0,0,0);
-    }
-  }
-  &--delay {
-    .toolbox__item {
-      -moz-transition: transform .7s ease-in-out .5s;
-      transition: transform .7s ease-in-out .5s;
+    a{
+      margin-bottom: 20px;
     }
   }
 }

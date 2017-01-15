@@ -10,6 +10,7 @@ use App\Echosarticle;
 use App\Appointment;
 use App\Slider;
 use DateTime;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -35,5 +36,21 @@ class HomeController extends Controller
             }
         }
         return view('home', compact('articles', 'temoignages', 'partenaires','competences','echosarticles','appointment','temoignagesLen','is_large','slider'))->withCount($appointment);
+    }
+
+    public function show($slug)
+    {
+        $article = Article::where('slug',"=",$slug)->first();
+        if(is_null($article)){
+            return abort(404);
+        }
+        return view('home.article', compact('article'));
+    }
+
+    public function indexArticles(Request $request)
+    {
+        $articles = DB::table('articles')->orderBy('created_at', 'desc')->paginate(6);
+        //dd($articles);
+        return view('home.articles', compact('articles'));
     }
 }

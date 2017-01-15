@@ -58,6 +58,9 @@ Route::group(['prefix'=>'admin', 'middleware'=> 'auth'],function(){
 
 // Home
 Route::get('/', 'HomeController@index');
+Route::get('/actualites-cabinet/{slug}','HomeController@show');
+Route::get('/actualites-cabinet','HomeController@indexArticles');
+
 
 //Actus
 Route::get('/actualites', 'ActusController@index');

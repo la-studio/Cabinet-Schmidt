@@ -3,29 +3,53 @@
   <div class="row">
     <header class="col-xs-12 actus-header">
       <h1 class="actus-header__title">L’actualité de votre cabinet d’expertise comptable</h1>
-      <h2 class="actus-header__label">Découvrez <a href="/actualites">plus d'actualités</a></h2>
     </header>
     <div class="col-xs-12 actus-articles">
       <div class="row center-lg">
         @if(!$articles->isEmpty())
-        <section class="col-custom col-md-5 col-sm-5 col-xs-12 actus-articles__cabinet">
-          <h3 class="actus-articles__header">L'actualité du cabinet</h3>
+        <section class="col-custom col-md-6 col-sm-6 col-xs-12 actus-articles__entreprises">
+          <h2 class="actus-articles__header"><a href="/actualites-cabinet">Toute l'actualité du cabinet</a></h2>
           @foreach ($articles as $article)
-            <article class="row middle-xs article">
-                <div class="article__wrapper"> <!-- wrapper is here to center content into the defined height box without stretch elements on sides and middle. -->
-                  <h4 class="article__name">{{$article->title}}</h4>
-                  <p class="article__body">
-                    {{$article->content}}
-                  </p>
-                  <span class="article__date">{{$article->created_at}}</span>
+            <article class="row article">
+                @if(isset($article->image))
+                <a href="/actualites-cabinet/{{$article->slug}}" class="col-xs article__picture" style="background-image: url('{{$article->image}}')"></a>
+                <div class="col-xs article__content">
+                  <div class="row article__wrapper"> <!-- wrapper is here to center content into the defined height box without stretch elements on sides and middle. -->
+                    <h4 class="article__name">{{$article->title}}</h4>
+                    <p class="article__body">
+                      {{$article->description}}
+                    </p>
+                  </div>
+                  <div class="article__footer">
+                      <span class="date">{{$article->created_at}}</span>
+                      @if(strlen($article->content)>0)
+                      <a href="/actualites-cabinet/{{$article->slug}}" class="button"><span >Lire +</span></a>
+                      @endif
+                  </div>
                 </div>
+                @else
+                    <div class="article__content withoutimage">
+
+                      <h4 class="article__name">{{$article->title}}</h4>
+                      <p class="article__body">
+                          {{$article->description}}
+                      </p>
+
+                       <div class="article__footer">
+                        <span class="date">{{$article->created_at}}</span>
+                        @if(strlen($article->content)>0)
+                        <a href="/actualites-cabinet/{{$article->slug}}" class="button"><span >Lire +</span></a>
+                        @endif
+                    </div>
+                  </div>
+              @endif
             </article>
           @endforeach
         </section>
         @endif
         @if(!$echosarticles->isEmpty())
-        <section class="col-custom col-md-7 col-sm-7 col-xs-12 actus-articles__entreprises">
-          <h3 class="actus-articles__header">L'actualité des TPE-PME</h3>
+        <section class="col-custom col-md-6 col-sm-6 col-xs-12 actus-articles__entreprises pr35">
+          <h2 class="actus-articles__header"><a href="/actualites">Toute l'actualité des chefs d'entreprises</a></h2>
            @foreach($echosarticles as $echosarticle)
             <article class="row article">
               <a href="/actualites/{{$echosarticle->slug}}" class="col-xs article__picture" style="background-image: url('{{$echosarticle->image}}')"></a>

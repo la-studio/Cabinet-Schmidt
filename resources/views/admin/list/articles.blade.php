@@ -6,7 +6,7 @@
       <div class="row center-xs middle-xs wrapper">
         <div class="col-xs">
           <p class="article__title">Titre : {{$article->title}}</p>
-          <p class="article__content">Contenu : {{$article->content}}</p>
+          <p class="article__content">Contenu : {{$article->description}}</p>
         </div>
       </div>
       <form class="row center-xs article__form" action="/admin/article/delete/{{$article->id}}" method="post">

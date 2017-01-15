@@ -185,6 +185,9 @@
         }
       }
     }
+    .pr35{
+        padding-right: 35px;
+    }
     .actus-articles {
       margin-top: 50px;
       &__title {
@@ -241,7 +244,7 @@
         @media screen and (min-width: 1600px) {
           @include custom-col(45%);
         }
-        @media screen and (max-width: 840px) {
+        @media screen and (max-width: 1160px) {
           @include custom-col(100%);
           padding: 0 20px;
         }
@@ -260,7 +263,7 @@
           margin-top: 20px;
           box-shadow: 2px 2px 4px 0px rgba(0,0,0,.4);
           max-width: 700px;
-          @media screen and (min-width: 1600px) , screen and (max-width: 840px) {
+          @media screen and (min-width: 1600px) , screen and (max-width: 1160px) {
             max-width: none;
           }
           &__header {
@@ -272,6 +275,10 @@
             max-width: $size-pic;
             flex-basis : $size-pic;
           }
+          .withoutimage{
+            max-width: 100% !important;
+            width: 100%;
+          }
           &__content {
             max-width: calc(100% - #{$size-pic});
             @include flex-between();
@@ -280,12 +287,6 @@
             @media screen and (max-width: 840px) {
               max-width: none;
             }
-          }
-          &__body {
-              text-align: left;
-              @media screen and (max-width: $tablet-max) {
-                display: none;
-              }
           }
           &__name {
             margin: 0;
@@ -702,6 +703,9 @@
       }
       &__wrapper {
         width: 100%;
+        p{
+
+        }
         @media screen and (min-width: $tablet-max) {
           text-align: left;
         }
@@ -750,5 +754,9 @@
         }
       }
     }
+  }
+
+  a{
+    color: #e7b116;
   }
 }

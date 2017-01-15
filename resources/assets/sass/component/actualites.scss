@@ -1,4 +1,7 @@
 .actualites {
+  .maxheight{
+    min-height: 420px !important;
+  }
   &__cover {
     height: 550px;
     @include bg-regular();

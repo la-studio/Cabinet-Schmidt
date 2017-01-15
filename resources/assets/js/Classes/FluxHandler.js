@@ -19,11 +19,9 @@ FluxHandler.prototype.parsingDates = function () {
     }else{
       var month = val.substring(6,7);
     }
-    console.log(month);
     month = that.getMonth(month);
-    console.log(month);
     var day = val.substring(8,10);
-    var date = 'Publié le '+day+' '+month+' '+year+'.';
+    var date = 'Publié le '+day+' '+month+' '+year;
     $(this).text(date);
   })
 };

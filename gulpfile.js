@@ -2,6 +2,14 @@ var elixir = require('laravel-elixir');
 
 require('laravel-elixir-imagemin');
 
+elixir.config.css.autoprefix = {
+    enabled: true, //default, this is only here so you know how to disable
+    options: {
+        cascade: true,
+        browsers: ['last 2 versions', '> 1%']
+    }
+};
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management

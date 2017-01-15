@@ -7,7 +7,10 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
-        "orchestra/parser": "~3.0"
+        "orchestra/parser": "~3.0",
+        "unisharp/laravel-ckeditor": "^4.5",
+        "unisharp/laravel-filemanager": "^1.6",
+        "doctrine/dbal": "^2.5"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
