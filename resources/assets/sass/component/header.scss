@@ -277,7 +277,7 @@
     height: 25px;
     margin: 0 auto;
     margin-bottom: 10px;
-    transition: transform 0.1s ease-out;
+    transition: transform 0.2s ease-out;
   }
   a{
     display: block;
@@ -285,8 +285,8 @@
     height: 100%;
     line-height: 100%;
     text-align: center;
-    transition: font-weight 0.1s ease-out;
-    transition: transform 0.1s ease-out;
+    transition: font-weight 0.2s ease-out;
+    transition: transform 0.2s ease-out;
   }
   a:hover{
     transform: scale(1.04);
