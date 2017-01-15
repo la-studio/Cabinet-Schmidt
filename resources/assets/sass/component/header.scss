@@ -277,7 +277,7 @@
     height: 25px;
     margin: 0 auto;
     margin-bottom: 10px;
-    transition: transform 0.2s ease-out;
+    transition: transform 0.1s ease-out;
   }
   a{
     display: block;
@@ -289,8 +289,7 @@
     transition: transform 0.1s ease-out;
   }
   a:hover{
-    font-weight: bold;
-    transform: scale(1.03);
+    transform: scale(1.04);
     img{
       transform: scale(1.3);
     }
