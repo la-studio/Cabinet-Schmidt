@@ -25,8 +25,4 @@ class SoapWrapperController extends Controller
   	$soapClient->__setSoapHeaders([$head]);
   	dd($soapClient->__soapCall('calculACSv2', [1, 4, 20, 5]));
   }
-  public function php() 
-  {
-    return phpinfo();
-  }
 }
