@@ -15,7 +15,7 @@
     <div class="row admin">
       <div class="col-custom admin-menu">
         <div class="row admin-menu__logo">
-          <a href="{{ URL::to('/admin/dashboard') }}">@include('admin.dashboard-logo')</a>
+          <a href="{{ URL::to('/') }}">@include('admin.dashboard-logo')</a>
         </div>
         <nav class="row admin-menu__nav">
           <ul class="col-xs admin-menu__list">

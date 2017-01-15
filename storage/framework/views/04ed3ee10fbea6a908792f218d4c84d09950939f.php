@@ -15,7 +15,7 @@
     <div class="row admin">
       <div class="col-custom admin-menu">
         <div class="row admin-menu__logo">
-          <a href="<?php echo e(URL::to('/admin/dashboard')); ?>"><?php echo $__env->make('admin.dashboard-logo', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?></a>
+          <a href="<?php echo e(URL::to('/')); ?>"><?php echo $__env->make('admin.dashboard-logo', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?></a>
         </div>
         <nav class="row admin-menu__nav">
           <ul class="col-xs admin-menu__list">
