@@ -4,9 +4,6 @@
   </div>
   <ul class="toolbox--list">
     <li class="toolbox-item">
-      <a href="<?php echo e(URL::to('faq')); ?>"><img src="/svg/calculator.svg" alt="Simulateurs">Simulateurs</a>
-    </li>
-    <li class="toolbox-item">
       <a href="<?php echo e(URL::to('chiffres-utiles')); ?>"><img src="/svg/rate.svg" alt="Indices et taux">Indices et taux</a>
     </li>    
     <li class="toolbox-item">

@@ -11,7 +11,7 @@ class ArticlesController extends Controller
 {
     public function show(Article $id)
     {
-        return view('admin.templates.article')->with('article',$id);
+        return view('admin.templates.article')->with('article', $id);
     }
     public function index()
     {

@@ -9,7 +9,7 @@ ToolBox.prototype.init = function () {
   this.enabled = false;
   this.selector = '.toolbox';
   this.el = $(this.selector);
-  this.clickListener()
+  this.clickListener();
 };
 
 ToolBox.prototype.clickListener = function () {
@@ -33,15 +33,15 @@ ToolBox.prototype.open = function () {
 ToolBox.prototype.close = function () {
   var that = this;
   this.el.removeClass('toolbox--open');
-  this.enabled = false
+  this.enabled = false;
 };
 
 ToolBox.prototype.toggleState = function () {
   if(!this.enabled) {
-    this.open()
+    this.open();
   } else {
-    this.close()
+    this.close();
   }
 };
 
-cabinetTools = new ToolBox()
+cabinetTools = new ToolBox();

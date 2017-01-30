@@ -206,7 +206,7 @@
 // Toolbox
 .toolbox{
   display: table;
-  width: 410px;
+  width: 290px;
   height: 155px;
   position: fixed;
   left: 100%;
@@ -258,7 +258,7 @@
 }
 
 .toolbox--open {
-  transform: translate3d(-410px,0,0);
+  transform: translate3d(-290px,0,0);
 }
 
 .toolbox--list{
@@ -269,7 +269,7 @@
 .toolbox-item{
   font-size: 15px;
   display: inline-block;
-  width: 24%;
+  width: 32%;
   vertical-align: top;
   img{
     display: block;
@@ -292,34 +292,6 @@
     transform: scale(1.04);
     img{
       transform: scale(1.3);
-    }
-  }
-}
-
-@media (max-width: 1000px) {
-  .toolbox{
-    width:155px;
-    height: 290px; 
-  }
-
-  .toolbox--open {
-    transform: translate3d(-195px,0,0);
-  }
-
-  .toolbox--text span{
-    top: 150px;
-    text-align: left;
-  }
-
-  .toolbox--list{
-    top:0;
-  }
-
-  .toolbox-item{
-    display: block;
-    width: 100%;
-    a{
-      margin-bottom: 20px;
     }
   }
 }
