@@ -7,6 +7,7 @@
     @include bg-regular();
     background-attachment: fixed;
     background-image: url('/images/cover-actu.jpg');
+    background-repeat: no-repeat;
   }
   &__banner {
     padding-left: 40px;
@@ -97,6 +98,7 @@
       .imgctrd{
           background-position: center;
           background-size: auto 210px;
+          background-repeat: no-repeat;
         }
       .image {
         height: 210px;
