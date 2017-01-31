@@ -15,6 +15,7 @@
   <div class="row center-xs echo-article">
     <div class="col-xs-9">
       <header>
+        <p class="previousPage"><a href="/actualites">Retour aux actualités</a></p>
         <h1 class="echo-article__title">{{$compacted_article->title}}</h1>
         <h2 class="echo-article__summary">{{$compacted_article->summary}}</h2>
       </header>

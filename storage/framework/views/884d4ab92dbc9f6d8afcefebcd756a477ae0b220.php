@@ -16,6 +16,7 @@
   <div class="row center-xs echo-article">
     <div class="col-xs-9">
       <header>
+        <p class="previousPage"><a href="/chiffres-utiles">Retour aux chiffres utiles</a></p>
         <h1 class="echo-article__title"><?php echo e($compacted_article->title); ?></h1>
         <h2 class="echo-article__summary"><?php echo e($compacted_article->summary); ?></h2>
       </header>

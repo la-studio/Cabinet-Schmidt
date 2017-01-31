@@ -10,8 +10,11 @@
 
 <?php $__env->startSection('content'); ?>
   <div class="row center-xs echo-article">
+    <div class="cover" style="background-image: url(<?php echo e($article->image); ?>)">
+    </div>
     <div class="col-xs-9">
       <header>
+        <p class="previousPage"><a href="/actualites-cabinet">Retour aux actualités</a></p>
         <h1 class="echo-article__title"><?php echo e($article->title); ?></h1>
       </header>
       <h2 class="echo-article__summary">

@@ -94,6 +94,10 @@
     &__item {
       box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, .4);
       margin-top: 20px;
+      .imgctrd{
+          background-position: center;
+          background-size: auto 210px;
+        }
       .image {
         height: 210px;
         position: relative;

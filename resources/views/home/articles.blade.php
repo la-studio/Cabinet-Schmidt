@@ -23,7 +23,7 @@ Suivez l’actualité de votre cabinet comptable et de la région grenobloise !
           <article class="col-md-4 col-sm-6 col-xs-12 col-custom gallery__wrapper">
             <div class="gallery__item">
               @if(isset($article->image))
-              <a href="/actualites-cabinet/{{$article->slug}}" class="row image" style="background-image: url('{{$article->image}}')">
+              <a href="/actualites-cabinet/{{$article->slug}}" class="row image imgctrd" style="background-image: url('{{$article->image}}')">
               </a>
               @endif
               @if(!isset($article->image))

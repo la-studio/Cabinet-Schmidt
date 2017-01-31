@@ -9,8 +9,11 @@
 
 @section('content')
   <div class="row center-xs echo-article">
+    <div class="cover" style="background-image: url({{$article->image}})">
+    </div>
     <div class="col-xs-9">
       <header>
+        <p class="previousPage"><a href="/actualites-cabinet">Retour aux actualités</a></p>
         <h1 class="echo-article__title">{{$article->title}}</h1>
       </header>
       <h2 class="echo-article__summary">
