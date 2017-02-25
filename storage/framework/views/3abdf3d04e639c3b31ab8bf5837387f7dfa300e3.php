@@ -4,8 +4,13 @@
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('description'); ?>
-<?php echo e($article->content); ?>
+  <?php if(strlen($article->description) > 0): ?>
+    <?php echo e($article->description); ?>
 
+  <?php else: ?>
+    <?php echo e(strip_tags($article->content)); ?>
+
+  <?php endif; ?>
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>

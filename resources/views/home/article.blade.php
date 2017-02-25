@@ -4,7 +4,11 @@
 @stop
 
 @section('description')
-{{$article->content}}
+  @if(strlen($article->description) > 0)
+    {{ $article->description }}
+  @else
+    {{ strip_tags($article->content) }}
+  @endif
 @stop
 
 @section('content')

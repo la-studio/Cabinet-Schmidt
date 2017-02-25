@@ -6,7 +6,7 @@
         {{ method_field('PATCH') }}
         {{csrf_field()}}
         @if(isset($article->image))
-            <div class="col-md-8 col-sm-10 col-xs-12">
+            <div class="col-md-12 col-sm-12 col-xs-12">
               <img src="{{$article->image}}" alt="{{$article->title}}" class="maxwh">
             </div>
         @endif
