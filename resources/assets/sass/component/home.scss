@@ -445,6 +445,7 @@
       margin-top: 20px;
       > .row {
         @include fixheight(auto);
+        justify-content: center;
       }
     }
     .partenaires-logo {
@@ -759,3 +760,5 @@
     color: #e7b116;
   }
 }
+
+
