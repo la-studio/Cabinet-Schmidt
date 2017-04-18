@@ -133,6 +133,9 @@ Route::get('/sites-utiles', function () {
     return view('useful',compact('partenaires_shown'));
 });
 
+//Temoignages
+Route::get('/temoignages/{id}', 'TemoignagesController@view');
+
 //JS route for appointments
 Route::get('/collection/exceptions/appointments', function()
 {

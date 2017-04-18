@@ -10,7 +10,7 @@ $(document).ready(function () {
   if(value != undefined){
       if (value.length > 0 && value != undefined){
         character = limit - value.length;
-      $('.count').text(character+' caractères restants');
+        $('.count').text(character+' caractères restants');
     }
   }
   $('#cabinet-article').textLimit(limit, function( length, limit, reached  ){
@@ -19,6 +19,25 @@ $(document).ready(function () {
       $('.count').text(character+' caractère restant');
     }else{
       $('.count').text(character+' caractères restants');
+    }
+  });
+
+    //Character limit call
+  var character2;
+  var value2 = $('#cabinet-article2').val();
+  var limit2 = 420;
+  if(value2 != undefined){
+      if (value2.length > 0 && value2 != undefined){
+        character2 = limit2 - value2.length;
+        $('.count2').text(character2+' caractères restants');
+    }
+  }
+  $('#cabinet-article2').textLimit(limit2, function( length2, limit2, reached2  ){
+    character2 = limit2 - length2;
+    if(length2 == limit2){
+      $('.count2').text(character2+' caractère restant');
+    }else{
+      $('.count2').text(character2+' caractères restants');
     }
   });
 

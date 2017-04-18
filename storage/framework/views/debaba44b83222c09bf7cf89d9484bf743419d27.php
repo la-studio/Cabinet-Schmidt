@@ -7,7 +7,7 @@
         <?php echo e(csrf_field()); ?>
 
         <?php if(isset($article->image)): ?>
-            <div class="col-md-8 col-sm-10 col-xs-12">
+            <div class="col-md-12 col-sm-12 col-xs-12">
               <img src="<?php echo e($article->image); ?>" alt="<?php echo e($article->title); ?>" class="maxwh">
             </div>
         <?php endif; ?>

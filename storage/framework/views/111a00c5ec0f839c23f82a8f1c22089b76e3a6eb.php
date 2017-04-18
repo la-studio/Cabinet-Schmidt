@@ -9,7 +9,7 @@
         <span><?php echo e($temoignage->title); ?></span>
       </div>
       <div class="row center-xs temoignage__content">
-        <span><?php echo e($temoignage->content); ?></span>
+        <span><?php echo e($temoignage->description); ?></span>
       </div>
       <div class="row center-xs temoignage__identity">
         <span><?php echo e($temoignage->person_identity); ?></span>

@@ -487,7 +487,6 @@
         &__photo {
           @include fixheight(auto);
           img {
-            width: 80px;
             height: 80px;
             @include bg-regular();
           }

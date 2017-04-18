@@ -28,16 +28,22 @@
               <input class="large-field" type="text" name="person_job" value="<?php echo e($temoignage->person_job); ?>">
             </div>
           </div>
+          <div class="row center-xs article__field">
+          <div class="col-md-8 col-sm-10 col-xs-12">
+            <span>Description du témoignage</span>
+            <textarea class="large-field text-field" id="cabinet-article2" name="description"><?php echo e($temoignage->description); ?></textarea>
+          </div>
+        </div>
+          <div class="row center-xs article__field">
+            <div class="col-md-8 col-sm-10 col-xs-12">
+              <span></span>
+              <div class="count2">420 caratères restants</div>
+            </div>
+          </div>
           <div class="row center-xs temoignage__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
               <span>Le témoignage</span>
-              <textarea id="cabinet-article" class="large-field text-field" name="content"><?php echo e($temoignage->content); ?></textarea>
-            </div>
-          </div>
-          <div class="row center-xs slide__field">
-            <div class="col-md-8 col-sm-10 col-xs-12">
-              <span></span>
-              <div class="count">255 caratères restants</div>
+              <textarea class="large-field text-field" id="article-ckeditor" name="content"><?php echo e($temoignage->content); ?></textarea>
             </div>
           </div>
           <input type="submit" class="temoignage__save" value="Enregistrer">

@@ -10,7 +10,7 @@
         <span>{{$temoignage->title}}</span>
       </div>
       <div class="row center-xs temoignage__content">
-        <span>{{$temoignage->content}}</span>
+        <span>{{$temoignage->description}}</span>
       </div>
       <div class="row center-xs temoignage__identity">
         <span>{{$temoignage->person_identity}}</span>

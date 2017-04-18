@@ -13,7 +13,7 @@
                   <img src="{{$temoignage->logo}}" alt title="" />
                 </div>
                 <div class="row center-xs temoignage__body">
-                  <p>{{$temoignage->content}}</p>
+                  <p>{{$temoignage->description}}</p>
                 </div>
                 <div class="row center-xs temoignage__identity">
                   <div class="col-xs">
@@ -21,6 +21,10 @@
                     <h4 class="row center-xs">{{$temoignage->person_job}}</h4>
                   </div>
                 </div>
+                @if(strlen($temoignage->content)>0)
+                <br>
+                    <a href="/temoignages/{{$temoignage->id}}" class="article__button"><span >Lire le témoignage complet</span></a>
+                @endif
               </div>
             </div>
           </div>

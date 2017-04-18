@@ -52,6 +52,7 @@ class TemoignagesController extends Controller
             $uploadSuccess   = $file->move($destinationPath, $filename);
             $temoignage->logo = "/images/partenaires/".$filename;
             $temoignage->content = $request->content;
+            $temoignage->description = $request->description;
             $temoignage->person_job = $request->person_job;
             $temoignage->person_identity = $request->person_identity;
             $temoignage->save();
@@ -60,5 +61,10 @@ class TemoignagesController extends Controller
             $temoignage->update($request->all());
             return redirect('/admin/temoignages');
         }
+    }
+    public function view($id)
+    {
+        $temoignage = Temoignage::find($id);
+        return view('temoignage', compact('temoignage'));
     }
 }
