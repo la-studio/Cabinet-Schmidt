@@ -521,15 +521,9 @@
           h3 {
             font-family: $font-semibold;
           }
-        }
-        &__more {
-          margin-top: 15px;
-          flex-direction: column;
           a{
             font-family: $font-semibold;
-          }
-          &.row {
-            height: auto !important;
+            margin-top: 10px;
           }
         }
       }
