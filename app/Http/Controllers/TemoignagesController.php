@@ -34,6 +34,7 @@ class TemoignagesController extends Controller
         $filename        = $file->getClientOriginalName();
         $uploadSuccess   = $file->move($destinationPath, $filename);
         $temoignage = new Temoignage($request->all());
+        $temoignage->slug = str_slug($request->person_identity);
         $temoignage->logo = "/images/partenaires/".$filename; // Filling this property manually
         $temoignage->save();
         return redirect('/admin/temoignages');
@@ -55,16 +56,25 @@ class TemoignagesController extends Controller
             $temoignage->description = $request->description;
             $temoignage->person_job = $request->person_job;
             $temoignage->person_identity = $request->person_identity;
+            $temoignage->slug = str_slug($request->person_identity);
             $temoignage->save();
             return redirect('/admin/temoignages');
         } else {
-            $temoignage->update($request->all());
+            $temoignage->content = $request->content;
+            $temoignage->description = $request->description;
+            $temoignage->person_job = $request->person_job;
+            $temoignage->person_identity = $request->person_identity;
+            $temoignage->slug = str_slug($request->person_identity);
+            $temoignage->save();
             return redirect('/admin/temoignages');
         }
     }
-    public function view($id)
+    public function view($slug)
     {
-        $temoignage = Temoignage::find($id);
+        $temoignage = Temoignage::where('slug', "=", $slug)->first();
+        if(is_null($temoignage)){
+            return abort(404);
+        }
         return view('temoignage', compact('temoignage'));
     }
 }

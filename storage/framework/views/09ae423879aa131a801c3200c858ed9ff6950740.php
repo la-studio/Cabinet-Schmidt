@@ -20,7 +20,7 @@
                     <h3 class="row center-xs"><?php echo e($temoignage->person_identity); ?></h3>
                     <h4 class="row center-xs"><?php echo e($temoignage->person_job); ?></h4>
                     <?php if(strlen($temoignage->content)>0): ?>
-                    <a href="/temoignages/<?php echo e($temoignage->id); ?>" class="row center-xs article__button"><span >Lire le témoignage complet</span></a>
+                    <a href="/temoignage/<?php echo e($temoignage->slug); ?>" class="row center-xs article__button"><span >Lire le témoignage complet</span></a>
                     <?php endif; ?>
                   </div>
                 </div>

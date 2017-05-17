@@ -475,8 +475,11 @@
       }
     }
     .slider {
-      height: 400px;
-      @media screen and (max-width: $mobile) {
+      height: 350px;
+      @media screen and (max-width: 1200px) {
+        height: 400px;
+      }
+      @media screen and (max-width: 500px) {
         height: 460px;
       }
       margin-top: 15px;

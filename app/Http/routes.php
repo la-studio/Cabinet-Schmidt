@@ -35,6 +35,7 @@ Route::group(['prefix'=>'admin', 'middleware'=> 'auth'],function(){
     Route::delete('temoignage/delete/{id}','TemoignagesController@destroy');
     Route::post('temoignage/store', 'TemoignagesController@store');
     Route::patch('temoignage/update/{id}', 'TemoignagesController@update');
+    
     //Slider
     Route::get('slider', 'SliderController@index');
     Route::get('slide/edit/{id}', 'SliderController@show');
@@ -134,7 +135,8 @@ Route::get('/sites-utiles', function () {
 });
 
 //Temoignages
-Route::get('/temoignages/{id}', 'TemoignagesController@view');
+Route::get('temoignage/{slug}', 'TemoignagesController@view');
+
 
 //JS route for appointments
 Route::get('/collection/exceptions/appointments', function()
