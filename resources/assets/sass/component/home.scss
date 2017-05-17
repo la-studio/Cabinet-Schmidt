@@ -465,7 +465,7 @@
   &__temoignages {
     overflow: hidden;
     .row {
-      height: auto;
+      height: auto !important;
     }
     .temoignages-header {
       &__title {
@@ -487,13 +487,18 @@
         }
         &__photo {
           @include fixheight(auto);
+          &.row {
+            height: auto !important;
+          }
           img {
             height: 80px;
             @include bg-regular();
           }
         }
         &__body {
-          @include fixheight(auto);
+          &.row {
+            height: auto !important;
+          }
           margin-top: 20px;
           font-family: $font;
           position: relative;
@@ -513,7 +518,7 @@
           flex-direction: column;
           @include fixheight(auto);
           &.row {
-            @include fixheight(auto);
+            height: auto !important;
           }
           h3 {
             font-family: $font-semibold;
