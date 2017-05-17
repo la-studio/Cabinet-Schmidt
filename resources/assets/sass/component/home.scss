@@ -1,9 +1,6 @@
 .home {
   &__slider {
     height: calc(100vh - 100px);
-    @media screen and (max-width: $mobile) {
-      height: 460px;
-    }
     width: 100%;
     overflow: hidden;
     .row {
@@ -479,6 +476,9 @@
     }
     .slider {
       height: 400px;
+      @media screen and (max-width: $mobile) {
+        height: 460px;
+      }
       margin-top: 15px;
       position: relative;
       .temoignage {
