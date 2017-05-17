@@ -19,15 +19,11 @@
                   <div class="col-xs">
                     <h3 class="row center-xs"><?php echo e($temoignage->person_identity); ?></h3>
                     <h4 class="row center-xs"><?php echo e($temoignage->person_job); ?></h4>
+                    <?php if(strlen($temoignage->content)>0): ?>
+                    <a href="/temoignages/<?php echo e($temoignage->id); ?>" class="row center-xs article__button"><span >Lire le témoignage complet</span></a>
+                    <?php endif; ?>
                   </div>
                 </div>
-                <?php if(strlen($temoignage->content)>0): ?>
-                    <div class="row center-xs temoignage__more">
-                      <div class="col-xs">
-                        <a href="/temoignages/<?php echo e($temoignage->id); ?>" class="row center-xs article__button"><span >Lire le témoignage complet</span></a>
-                      </div>
-                    </div>
-                <?php endif; ?>
               </div>
             </div>
           </div>
