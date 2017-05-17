@@ -22,8 +22,11 @@
                   </div>
                 </div>
                 <?php if(strlen($temoignage->content)>0): ?>
-                <br>
-                    <a href="/temoignages/<?php echo e($temoignage->id); ?>" class="article__button"><span >Lire le témoignage complet</span></a>
+                    <div class="row center-xs temoignage__more">
+                      <div class="col-xs">
+                        <a href="/temoignages/<?php echo e($temoignage->id); ?>" class="row center-xs article__button"><span >Lire le témoignage complet</span></a>
+                      </div>
+                    </div>
                 <?php endif; ?>
               </div>
             </div>

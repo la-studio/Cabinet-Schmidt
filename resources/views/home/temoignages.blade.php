@@ -22,8 +22,11 @@
                   </div>
                 </div>
                 @if(strlen($temoignage->content)>0)
-                <br>
-                    <a href="/temoignages/{{$temoignage->id}}" class="article__button"><span >Lire le témoignage complet</span></a>
+                    <div class="row center-xs temoignage__more">
+                      <div class="col-xs">
+                        <a href="/temoignages/{{$temoignage->id}}" class="row center-xs article__button"><span >Lire le témoignage complet</span></a>
+                      </div>
+                    </div>
                 @endif
               </div>
             </div>

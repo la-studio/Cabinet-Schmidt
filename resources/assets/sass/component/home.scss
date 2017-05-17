@@ -486,7 +486,6 @@
           }
         }
         &__photo {
-          @include fixheight(auto);
           &.row {
             height: auto !important;
           }
@@ -516,12 +515,21 @@
         &__identity {
           margin-top: 15px;
           flex-direction: column;
-          @include fixheight(auto);
           &.row {
             height: auto !important;
           }
           h3 {
             font-family: $font-semibold;
+          }
+        }
+        &__more {
+          margin-top: 15px;
+          flex-direction: column;
+          a{
+            font-family: $font-semibold;
+          }
+          &.row {
+            height: auto !important;
           }
         }
       }
