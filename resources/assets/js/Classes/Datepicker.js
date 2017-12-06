@@ -44,11 +44,11 @@ Datepicker.prototype.init = function () {
   $('.month__text').text(this.getThisMonth()+' '+this.year);
   //this.highlightToday();
   $('.calendar-list').css('transform','translate3d('+this.translate+'px,0,0)');
-  /*
-  $('.col').click(function () {
-    $('.col').removeClass('col--selected');
-    $(this).addClass('col--selected');
-  })*/
+    /*
+    $('.col').click(function () {
+      $('.col').removeClass('col--selected');
+      $(this).addClass('col--selected');
+    })*/
 };
 
 Datepicker.prototype.getToday = function () {
@@ -65,8 +65,8 @@ Datepicker.prototype.getThisMonth = function () {
 };
 
 Datepicker.prototype.getMonth = function (index) {
-    if(this.month<12) {
-        return this.monthList[index]; // return current month as String (e.g: Juin)
+    if(index<12) {
+        return this.monthList[index];// return current month as String (e.g: Juin)
     } else {
         // For december
         return this.monthList[0];
@@ -84,6 +84,9 @@ Datepicker.prototype.getDayIndex = function (day) {
 
 Datepicker.prototype.getMonthIndex = function (month) {
   var index = this.monthList.indexOf(month);
+  if(index == 0){
+    index = 12;
+  }
   return index; // With String day as parameter, returns month  Index.
 };
 
@@ -141,36 +144,37 @@ Datepicker.prototype.translation = function (type, string) {
 
 Datepicker.prototype.getCalendarMonth = function (index) {
   this.active==index;
-  this.setTranslate();
+    this.setTranslate();
   $('.calendar-list').css('transform','translate3d('+this.translate+'px,0,0)');
   $('.month__text').text(this.getMonth(this.active)+' '+this.year);
 };
 
 Datepicker.prototype.getNext = function () {
-  if(this.active<11) {
+
+    if(this.active<=11) {
     this.active++;
     this.setTranslate()
     $('.calendar-list').css('transform','translate3d('+this.translate+'px,0,0)');
     $('.month__text').text(this.getMonth(this.active)+' '+this.year);
-  } else if(this.active==11) {
-    this.active=0;
-    this.setTranslate();
-    $('.calendar-list').css('transform','translate3d('+this.translate+'px,0,0)');
-    $('.month__text').text(this.getMonth(this.active)+' '+this.year);// Setting parameter manually because activ is defined to 0
-  }
+  } //else if(this.active==11) {
+    //this.active=0;
+    //this.setTranslate();
+    //$('.calendar-list').css('transform','translate3d('+this.translate+'px,0,0)');
+    //$('.month__text').text(this.getMonth(this.active)+' '+this.year);// Setting parameter manually because activ is defined to 0
+  //}
 };
 Datepicker.prototype.getPrev = function () {
-  if(this.active>1) {
+    if(this.active>1) {
     this.active--;
-    this.setTranslate()
+        this.setTranslate()
     $('.calendar-list').css('transform','translate3d('+this.translate+'px,0,0)');
     $('.month__text').text(this.getMonth(this.active)+' '+this.year);
-  } else if(this.active==0) {
-    this.active=11;
-    this.setTranslate()
-    $('.calendar-list').css('transform','translate3d('+this.translate+'px,0,0)');
-    $('.month__text').text(this.getMonth(this.active)+' '+this.year); // Setting parameter manually because activ is defined to 0
-  }
+  } //else if(this.active==0) {
+    //this.active=11;
+    //this.setTranslate()
+    //$('.calendar-list').css('transform','translate3d('+this.translate+'px,0,0)');
+    //$('.month__text').text(this.getMonth(this.active)+' '+this.year); // Setting parameter manually because activ is defined to 0
+  //}
 };
 Datepicker.prototype.getDayIndex = function (today) {
   var index = this.dayList.indexOf(today);
@@ -225,11 +229,11 @@ Datepicker.prototype.createBoards = function () {
 Datepicker.prototype.addMarkers = function (options) {
   var that = this;
   setTimeout(function () {
-    for (var i = 0; i < options.length; i++) {
+      for (var i = 0; i < options.length; i++) {
         var monthIndex = that.getMonthIndex(options[i].month);
         var toHighlight = $('.calendar[data-month="'+monthIndex+'"] .calendar__day-list .col[data-day="'+options[i].day+'"]').addClass('col--highlight');
     }
-  },1000);
+  },2000);
 };
 
 Datepicker.prototype.setTranslate = function () {

@@ -2,12 +2,12 @@
 <!DOCTYPE articles SYSTEM "FluxXmlClient.dtd">
 <articles>
 <article>
-  <id>k4_8172858</id>
-  <create_date>2016-07-01 12:00:00</create_date>
-  <display_date>2016-07-01 12:00:00</display_date>
+  <id>k4_11572966</id>
+  <create_date>2017-12-01 08:00:00</create_date>
+  <display_date>2017-12-01 08:00:00</display_date>
   <author>La Rédaction</author>
   <language>fr</language>
-  <title>Septembre 2016</title>
+  <title>Février 2018</title>
   <summary>Sous réserve de confirmation officielle.</summary>
   <content>
       <section>
@@ -15,89 +15,95 @@
          <section_summary/>
          <section_author/>
          <section_content>
-            <texteparagraphe>• Télédéclaration et télépaiement de la TVA correspondant aux opérations d’août 2016 et, éventuellement, demande de remboursement du crédit de TVA au titre du mois d’août 2016.</texteparagraphe>
+            <texteparagraphe>• Télédéclaration et télérèglement de la TVA correspondant aux opérations de janvier 2017 et, éventuellement, demande de remboursement du crédit de TVA au titre du mois de janvier 2018.</texteparagraphe>
          </section_content>
       </section>
       <section>
-         <section_title>5 Septembre 2016</section_title>
+         <section_title>5 février 2018</section_title>
          <section_summary/>
          <section_author/>
          <section_content>
             <texteparagraphe>
-               • Employeurs occupant au moins 50 salariés et payant les salaires d’août 2016 au plus tard le 31 août 2016 : DSN d’août 2016 et paiement des charges sociales sur les salaires. </texteparagraphe>
+               • Employeurs d’au moins 50 salariés : DSN de janvier 2018 et paiement des charges sociales sur les salaires de janvier 2018 versés au plus tard le 31 janvier 2018.</texteparagraphe>
             <texteparagraphe>
-               • Artisans, commerçants et industriels : paiement par prélèvement mensuel des cotisations d’assurance maladie-maternité, d’assurance vieillesse, d’invalidité-décès, d’allocations familiales, de la CSG et de la CRDS (le 20 septembre sur demande). </texteparagraphe>
+               • Employeurs d’au moins 50 salariés : paiement des charges sociales sur les salaires de décembre 2017 versés entre le 21 et le 31 janvier 2018.</texteparagraphe>
             <texteparagraphe>
-               • Professionnels libéraux : paiement par prélèvement mensuel des cotisations d’assurance maladie-maternité, d’allocations familiales, de la CSG et de la CRDS (le 20 septembre sur demande).</texteparagraphe>
+               • Artisans, commerçants et industriels : paiement par prélèvement mensuel des cotisations de maladie-maternité, d’indemnités journalières, de retraite, d’invalidité-décès, d’allocations familiales, de la CSG-CRDS et de la contribution à la formation professionnelle (sauf artisans) (le 20 février sur demande).<gras/>
+            </texteparagraphe>
+            <texteparagraphe>
+               • Professionnels libéraux : paiement par prélèvement mensuel des cotisations de maladie-maternité, d’allocations familiales, de la CSG-CRDS et de la contribution à la formation professionnelle (le 20 février sur demande).</texteparagraphe>
+            <texteparagraphe>
+               • Artisans, commerçants et industriels n’ayant pas choisi la mensualisation : paiement trimestriel des cotisations de maladie-maternité, d’indemnités journalières, de retraite, d’invalidité-décès, d’allocations familiales, de la CSG-CRDS et de la contribution à la formation professionnelle (sauf artisans).</texteparagraphe>
+            <texteparagraphe>
+               • Professionnels libéraux n’ayant pas choisi la mensualisation : paiement trimestriel des cotisations de maladie-maternité, d’allocations familiales, de la CSG-CRDS et de la contribution à la formation professionnelle.</texteparagraphe>
          </section_content>
       </section>
       <section>
-         <section_title>12 Septembre 2016</section_title>
+         <section_title>12 février 2018</section_title>
          <section_summary/>
          <section_author/>
          <section_content>
             <texteparagraphe>
-               • Assujettis à la TVA réalisant des opérations intracommunautaires : dépôt auprès des douanes de la déclaration d’échanges de biens et de la déclaration européenne des services pour les opérations intervenues en août 2016.</texteparagraphe>
+               • Assujettis à la TVA réalisant des opérations intracommunautaires : dépôt auprès des douanes de la déclaration d’échanges de biens et de la déclaration européenne des services pour les opérations intervenues en janvier 2018.</texteparagraphe>
          </section_content>
       </section>
       <section>
-         <section_title>15 Septembre 2016</section_title>
+         <section_title>15 février 2018</section_title>
          <section_summary/>
          <section_author/>
          <section_content>
             <texteparagraphe>
-               • Entreprises dont l’effectif est supérieur à 9 et inférieur à 50 salariés, et entreprises de 9 salariés au plus ayant opté pour le paiement mensuel des charges sociales : DSN d’août 2016 (entreprises dont le montant des cotisations et contributions sociales dues au titre de 2014 est égal ou supérieur à 50 000 €) ou DUCS, et paiement des charges sociales sur les salaires d’août 2016. </texteparagraphe>
+               • Contribuables n’ayant pas opté pour le paiement mensuel de l’impôt sur le revenu : paiement du premier tiers d’impôt sur le revenu de 2017 (report au 20 février en cas de paiement en ligne).</texteparagraphe>
             <texteparagraphe>
-               • Contribuables n’ayant pas opté pour le paiement mensuel de l’impôt sur le revenu : paiement du solde de l’impôt sur le revenu de 2015 et, le cas échéant, de la contribution exceptionnelle sur les hauts revenus. </texteparagraphe>
+               • Employeurs de moins de 11 salariés ayant opté pour le paiement trimestriel des charges sociales : DSN de janvier 2018.</texteparagraphe>
             <texteparagraphe>
-               • Sociétés soumises à l’impôt sur les sociétés ayant clos leur exercice le 31 mai 2016 : télépaiement du solde de l’impôt sur les sociétés, de la contribution sociale ainsi que, le cas échéant, de la contribution exceptionnelle.</texteparagraphe>
+               • Employeurs de 9 salariés au plus n’ayant pas opté pour le paiement trimestriel des charges sociales : DSN de janvier 2018 et paiement des charges sociales sur les salaires de janvier 2018.</texteparagraphe>
             <texteparagraphe>
-               • Sociétés soumises à l’impôt sur les sociétés : télépaiement de l’acompte d’IS, de l’acompte de contribution sociale, ainsi que le cas échéant, du versement anticipé de la contribution exceptionnelle, et de la contribution sur les dividendes distribués. </texteparagraphe>
+               • Employeurs d’au moins 11 et de moins de 50 salariés, et employeurs de plus de 9 et de moins de 11 salariés n’ayant pas opté pour le paiement trimestriel des charges sociales : DSN de janvier 2018 et paiement des charges sociales sur les salaires de janvier 2018 versés au plus tard le 10 février 2018.<gras/>
+            </texteparagraphe>
             <texteparagraphe>
-               • Employeurs assujettis à la taxe sur les salaires : télépaiement de la taxe sur les salaires payés en août 2016 lorsque le total des sommes dues au titre de 2015 excédait 10 000 €. </texteparagraphe>
+               • Employeurs de plus de 9 et de moins de 50 salariés, et employeurs de 9 salariés au plus ayant opté, pour 2017, pour le paiement mensuel des charges sociales : paiement des charges sociales sur les salaires de décembre 2017 versés entre le 11 et le 31 janvier 2018.</texteparagraphe>
             <texteparagraphe>
-               • Employeurs occupant au moins 50 salariés et payant les salaires d’août 2016 dans les 10 premiers jours de septembre 2016 : DSN d’août 2016 et paiement des charges sociales sur les salaires.</texteparagraphe>
+               • Employeurs d’au moins 50 salariés : DSN de janvier 2018 et paiement des charges sociales sur les salaires de janvier 2018 versés entre le 1er et le 20 février 2018 et DSN de janvier 2018 sur les salaires de janvier 2018 versés entre le 21 et le 28 février 2018.</texteparagraphe>
             <texteparagraphe>
-               • Employeurs occupant au moins 50 salariés et payant les salaires d’août 2016 entre le 11 et le 20 septembre, et employeurs de 9 salariés au plus n’ayant pas opté pour le paiement mensuel des charges sociales : DSN d’août 2016.</texteparagraphe>
+               • Entreprises soumises à l’impôt sur les sociétés ayant clos leur exercice le 31 octobre 2017 : télérèglement du solde de l’impôt sur les sociétés ainsi que, le cas échéant, de la contribution sociale.</texteparagraphe>
             <texteparagraphe>
-               • Entreprises assujetties à la cotisation sur la valeur ajoutée des entreprises (CVAE) : télédéclaration (n° 1329-AC) et télépaiement, le cas échéant, du 2e acompte de CVAE. </texteparagraphe>
+               • Sociétés ayant distribué des dividendes et payé des intérêts de comptes courants en 2017 : télédéclaration récapitulative (IFU) à déposer au service des finances publiques.</texteparagraphe>
+            <texteparagraphe>
+               • Employeurs assujettis à la taxe sur les salaires : télérèglement de la taxe sur les salaires payés en janvier 2018 lorsque le total des sommes dues au titre de 2017 excédait 10 000 € et télétransmission du relevé de versement provisionnel n° 2501.</texteparagraphe>
          </section_content>
       </section>
       <section>
-         <section_title>25 Septembre 2016</section_title>
+         <section_title>28 février 2018</section_title>
          <section_summary/>
          <section_author/>
          <section_content>
             <texteparagraphe>
-               • Employeurs occupant au moins 50 salariés et payant les salaires d’août 2016 entre le 11 et le 20 septembre : paiement des charges sociales sur les salaires.</texteparagraphe>
-         </section_content>
-      </section>
-      <section>
-         <section_title>30 Septembre 2016</section_title>
-         <section_summary/>
-         <section_author/>
-         <section_content>
+               • Redevables de la taxe d’apprentissage : date limite de réalisation de certaines dépenses déductibles.</texteparagraphe>
             <texteparagraphe>
-               • Sociétés soumises à l’impôt sur les sociétés ayant clos leur exercice le 30 juin 2016 : télétransmission de la déclaration annuelle des résultats et des documents annexes. </texteparagraphe>
+               • Employeurs assujettis à l’obligation de participation à la formation professionnelle continue : date limite de paiement de la contribution unique due sur les rémunérations de 2017.</texteparagraphe>
             <texteparagraphe>
-               • Contribuables ayant opté pour la mensualisation du paiement de leur cotisation foncière des entreprises (CFE) : dernière faculté de résiliation de l’option pour l’année en cours. </texteparagraphe>
+               • Entreprises soumises à l’impôt sur les sociétés ayant clos leur exercice le 30 novembre 2017 : télétransmission de la déclaration annuelle des résultats et des annexes (tolérance jusqu’au 15 mars).</texteparagraphe>
+            <texteparagraphe>
+               • Employeurs d’au moins 50 salariés : paiement des charges sociales sur les salaires de janvier 2018 versés entre le 21 et le 28 février 2018.<gras/>
+            </texteparagraphe>
          </section_content>
       </section>
    </content>
   <tag type="typo">Echéancier</tag>
   <copyright>
     <holder>Les Echos Publishing</holder>
-    <year>2016</year>
+    <year>2017</year>
   </copyright>
 </article>
 
 <article>
-  <id>k4_8010802</id>
-  <create_date>2016-06-02 10:00:00</create_date>
-  <display_date>2016-06-02 10:02:00</display_date>
+  <id>k4_11428137</id>
+  <create_date>2017-10-30 15:00:00</create_date>
+  <display_date>2017-11-01 07:00:00</display_date>
   <author>La Rédaction</author>
   <language>fr</language>
-  <title>Août 2016</title>
+  <title>Janvier 2018</title>
   <summary>Sous réserve de confirmation officielle.</summary>
   <content>
       <section>
@@ -105,85 +111,90 @@
          <section_summary/>
          <section_author/>
          <section_content>
-            <texteparagraphe>• Télédéclaration et télépaiement de la TVA correspondant aux opérations de juillet 2016 et, éventuellement, demande de remboursement du crédit de TVA au titre du mois de juillet 2016.</texteparagraphe>
+            <texteparagraphe>• Télédéclaration et télérèglement de la TVA correspondant aux opérations de décembre 2017 ou du 4e trimestre 2017 et, éventuellement, demande de remboursement du crédit de TVA au titre de l’année 2017, du 4e trimestre 2017, ou du mois de décembre 2017.</texteparagraphe>
+            <texteparagraphe>
+               • Sociétés propriétaires ou utilisatrices de voitures de tourisme : télédéclaration et télérèglement de la taxe sur les véhicules de société (TVS) due au titre de la période allant du 1er octobre 2016 au 30 septembre 2017 et de la taxe exceptionnelle due au titre du 1er octobre 2017 au 31 décembre 2017.</texteparagraphe>
          </section_content>
       </section>
       <section>
-         <section_title>5 Août 2016</section_title>
+         <section_title>5 Janvier 2018</section_title>
          <section_summary/>
          <section_author/>
          <section_content>
             <texteparagraphe>
-               • Employeurs occupant au moins 50 salariés et payant les salaires de juillet 2016 au plus tard le 31 juillet 2016 : déclaration sociale nominative de juillet 2016 et paiement des charges sociales sur les salaires.</texteparagraphe>
+               • Employeurs d’au moins 50 salariés : DSN de décembre 2017 et paiement des charges sociales sur les salaires de décembre 2017 versés au plus tard le 31 décembre 2017.</texteparagraphe>
             <texteparagraphe>
-               • Artisans, commerçants et industriels : paiement par prélèvement mensuel des cotisations d’assurance maladie-maternité, d’assurance vieillesse, d’invalidité-décès, d’allocations familiales, de la CSG et de la CRDS (le 20 août sur demande).</texteparagraphe>
+               • Employeurs d’au moins 50 salariés : paiement des charges sociales sur les salaires de novembre 2017 versés entre le 21 et le 31 décembre 2017.</texteparagraphe>
             <texteparagraphe>
-               • Professionnels libéraux : paiement par prélèvement mensuel des cotisations d’assurance maladie-maternité, d’allocations familiales, de la CSG et de la CRDS (le 20 août sur demande).</texteparagraphe>
+               • Artisans, commerçants et industriels : paiement par prélèvement mensuel des cotisations de maladie-maternité, d’indemnités journalières, de retraite, d’invalidité-décès, d’allocations familiales et de la CSG-CRDS (le 20 janvier sur demande).</texteparagraphe>
             <texteparagraphe>
-               • Artisans, commerçants et industriels n’ayant pas choisi la mensualisation : paiement trimestriel des cotisations d’assurance maladie-maternité, d’assurance vieillesse, d’invalidité-décès, d’allocations familiales, de la CSG et de la CRDS.</texteparagraphe>
-            <texteparagraphe>
-               • Professionnels libéraux n’ayant pas choisi la mensualisation : paiement trimestriel des cotisations d’assurance maladie-maternité, d’allocations familiales, de la CSG et de la CRDS.</texteparagraphe>
+               • Professionnels libéraux : paiement par prélèvement mensuel des cotisations de maladie-maternité, d’allocations familiales et de la CSG-CRDS (le 20 janvier sur demande).</texteparagraphe>
          </section_content>
       </section>
       <section>
-         <section_title>11 Août 2016</section_title>
+         <section_title>12 Janvier 2018</section_title>
          <section_summary/>
          <section_author/>
          <section_content>
             <texteparagraphe>
-               • Assujettis à la TVA réalisant des opérations intracommunautaires : dépôt auprès des douanes de la déclaration d’échanges de biens et de la déclaration européenne des services pour les opérations intervenues en juillet 2016.</texteparagraphe>
+               • Assujettis à la TVA réalisant des opérations intracommunautaires : dépôt auprès des douanes de la déclaration d’échanges de biens et de la déclaration européenne des services pour les opérations intervenues en décembre 2017.</texteparagraphe>
          </section_content>
       </section>
       <section>
-         <section_title>15 Août 2016</section_title>
+         <section_title>15 Janvier 2018</section_title>
          <section_summary/>
          <section_author/>
          <section_content>
             <texteparagraphe>
-               • Employeurs assujettis à la taxe sur les salaires : télépaiement de la taxe sur les salaires payés en juillet 2016 lorsque le total des sommes dues au titre de 2015 excédait 10 000 €.</texteparagraphe>
+               • Employeurs de 9 salariés au plus n’ayant pas opté pour le paiement mensuel des charges sociales : DSN de décembre 2017 et paiement des charges sociales sur les salaires du 4e trimestre 2017 (le 31 janvier pour les entreprises qui pratiquent le décalage de la paie avec rattachement à la période d’emploi).</texteparagraphe>
             <texteparagraphe>
-               • Entreprises dont l’effectif est supérieur à 9 et inférieur à 50 salariés, et entreprises de 9 salariés au plus ayant opté pour le paiement mensuel des charges sociales : déclaration sociale nominative de juillet 2016 (entreprises dont le montant des cotisations et contributions sociales dues au titre de 2014 est égal ou supérieur à 50 000 €) ou DUCS, et paiement des charges sociales sur les salaires de juillet 2016.</texteparagraphe>
+               • Employeurs de plus de 9 et de moins de 50 salariés, et employeurs de 9 salariés au plus ayant opté pour le paiement mensuel des charges sociales : DSN de décembre 2017 et paiement des charges sociales sur les salaires de décembre 2017 versés au plus tard le 10 janvier 2018 ou sur les salaires de novembre 2017 versés entre le 11 et le 31 décembre 2017.</texteparagraphe>
             <texteparagraphe>
-               • Sociétés soumises à l’impôt sur les sociétés ayant clos leur exercice le 30 avril 2016 : télépaiement du solde de l’impôt sur les sociétés, de la contribution sociale ainsi que, le cas échéant, de la contribution exceptionnelle.</texteparagraphe>
+               • Employeurs d’au moins 50 salariés : DSN de décembre 2017 et paiement des charges sociales sur les salaires de décembre 2017 versés dans les 20 premiers jours de janvier 2018 (paiement des charges sociales le 20 janvier par tolérance pour les salaires versés entre le 11 et le 20 janvier) et DSN de décembre 2017 sur les salaires de décembre 2017 versés entre le 21 et le 31 janvier 2018.</texteparagraphe>
             <texteparagraphe>
-               • Employeurs occupant au moins 50 salariés et payant les salaires de juillet 2016 dans les 10 premiers jours d’août 2016 : déclaration sociale nominative de juillet 2016 et paiement des charges sociales sur les salaires.</texteparagraphe>
+               • Entreprises soumises à l’impôt sur les sociétés ayant clos leur exercice le 30 septembre 2017 : télérèglement du solde de l’impôt sur les sociétés ainsi que, le cas échéant, de la contribution sociale et de la contribution exceptionnelle.</texteparagraphe>
             <texteparagraphe>
-               • Employeurs occupant au moins 50 salariés et payant les salaires de juillet 2016 entre le 11 et 20 août 2016, et employeurs de 9 salariés au plus n’ayant pas opté pour le paiement mensuel des charges sociales : déclaration sociale nominative de juillet 2016.</texteparagraphe>
+               • Employeurs assujettis à la taxe sur les salaires : télérèglement de la taxe sur les salaires payés en décembre 2017 lorsque le total des sommes dues au titre de 2016 excédait 10 000 €, ou au cours du 4e trimestre 2017 lorsque le total des sommes dues au titre de 2016 était compris entre 4 000 et 10 000 € (et télétransmission du relevé provisionnel n° 2501), ou au cours de l’année 2017 lorsque le total des sommes dues en 2016 était inférieur à 4 000 €, et télédéclaration de la régularisation des versements 2017 sur l’imprimé n° 2502 (tolérance jusqu’au 31 janvier).</texteparagraphe>
          </section_content>
       </section>
       <section>
-         <section_title>25 Août 2016</section_title>
+         <section_title>31 Janvier 2018</section_title>
          <section_summary/>
          <section_author/>
          <section_content>
             <texteparagraphe>
-               • Employeurs occupant au moins 50 salariés et payant les salaires de juillet 2016 entre le 11 et le 20 août : paiement des charges sociales sur les salaires de juillet 2016.</texteparagraphe>
-         </section_content>
-      </section>
-      <section>
-         <section_title>31 Août 2016</section_title>
-         <section_summary/>
-         <section_author/>
-         <section_content>
+               • Employeurs : le cas échéant, déclaration annuelle des salaires versés en 2017 (DADS).</texteparagraphe>
             <texteparagraphe>
-               • Sociétés soumises à l’impôt sur les sociétés ayant clos leur exercice le 31 mai 2016 : télétransmission de la déclaration annuelle des résultats et des documents annexes.</texteparagraphe>
+               • Entreprises soumises à l’impôt sur les sociétés ayant clos leur exercice le 31 octobre 2017 : télétransmission de la déclaration annuelle des résultats et des annexes (tolérance jusqu’au 15 février).</texteparagraphe>
+            <texteparagraphe>
+               • Entreprises relevant du régime micro-BIC : option pour un régime réel d’imposition (valable pour 2018).</texteparagraphe>
+            <texteparagraphe>
+               • Entreprises relevant du régime simplifié d’imposition : option pour le régime réel normal (valable pour 2018 et 2019).</texteparagraphe>
+            <texteparagraphe>
+               • Entreprises relevant d’un régime micro ayant opté pour un régime réel au titre de 2017 : renonciation à partir de 2018.</texteparagraphe>
+            <texteparagraphe>
+               • Entreprises relevant du régime simplifié ayant opté pour le régime normal en 2016 : renonciation pour 2018.</texteparagraphe>
+            <texteparagraphe>
+               • Titulaires de bénéfices non commerciaux (BNC) imposés selon le régime de la déclaration contrôlée : option pour la détermination du résultat 2018 en fonction des créances acquises et des dépenses engagées.</texteparagraphe>
+            <texteparagraphe>
+               • Employeurs ayant exposé leurs salariés à la pénibilité en 2017 : paiement de la contribution additionnelle sur les rémunérations versées en 2017.</texteparagraphe>
          </section_content>
       </section>
    </content>
   <tag type="typo">Echéancier</tag>
   <copyright>
     <holder>Les Echos Publishing</holder>
-    <year>2016</year>
+    <year>2017</year>
   </copyright>
 </article>
 
 <article>
-  <id>k4_7893360</id>
-  <create_date>2016-05-03 09:45:00</create_date>
-  <display_date>2016-05-03 09:45:00</display_date>
+  <id>k4_11274995</id>
+  <create_date>2017-10-01 06:00:00</create_date>
+  <display_date>2017-10-01 06:00:00</display_date>
   <author>La Rédaction</author>
   <language>fr</language>
-  <title>Juillet 2016</title>
+  <title>Décembre 2017</title>
   <summary>Sous réserve de confirmation officielle.</summary>
   <content>
       <section>
@@ -191,80 +202,87 @@
          <section_summary/>
          <section_author/>
          <section_content>
-            <texteparagraphe>• Télédéclaration et télépaiement de la TVA correspondant aux opérations de juin 2016 ou du 2e trimestre 2016 et, éventuellement, demande de remboursement du crédit de TVA au titre du mois de juin 2016 ou du 2e trimestre 2016.</texteparagraphe>
+            <texteparagraphe>• Télédéclaration et télérèglement de la TVA correspondant aux opérations de novembre 2017 et, éventuellement, demande de remboursement du crédit de TVA au titre du mois de novembre 2017.</texteparagraphe>
+            <texteparagraphe>
+               • Entreprises relevant du régime simplifié de TVA : télérèglement de l’acompte semestriel, accompagné du relevé n° 3514.</texteparagraphe>
          </section_content>
       </section>
       <section>
-         <section_title>5 Juillet 2016</section_title>
+         <section_title>5 Décembre 2017</section_title>
          <section_summary/>
          <section_author/>
          <section_content>
             <texteparagraphe>
-               • Employeurs occupant au moins 50 salariés : déclaration (DUCS ou déclaration sociale nominative) et paiement des charges sociales sur les salaires de juin 2016 payés au plus tard le 30 juin 2016. </texteparagraphe>
+               • Employeurs occupant au moins 50 salariés : DSN de novembre 2017 et paiement des charges sociales sur les salaires de novembre 2017 payés au plus tard le 30 novembre 2017.</texteparagraphe>
             <texteparagraphe>
-               • Artisans, commerçants et industriels : paiement par prélèvement mensuel des cotisations d’assurance maladie-maternité, d’assurance vieillesse, d’invalidité-décès, d’allocations familiales, de la CSG et de la CRDS (le 20 juillet sur demande). </texteparagraphe>
+               • Employeurs occupant au moins 50 salariés : paiement des charges sociales sur les salaires d’octobre 2017 payés entre le 21 et le 30 novembre 2017.</texteparagraphe>
             <texteparagraphe>
-               • Professionnels libéraux : paiement par prélèvement mensuel des cotisations d’assurance maladie-maternité, d’allocations familiales, de la CSG et de la CRDS (le 20 juillet sur demande).</texteparagraphe>
+               • Artisans, commerçants et industriels : paiement par prélèvement mensuel des cotisations de maladie-maternité, d’indemnités journalières, de retraite, d’invalidité-décès, d’allocations familiales et de la CSG-CRDS (le 20 décembre sur demande).</texteparagraphe>
+            <texteparagraphe>
+               • Professionnels libéraux : paiement par prélèvement mensuel des cotisations de maladie-maternité, d’allocations familiales et de la CSG-CRDS (le 20 décembre sur demande).</texteparagraphe>
          </section_content>
       </section>
       <section>
-         <section_title>12 Juillet 2016</section_title>
+         <section_title>12 Décembre 2017</section_title>
          <section_summary/>
          <section_author/>
          <section_content>
             <texteparagraphe>
-               • Assujettis à la TVA réalisant des opérations intracommunautaires : dépôt auprès des douanes de la déclaration d’échanges de biens et de la déclaration européenne des services pour les opérations intervenues en juin 2016.</texteparagraphe>
+               • Assujettis à la TVA réalisant des opérations intracommunautaires : dépôt auprès des douanes de la déclaration d’échanges de biens et de la déclaration européenne des services pour les opérations intervenues en novembre 2017.</texteparagraphe>
          </section_content>
       </section>
       <section>
-         <section_title>15 Juillet 2016</section_title>
+         <section_title>15 Décembre 2017</section_title>
          <section_summary/>
          <section_author/>
          <section_content>
             <texteparagraphe>
-               • Entreprises de 9 salariés au plus n’ayant pas opté pour le paiement mensuel des charges sociales : déclaration (DUCS ou déclaration sociale nominative) de juin 2016 et paiement des charges sociales sur les salaires du 2e trimestre 2016 (le 31 juillet pour les entreprises qui pratiquent le décalage de la paie avec rattachement à la période d’emploi). </texteparagraphe>
+               • Entreprises soumises à l’impôt sur les sociétés ayant clos leur exercice le 31 août 2017 : télérèglement du solde de l’impôt sur les sociétés ainsi que, le cas échéant, de la contribution sociale.</texteparagraphe>
             <texteparagraphe>
-               • Entreprises dont l’effectif est supérieur à 9 et inférieur à 50 salariés, et entreprises de 9 salariés au plus ayant opté pour le paiement mensuel des charges sociales : déclaration (DUCS ou déclaration sociale nominative) et paiement des charges sociales sur les salaires de juin 2016.</texteparagraphe>
+               • Entreprises soumises à l’impôt sur les sociétés : télérèglement de l’acompte d’IS, ainsi que le cas échéant, de l’acompte de contribution sociale et de la contribution sur les dividendes distribués.</texteparagraphe>
             <texteparagraphe>
-               • Employeurs occupant au moins 50 salariés : déclaration (DUCS ou déclaration sociale nominative) et paiement des charges sociales sur les salaires de juin 2016 payés dans les 10 premiers jours de juillet 2016. </texteparagraphe>
+               • Tous contribuables : paiement des impositions mises en recouvrement le 31 octobre 2017, notamment télérèglement du solde de la cotisation foncière des entreprises (CFE).</texteparagraphe>
             <texteparagraphe>
-               • Employeurs occupant au moins 50 salariés et payant les salaires de juin 2016 entre le 11 et 20 juillet 2016 : déclaration sociale nominative de juin 2016. </texteparagraphe>
+               • Employeurs de 9 salariés au plus n’ayant pas opté pour le paiement mensuel des charges sociales : DSN de novembre 2017.</texteparagraphe>
             <texteparagraphe>
-               • Sociétés soumises à l’impôt sur les sociétés ayant clos leur exercice le 31 mars 2016 : télépaiement du solde de l’impôt sur les sociétés, de la contribution sociale ainsi que, le cas échéant, de la contribution exceptionnelle. </texteparagraphe>
+               • Entreprises dont l’effectif est supérieur à 9 et inférieur à 50 salariés, et entreprises de 9 salariés au plus ayant opté pour le paiement mensuel des charges sociales : DSN de novembre 2017 et paiement des charges sociales sur les salaires de novembre 2017 payés au plus tard le 10 décembre 2017 ou sur les salaires d’octobre 2017 payés entre le 11 et le 30 novembre 2017.</texteparagraphe>
             <texteparagraphe>
-               • Employeurs assujettis à la taxe sur les salaires : télépaiement de la taxe sur les salaires payés en juin 2016 lorsque le total des sommes dues au titre de 2015 excédait 10 000 €, ou au cours du 2e trimestre 2016 lorsque le total des sommes dues au titre de 2015 était compris entre 4 000 et 10 000 €. </texteparagraphe>
+               • Employeurs occupant au moins 50 salariés : DSN de novembre 2017 et paiement des charges sociales sur les salaires de novembre 2017 payés dans les 20 premiers jours de décembre 2017 (paiement des charges sociales le 20 décembre par tolérance pour les salaires versés entre le 11 et le 20 décembre).</texteparagraphe>
+            <texteparagraphe>
+               • Employeurs assujettis à la taxe sur les salaires : télérèglement de la taxe sur les salaires payés en novembre 2017 lorsque le total des sommes dues au titre de  2016 excédait 10 000 € et télétransmission du relevé de versement provisionnel.</texteparagraphe>
+            <texteparagraphe>
+               • Contribuables souhaitant opter pour le paiement mensuel de leur impôt sur le revenu et/ou de leurs impôts locaux (taxe d’habitation, taxe foncière, cotisation foncière des entreprises)  et/ou de l’ISF (patrimoine net taxable compris entre 1,3 M€ et 2,57 M€) : date limite d’exercice de l’option pour une entrée en vigueur dès janvier 2018.</texteparagraphe>
          </section_content>
       </section>
       <section>
-         <section_title>25 Juillet 2016</section_title>
+         <section_title>31 Décembre 2017</section_title>
          <section_summary/>
          <section_author/>
          <section_content>
             <texteparagraphe>
-               • Employeurs occupant au moins 50 salariés : DUCS (pour les employeurs hors déclaration sociale nominative) et paiement des charges sociales sur les salaires de juin 2016 payés entre le 11 et le 20 juillet 2016.</texteparagraphe>
-         </section_content>
-      </section>
-      <section>
-         <section_title>31 Juillet 2016</section_title>
-         <section_summary/>
-         <section_author/>
-         <section_content>
+               • Entreprises assujetties à la participation-construction : date limite pour investir la participation égale à 0,45 % des salaires 2016.</texteparagraphe>
             <texteparagraphe>
-               • Sociétés soumises à l’impôt sur les sociétés ayant clos leur exercice le 30 avril 2016 : télétransmission de la déclaration annuelle des résultats et des documents annexes.</texteparagraphe>
+               • Entreprises soumises à l’impôt sur les sociétés ayant clos leur exercice le 30 septembre 2017 : télétransmission de la déclaration annuelle des résultats et des annexes (tolérance jusqu’au 15 janvier).</texteparagraphe>
+            <texteparagraphe>
+               • Établissements créés ou repris en 2017 : déclaration provisoire n° 1447-C relative à la cotisation foncière des entreprises (CFE).</texteparagraphe>
+            <texteparagraphe>
+               • Tous contribuables : date limite des réclamations relatives aux impôts payés ou recouvrés en  2015 (ou en 2016 pour les impôts locaux).</texteparagraphe>
+            <texteparagraphe>
+               • Entreprises assujetties à la CET : date limite de demande du plafonnement de la CET en fonction de la valeur ajoutée au titre de 2016.</texteparagraphe>
          </section_content>
       </section>
    </content>
   <tag type="typo">Echéancier</tag>
   <copyright>
     <holder>Les Echos Publishing</holder>
-    <year>2016</year>
+    <year>2017</year>
   </copyright>
 </article>
 
 <article>
   <id>k4_1679341</id>
   <create_date>2014-01-27 08:35:00</create_date>
-  <display_date>2015-04-17 18:02:00</display_date>
+  <display_date>2017-10-11 15:01:00</display_date>
   <author>La Rédaction</author>
   <language>fr</language>
   <title>Calendrier des vacances scolaires</title>
@@ -272,104 +290,6 @@
   <content>
       <section>
          <section_content>
-            <texteparagraphe>
-               <table>
-                  <tbody>
-                     <tr>
-                        <td class="TABLEAU-Titre" rowspan="1" colspan="4">2015 - 2016</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Périodes</td>
-                        <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Zone A</td>
-                        <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Zone B</td>
-                        <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Zone C</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Rentrée 2015</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="3">01/09/2015</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Toussaint</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="3">17/10/2015 au 02/11/2015</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Noël</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="3">19/12/2015 au 04/01/2016</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Hiver</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">13/02/2016 au 29/02/2016</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">06/02/2016 au 22/02/2016</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">20/02/2016 au 07/03/2016</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Printemps</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">09/04/2016 au 25/04/2016</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">02/04/2016 au 18/04/2016</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">16/04/2016 au 02/05/2016</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Eté (sortie des classes)</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="3">05/07/2016</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-legende" rowspan="1" colspan="4">Zone A : Besançon, Bordeaux, Clermont-Ferrand, Dijon, Grenoble, Limoges, Lyon et Poitiers.<retourligne/>Zone B : Aix-Marseille, Amiens, Caen, Lille, Nancy-Metz, Nantes, Nice, Orléans-Tours, Reims, Rennes, Rouen et Strasbourg.<retourligne/>Zone C : Créteil, Montpellier, Paris, Toulouse et Versailles.</td>
-                     </tr>
-                  </tbody>
-               </table>
-            </texteparagraphe>
-            <texteparagraphe>Le départ en vacances a lieu après la classe, la reprise des cours le matin des jours indiqués.</texteparagraphe>
-            <texteparagraphe>Les vacances débutant le samedi, pour les élèves qui n’ont pas cours ce jour-là, le départ a lieu le vendredi après les cours.<retourligne/>
-            </texteparagraphe>
-            <texteparagraphe>
-               <table>
-                  <tbody>
-                     <tr>
-                        <td class="TABLEAU-Titre" rowspan="1" colspan="4">2016 - 2017</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Périodes</td>
-                        <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Zone A</td>
-                        <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Zone B</td>
-                        <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Zone C</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Rentrée 2016</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="3">01/09/2016</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Toussaint</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="3">19/10/2016 au 03/11/2016</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Noël</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="3">17/12/2016 au 03/01/2017</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Hiver</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">18/02/2017 au 06/03/2017</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">11/02/2017 au 27/02/2017</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">04/02/2017 au 20/02/2017</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Printemps</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">15/04/2017 au 02/05/2017</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">08/04/2017 au 24/04/2017</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">01/04/2017 au 18/04/2017</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Eté (sortie des classes)</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="3">08/07/2017</td>
-                     </tr>
-                     <tr>
-                        <td class="TABLEAU-legende" rowspan="1" colspan="4">Zone A : Besançon, Bordeaux, Clermont-Ferrand, Dijon, Grenoble, Limoges, Lyon et Poitiers.<retourligne/>Zone B : Aix-Marseille, Amiens, Caen, Lille, Nancy-Metz, Nantes, Nice, Orléans-Tours, Reims, Rennes, Rouen et Strasbourg.<retourligne/>Zone C : Créteil, Montpellier, Paris, Toulouse et Versailles.</td>
-                     </tr>
-                  </tbody>
-               </table>
-            </texteparagraphe>
-            <texteparagraphe>Le départ des vacances a lieu après la classe, la reprise des cours le matin des jours indiqués.</texteparagraphe>
-            <texteparagraphe>Les vacances débutant le samedi, pour les élèves qui n’ont pas cours ce jour-là, le départ a lieu le vendredi après les cours.<retourligne/>
-            </texteparagraphe>
             <texteparagraphe>
                <table>
                   <tbody>
@@ -383,7 +303,7 @@
                         <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Zone C</td>
                      </tr>
                      <tr>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Rentrée 20167</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Rentrée 2017</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="3">04/09/2017</td>
                      </tr>
                      <tr>
@@ -403,7 +323,7 @@
                      <tr>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">Printemps</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">07/04/2018 au 23/04/2018</td>
-                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">21/04/2018 au 07/05/2018</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">21/04/2018 au 07/05/2018 (25/04/2018 au 14/05/2018 pour les académies de Caen, Nantes, Orléans-Tours, Rennes et Rouen)</td>
                         <td class="TABLEAU-Texte" rowspan="1" colspan="1">14/04/2018 au 30/04/2018</td>
                      </tr>
                      <tr>
@@ -417,7 +337,56 @@
                </table>
             </texteparagraphe>
             <texteparagraphe>Le départ des vacances a lieu après la classe, la reprise des cours le matin des jours indiqués.</texteparagraphe>
+            <texteparagraphe>Les vacances débutant le samedi, pour les élèves qui n’ont pas cours ce jour-là, le départ a lieu le vendredi après les cours.</texteparagraphe>
+            <texteparagraphe>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td class="TABLEAU-Titre" rowspan="1" colspan="4">2018 - 2019</td>
+                     </tr>
+                     <tr>
+                        <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Périodes</td>
+                        <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Zone A</td>
+                        <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Zone B</td>
+                        <td class="TABLEAU-Titre-colonne" rowspan="1" colspan="1">Zone C</td>
+                     </tr>
+                     <tr>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Rentrée 2017</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="3">03/09/2018</td>
+                     </tr>
+                     <tr>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Toussaint</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="3">20/10/2018 au 05/11/2018</td>
+                     </tr>
+                     <tr>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Noël</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="3">22/12/2018 au 07/01/2019</td>
+                     </tr>
+                     <tr>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Hiver</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">16/02/2019 au 04/03/2019</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">09/02/2019 au 25/02/2019</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">23/02/2019 au 11/03/2019</td>
+                     </tr>
+                     <tr>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Printemps</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">13/04/2019 au 29/04/2019</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">06/04/2019 au 23/04/2019</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">20/04/2019 au 06/05/2019</td>
+                     </tr>
+                     <tr>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="1">Eté (sortie des classes)</td>
+                        <td class="TABLEAU-Texte" rowspan="1" colspan="3">06/07/2019</td>
+                     </tr>
+                     <tr>
+                        <td class="TABLEAU-legende" rowspan="1" colspan="4">Zone A : Besançon, Bordeaux, Clermont-Ferrand, Dijon, Grenoble, Limoges, Lyon et Poitiers.<retourligne/>Zone B : Aix-Marseille, Amiens, Caen, Lille, Nancy-Metz, Nantes, Nice, Orléans-Tours, Reims, Rennes, Rouen et Strasbourg.<retourligne/>Zone C : Créteil, Montpellier, Paris, Toulouse et Versailles.</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </texteparagraphe>
+            <texteparagraphe>Le départ des vacances a lieu après la classe, la reprise des cours le matin des jours indiqués.</texteparagraphe>
             <texteparagraphe>Les vacances débutant le samedi, pour les élèves qui n’ont pas cours ce jour-là, le départ a lieu le vendredi après les cours.<retourligne/>
+               <retourligne/>
             </texteparagraphe>
          </section_content>
       </section>
@@ -425,7 +394,7 @@
   <tag type="typo">Vacances scolaires</tag>
   <copyright>
     <holder>Les Echos Publishing</holder>
-    <year>2016</year>
+    <year>2017</year>
   </copyright>
 </article>
 

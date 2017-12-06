@@ -3,5 +3,5 @@
 Homestead.yaml
 Homestead.json
 /storage/logs/laravel.log
-
+/.idea
 .env

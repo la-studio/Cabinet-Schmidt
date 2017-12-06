@@ -81,13 +81,13 @@ Agenda.prototype.getDatas = function () {
   var listContent =  [];
   $.getJSON('/collection/exceptions/appointments')
   .done(function (data) {
-    for (var i = 0; i < data.length; i++) {
-      var dates = data[i].date.split(' ');
-      var day = dates[0];
-      var month = dates[1];
-      listFullDates.push(data[i].date);
-      listContent.push(data[i].content);
-      listDates.push({day: day ,month: month });
+      for (var i = 0; i < data.length; i++) {
+        var dates = data[i].date.split(' ');
+        var day = dates[0];
+        var month = dates[1];
+        listFullDates.push(data[i].date);
+        listContent.push(data[i].content);
+        listDates.push({day: day ,month: month });
     }
   })
   this.listContent = listContent;
