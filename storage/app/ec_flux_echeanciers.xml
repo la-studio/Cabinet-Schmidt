@@ -2,6 +2,94 @@
 <!DOCTYPE articles SYSTEM "FluxXmlClient.dtd">
 <articles>
 <article>
+  <id>k4_11737092</id>
+  <create_date>2018-01-05 09:00:00</create_date>
+  <display_date>2018-01-05 09:00:00</display_date>
+  <author>La Rédaction</author>
+  <language>fr</language>
+  <title>Mars 2018</title>
+  <summary>Sous réserve de confirmation officielle.</summary>
+  <content>
+      <section>
+         <section_title>Délai variable</section_title>
+         <section_summary/>
+         <section_author/>
+         <section_content>
+            <texteparagraphe>• Télédéclaration et télérèglement de la TVA correspondant aux opérations de février 2018 et, éventuellement, demande de remboursement du crédit de TVA au titre du mois de février 2018.</texteparagraphe>
+         </section_content>
+      </section>
+      <section>
+         <section_title>1er mars 2018</section_title>
+         <section_summary/>
+         <section_author/>
+         <section_content>
+            <texteparagraphe>
+               • Employeurs d’au moins 20 salariés : déclaration annuelle d’emploi des travailleurs handicapés, et éventuellement, paiement de la contribution à l’Agefiph.</texteparagraphe>
+         </section_content>
+      </section>
+      <section>
+         <section_title>5 mars 2018</section_title>
+         <section_summary/>
+         <section_author/>
+         <section_content>
+            <texteparagraphe>
+               • Employeurs d’au moins 50 salariés : DSN de février 2018 et paiement des charges sociales sur les salaires de février 2018 versés au plus tard le 28 février 2018.</texteparagraphe>
+            <texteparagraphe>
+               • Employeurs d’au moins 11 et de moins de 50 salariés, et employeurs de plus de 9 et de moins de 11 salariés n’ayant pas opté pour le paiement trimestriel des charges sociales : paiement des charges sociales sur les salaires de janvier 2018 versés entre le 11 et le 28 février 2018.</texteparagraphe>
+            <texteparagraphe>
+               • Artisans, commerçants et industriels : paiement par prélèvement mensuel des cotisations de maladie-maternité, d’indemnités journalières, de retraite, d’invalidité-décès, d’allocations familiales et de la CSG-CRDS (le 20 mars sur demande).<gras/>
+            </texteparagraphe>
+            <texteparagraphe>
+               • Professionnels libéraux : paiement par prélèvement mensuel des cotisations de maladie-maternité, d’allocations familiales et de la CSG-CRDS (le 20 mars sur demande).</texteparagraphe>
+         </section_content>
+      </section>
+      <section>
+         <section_title>12 mars 2018</section_title>
+         <section_summary/>
+         <section_author/>
+         <section_content>
+            <texteparagraphe>
+               • Assujettis à la TVA réalisant des opérations intracommunautaires : dépôt auprès des douanes de la déclaration d’échanges de biens et de la déclaration européenne des services pour les opérations intervenues en février 2018.</texteparagraphe>
+         </section_content>
+      </section>
+      <section>
+         <section_title>15 mars 2018</section_title>
+         <section_summary/>
+         <section_author/>
+         <section_content>
+            <texteparagraphe>
+               • Employeurs de moins de 11 salariés ayant opté pour le paiement trimestriel des charges sociales : DSN de février 2018.</texteparagraphe>
+            <texteparagraphe>
+               • Employeurs de 9 salariés au plus n’ayant pas opté pour le paiement trimestriel des charges sociales : DSN de février 2018 et paiement des charges sociales sur les salaires de février 2018.</texteparagraphe>
+            <texteparagraphe>
+               • Employeurs d’au moins 11 et de moins de 50 salariés, et employeurs de plus de 9 et de moins de 11 salariés n’ayant pas opté pour le paiement trimestriel des charges sociales : DSN de février 2018 et paiement des charges sociales sur les salaires de février 2018 versés au plus tard le 10 mars 2018 et DSN de février 2018 sur les salaires de février 2018 versés entre le 11 et le 31 mars 2018.</texteparagraphe>
+            <texteparagraphe>
+               • Employeurs d’au moins 50 salariés : DSN de février 2018 et paiement des charges sociales sur les salaires de février 2018 versés entre le 1er et le 20 mars 2018 et DSN de février 2018 sur les salaires de février 2018 versés entre le 21 et le 31 mars 2018.</texteparagraphe>
+            <texteparagraphe>
+               • Entreprises soumises à l’impôt sur les sociétés : télérèglement de l’acompte d’IS ainsi que le cas échéant, de l’acompte de contribution sociale.</texteparagraphe>
+            <texteparagraphe>
+               • Entreprises soumises à l’impôt sur les sociétés ayant clos leur exercice le 30 novembre 2017 : télérèglement du solde de l’impôt sur les sociétés ainsi que, le cas échéant, de la contribution sociale.</texteparagraphe>
+            <texteparagraphe>
+               • Employeurs assujettis à la taxe sur les salaires : télérèglement de la taxe sur les salaires payés en février 2018 lorsque le total des sommes dues au titre de 2017 excédait 10 000 € et télétransmission du relevé de versement provisionnel n° 2501.</texteparagraphe>
+         </section_content>
+      </section>
+      <section>
+         <section_title>31 mars 2018</section_title>
+         <section_summary/>
+         <section_author/>
+         <section_content>
+            <texteparagraphe>• Employeurs d’au moins 50 salariés : paiement des charges sociales sur les salaires de février 2018 versés entre le 21 et le 31 mars 2018.</texteparagraphe>
+         </section_content>
+      </section>
+   </content>
+  <tag type="typo">Echéancier</tag>
+  <copyright>
+    <holder>Les Echos Publishing</holder>
+    <year>2017</year>
+  </copyright>
+</article>
+
+<article>
   <id>k4_11572966</id>
   <create_date>2017-12-01 08:00:00</create_date>
   <display_date>2017-12-01 08:00:00</display_date>
@@ -178,97 +266,6 @@
                • Titulaires de bénéfices non commerciaux (BNC) imposés selon le régime de la déclaration contrôlée : option pour la détermination du résultat 2018 en fonction des créances acquises et des dépenses engagées.</texteparagraphe>
             <texteparagraphe>
                • Employeurs ayant exposé leurs salariés à la pénibilité en 2017 : paiement de la contribution additionnelle sur les rémunérations versées en 2017.</texteparagraphe>
-         </section_content>
-      </section>
-   </content>
-  <tag type="typo">Echéancier</tag>
-  <copyright>
-    <holder>Les Echos Publishing</holder>
-    <year>2017</year>
-  </copyright>
-</article>
-
-<article>
-  <id>k4_11274995</id>
-  <create_date>2017-10-01 06:00:00</create_date>
-  <display_date>2017-10-01 06:00:00</display_date>
-  <author>La Rédaction</author>
-  <language>fr</language>
-  <title>Décembre 2017</title>
-  <summary>Sous réserve de confirmation officielle.</summary>
-  <content>
-      <section>
-         <section_title>Délai variable</section_title>
-         <section_summary/>
-         <section_author/>
-         <section_content>
-            <texteparagraphe>• Télédéclaration et télérèglement de la TVA correspondant aux opérations de novembre 2017 et, éventuellement, demande de remboursement du crédit de TVA au titre du mois de novembre 2017.</texteparagraphe>
-            <texteparagraphe>
-               • Entreprises relevant du régime simplifié de TVA : télérèglement de l’acompte semestriel, accompagné du relevé n° 3514.</texteparagraphe>
-         </section_content>
-      </section>
-      <section>
-         <section_title>5 Décembre 2017</section_title>
-         <section_summary/>
-         <section_author/>
-         <section_content>
-            <texteparagraphe>
-               • Employeurs occupant au moins 50 salariés : DSN de novembre 2017 et paiement des charges sociales sur les salaires de novembre 2017 payés au plus tard le 30 novembre 2017.</texteparagraphe>
-            <texteparagraphe>
-               • Employeurs occupant au moins 50 salariés : paiement des charges sociales sur les salaires d’octobre 2017 payés entre le 21 et le 30 novembre 2017.</texteparagraphe>
-            <texteparagraphe>
-               • Artisans, commerçants et industriels : paiement par prélèvement mensuel des cotisations de maladie-maternité, d’indemnités journalières, de retraite, d’invalidité-décès, d’allocations familiales et de la CSG-CRDS (le 20 décembre sur demande).</texteparagraphe>
-            <texteparagraphe>
-               • Professionnels libéraux : paiement par prélèvement mensuel des cotisations de maladie-maternité, d’allocations familiales et de la CSG-CRDS (le 20 décembre sur demande).</texteparagraphe>
-         </section_content>
-      </section>
-      <section>
-         <section_title>12 Décembre 2017</section_title>
-         <section_summary/>
-         <section_author/>
-         <section_content>
-            <texteparagraphe>
-               • Assujettis à la TVA réalisant des opérations intracommunautaires : dépôt auprès des douanes de la déclaration d’échanges de biens et de la déclaration européenne des services pour les opérations intervenues en novembre 2017.</texteparagraphe>
-         </section_content>
-      </section>
-      <section>
-         <section_title>15 Décembre 2017</section_title>
-         <section_summary/>
-         <section_author/>
-         <section_content>
-            <texteparagraphe>
-               • Entreprises soumises à l’impôt sur les sociétés ayant clos leur exercice le 31 août 2017 : télérèglement du solde de l’impôt sur les sociétés ainsi que, le cas échéant, de la contribution sociale.</texteparagraphe>
-            <texteparagraphe>
-               • Entreprises soumises à l’impôt sur les sociétés : télérèglement de l’acompte d’IS, ainsi que le cas échéant, de l’acompte de contribution sociale et de la contribution sur les dividendes distribués.</texteparagraphe>
-            <texteparagraphe>
-               • Tous contribuables : paiement des impositions mises en recouvrement le 31 octobre 2017, notamment télérèglement du solde de la cotisation foncière des entreprises (CFE).</texteparagraphe>
-            <texteparagraphe>
-               • Employeurs de 9 salariés au plus n’ayant pas opté pour le paiement mensuel des charges sociales : DSN de novembre 2017.</texteparagraphe>
-            <texteparagraphe>
-               • Entreprises dont l’effectif est supérieur à 9 et inférieur à 50 salariés, et entreprises de 9 salariés au plus ayant opté pour le paiement mensuel des charges sociales : DSN de novembre 2017 et paiement des charges sociales sur les salaires de novembre 2017 payés au plus tard le 10 décembre 2017 ou sur les salaires d’octobre 2017 payés entre le 11 et le 30 novembre 2017.</texteparagraphe>
-            <texteparagraphe>
-               • Employeurs occupant au moins 50 salariés : DSN de novembre 2017 et paiement des charges sociales sur les salaires de novembre 2017 payés dans les 20 premiers jours de décembre 2017 (paiement des charges sociales le 20 décembre par tolérance pour les salaires versés entre le 11 et le 20 décembre).</texteparagraphe>
-            <texteparagraphe>
-               • Employeurs assujettis à la taxe sur les salaires : télérèglement de la taxe sur les salaires payés en novembre 2017 lorsque le total des sommes dues au titre de  2016 excédait 10 000 € et télétransmission du relevé de versement provisionnel.</texteparagraphe>
-            <texteparagraphe>
-               • Contribuables souhaitant opter pour le paiement mensuel de leur impôt sur le revenu et/ou de leurs impôts locaux (taxe d’habitation, taxe foncière, cotisation foncière des entreprises)  et/ou de l’ISF (patrimoine net taxable compris entre 1,3 M€ et 2,57 M€) : date limite d’exercice de l’option pour une entrée en vigueur dès janvier 2018.</texteparagraphe>
-         </section_content>
-      </section>
-      <section>
-         <section_title>31 Décembre 2017</section_title>
-         <section_summary/>
-         <section_author/>
-         <section_content>
-            <texteparagraphe>
-               • Entreprises assujetties à la participation-construction : date limite pour investir la participation égale à 0,45 % des salaires 2016.</texteparagraphe>
-            <texteparagraphe>
-               • Entreprises soumises à l’impôt sur les sociétés ayant clos leur exercice le 30 septembre 2017 : télétransmission de la déclaration annuelle des résultats et des annexes (tolérance jusqu’au 15 janvier).</texteparagraphe>
-            <texteparagraphe>
-               • Établissements créés ou repris en 2017 : déclaration provisoire n° 1447-C relative à la cotisation foncière des entreprises (CFE).</texteparagraphe>
-            <texteparagraphe>
-               • Tous contribuables : date limite des réclamations relatives aux impôts payés ou recouvrés en  2015 (ou en 2016 pour les impôts locaux).</texteparagraphe>
-            <texteparagraphe>
-               • Entreprises assujetties à la CET : date limite de demande du plafonnement de la CET en fonction de la valeur ajoutée au titre de 2016.</texteparagraphe>
          </section_content>
       </section>
    </content>

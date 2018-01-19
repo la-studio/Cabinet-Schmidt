@@ -78,7 +78,6 @@ class RefreshAppointmentsFlux extends Command
                 intval($day);
             }
             $datetime = $arr[2] . '-' . $monthIndex . '-' . $day;
-
             return $datetime;
         }
 
@@ -89,13 +88,14 @@ class RefreshAppointmentsFlux extends Command
             foreach ($sections as $section)
             {
                 $data = [];
-                $title = $section->section_title;
+                $title = str_replace('1er', '1', $section->section_title);
+                ;
                 $content = $section->section_content->texteparagraphe;
                 $rdv = new Appointment();
                 $first_caracter = substr($title, 0, 1);
-                if ($title->__toString() !== 'Délai variable' && $title->__toString() !== '' && is_numeric($first_caracter))
+                if ($title !== 'Délai variable' && $title !== '' && is_numeric($first_caracter))
                 {
-                    $formattedDate = preg_replace('@[\s+　]@u', ' ', $title->__toString());
+                    $formattedDate = preg_replace('@[\s+　]@u', ' ', $title);
                     $formattedDate = ucwords(strtolower($formattedDate));
                     $rdv->date = $formattedDate;
                     for ($i = 0; $i < count($content); $i++)
