@@ -233,7 +233,7 @@ Datepicker.prototype.addMarkers = function (options) {
         var monthIndex = that.getMonthIndex(options[i].month);
         var toHighlight = $('.calendar[data-month="'+monthIndex+'"] .calendar__day-list .col[data-day="'+options[i].day+'"]').addClass('col--highlight');
     }
-  },2000);
+  }, 5000);
 };
 
 Datepicker.prototype.setTranslate = function () {
