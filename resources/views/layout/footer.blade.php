@@ -8,7 +8,7 @@
     </div>
   </div>
   <div class="footer__call-action">
-    <a href="page-explication-SILAE.pdf" target="_blank">Accès client SILAE</a>
+    <a href="page-explication-SILAE.pdf" rel="nofollow" target="_blank">Accès client SILAE</a>
   </div>
   <div class="col-md-4 col-custom footer__socials">
     <div class="row">
