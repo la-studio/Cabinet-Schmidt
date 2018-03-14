@@ -135,6 +135,7 @@ Route::get('/sites-utiles', function () {
 });
 
 //Temoignages
+Route::get('temoignages', 'TemoignagesController@all');
 Route::get('temoignage/{slug}', 'TemoignagesController@view');
 
 

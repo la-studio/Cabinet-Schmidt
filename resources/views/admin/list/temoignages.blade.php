@@ -6,17 +6,14 @@
       <div class="row center-xs temoignage__image">
         <img src="{{$temoignage->logo}}" alt="" />
       </div>
-      <div class="row center-xs temoignage__title">
-        <span>{{$temoignage->title}}</span>
+      <div class="row center-xs" style="margin-top: 5px">
+        <strong><span>{{$temoignage->person_identity}}</span></strong>
+      </div>
+      <div class="row center-xs temoignage__job" style="margin-bottom: 5px">
+        <span>{{$temoignage->person_job}}</span>
       </div>
       <div class="row center-xs temoignage__content">
         <span>{{$temoignage->description}}</span>
-      </div>
-      <div class="row center-xs temoignage__identity">
-        <span>{{$temoignage->person_identity}}</span>
-      </div>
-      <div class="row center-xs temoignage__job">
-        <span>{{$temoignage->person_job}}</span>
       </div>
       <form class="row center-xs temoignage__form" action="/admin/temoignage/delete/{{$temoignage->id}}" method="post">
         {{ method_field('DELETE') }}

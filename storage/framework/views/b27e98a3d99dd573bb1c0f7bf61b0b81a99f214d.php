@@ -13,7 +13,13 @@
           <div class="row center-xs temoignage__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
               <span>Logo de l'entreprise</span>
-              <input class="large-file" type="file" name="photo"/>
+              <input class="large-file" type="file" name="logo"/>
+            </div>
+          </div>
+          <div class="row center-xs slide__field">
+            <div class="col-md-8 col-sm-10 col-xs-12">
+              <span>Photo du témoignage</span>
+              <input class="large-file file-input" type="file" name="photo"/>
             </div>
           </div>
           <div class="row center-xs temoignage__field">

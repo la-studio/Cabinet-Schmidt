@@ -12,7 +12,11 @@ Témoignage de <?php echo e($temoignage->person_identity); ?>, <?php echo e($tem
   <div class="row center-xs echo-article">
     <div class="col-xs-9">
       <header>
-        <p class="previousPage"><a href="/">Retour à la page d'accueil</a></p>
+        <p class="previousPage">
+          <a href="/" style="font-weight: 800">Retour à la page d'accueil</a>
+          >
+          <a href="<?php echo e(URL::to('temoignages')); ?>" style="text-align: left">Retour aux témoignages</a>
+        </p>
         <h1 class="echo-article__title">Témoignage de <?php echo e($temoignage->person_identity); ?>, <?php echo e($temoignage->person_job); ?></h1>
       </header>
       <h2 class="echo-article__summary">

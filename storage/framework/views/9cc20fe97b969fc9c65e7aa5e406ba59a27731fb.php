@@ -1,4 +1,4 @@
-<div class="col-xs-12 services">
+<div class="col-xs-12 services" style="background-attachment: fixed">
   <div class="row center-xs">
     <header class="col-xs-12 services__head">
       <h2 class="services__title">Un cabinet d'expertise c'est</h2>

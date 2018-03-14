@@ -5,17 +5,14 @@
       <div class="row center-xs temoignage__image">
         <img src="<?php echo e($temoignage->logo); ?>" alt="" />
       </div>
-      <div class="row center-xs temoignage__title">
-        <span><?php echo e($temoignage->title); ?></span>
+      <div class="row center-xs" style="margin-top: 5px">
+        <strong><span><?php echo e($temoignage->person_identity); ?></span></strong>
+      </div>
+      <div class="row center-xs temoignage__job" style="margin-bottom: 5px">
+        <span><?php echo e($temoignage->person_job); ?></span>
       </div>
       <div class="row center-xs temoignage__content">
         <span><?php echo e($temoignage->description); ?></span>
-      </div>
-      <div class="row center-xs temoignage__identity">
-        <span><?php echo e($temoignage->person_identity); ?></span>
-      </div>
-      <div class="row center-xs temoignage__job">
-        <span><?php echo e($temoignage->person_job); ?></span>
       </div>
       <form class="row center-xs temoignage__form" action="/admin/temoignage/delete/<?php echo e($temoignage->id); ?>" method="post">
         <?php echo e(method_field('DELETE')); ?>

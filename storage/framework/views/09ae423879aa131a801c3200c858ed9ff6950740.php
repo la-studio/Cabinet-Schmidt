@@ -2,6 +2,11 @@
   <div class="row center-xs">
     <header class="col-xs-12 temoignages-header">
       <h2 class="temoignages-header__title">Ils nous font confiance</h2>
+      <h3 class="services__label">
+        <a href="<?php echo e(URL::to('temoignages')); ?>">
+          Retrouvez tous les témoignages
+        </a>
+      </h3>
     </header>
     <div id="slider-temoignage" class="col-xs-12 slider">
       <div class="swiper-wrapper">

@@ -8,6 +8,12 @@
           <div class="row center-xs slide__field">
             <div class="col-md-8 col-sm-10 col-xs-12">
               <span>Logo de l'entreprise</span>
+              <input class="large-file file-input" type="file" name="logo"/>
+            </div>
+          </div>
+          <div class="row center-xs slide__field">
+            <div class="col-md-8 col-sm-10 col-xs-12">
+              <span>Photo du témoignage</span>
               <input class="large-file file-input" type="file" name="photo"/>
             </div>
           </div>
@@ -43,7 +49,7 @@
           </div>
           <input type="submit" class="competence__save" value="Enregistrer"/>
         @if(\Session::has('emptyFile'))
-        <p style="color:red">Vous devez ajouter le logo de l'entreprise</p>
+        <p style="color:red">Vous devez ajouter le logo et la photo du témoignage</p>
         @endif
         </div>
       </form>

@@ -12,7 +12,11 @@ Témoignage de {{$temoignage->person_identity}}, {{$temoignage->person_job}}
   <div class="row center-xs echo-article">
     <div class="col-xs-9">
       <header>
-        <p class="previousPage"><a href="/">Retour à la page d'accueil</a></p>
+        <p class="previousPage">
+          <a href="/" style="font-weight: 800">Retour à la page d'accueil</a>
+          >
+          <a href="{{ URL::to('temoignages') }}" style="text-align: left">Retour aux témoignages</a>
+        </p>
         <h1 class="echo-article__title">Témoignage de {{$temoignage->person_identity}}, {{$temoignage->person_job}}</h1>
       </header>
       <h2 class="echo-article__summary">
