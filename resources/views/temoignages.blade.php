@@ -10,7 +10,7 @@ Les témoignagnes des clients du Cabinet Schmidt : les TPE et PME de la vallée 
 
 @section('content')
   <div class="row center-xs actualites">
-    <div class="col-xs-12 actualites__cover"></div>
+    <div class="col-xs-12 temoignages__cover"></div>
     <div class="col-xs-12 actualites__banner">
       <h1>Les témoignages du Cabinet Schmidt</h1>
     </div>

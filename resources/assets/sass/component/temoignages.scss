@@ -1,0 +1,9 @@
+.temoignages{
+  &__cover {
+    height: 550px;
+    @include bg-regular();
+    background-attachment: fixed;
+    background-image: url('/images/slider/ArtisanCrolles-CabinetSchmidt.jpg');
+    background-repeat: no-repeat;
+  }
+}

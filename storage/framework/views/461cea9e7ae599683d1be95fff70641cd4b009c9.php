@@ -3,12 +3,12 @@ Ils nous font confiance
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('description'); ?>
-Tous les témoignagnes des clients du Cabinet Schmidt. Ils nous font confiance.
+Les témoignagnes des clients du Cabinet Schmidt : les TPE et PME de la vallée du Grésivaudan qui nous font confiance.
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
   <div class="row center-xs actualites">
-    <div class="col-xs-12 actualites__cover"></div>
+    <div class="col-xs-12 temoignages__cover"></div>
     <div class="col-xs-12 actualites__banner">
       <h1>Les témoignages du Cabinet Schmidt</h1>
     </div>
