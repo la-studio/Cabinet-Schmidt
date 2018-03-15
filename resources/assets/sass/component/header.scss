@@ -1,7 +1,7 @@
 .header {
   @include reset();
   height: 100px;
-  $responsive-menu-size: 620px;
+  $responsive-menu-size: 800px;
   a {
     @include link-off();
   }
