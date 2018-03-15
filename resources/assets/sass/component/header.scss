@@ -124,7 +124,7 @@
             -moz-transition: transform .35s $easeInOutCubic;
             transition: transform .35s $easeInOutCubic;
             position: relative;
-            min-width: 70%;
+            min-width: 90%;
             &:before {
               content: attr(data-hover);
               font-family: $font-semibold;
@@ -299,7 +299,8 @@
 @media (max-width: 1000px) {
   .toolbox{
     width:155px;
-    height: 290px; 
+    height: 290px;
+    user-select: none;
   }
 
   .toolbox--open {

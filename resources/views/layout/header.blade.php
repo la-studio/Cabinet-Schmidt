@@ -42,7 +42,8 @@
     <ul class="row secondary-nav__list">
       <li class="col-xs-12 secondary-nav__item"><a href="{{ URL::to('/') }}">Accueil</a></li>
       <li class="col-xs-12 secondary-nav__item"><a href="{{ URL::to('a-propos') }}">À propos</a></li>
-      <li class="col-xs-12 secondary-nav__item"><a href="{{ URL::to('actualites') }}">Actualité</a></li>
+      <li class="col-xs-12 secondary-nav__item"><a href="{{ URL::to('actualites-cabinet') }}">Actualité</a></li>      
+      <li class="col-xs-12 secondary-nav__item"><a href="{{ URL::to('temoignages') }}">Témoignages</a></li>
       <li class="col-xs-12 secondary-nav__item"><a href="{{ URL::to('contact') }}">Contact</a></li>
     </ul>
   </nav>
