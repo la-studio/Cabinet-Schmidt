@@ -300,6 +300,9 @@
   .toolbox{
     width:155px;
     height: 290px;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;
     user-select: none;
   }
 
