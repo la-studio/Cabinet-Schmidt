@@ -16,7 +16,7 @@ Suivez l’actualité de votre cabinet comptable et de la région grenobloise !
     </div>
     <div class="col-md-10 col-xs-12 gallery" id="gallery">
       <header class="row center-xs gallery__head">
-        <h2>Toute l'actualité du Cabinet Schmdit</h2>
+        <h2>Toute l'actualité du Cabinet Schmidt</h2>
       </header>
       <section class="row center-xs gallery__list">
           @foreach ($articles as $article)
