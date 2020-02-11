@@ -131,7 +131,7 @@ class RefreshEchosArticlesFlux extends Command
                     }
                 }
                 if($media_attr['type']=="image") {
-                    $article->image = 'http://photo.expert-infos.com/'.$element->media->__toString();
+                    $article->image = 'https://photo.expert-infos.com/'.$element->media->__toString();
                 }
                 foreach ($section_content as $element) {
                     foreach($element as $sub) {
